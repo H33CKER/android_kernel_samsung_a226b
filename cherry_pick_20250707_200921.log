@@ -1,0 +1,115 @@
+Cherry-picking from 436bfd0121cc094ad53000eadd61fba397ed06f9 to 80ba874d752b77e7f913ca4b59479204bd61c08a
+----------------------------------------
+Cherry-picking 436bfd0121cc094ad53000eadd61fba397ed06f9
+Auto-merging kernel/sys.c
+[main b7387f575f68] syscall: Fake uname to 4.19 for bpfloader/netd
+ Author: Tim Zimmermann <tim@linux4.de>
+ Date: Fri Oct 6 05:32:56 2023 +0200
+ 1 file changed, 6 insertions(+)
+Successfully cherry-picked 436bfd0121cc094ad53000eadd61fba397ed06f9
+----------------------------------------
+Cherry-picking 213e55c0cc7d855ed2123865d2a1959b588000ba
+Auto-merging include/uapi/linux/bpf.h
+Auto-merging net/core/filter.c
+[main 8568094e502d] BACKPORT: bpf: add skb_load_bytes_relative helper
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Fri May 4 01:08:15 2018 +0200
+ 2 files changed, 75 insertions(+)
+Successfully cherry-picked 213e55c0cc7d855ed2123865d2a1959b588000ba
+----------------------------------------
+Cherry-picking 4ed29362c42de76aa09c2ff6bd25512b4a4a1158
+[main 7a80553d8c5b] BACKPORT: bpf: encapsulate verifier log state into a structure
+ Author: Jakub Kicinski <jakub.kicinski@netronome.com>
+ Date: Mon Oct 9 10:30:10 2017 -0700
+ 2 files changed, 43 insertions(+), 27 deletions(-)
+Successfully cherry-picked 4ed29362c42de76aa09c2ff6bd25512b4a4a1158
+----------------------------------------
+Cherry-picking 1b4a3e9c579b6bfd20e3ea47539edb5136c386d5
+[main 9698fc7d173b] BACKPORT: bpf: Rename bpf_verifer_log
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Sat Mar 24 11:44:22 2018 -0700
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+Successfully cherry-picked 1b4a3e9c579b6bfd20e3ea47539edb5136c386d5
+----------------------------------------
+Cherry-picking e1432ae61f8fae764b4f8829e1abb7c974daef7d
+[main f1daba591b0f] BACKPORT: bpf: btf: Introduce BPF Type Format (BTF)
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Wed Apr 18 15:55:57 2018 -0700
+ 3 files changed, 1046 insertions(+)
+ create mode 100644 include/uapi/linux/btf.h
+ create mode 100644 kernel/bpf/btf.c
+Successfully cherry-picked e1432ae61f8fae764b4f8829e1abb7c974daef7d
+----------------------------------------
+Cherry-picking bece722fd70f5a2d6b24bca7ccf78dd6561b7f4c
+[main 8a27b7561fab] bpf: Update logging functions to work with BTF
+ Author: Tim Zimmermann <tim@linux4.de>
+ Date: Sun Oct 15 14:57:14 2023 +0200
+ 3 files changed, 80 insertions(+), 21 deletions(-)
+ create mode 100644 scripts/module-lto.lds
+Successfully cherry-picked bece722fd70f5a2d6b24bca7ccf78dd6561b7f4c
+----------------------------------------
+Cherry-picking d364ef2ec731702fe645bec7a3ebbbd5f33772ba
+[main 097a106ed341] bpf: btf: Validate type reference
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Wed Apr 18 15:55:58 2018 -0700
+ 2 files changed, 702 insertions(+), 1 deletion(-)
+ create mode 100644 include/linux/btf.h
+Successfully cherry-picked d364ef2ec731702fe645bec7a3ebbbd5f33772ba
+----------------------------------------
+Cherry-picking 238e9db7240fcc6abbb51c4f4c9b0db75cead527
+[main c0ffaae8856a] bpf: btf: Check members of struct/union
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Wed Apr 18 15:55:59 2018 -0700
+ 1 file changed, 205 insertions(+)
+Successfully cherry-picked 238e9db7240fcc6abbb51c4f4c9b0db75cead527
+----------------------------------------
+Cherry-picking 224cbc20119f112056ebf555e6537551f3a4502d
+[main c3c2e5e8178f] bpf: btf: Add pretty print capability for data with BTF type info
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Wed Apr 18 15:56:00 2018 -0700
+ 2 files changed, 200 insertions(+)
+Successfully cherry-picked 224cbc20119f112056ebf555e6537551f3a4502d
+----------------------------------------
+Cherry-picking 78a88e4feeec14d19884a2956a32522d8c83b821
+Auto-merging include/uapi/linux/bpf.h
+Auto-merging kernel/bpf/syscall.c
+[main 644aee5ba373] BACKPORT: bpf: btf: Add BPF_BTF_LOAD command
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Wed Apr 18 15:56:01 2018 -0700
+ 4 files changed, 97 insertions(+)
+Successfully cherry-picked 78a88e4feeec14d19884a2956a32522d8c83b821
+----------------------------------------
+Cherry-picking f474ed3f24adc51ce042caaf42af408fa773f930
+Auto-merging kernel/bpf/syscall.c
+[main 9a5b6caa730b] bpf: btf: Add BPF_OBJ_GET_INFO_BY_FD support to BTF fd
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Wed Apr 18 15:56:02 2018 -0700
+ 3 files changed, 23 insertions(+), 1 deletion(-)
+Successfully cherry-picked f474ed3f24adc51ce042caaf42af408fa773f930
+----------------------------------------
+Cherry-picking 198c16b85a734e40562ea34ea7ad21983e4406f8
+[main 2b4e9b822a81] BACKPORT: bpf: btf: Clean up btf.h in uapi
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Sat Apr 21 09:48:23 2018 -0700
+ 2 files changed, 13 insertions(+), 15 deletions(-)
+Successfully cherry-picked 198c16b85a734e40562ea34ea7ad21983e4406f8
+----------------------------------------
+Cherry-picking 6892978ee11786f227451dff5d1f66bdfc321550
+[main af6e5a2dd368] bpf: btf: Avoid WARN_ON when CONFIG_REFCOUNT_FULL=y
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Fri May 4 14:49:50 2018 -0700
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 6892978ee11786f227451dff5d1f66bdfc321550
+----------------------------------------
+Cherry-picking 2bd7fe25fea1bf36eefd42b7bcf6830b4ee19337
+Auto-merging kernel/bpf/syscall.c
+CONFLICT (content): Merge conflict in kernel/bpf/syscall.c
+error: could not apply 2bd7fe25fea1... bpf: Fix compiler warning on info.map_ids for 32bit platform
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 2bd7fe25fea1bf36eefd42b7bcf6830b4ee19337
+Auto-resolving conflicts by accepting incoming changes...
