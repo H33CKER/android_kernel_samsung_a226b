@@ -6512,3 +6512,29 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of da54edbe563866eb2bd57a12bc8f76ddc88fc369
 Auto-resolving conflicts by accepting incoming changes...
+[main 11a102237751] genirq/affinity: Handle affinity setting on inactive interrupts correctly
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Fri Jul 17 18:00:02 2020 +0200
+ 2 files changed, 201 insertions(+), 9 deletions(-)
+----------------------------------------
+Cherry-picking 6a7a29935d98567331ae26b183422e22f4d0ae90
+Auto-merging arch/x86/kernel/apic/vector.c
+Auto-merging drivers/irqchip/irq-gic-v3-its.c
+[main edfe12d61152] genirq/affinity: Make affinity setting if activated opt-in
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Fri Jul 24 22:44:41 2020 +0200
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+Successfully cherry-picked 6a7a29935d98567331ae26b183422e22f4d0ae90
+----------------------------------------
+Cherry-picking 755b4e83e11cfc530e426e1f717e97dc8af31d3d
+Auto-merging drivers/md/dm-cache-target.c
+CONFLICT (content): Merge conflict in drivers/md/dm-cache-target.c
+error: could not apply 755b4e83e11c... dm cache: pass cache structure to mode functions
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 755b4e83e11cfc530e426e1f717e97dc8af31d3d
+Auto-resolving conflicts by accepting incoming changes...
