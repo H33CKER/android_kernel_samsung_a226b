@@ -262,3 +262,24 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 7d4120614babb01f1ec5fbcdf5faba3d325a366f
 Auto-resolving conflicts by accepting incoming changes...
+[main 45ebcaa80528] BACKPORT: net: bpf: rename ndo_xdp to ndo_bpf
+ Author: Jakub Kicinski <jakub.kicinski@netronome.com>
+ Date: Fri Nov 3 13:56:16 2017 -0700
+ 18 files changed, 362 insertions(+), 384 deletions(-)
+----------------------------------------
+Cherry-picking b25c3f1776583c62639c8f1d1983a9ab6553fab5
+Auto-merging include/linux/bpf.h
+CONFLICT (content): Merge conflict in include/linux/bpf.h
+Auto-merging include/linux/netdevice.h
+Auto-merging include/uapi/linux/bpf.h
+CONFLICT (content): Merge conflict in include/uapi/linux/bpf.h
+Auto-merging kernel/bpf/core.c
+error: could not apply b25c3f177658... BACKPORT: bpf: offload: add infrastructure for loading programs for a specific netdev
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of b25c3f1776583c62639c8f1d1983a9ab6553fab5
+Auto-resolving conflicts by accepting incoming changes...
