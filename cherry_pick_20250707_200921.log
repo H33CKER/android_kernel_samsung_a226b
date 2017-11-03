@@ -113,3 +113,152 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 2bd7fe25fea1bf36eefd42b7bcf6830b4ee19337
 Auto-resolving conflicts by accepting incoming changes...
+[main 06da64047090] bpf: Fix compiler warning on info.map_ids for 32bit platform
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Fri Sep 29 10:52:17 2017 -0700
+ 2 files changed, 170 insertions(+), 2 deletions(-)
+ create mode 100644 cherry_pick_20250707_200921.log
+----------------------------------------
+Cherry-picking b86cbbc405814519b505d755a19516cf37118149
+[main d6a2112819fb] bpf: btf: Change how section is supported in btf_header
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Tue May 22 14:57:18 2018 -0700
+ 2 files changed, 160 insertions(+), 57 deletions(-)
+Successfully cherry-picked b86cbbc405814519b505d755a19516cf37118149
+----------------------------------------
+Cherry-picking ee5ecb40eb1b769567c5d417f8cf6a383ceb27ee
+[main 2758e98340cb] bpf: btf: Check array->index_type
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Tue May 22 14:57:19 2018 -0700
+ 1 file changed, 56 insertions(+), 24 deletions(-)
+Successfully cherry-picked ee5ecb40eb1b769567c5d417f8cf6a383ceb27ee
+----------------------------------------
+Cherry-picking fc897edc32c4c8032ca973a41903822044e0b9c3
+[main 622db1a89195] bpf: btf: Remove unused bits from uapi/linux/btf.h
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Tue May 22 14:57:20 2018 -0700
+ 2 files changed, 44 insertions(+), 37 deletions(-)
+Successfully cherry-picked fc897edc32c4c8032ca973a41903822044e0b9c3
+----------------------------------------
+Cherry-picking 4021fe17d198f94db87e2feac5dd57a891806e72
+[main ca4015a0fce5] bpf: btf: Avoid variable length array
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Wed May 23 11:32:36 2018 -0700
+ 1 file changed, 5 insertions(+), 6 deletions(-)
+Successfully cherry-picked 4021fe17d198f94db87e2feac5dd57a891806e72
+----------------------------------------
+Cherry-picking 4f70d72c35b88fbd2099698a59218249771580d7
+[main cb5bf4f8c740] bpf: btf: avoid -Wreturn-type warning
+ Author: Arnd Bergmann <arnd@arndb.de>
+ Date: Fri May 25 23:33:19 2018 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 4f70d72c35b88fbd2099698a59218249771580d7
+----------------------------------------
+Cherry-picking 4ac5ae9625f12a5f2264f2d85d93f7e8997b3e0e
+[main 22505baf8a28] bpf: btf: Check array t->size
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Sat Jun 2 09:06:50 2018 -0700
+ 1 file changed, 5 insertions(+)
+Successfully cherry-picked 4ac5ae9625f12a5f2264f2d85d93f7e8997b3e0e
+----------------------------------------
+Cherry-picking b5f288dc299e8f2f369a64562af1a16b3e0b0c4a
+[main aa9aac2b30eb] bpf: btf: Ensure t->type == 0 for BTF_KIND_FWD
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Sat Jun 2 09:06:51 2018 -0700
+ 1 file changed, 20 insertions(+), 1 deletion(-)
+Successfully cherry-picked b5f288dc299e8f2f369a64562af1a16b3e0b0c4a
+----------------------------------------
+Cherry-picking 1a6aedc470b8b8de016e7335b929a191325cb28c
+[main a0dcfbac3e46] bpf: btf: Fix bitfield extraction for big endian
+ Author: Okash Khawaja <osk@fb.com>
+ Date: Tue Jul 10 14:33:07 2018 -0700
+ 1 file changed, 13 insertions(+), 17 deletions(-)
+Successfully cherry-picked 1a6aedc470b8b8de016e7335b929a191325cb28c
+----------------------------------------
+Cherry-picking 2553505c4ffbd9561e27d3298ece55c63fae7d92
+[main 47f21708bfe9] bpf: btf: Clean up BTF_INT_BITS() in uapi btf.h
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Thu Jul 19 22:14:31 2018 -0700
+ 2 files changed, 11 insertions(+), 7 deletions(-)
+Successfully cherry-picked 2553505c4ffbd9561e27d3298ece55c63fae7d92
+----------------------------------------
+Cherry-picking 01a23fe67dedc8630b1581855c8f09b5c25f1e35
+[main 4c0d24450716] bpf: btf: Ensure the member->offset is in the right order
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Fri Jul 20 17:38:37 2018 -0700
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+Successfully cherry-picked 01a23fe67dedc8630b1581855c8f09b5c25f1e35
+----------------------------------------
+Cherry-picking 09d924bc93b3d1c63dc215fc58aeb417f7103d06
+Auto-merging net/core/filter.c
+[main d1b7e6abba7f] bpf: fix bpf_skb_load_bytes_relative pkt length check
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Sat Jul 28 00:17:56 2018 +0200
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+Successfully cherry-picked 09d924bc93b3d1c63dc215fc58aeb417f7103d06
+----------------------------------------
+Cherry-picking fdd2f9a15e9d33237f5a3e873bde87ee813321fa
+[main f12df8430be8] bpf: btf: Fix end boundary calculation for type section
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Wed Sep 12 10:29:11 2018 -0700
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked fdd2f9a15e9d33237f5a3e873bde87ee813321fa
+----------------------------------------
+Cherry-picking c78002d2dd27ab7ebacedfbda0efda1e38e753bb
+[main e7bccdc8b4de] bpf: btf: Fix a missing check bug
+ Author: Wenwen Wang <wang6495@umn.edu>
+ Date: Sun Oct 7 15:23:15 2018 -0500
+ 1 file changed, 3 insertions(+)
+Successfully cherry-picked c78002d2dd27ab7ebacedfbda0efda1e38e753bb
+----------------------------------------
+Cherry-picking 6ee1b466c23f6ef581d00951edac8fd040448aad
+[main b1006c54a73c] bpf, btf: fix a missing check bug in btf_parse
+ Author: Martin Lau <kafai@fb.com>
+ Date: Wed Oct 24 20:42:25 2018 +0000
+ 1 file changed, 25 insertions(+), 30 deletions(-)
+Successfully cherry-picked 6ee1b466c23f6ef581d00951edac8fd040448aad
+----------------------------------------
+Cherry-picking fdac286ac872b0e06513bc44cd9eb83fe8e93e87
+[main ffc6f58be857] bpf: fix BTF limits
+ Author: Alexei Starovoitov <ast@kernel.org>
+ Date: Tue Sep 17 10:45:38 2019 -0700
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked fdac286ac872b0e06513bc44cd9eb83fe8e93e87
+----------------------------------------
+Cherry-picking 3135604a13ae32b75c0f8ef2872f65355ba77a31
+[main 5eb81aa10428] bpf/btf: Fix BTF verification of enum members in struct/union
+ Author: Yoshiki Komachi <komachi.yoshiki@gmail.com>
+ Date: Tue Mar 10 16:32:29 2020 +0900
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 3135604a13ae32b75c0f8ef2872f65355ba77a31
+----------------------------------------
+Cherry-picking 9fb64d251dfbb52aa2ea9ca91ef4c86da202ba0f
+[main 6558fa75bc51] bpf: btf: fix truncated last_member_type_id in btf_struct_resolve
+ Author: Lorenz Bauer <oss@lmb.io>
+ Date: Sat Sep 10 11:01:20 2022 +0000
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 9fb64d251dfbb52aa2ea9ca91ef4c86da202ba0f
+----------------------------------------
+Cherry-picking 69ca9bb3e69d15541e24bf00748b57f0b8ccf8bb
+Auto-merging kernel/sys.c
+[main 50bee4d47ba5] syscall: Fake uname to 4.19 also for netbpfload
+ Author: Tim Zimmermann <tim@linux4.de>
+ Date: Mon Jan 1 08:54:37 2024 +0100
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 69ca9bb3e69d15541e24bf00748b57f0b8ccf8bb
+----------------------------------------
+Cherry-picking 7d4120614babb01f1ec5fbcdf5faba3d325a366f
+Auto-merging drivers/net/ethernet/intel/ixgbe/ixgbe_main.c
+Auto-merging drivers/net/tun.c
+Auto-merging include/linux/netdevice.h
+Auto-merging net/core/dev.c
+CONFLICT (content): Merge conflict in net/core/dev.c
+error: could not apply 7d4120614bab... BACKPORT: net: bpf: rename ndo_xdp to ndo_bpf
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 7d4120614babb01f1ec5fbcdf5faba3d325a366f
+Auto-resolving conflicts by accepting incoming changes...
