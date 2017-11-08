@@ -334,9 +334,9 @@ static int ncsi_rsp_handler_svf(struct ncsi_request *nr)
 	struct ncsi_rsp_pkt *rsp;
 	struct ncsi_dev_priv *ndp = nr->ndp;
 	struct ncsi_channel *nc;
-	struct ncsi_channel_vlan_filter *ncf;
-	unsigned long flags;
-	void *bitmap;
+	struct ncsi_channel_filter *ncf;
+	unsigned short vlan;
+	int ret;
 
 	/* Find the package and channel */
 	rsp = (struct ncsi_rsp_pkt *)skb_network_header(nr->rsp);
@@ -346,23 +346,22 @@ static int ncsi_rsp_handler_svf(struct ncsi_request *nr)
 		return -ENODEV;
 
 	cmd = (struct ncsi_cmd_svf_pkt *)skb_network_header(nr->cmd);
-	ncf = &nc->vlan_filter;
-	if (cmd->index > ncf->n_vids)
+	ncf = nc->filters[NCSI_FILTER_VLAN];
+	if (!ncf)
+		return -ENOENT;
+	if (cmd->index >= ncf->total)
 		return -ERANGE;
 
-	/* Add or remove the VLAN filter. Remember HW indexes from 1 */
-	spin_lock_irqsave(&nc->lock, flags);
-	bitmap = &ncf->bitmap;
+	/* Add or remove the VLAN filter */
 	if (!(cmd->enable & 0x1)) {
-		if (test_and_clear_bit(cmd->index - 1, bitmap))
-			ncf->vids[cmd->index - 1] = 0;
+		/* HW indexes from 1 */
+		ret = ncsi_remove_filter(nc, NCSI_FILTER_VLAN, cmd->index - 1);
 	} else {
-		set_bit(cmd->index - 1, bitmap);
-		ncf->vids[cmd->index - 1] = ntohs(cmd->vlan);
+		vlan = ntohs(cmd->vlan);
+		ret = ncsi_add_filter(nc, NCSI_FILTER_VLAN, &vlan);
 	}
-	spin_unlock_irqrestore(&nc->lock, flags);
 
-	return 0;
+	return ret;
 }
 
 static int ncsi_rsp_handler_ev(struct ncsi_request *nr)
@@ -423,12 +422,8 @@ static int ncsi_rsp_handler_sma(struct ncsi_request *nr)
 	struct ncsi_rsp_pkt *rsp;
 	struct ncsi_dev_priv *ndp = nr->ndp;
 	struct ncsi_channel *nc;
-	struct ncsi_channel_mac_filter *ncf;
-	unsigned long flags;
+	struct ncsi_channel_filter *ncf;
 	void *bitmap;
-	bool enabled;
-	int index;
-
 
 	/* Find the package and channel */
 	rsp = (struct ncsi_rsp_pkt *)skb_network_header(nr->rsp);
@@ -441,23 +436,31 @@ static int ncsi_rsp_handler_sma(struct ncsi_request *nr)
 	 * isn't supported yet.
 	 */
 	cmd = (struct ncsi_cmd_sma_pkt *)skb_network_header(nr->cmd);
-	enabled = cmd->at_e & 0x1;
-	ncf = &nc->mac_filter;
-	bitmap = &ncf->bitmap;
+	switch (cmd->at_e >> 5) {
+	case 0x0:	/* UC address */
+		ncf = nc->filters[NCSI_FILTER_UC];
+		break;
+	case 0x1:	/* MC address */
+		ncf = nc->filters[NCSI_FILTER_MC];
+		break;
+	default:
+		return -EINVAL;
+	}
 
-	if (cmd->index > ncf->n_uc + ncf->n_mc + ncf->n_mixed)
+	/* Sanity check on the filter */
+	if (!ncf)
+		return -ENOENT;
+	else if (cmd->index >= ncf->total)
 		return -ERANGE;
 
-	index = (cmd->index - 1) * ETH_ALEN;
-	spin_lock_irqsave(&nc->lock, flags);
-	if (enabled) {
-		set_bit(cmd->index - 1, bitmap);
-		memcpy(&ncf->addrs[index], cmd->mac, ETH_ALEN);
+	bitmap = &ncf->bitmap;
+	if (cmd->at_e & 0x1) {
+		set_bit(cmd->index, bitmap);
+		memcpy(ncf->data + 6 * cmd->index, cmd->mac, 6);
 	} else {
-		clear_bit(cmd->index - 1, bitmap);
-		memset(&ncf->addrs[index], 0, ETH_ALEN);
+		clear_bit(cmd->index, bitmap);
+		memset(ncf->data + 6 * cmd->index, 0, 6);
 	}
-	spin_unlock_irqrestore(&nc->lock, flags);
 
 	return 0;
 }
@@ -628,7 +631,9 @@ static int ncsi_rsp_handler_gc(struct ncsi_request *nr)
 	struct ncsi_rsp_gc_pkt *rsp;
 	struct ncsi_dev_priv *ndp = nr->ndp;
 	struct ncsi_channel *nc;
-	size_t size;
+	struct ncsi_channel_filter *ncf;
+	size_t size, entry_size;
+	int cnt, i;
 
 	/* Find the channel */
 	rsp = (struct ncsi_rsp_gc_pkt *)skb_network_header(nr->rsp);
@@ -650,40 +655,64 @@ static int ncsi_rsp_handler_gc(struct ncsi_request *nr)
 	nc->caps[NCSI_CAP_VLAN].cap = rsp->vlan_mode &
 				      NCSI_CAP_VLAN_MASK;
 
-	size = (rsp->uc_cnt + rsp->mc_cnt + rsp->mixed_cnt) * ETH_ALEN;
-	nc->mac_filter.addrs = kzalloc(size, GFP_ATOMIC);
-	if (!nc->mac_filter.addrs)
-		return -ENOMEM;
-	nc->mac_filter.n_uc = rsp->uc_cnt;
-	nc->mac_filter.n_mc = rsp->mc_cnt;
-	nc->mac_filter.n_mixed = rsp->mixed_cnt;
+	/* Build filters */
+	for (i = 0; i < NCSI_FILTER_MAX; i++) {
+		switch (i) {
+		case NCSI_FILTER_VLAN:
+			cnt = rsp->vlan_cnt;
+			entry_size = 2;
+			break;
+		case NCSI_FILTER_MIXED:
+			cnt = rsp->mixed_cnt;
+			entry_size = 6;
+			break;
+		case NCSI_FILTER_MC:
+			cnt = rsp->mc_cnt;
+			entry_size = 6;
+			break;
+		case NCSI_FILTER_UC:
+			cnt = rsp->uc_cnt;
+			entry_size = 6;
+			break;
+		default:
+			continue;
+		}
 
-	nc->vlan_filter.vids = kcalloc(rsp->vlan_cnt,
-				       sizeof(*nc->vlan_filter.vids),
-				       GFP_ATOMIC);
-	if (!nc->vlan_filter.vids)
-		return -ENOMEM;
-	/* Set VLAN filters active so they are cleared in the first
-	 * configuration state
-	 */
-	nc->vlan_filter.bitmap = U64_MAX;
-	nc->vlan_filter.n_vids = rsp->vlan_cnt;
+		if (!cnt || nc->filters[i])
+			continue;
+
+		size = sizeof(*ncf) + cnt * entry_size;
+		ncf = kzalloc(size, GFP_ATOMIC);
+		if (!ncf) {
+			pr_warn("%s: Cannot alloc filter table (%d)\n",
+				__func__, i);
+			return -ENOMEM;
+		}
+
+		ncf->index = i;
+		ncf->total = cnt;
+		if (i == NCSI_FILTER_VLAN) {
+			/* Set VLAN filters active so they are cleared in
+			 * first configuration state
+			 */
+			ncf->bitmap = U64_MAX;
+		} else {
+			ncf->bitmap = 0x0ul;
+		}
+		nc->filters[i] = ncf;
+	}
 
 	return 0;
 }
 
 static int ncsi_rsp_handler_gp(struct ncsi_request *nr)
 {
-	struct ncsi_channel_vlan_filter *ncvf;
-	struct ncsi_channel_mac_filter *ncmf;
-	struct ncsi_dev_priv *ndp = nr->ndp;
 	struct ncsi_rsp_gp_pkt *rsp;
+	struct ncsi_dev_priv *ndp = nr->ndp;
 	struct ncsi_channel *nc;
-	unsigned short enable;
+	unsigned short enable, vlan;
 	unsigned char *pdata;
-	unsigned long flags;
-	void *bitmap;
-	int i;
+	int table, i;
 
 	/* Find the channel */
 	rsp = (struct ncsi_rsp_gp_pkt *)skb_network_header(nr->rsp);
@@ -717,33 +746,36 @@ static int ncsi_rsp_handler_gp(struct ncsi_request *nr)
 	/* MAC addresses filter table */
 	pdata = (unsigned char *)rsp + 48;
 	enable = rsp->mac_enable;
-	ncmf = &nc->mac_filter;
-	spin_lock_irqsave(&nc->lock, flags);
-	bitmap = &ncmf->bitmap;
 	for (i = 0; i < rsp->mac_cnt; i++, pdata += 6) {
-		if (!(enable & (0x1 << i)))
-			clear_bit(i, bitmap);
+		if (i >= (nc->filters[NCSI_FILTER_UC]->total +
+			  nc->filters[NCSI_FILTER_MC]->total))
+			table = NCSI_FILTER_MIXED;
+		else if (i >= nc->filters[NCSI_FILTER_UC]->total)
+			table = NCSI_FILTER_MC;
 		else
-			set_bit(i, bitmap);
+			table = NCSI_FILTER_UC;
 
-		memcpy(&ncmf->addrs[i * ETH_ALEN], pdata, ETH_ALEN);
+		if (!(enable & (0x1 << i)))
+			continue;
+
+		if (ncsi_find_filter(nc, table, pdata) >= 0)
+			continue;
+
+		ncsi_add_filter(nc, table, pdata);
 	}
-	spin_unlock_irqrestore(&nc->lock, flags);
 
 	/* VLAN filter table */
 	enable = ntohs(rsp->vlan_enable);
-	ncvf = &nc->vlan_filter;
-	bitmap = &ncvf->bitmap;
-	spin_lock_irqsave(&nc->lock, flags);
 	for (i = 0; i < rsp->vlan_cnt; i++, pdata += 2) {
 		if (!(enable & (0x1 << i)))
-			clear_bit(i, bitmap);
-		else
-			set_bit(i, bitmap);
+			continue;
 
-		ncvf->vids[i] = ntohs(*(__be16 *)pdata);
+		vlan = ntohs(*(__be16 *)pdata);
+		if (ncsi_find_filter(nc, NCSI_FILTER_VLAN, &vlan) >= 0)
+			continue;
+
+		ncsi_add_filter(nc, NCSI_FILTER_VLAN, &vlan);
 	}
-	spin_unlock_irqrestore(&nc->lock, flags);
 
 	return 0;
 }

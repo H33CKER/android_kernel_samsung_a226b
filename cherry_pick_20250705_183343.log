@@ -57878,3 +57878,28 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of e49c41505ae866321388e21d540663d01ae9333e
 Auto-resolving conflicts by accepting incoming changes...
+[main 63a2e2d7d29d] net/ncsi: Make local function ncsi_get_filter() static
+ Author: Wei Yongjun <weiyongjun1@huawei.com>
+ Date: Thu Nov 2 11:15:28 2017 +0000
+ 2 files changed, 878 insertions(+), 130 deletions(-)
+----------------------------------------
+Cherry-picking f013e2b4c8c66e38e2417e8e2b03a54fdf26437b
+Auto-merging net/ncsi/ncsi-rsp.c
+[main e14ef9c97d54] net/ncsi: Improve general state logging
+ Author: Samuel Mendoza-Jonas <sam@mendozajonas.com>
+ Date: Wed Nov 8 16:30:44 2017 +1100
+ 1 file changed, 57 insertions(+), 19 deletions(-)
+Successfully cherry-picked f013e2b4c8c66e38e2417e8e2b03a54fdf26437b
+----------------------------------------
+Cherry-picking 32e0a805c060b38ca4665bd91ff32ce34433f66f
+Auto-merging net/ncsi/ncsi-rsp.c
+CONFLICT (content): Merge conflict in net/ncsi/ncsi-rsp.c
+error: could not apply 32e0a805c060... net/ncsi: Don't return error on normal response
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 32e0a805c060b38ca4665bd91ff32ce34433f66f
+Auto-resolving conflicts by accepting incoming changes...
