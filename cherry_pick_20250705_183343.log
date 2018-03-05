@@ -57903,3 +57903,22 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 32e0a805c060b38ca4665bd91ff32ce34433f66f
 Auto-resolving conflicts by accepting incoming changes...
+[main da0dd07a1730] net/ncsi: Don't return error on normal response
+ Author: Samuel Mendoza-Jonas <sam@mendozajonas.com>
+ Date: Wed Nov 8 16:30:45 2017 +1100
+ 2 files changed, 130 insertions(+), 73 deletions(-)
+----------------------------------------
+Cherry-picking f4e7325060fe9d7f6b223fee7d2a28bf91ba8cb9
+Auto-merging net/ncsi/internal.h
+CONFLICT (content): Merge conflict in net/ncsi/internal.h
+Auto-merging net/ncsi/ncsi-netlink.c
+CONFLICT (add/add): Merge conflict in net/ncsi/ncsi-netlink.c
+error: could not apply f4e7325060fe... net/ncsi: Add generic netlink family
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of f4e7325060fe9d7f6b223fee7d2a28bf91ba8cb9
+Auto-resolving conflicts by accepting incoming changes...
