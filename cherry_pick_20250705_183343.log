@@ -29961,3 +29961,20 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of a1fe39636e6fb60c8fe7e3b87a32cb561585399f
 Auto-resolving conflicts by accepting incoming changes...
+[main 2a41b4c6e3dd] powerpc/64s: flush L1D after user accesses
+ Author: Nicholas Piggin <npiggin@gmail.com>
+ Date: Fri Nov 20 10:52:44 2020 +1100
+ 13 files changed, 215 insertions(+), 60 deletions(-)
+----------------------------------------
+Cherry-picking 9d63ef79a92de6c541f6794fa66e4530e6501ae5
+Auto-merging drivers/i2c/busses/i2c-imx.c
+CONFLICT (content): Merge conflict in drivers/i2c/busses/i2c-imx.c
+error: could not apply 9d63ef79a92d... i2c: imx: use clk notifier for rate changes
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 9d63ef79a92de6c541f6794fa66e4530e6501ae5
+Auto-resolving conflicts by accepting incoming changes...
