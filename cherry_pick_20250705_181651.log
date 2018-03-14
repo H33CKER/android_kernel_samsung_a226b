@@ -4040,3 +4040,159 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 751deef5de35a497a3ea007e0953889ba1123a97
 Auto-resolving conflicts by accepting incoming changes...
+[main 3b854421e343] tg3: Fix soft lockup when tg3_reset_task() fails.
+ Author: Michael Chan <michael.chan@broadcom.com>
+ Date: Thu Sep 3 14:28:54 2020 -0400
+ 2 files changed, 18567 insertions(+)
+ create mode 100644 drivers/net/ethernet/broadcom/tg3.c
+----------------------------------------
+Cherry-picking deb5efa71e6d51405beaee4715536be5541f6cb4
+Auto-merging drivers/iommu/intel_irq_remapping.c
+[main cdf999912d78] iommu/vt-d: Serialize IOMMU GCMD register modifications
+ Author: Lu Baolu <baolu.lu@linux.intel.com>
+ Date: Fri Aug 28 08:06:15 2020 +0800
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+Successfully cherry-picked deb5efa71e6d51405beaee4715536be5541f6cb4
+----------------------------------------
+Cherry-picking 905f44ec6e0eaca2c73b2a92b02c0731530384ca
+[main 01f24e4202e8] thermal: ti-soc-thermal: Fix bogus thermal shutdowns for omap4430
+ Author: Tony Lindgren <tony@atomide.com>
+ Date: Mon Jul 6 11:33:38 2020 -0700
+ 2 files changed, 19 insertions(+), 14 deletions(-)
+Successfully cherry-picked 905f44ec6e0eaca2c73b2a92b02c0731530384ca
+----------------------------------------
+Cherry-picking 5ace0847122fb22f18a20fb7809339cb3d789f01
+Auto-merging include/linux/log2.h
+[main d0eb4ee96026] include/linux/log2.h: add missing () around n in roundup_pow_of_two()
+ Author: Jason Gunthorpe <jgg@nvidia.com>
+ Date: Fri Sep 4 16:36:19 2020 -0700
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 5ace0847122fb22f18a20fb7809339cb3d789f01
+----------------------------------------
+Cherry-picking 72de52916de69cce0b3f85198e656252ce236a81
+Auto-merging fs/btrfs/volumes.c
+[main 76d1d9e14e0f] btrfs: drop path before adding new uuid tree entry
+ Author: Josef Bacik <josef@toxicpanda.com>
+ Date: Mon Aug 10 11:42:26 2020 -0400
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 72de52916de69cce0b3f85198e656252ce236a81
+----------------------------------------
+Cherry-picking e23efd6da3a660168a053122b6e26917231bfcdf
+[main 37f7a801fcc3] btrfs: Remove redundant extent_buffer_get in get_old_root
+ Author: Nikolay Borisov <nborisov@suse.com>
+ Date: Wed Aug 15 18:26:53 2018 +0300
+ 1 file changed, 1 deletion(-)
+Successfully cherry-picked e23efd6da3a660168a053122b6e26917231bfcdf
+----------------------------------------
+Cherry-picking 8ab36da262fd529059045e41b4d5af387bae833f
+[main 0ca16528f91b] btrfs: Remove extraneous extent_buffer_get from tree_mod_log_rewind
+ Author: Nikolay Borisov <nborisov@suse.com>
+ Date: Wed Aug 15 18:26:54 2018 +0300
+ 1 file changed, 1 deletion(-)
+Successfully cherry-picked 8ab36da262fd529059045e41b4d5af387bae833f
+----------------------------------------
+Cherry-picking a6d4a84d569f49affa53959889d2b9acf885a97c
+[main cea4c836168d] btrfs: set the lockdep class for log tree extent buffers
+ Author: Josef Bacik <josef@toxicpanda.com>
+ Date: Mon Aug 10 11:42:31 2020 -0400
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+Successfully cherry-picked a6d4a84d569f49affa53959889d2b9acf885a97c
+----------------------------------------
+Cherry-picking f4abfb03a387c0991dc9de3a5512fa84ab0663b9
+Auto-merging include/linux/uaccess.h
+[main 4dfd98b2329d] uaccess: Add non-pagefault user-space read functions
+ Author: Masami Hiramatsu <mhiramat@kernel.org>
+ Date: Wed May 15 14:38:18 2019 +0900
+ 2 files changed, 130 insertions(+), 6 deletions(-)
+Successfully cherry-picked f4abfb03a387c0991dc9de3a5512fa84ab0663b9
+----------------------------------------
+Cherry-picking 6aa022755fa184cde7c1af02f45357d7f483b1f7
+Auto-merging include/linux/uaccess.h
+[main 4421c044a4f2] uaccess: Add non-pagefault user-space write function
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Sat Nov 2 00:17:56 2019 +0100
+ 2 files changed, 53 insertions(+), 4 deletions(-)
+Successfully cherry-picked 6aa022755fa184cde7c1af02f45357d7f483b1f7
+----------------------------------------
+Cherry-picking 80c8b74ce1fdf384c6ae43654501d9979802e8e1
+Auto-merging fs/btrfs/extent_io.c
+[main 5069f7ef7513] btrfs: fix potential deadlock in the search ioctl
+ Author: Josef Bacik <josef@toxicpanda.com>
+ Date: Mon Aug 10 11:42:27 2020 -0400
+ 3 files changed, 27 insertions(+), 14 deletions(-)
+Successfully cherry-picked 80c8b74ce1fdf384c6ae43654501d9979802e8e1
+----------------------------------------
+Cherry-picking 23e13527eccaf43004e8c19952e53a2a4424fbaa
+Auto-merging drivers/net/usb/qmi_wwan.c
+[main e7c3ea67136f] net: usb: qmi_wwan: add Telit 0x1050 composition
+ Author: Daniele Palmas <dnlplm@gmail.com>
+ Date: Wed Oct 9 11:07:18 2019 +0200
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 23e13527eccaf43004e8c19952e53a2a4424fbaa
+----------------------------------------
+Cherry-picking 30b0f412f39597da5fbff0d1d3a97c063c33fe4a
+Auto-merging drivers/net/usb/qmi_wwan.c
+[main d6bfc013d482] usb: qmi_wwan: add D-Link DWM-222 A2 device ID
+ Author: Rogan Dawes <rogan@dawes.za.net>
+ Date: Wed Jul 17 11:14:33 2019 +0200
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 30b0f412f39597da5fbff0d1d3a97c063c33fe4a
+----------------------------------------
+Cherry-picking e8e9ec81957f61d458b5de0b324a18e0311cc7e2
+[main 504293165ef6] ALSA: ca0106: fix error code handling
+ Author: Tong Zhang <ztong0001@gmail.com>
+ Date: Mon Aug 24 18:45:41 2020 -0400
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked e8e9ec81957f61d458b5de0b324a18e0311cc7e2
+----------------------------------------
+Cherry-picking e463aed86fcec8135b31112a1729b1c03d785a07
+[main 2e35a27227c4] ALSA: pcm: oss: Remove superfluous WARN_ON() for mulaw sanity check
+ Author: Takashi Iwai <tiwai@suse.de>
+ Date: Tue Sep 1 15:18:02 2020 +0200
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked e463aed86fcec8135b31112a1729b1c03d785a07
+----------------------------------------
+Cherry-picking 805aebc26ccafd3542c71aa7c99d0a9fa40dc8c5
+Auto-merging sound/pci/hda/patch_hdmi.c
+[main 62ae4e839a46] ALSA: hda/hdmi: always check pin power status in i915 pin fixup
+ Author: Kai Vehmanen <kai.vehmanen@linux.intel.com>
+ Date: Wed Aug 26 20:03:06 2020 +0300
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 805aebc26ccafd3542c71aa7c99d0a9fa40dc8c5
+----------------------------------------
+Cherry-picking 955bd0c0a7ad72a65ce44c714d114b9a8eca9974
+[main 7965782808c5] ALSA: firewire-digi00x: exclude Avid Adrenaline from detection
+ Author: Takashi Sakamoto <o-takashi@sakamocchi.jp>
+ Date: Sun Aug 23 16:55:45 2020 +0900
+ 1 file changed, 5 insertions(+)
+Successfully cherry-picked 955bd0c0a7ad72a65ce44c714d114b9a8eca9974
+----------------------------------------
+Cherry-picking b9857b87ffcc8069b6e02a03f954e1cd4b899e68
+[main 1ef98761fcaf] affs: fix basic permission bits to actually work
+ Author: Max Staudt <max@enpas.org>
+ Date: Thu Aug 27 17:49:00 2020 +0200
+ 3 files changed, 62 insertions(+), 7 deletions(-)
+Successfully cherry-picked b9857b87ffcc8069b6e02a03f954e1cd4b899e68
+----------------------------------------
+Cherry-picking b7aae706e84ac271f755a574d6a18fc9b42e8e8f
+[main c6ca25b12174] block: allow for_each_bvec to support zero len bvec
+ Author: Ming Lei <ming.lei@redhat.com>
+ Date: Mon Aug 17 18:00:55 2020 +0800
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+Successfully cherry-picked b7aae706e84ac271f755a574d6a18fc9b42e8e8f
+----------------------------------------
+Cherry-picking 9f086cac518138da215f0b30db80776678142474
+Auto-merging drivers/block/zram/zram_drv.h
+CONFLICT (content): Merge conflict in drivers/block/zram/zram_drv.h
+Auto-merging drivers/nvdimm/nd.h
+Auto-merging include/linux/blkdev.h
+Auto-merging include/linux/device-mapper.h
+error: could not apply 9f086cac5181... block: Move SECTOR_SIZE and SECTOR_SHIFT definitions into <linux/blkdev.h>
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 9f086cac518138da215f0b30db80776678142474
+Auto-resolving conflicts by accepting incoming changes...
