@@ -10235,3 +10235,39 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of fc08b8e9d8928a21faf7fb5d31fc5d3f26a910a8
 Auto-resolving conflicts by accepting incoming changes...
+[main df67998440fe] net: Update window_clamp if SOCK_RCVBUF is set
+ Author: Mao Wenan <wenan.mao@linux.alibaba.com>
+ Date: Tue Nov 10 08:16:31 2020 +0800
+ 3 files changed, 121 insertions(+), 4 deletions(-)
+----------------------------------------
+Cherry-picking a16f026330fee92e434267dc35c21bceaa7fd573
+Auto-merging drivers/char/random.c
+Auto-merging kernel/time/timer.c
+[main e01f933f5dfa] random32: make prandom_u32() output unpredictable
+ Author: George Spelvin <lkml@sdf.org>
+ Date: Sun Aug 9 06:57:44 2020 +0000
+ 4 files changed, 317 insertions(+), 189 deletions(-)
+Successfully cherry-picked a16f026330fee92e434267dc35c21bceaa7fd573
+----------------------------------------
+Cherry-picking 0bd4eaf991f8896dae5b1a305544d726515a3e85
+[main 56cdfd55d79e] x86/speculation: Allow IBPB to be conditionally enabled on CPUs with always-on STIBP
+ Author: Anand K Mistry <amistry@google.com>
+ Date: Thu Nov 5 16:33:04 2020 +1100
+ 1 file changed, 33 insertions(+), 19 deletions(-)
+Successfully cherry-picked 0bd4eaf991f8896dae5b1a305544d726515a3e85
+----------------------------------------
+Cherry-picking 3cd62032ff7d99509286e3594df93e95248ff037
+Auto-merging arch/x86/events/intel/pt.c
+CONFLICT (content): Merge conflict in arch/x86/events/intel/pt.c
+Auto-merging include/linux/perf_event.h
+Auto-merging kernel/events/core.c
+CONFLICT (content): Merge conflict in kernel/events/core.c
+error: could not apply 3cd62032ff7d... perf/core: Fix bad use of igrab()
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 3cd62032ff7d99509286e3594df93e95248ff037
+Auto-resolving conflicts by accepting incoming changes...
