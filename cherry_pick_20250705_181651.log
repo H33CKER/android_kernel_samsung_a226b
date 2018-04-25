@@ -28668,3 +28668,1449 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of eee65a1282369eedfcbb664d0c865a0ef3eb7017
 Auto-resolving conflicts by accepting incoming changes...
+[main de857d76c6fc] net: split out functions related to registering inflight socket files
+ Author: Jens Axboe <axboe@kernel.dk>
+ Date: Fri Feb 8 09:01:44 2019 -0700
+ 3 files changed, 64 insertions(+), 52 deletions(-)
+----------------------------------------
+Cherry-picking af3e2b87b36100c28feb71da52c57293c4540690
+[main e738711bec3b] af_unix: fix garbage collect vs MSG_PEEK
+ Author: Miklos Szeredi <mszeredi@redhat.com>
+ Date: Wed Jul 28 14:47:20 2021 +0200
+ 1 file changed, 49 insertions(+), 2 deletions(-)
+Successfully cherry-picked af3e2b87b36100c28feb71da52c57293c4540690
+----------------------------------------
+Cherry-picking ad7ae9e2a39cd7d0052b721a0dd6f2da0cf99dfc
+Auto-merging kernel/workqueue.c
+[main 46568c371240] workqueue: fix UAF in pwq_unbound_release_workfn()
+ Author: Yang Yingliang <yangyingliang@huawei.com>
+ Date: Wed Jul 14 17:19:33 2021 +0800
+ 1 file changed, 13 insertions(+), 7 deletions(-)
+Successfully cherry-picked ad7ae9e2a39cd7d0052b721a0dd6f2da0cf99dfc
+----------------------------------------
+Cherry-picking 4d565fccc539334f563e41e1a05eb5e8e4e2281a
+[main 4e78ee4c1066] net/802/mrp: fix memleak in mrp_request_join()
+ Author: Yang Yingliang <yangyingliang@huawei.com>
+ Date: Tue Jun 29 15:22:37 2021 +0800
+ 1 file changed, 14 insertions(+)
+Successfully cherry-picked 4d565fccc539334f563e41e1a05eb5e8e4e2281a
+----------------------------------------
+Cherry-picking 0b38430491af6580e219237ad65945128d185fe9
+[main 8a49c06c09f5] net/802/garp: fix memleak in garp_request_join()
+ Author: Yang Yingliang <yangyingliang@huawei.com>
+ Date: Tue Jun 29 19:53:28 2021 +0800
+ 1 file changed, 14 insertions(+)
+Successfully cherry-picked 0b38430491af6580e219237ad65945128d185fe9
+----------------------------------------
+Cherry-picking e7d0a2680cce2bdf82a9da44dbb72b9b960052ab
+Auto-merging net/core/sock.c
+[main c952dc9c163d] net: annotate data race around sk_ll_usec
+ Author: Eric Dumazet <edumazet@google.com>
+ Date: Tue Jun 29 07:12:45 2021 -0700
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked e7d0a2680cce2bdf82a9da44dbb72b9b960052ab
+----------------------------------------
+Cherry-picking 43b699d129a08fc0bd6735b6d25686712a9bdabb
+Auto-merging include/net/sctp/constants.h
+Auto-merging net/sctp/protocol.c
+[main 99fe79baafee] sctp: move 198 addresses from unusable to private scope
+ Author: Xin Long <lucien.xin@gmail.com>
+ Date: Tue Jun 29 23:34:08 2021 -0400
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+Successfully cherry-picked 43b699d129a08fc0bd6735b6d25686712a9bdabb
+----------------------------------------
+Cherry-picking 6004efa7047db44270788a79536993d34ecc506c
+[main a1a7129f0b24] hfs: add missing clean-up in hfs_fill_super
+ Author: Desmond Cheong Zhi Xi <desmondcheongzx@gmail.com>
+ Date: Wed Jul 14 21:27:01 2021 -0700
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+Successfully cherry-picked 6004efa7047db44270788a79536993d34ecc506c
+----------------------------------------
+Cherry-picking 7aefafe48668176fe9511f3472d491538f1027fb
+[main 9f9a602dc189] hfs: fix high memory mapping in hfs_bnode_read
+ Author: Desmond Cheong Zhi Xi <desmondcheongzx@gmail.com>
+ Date: Wed Jul 14 21:27:05 2021 -0700
+ 1 file changed, 20 insertions(+), 5 deletions(-)
+Successfully cherry-picked 7aefafe48668176fe9511f3472d491538f1027fb
+----------------------------------------
+Cherry-picking b744d40f21bd4565169522be484752cddad8e894
+[main e4cbf1b3fa05] hfs: add lock nesting notation to hfs_find_init
+ Author: Desmond Cheong Zhi Xi <desmondcheongzx@gmail.com>
+ Date: Wed Jul 14 21:27:08 2021 -0700
+ 2 files changed, 20 insertions(+), 1 deletion(-)
+Successfully cherry-picked b744d40f21bd4565169522be484752cddad8e894
+----------------------------------------
+Cherry-picking 316f526ab0adf88b704cdd33258df1e48933331a
+[main 69406b0f9ced] ARM: dts: versatile: Fix up interrupt controller node names
+ Author: Sudeep Holla <sudeep.holla@arm.com>
+ Date: Thu Jul 1 14:21:18 2021 +0100
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+Successfully cherry-picked 316f526ab0adf88b704cdd33258df1e48933331a
+----------------------------------------
+Cherry-picking 2789bc090f4a2caef0cceb3f108867de608bb23a
+Auto-merging include/linux/virtio_net.h
+[main 13c8215ebef1] virtio_net: Do not pull payload in skb->head
+ Author: Eric Dumazet <edumazet@google.com>
+ Date: Fri Apr 2 06:26:02 2021 -0700
+ 2 files changed, 16 insertions(+), 8 deletions(-)
+Successfully cherry-picked 2789bc090f4a2caef0cceb3f108867de608bb23a
+----------------------------------------
+Cherry-picking b2ac545efdb8ad273df23be34aa6644067ecd3b6
+Auto-merging include/linux/skbuff.h
+Auto-merging net/core/dev.c
+[main f02717a952ef] gro: ensure frag0 meets IP header alignment
+ Author: Eric Dumazet <edumazet@google.com>
+ Date: Tue Apr 13 05:41:35 2021 -0700
+ 2 files changed, 11 insertions(+), 1 deletion(-)
+Successfully cherry-picked b2ac545efdb8ad273df23be34aa6644067ecd3b6
+----------------------------------------
+Cherry-picking 5e6cfccad137cf184e78689fbe414d09db062618
+[main 3855370fb33e] x86/kvm: fix vcpu-id indexed array sizes
+ Author: Juergen Gross <jgross@suse.com>
+ Date: Thu Jul 1 17:41:00 2021 +0200
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+Successfully cherry-picked 5e6cfccad137cf184e78689fbe414d09db062618
+----------------------------------------
+Cherry-picking 97bb422f071e573677218966affdf6c3a115fc6e
+[main a60373727de6] ocfs2: fix zero out valid data
+ Author: Junxiao Bi <junxiao.bi@oracle.com>
+ Date: Thu Jul 29 14:53:38 2021 -0700
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked 97bb422f071e573677218966affdf6c3a115fc6e
+----------------------------------------
+Cherry-picking bed629679a3c3fb75fca40ca33c07fee72c98550
+[main 6af7aa675175] ocfs2: issue zeroout to EOF blocks
+ Author: Junxiao Bi <junxiao.bi@oracle.com>
+ Date: Thu Jul 29 14:53:41 2021 -0700
+ 1 file changed, 60 insertions(+), 39 deletions(-)
+Successfully cherry-picked bed629679a3c3fb75fca40ca33c07fee72c98550
+----------------------------------------
+Cherry-picking 919c9a0b3cbbb4b67fce7c066c8278db67349bc4
+[main 499ef99bc9eb] can: raw: raw_setsockopt(): fix raw_rcv panic for sock UAF
+ Author: Ziyang Xuan <william.xuanziyang@huawei.com>
+ Date: Thu Jul 22 15:08:19 2021 +0800
+ 1 file changed, 18 insertions(+), 2 deletions(-)
+Successfully cherry-picked 919c9a0b3cbbb4b67fce7c066c8278db67349bc4
+----------------------------------------
+Cherry-picking 8c85c006a2bbf68ad300ce6f1ce468f3b6c97afa
+[main b531c88db90c] can: mcba_usb_start(): add missing urb->transfer_dma initialization
+ Author: Pavel Skripkin <paskripkin@gmail.com>
+ Date: Sun Jul 25 13:36:30 2021 +0300
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked 8c85c006a2bbf68ad300ce6f1ce468f3b6c97afa
+----------------------------------------
+Cherry-picking 94344109266efd6fffaae3afcdd882602407afec
+[main 546a762a532d] can: usb_8dev: fix memory leak
+ Author: Pavel Skripkin <paskripkin@gmail.com>
+ Date: Tue Jul 27 19:59:57 2021 +0300
+ 1 file changed, 13 insertions(+), 2 deletions(-)
+Successfully cherry-picked 94344109266efd6fffaae3afcdd882602407afec
+----------------------------------------
+Cherry-picking ad3f58662e82894a144e5c43a029b39e1322e785
+[main 7b196ba7aa9d] can: ems_usb: fix memory leak
+ Author: Pavel Skripkin <paskripkin@gmail.com>
+ Date: Tue Jul 27 20:00:33 2021 +0300
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+Successfully cherry-picked ad3f58662e82894a144e5c43a029b39e1322e785
+----------------------------------------
+Cherry-picking 27be2b5ce9001ebbf5fe9b3843192dc672d15080
+[main 78b6a16b3d54] can: esd_usb2: fix memory leak
+ Author: Pavel Skripkin <paskripkin@gmail.com>
+ Date: Tue Jul 27 20:00:46 2021 +0300
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+Successfully cherry-picked 27be2b5ce9001ebbf5fe9b3843192dc672d15080
+----------------------------------------
+Cherry-picking 0be68b80c323b6447c6c57a90de5108858bd9555
+[main 9d069c30af28] NIU: fix incorrect error return, missed in previous revert
+ Author: Paul Jakma <paul@jakma.org>
+ Date: Fri Jul 23 16:13:04 2021 +0100
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 0be68b80c323b6447c6c57a90de5108858bd9555
+----------------------------------------
+Cherry-picking 546b6dcf837f5ad0a34ac5be5249aa1bb4855d00
+[main 0748dc3fab5b] nfc: nfcsim: fix use after free during module unload
+ Author: Krzysztof Kozlowski <krzysztof.kozlowski@canonical.com>
+ Date: Wed Jul 28 08:49:09 2021 +0200
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+Successfully cherry-picked 546b6dcf837f5ad0a34ac5be5249aa1bb4855d00
+----------------------------------------
+Cherry-picking f51e5229c24b016567d829455d4762a5fb645a9f
+[main a9349e7cf373] x86/asm: Ensure asm/proto.h can be included stand-alone
+ Author: Jan Kiszka <jan.kiszka@siemens.com>
+ Date: Sun Apr 11 10:12:16 2021 +0200
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked f51e5229c24b016567d829455d4762a5fb645a9f
+----------------------------------------
+Cherry-picking c788a2936aecb87b7085e6826c6024099e27f9c3
+Auto-merging net/wireless/scan.c
+[main 837f71c2c571] cfg80211: Fix possible memory leak in function cfg80211_bss_update
+ Author: Nguyen Dinh Phi <phind.uet@gmail.com>
+ Date: Mon Jun 28 21:23:34 2021 +0800
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+Successfully cherry-picked c788a2936aecb87b7085e6826c6024099e27f9c3
+----------------------------------------
+Cherry-picking d5103628648e030fa8d5e7f784f771b4159195a8
+Auto-merging net/netfilter/nf_conntrack_core.c
+[main 07f1d1d33cef] netfilter: conntrack: adjust stop timestamp to real expiry value
+ Author: Florian Westphal <fw@strlen.de>
+ Date: Sun Jul 18 18:36:00 2021 +0200
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+Successfully cherry-picked d5103628648e030fa8d5e7f784f771b4159195a8
+----------------------------------------
+Cherry-picking 37fb1aa49cfa538ea5a8db660918fea5dd6ca1e2
+[main ae87ac1e9b3d] netfilter: nft_nat: allow to specify layer 4 protocol NAT only
+ Author: Pablo Neira Ayuso <pablo@netfilter.org>
+ Date: Tue Jul 20 18:22:50 2021 +0200
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Successfully cherry-picked 37fb1aa49cfa538ea5a8db660918fea5dd6ca1e2
+----------------------------------------
+Cherry-picking cf76aa1aab8089d271ea827995099a914dec7c98
+[main ee9af6600252] tipc: fix sleeping in tipc accept routine
+ Author: Hoang Le <hoang.h.le@dektech.com.au>
+ Date: Fri Jul 23 09:25:34 2021 +0700
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+Successfully cherry-picked cf76aa1aab8089d271ea827995099a914dec7c98
+----------------------------------------
+Cherry-picking 3af1c181ee75fc89678cbddc0a925386a56dceed
+[main fcf377c14720] mlx4: Fix missing error code in mlx4_load_one()
+ Author: Jiapeng Chong <jiapeng.chong@linux.alibaba.com>
+ Date: Fri Jul 23 18:36:09 2021 +0800
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 3af1c181ee75fc89678cbddc0a925386a56dceed
+----------------------------------------
+Cherry-picking f3f6b1ecb11c0b2bba73d90eeae833f120215dc2
+Auto-merging net/llc/af_llc.c
+[main a6c3800073e5] net: llc: fix skb_over_panic
+ Author: Pavel Skripkin <paskripkin@gmail.com>
+ Date: Sun Jul 25 00:11:59 2021 +0300
+ 3 files changed, 33 insertions(+), 10 deletions(-)
+Successfully cherry-picked f3f6b1ecb11c0b2bba73d90eeae833f120215dc2
+----------------------------------------
+Cherry-picking 766807b77ba14c5dfde8dd1823e637ad9a54b88a
+[main 6eb2f47b548c] net/mlx5: Fix flow table chaining
+ Author: Maor Gottlieb <maorg@nvidia.com>
+ Date: Mon Jul 26 09:20:14 2021 +0300
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+Successfully cherry-picked 766807b77ba14c5dfde8dd1823e637ad9a54b88a
+----------------------------------------
+Cherry-picking 1ad35d7d7fb3d160535b301ba0763e7ea373b062
+Auto-merging net/sctp/input.c
+[main 3508f803fcbf] sctp: fix return value check in __sctp_rcv_asconf_lookup
+ Author: Marcelo Ricardo Leitner <marcelo.leitner@gmail.com>
+ Date: Tue Jul 27 23:40:54 2021 -0300
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 1ad35d7d7fb3d160535b301ba0763e7ea373b062
+----------------------------------------
+Cherry-picking b5c7e5b95afb908d1c23ebb55709bc03c47d171f
+[main 643b57bada18] tulip: windbond-840: Fix missing pci_disable_device() in probe and remove
+ Author: Wang Hai <wanghai38@huawei.com>
+ Date: Wed Jul 28 15:43:13 2021 +0800
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+Successfully cherry-picked b5c7e5b95afb908d1c23ebb55709bc03c47d171f
+----------------------------------------
+Cherry-picking 6846170b0be30257c75901aeb7664cc1fc4477d2
+[main a881dc80f097] sis900: Fix missing pci_disable_device() in probe and remove
+ Author: Wang Hai <wanghai38@huawei.com>
+ Date: Wed Jul 28 20:11:07 2021 +0800
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+Successfully cherry-picked 6846170b0be30257c75901aeb7664cc1fc4477d2
+----------------------------------------
+Cherry-picking af3493a59fd8e493fa97ef42bb52b5017603de65
+[main 024db5e6cae1] can: hi311x: fix a signedness bug in hi3110_cmd()
+ Author: Dan Carpenter <dan.carpenter@oracle.com>
+ Date: Thu Jul 29 17:12:46 2021 +0300
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked af3493a59fd8e493fa97ef42bb52b5017603de65
+----------------------------------------
+Cherry-picking c925d063b187c02e3f9a6003f0255b3f696858e4
+[main 4780f2fe31bf] Revert "perf map: Fix dso->nsinfo refcounting"
+ Author: Arnaldo Carvalho de Melo <acme@redhat.com>
+ Date: Fri Jul 30 18:26:22 2021 -0300
+ 1 file changed, 2 deletions(-)
+Successfully cherry-picked c925d063b187c02e3f9a6003f0255b3f696858e4
+----------------------------------------
+Cherry-picking 94cb1fed447ac8d328a8b50f9583df4ce70793e2
+[main 688c153be585] Linux 4.14.242
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Wed Aug 4 12:22:17 2021 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 94cb1fed447ac8d328a8b50f9583df4ce70793e2
+----------------------------------------
+Cherry-picking bc75bb210d9d7e0e791e51cfbb17e5624f7a0d57
+[main 33bb297fd5ed] btrfs: mark compressed range uptodate only if all bio succeed
+ Author: Goldwyn Rodrigues <rgoldwyn@suse.de>
+ Date: Mon Aug 2 09:31:37 2021 -0500
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked bc75bb210d9d7e0e791e51cfbb17e5624f7a0d57
+----------------------------------------
+Cherry-picking 0e4c9ad9e10e2cde36ca5a294d7d24aa6d17e42e
+[main ad9296aff47e] regulator: rt5033: Fix n_voltages settings for BUCK and LDO
+ Author: Axel Lin <axel.lin@ingics.com>
+ Date: Sun Jun 27 16:04:18 2021 +0800
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked 0e4c9ad9e10e2cde36ca5a294d7d24aa6d17e42e
+----------------------------------------
+Cherry-picking ac1f88dcf4e96576b66a4aaa209b95104d89107c
+[main b208191f5113] r8152: Fix potential PM refcount imbalance
+ Author: Takashi Iwai <tiwai@suse.de>
+ Date: Wed Jul 14 19:00:21 2021 +0200
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked ac1f88dcf4e96576b66a4aaa209b95104d89107c
+----------------------------------------
+Cherry-picking 5bfc9b4c6e881a02bd1f9b8d566b37b09bc67433
+[main dc5a3c287d39] qed: fix possible unpaired spin_{un}lock_bh in _qed_mcp_cmd_and_union()
+ Author: Jia He <justin.he@arm.com>
+ Date: Thu Jul 15 16:08:21 2021 +0800
+ 1 file changed, 17 insertions(+), 6 deletions(-)
+Successfully cherry-picked 5bfc9b4c6e881a02bd1f9b8d566b37b09bc67433
+----------------------------------------
+Cherry-picking 9ffd10860947a812068d8774155c050949f449b7
+Auto-merging net/core/skbuff.c
+[main cdb8b4e41e9d] net: Fix zero-copy head len calculation.
+ Author: Pravin B Shelar <pshelar@ovn.org>
+ Date: Thu Jul 15 16:59:00 2021 -0700
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Successfully cherry-picked 9ffd10860947a812068d8774155c050949f449b7
+----------------------------------------
+Cherry-picking 25ef8727c5833fa99709a0186d5c3f0f12f8378a
+[main 01d0f8208bc6] Revert "Bluetooth: Shutdown controller after workqueues are flushed or cancelled"
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Thu Aug 5 20:58:57 2021 +0200
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+Successfully cherry-picked 25ef8727c5833fa99709a0186d5c3f0f12f8378a
+----------------------------------------
+Cherry-picking ac8ce7ee33c96210db4e7b3ccd9f87072d54ee51
+[main a08db8c49ddd] KVM: do not assume PTE is writable after follow_pfn
+ Author: Paolo Bonzini <pbonzini@redhat.com>
+ Date: Mon Feb 1 05:12:11 2021 -0500
+ 1 file changed, 12 insertions(+), 3 deletions(-)
+Successfully cherry-picked ac8ce7ee33c96210db4e7b3ccd9f87072d54ee51
+----------------------------------------
+Cherry-picking 46d75ff2c1beebe90e7af8887256d8f0323679e4
+[main 8784043b6512] KVM: do not allow mapping valid but non-reference-counted pages
+ Author: Nicholas Piggin <npiggin@gmail.com>
+ Date: Thu Jun 24 08:29:04 2021 -0400
+ 1 file changed, 17 insertions(+), 2 deletions(-)
+Successfully cherry-picked 46d75ff2c1beebe90e7af8887256d8f0323679e4
+----------------------------------------
+Cherry-picking ff7f4da1dcd336772772f819997d072b272581b2
+[main 0085fbf2dd87] KVM: Use kvm_pfn_t for local PFN variable in hva_to_pfn_remapped()
+ Author: Sean Christopherson <seanjc@google.com>
+ Date: Mon Feb 8 12:19:40 2021 -0800
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked ff7f4da1dcd336772772f819997d072b272581b2
+----------------------------------------
+Cherry-picking be231952c16f502b9eb128c30df674348e44b211
+[main a97b755a73ac] Revert "watchdog: iTCO_wdt: Account for rebooting on second timeout"
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Fri Aug 6 08:28:48 2021 +0200
+ 1 file changed, 3 insertions(+), 9 deletions(-)
+Successfully cherry-picked be231952c16f502b9eb128c30df674348e44b211
+----------------------------------------
+Cherry-picking f9143be0531fd361b66260ea4168e0e60368d45b
+Auto-merging drivers/spi/spi-mt65xx.c
+[main 34c46f3c1b72] spi: mediatek: Fix fifo transfer
+ Author: Guenter Roeck <linux@roeck-us.net>
+ Date: Sun Aug 1 20:00:23 2021 -0700
+ 1 file changed, 5 insertions(+), 14 deletions(-)
+Successfully cherry-picked f9143be0531fd361b66260ea4168e0e60368d45b
+----------------------------------------
+Cherry-picking 46914f96189be290174e378c6bf9ccadfdb9ca1e
+[main d618001a2163] Linux 4.14.243
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Sun Aug 8 08:53:30 2021 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 46914f96189be290174e378c6bf9ccadfdb9ca1e
+----------------------------------------
+Cherry-picking b211b2eff4c1bd8af21d3ec42d1a473b8328f5b4
+[main cc7981b26eb9] Revert "ACPICA: Fix memory leak caused by _CID repair function"
+ Author: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
+ Date: Tue Aug 3 18:14:44 2021 +0200
+ 1 file changed, 7 deletions(-)
+Successfully cherry-picked b211b2eff4c1bd8af21d3ec42d1a473b8328f5b4
+----------------------------------------
+Cherry-picking f8927c61c3e00830db135b96fb01808e303c2df8
+[main d2b48123490f] ALSA: seq: Fix racy deletion of subscriber
+ Author: Takashi Iwai <tiwai@suse.de>
+ Date: Tue Aug 3 13:43:12 2021 +0200
+ 1 file changed, 27 insertions(+), 12 deletions(-)
+Successfully cherry-picked f8927c61c3e00830db135b96fb01808e303c2df8
+----------------------------------------
+Cherry-picking a2cbb5615baa6412c49bff05294ac00e75cb2303
+[main 392e8d44ea24] clk: stm32f4: fix post divisor setup for I2S/SAI PLLs
+ Author: Dario Binacchi <dariobin@libero.it>
+ Date: Sun Jul 25 18:07:25 2021 +0200
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+Successfully cherry-picked a2cbb5615baa6412c49bff05294ac00e75cb2303
+----------------------------------------
+Cherry-picking 7d40962a25a959000f0a335927ac7437802934a1
+[main a99f05ffb5fb] omap5-board-common: remove not physically existing vdds_1v8_main fixed-regulator
+ Author: H. Nikolaus Schaller <hns@goldelico.com>
+ Date: Thu Jul 1 16:00:22 2021 +0200
+ 1 file changed, 1 insertion(+), 8 deletions(-)
+Successfully cherry-picked 7d40962a25a959000f0a335927ac7437802934a1
+----------------------------------------
+Cherry-picking f27bc704e2e04f6d600342572834a090ea5e73cc
+[main 793aaf5aa50b] scsi: sr: Return correct event when media event code is 3
+ Author: Li Manyi <limanyi@uniontech.com>
+ Date: Mon Jul 26 19:49:13 2021 +0800
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked f27bc704e2e04f6d600342572834a090ea5e73cc
+----------------------------------------
+Cherry-picking 9e38c674ed71a7a05f9c35660951d0956134b6b2
+[main 46293ff85bc2] media: videobuf2-core: dequeue if start_streaming fails
+ Author: Hans Verkuil <hverkuil-cisco@xs4all.nl>
+ Date: Wed Jun 30 09:58:23 2021 +0200
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+Successfully cherry-picked 9e38c674ed71a7a05f9c35660951d0956134b6b2
+----------------------------------------
+Cherry-picking 4c9ce62020ef23754e8cb6f19dce83c5e76a7c1d
+[main cb4e319cd0d2] net: natsemi: Fix missing pci_disable_device() in probe and remove
+ Author: Wang Hai <wanghai38@huawei.com>
+ Date: Sat Jul 31 14:38:01 2021 +0800
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+Successfully cherry-picked 4c9ce62020ef23754e8cb6f19dce83c5e76a7c1d
+----------------------------------------
+Cherry-picking f97f6b83e5403b52f085918fa27e8915fec09c4e
+[main 46538fad3aea] nfp: update ethtool reporting of pauseframe control
+ Author: Fei Qin <fei.qin@corigine.com>
+ Date: Tue Aug 3 12:39:11 2021 +0200
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked f97f6b83e5403b52f085918fa27e8915fec09c4e
+----------------------------------------
+Cherry-picking 2a465b741e7dafaa216c0e11a0fa06d24252bd0f
+[main c99e6c8d46b4] mips: Fix non-POSIX regexp
+ Author: H. Nikolaus Schaller <hns@goldelico.com>
+ Date: Thu Jul 8 10:57:10 2021 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 2a465b741e7dafaa216c0e11a0fa06d24252bd0f
+----------------------------------------
+Cherry-picking f34f46ca638ef743596cc57d12313aa92531c5ed
+[main 180131749eff] bnx2x: fix an error code in bnx2x_nic_load()
+ Author: Dan Carpenter <dan.carpenter@oracle.com>
+ Date: Thu Aug 5 13:38:26 2021 +0300
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked f34f46ca638ef743596cc57d12313aa92531c5ed
+----------------------------------------
+Cherry-picking 961f330f9a905e629953b49d681e4b04864e74de
+[main d5fdb197b3ef] net: pegasus: fix uninit-value in get_interrupt_interval
+ Author: Pavel Skripkin <paskripkin@gmail.com>
+ Date: Wed Aug 4 17:30:05 2021 +0300
+ 1 file changed, 11 insertions(+), 3 deletions(-)
+Successfully cherry-picked 961f330f9a905e629953b49d681e4b04864e74de
+----------------------------------------
+Cherry-picking 26c54e7122a0a40073ddc8b733173c38e72afe14
+[main 9628db3ebcd6] net: fec: fix use-after-free in fec_drv_remove
+ Author: Pavel Skripkin <paskripkin@gmail.com>
+ Date: Wed Aug 4 18:51:51 2021 +0300
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 26c54e7122a0a40073ddc8b733173c38e72afe14
+----------------------------------------
+Cherry-picking 0efd5912b7e753b799500af5b8ab0a42b10f0594
+[main e25137633792] net: vxge: fix use-after-free in vxge_device_unregister
+ Author: Pavel Skripkin <paskripkin@gmail.com>
+ Date: Wed Aug 4 18:52:20 2021 +0300
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Successfully cherry-picked 0efd5912b7e753b799500af5b8ab0a42b10f0594
+----------------------------------------
+Cherry-picking 0782c8c7f80c9dd457acdfe16fd0f339f0e73093
+Auto-merging net/bluetooth/hci_sock.c
+[main addf74ff86be] Bluetooth: defer cleanup of resources in hci_unregister_dev()
+ Author: Tetsuo Handa <penguin-kernel@i-love.sakura.ne.jp>
+ Date: Wed Aug 4 19:26:56 2021 +0900
+ 4 files changed, 45 insertions(+), 24 deletions(-)
+Successfully cherry-picked 0782c8c7f80c9dd457acdfe16fd0f339f0e73093
+----------------------------------------
+Cherry-picking fd82bbdacd86e901aa9a684c8b8826db62c3b88f
+[main ace0f1191bce] USB: usbtmc: Fix RCU stall warning
+ Author: Qiang.zhang <qiang.zhang@windriver.com>
+ Date: Fri Jul 23 08:43:34 2021 +0800
+ 1 file changed, 1 insertion(+), 7 deletions(-)
+Successfully cherry-picked fd82bbdacd86e901aa9a684c8b8826db62c3b88f
+----------------------------------------
+Cherry-picking f2fa3deb27538ed18e0b9f1d1df7f38207807a6f
+[main ad398b3f2ddc] USB: serial: option: add Telit FD980 composition 0x1056
+ Author: Daniele Palmas <dnlplm@gmail.com>
+ Date: Tue Aug 3 21:47:11 2021 +0200
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked f2fa3deb27538ed18e0b9f1d1df7f38207807a6f
+----------------------------------------
+Cherry-picking 89b2dafd273b5b16e0669578591ac66aca2f1aff
+[main 544a0daf6da4] USB: serial: ch341: fix character loss at high transfer rates
+ Author: Willy Tarreau <w@1wt.eu>
+ Date: Sat Jul 24 17:27:39 2021 +0200
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 89b2dafd273b5b16e0669578591ac66aca2f1aff
+----------------------------------------
+Cherry-picking 4eaa17d99d2dc689aa34e15155db2bcfc0265d4c
+[main 9895d43edb0a] USB: serial: ftdi_sio: add device ID for Auto-M3 OP-COM v2
+ Author: David Bauer <mail@david-bauer.net>
+ Date: Thu Aug 5 01:25:22 2021 +0200
+ 2 files changed, 4 insertions(+)
+Successfully cherry-picked 4eaa17d99d2dc689aa34e15155db2bcfc0265d4c
+----------------------------------------
+Cherry-picking 2ef2d25cd49211f42be6b36b2d7203e82799ca06
+Auto-merging drivers/usb/gadget/function/f_hid.c
+[main 18649aa86e70] usb: gadget: f_hid: added GET_IDLE and SET_IDLE handlers
+ Author: Maxim Devaev <mdevaev@gmail.com>
+ Date: Wed Jul 21 21:03:51 2021 +0300
+ 1 file changed, 18 insertions(+)
+Successfully cherry-picked 2ef2d25cd49211f42be6b36b2d7203e82799ca06
+----------------------------------------
+Cherry-picking 9d25976d99a0dae8d32ac7685a34def12671c9d2
+Auto-merging drivers/usb/gadget/function/f_hid.c
+[main 52ec5bcf7d37] usb: gadget: f_hid: fixed NULL pointer dereference
+ Author: Phil Elwell <phil@raspberrypi.com>
+ Date: Fri Jul 23 18:59:30 2021 +0300
+ 1 file changed, 20 insertions(+), 6 deletions(-)
+Successfully cherry-picked 9d25976d99a0dae8d32ac7685a34def12671c9d2
+----------------------------------------
+Cherry-picking ad6a82a4f4f94fe82ff218bed5927deb35e08d17
+Auto-merging drivers/usb/gadget/function/f_hid.c
+[main 5de3b4c8df5a] usb: gadget: f_hid: idle uses the highest byte for duration
+ Author: Maxim Devaev <mdevaev@gmail.com>
+ Date: Tue Jul 27 21:58:00 2021 +0300
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked ad6a82a4f4f94fe82ff218bed5927deb35e08d17
+----------------------------------------
+Cherry-picking 18bbb1d1654c65afdb0ca408e102544efeaec853
+[main 9969903edc06] usb: otg-fsm: Fix hrtimer list corruption
+ Author: Dmitry Osipenko <digetx@gmail.com>
+ Date: Sat Jul 17 21:21:27 2021 +0300
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+Successfully cherry-picked 18bbb1d1654c65afdb0ca408e102544efeaec853
+----------------------------------------
+Cherry-picking 7f192414da9c538a5ae3316e8d42f2e385ab9974
+[main 08fab9e80c94] scripts/tracing: fix the bug that can't parse raw_trace_func
+ Author: Hui Su <suhui@zeku.com>
+ Date: Fri Jun 11 10:21:07 2021 +0800
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Successfully cherry-picked 7f192414da9c538a5ae3316e8d42f2e385ab9974
+----------------------------------------
+Cherry-picking 15b70fa9f9fc705ec5f87f0f2321849fb045e466
+[main dc9739fe289e] staging: rtl8723bs: Fix a resource leak in sd_int_dpc
+ Author: Xiangyang Zhang <xyz.sun.ok@gmail.com>
+ Date: Mon Jun 28 23:22:39 2021 +0800
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked 15b70fa9f9fc705ec5f87f0f2321849fb045e466
+----------------------------------------
+Cherry-picking 78eea0f6607df1f97645b03d13a1e6a3b9376b38
+[main 8de957fcd15d] media: rtl28xxu: fix zero-length control request
+ Author: Johan Hovold <johan@kernel.org>
+ Date: Wed Jun 23 10:45:21 2021 +0200
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+Successfully cherry-picked 78eea0f6607df1f97645b03d13a1e6a3b9376b38
+----------------------------------------
+Cherry-picking d346d23d68ed0adcbddb23e8342aaa5c470b929a
+Auto-merging fs/pipe.c
+[main d9418aca6ad2] pipe: increase minimum default pipe size to 2 pages
+ Author: Alex Xu (Hello71) <alex_y_xu@yahoo.ca>
+ Date: Thu Aug 5 10:40:47 2021 -0400
+ 1 file changed, 17 insertions(+), 2 deletions(-)
+Successfully cherry-picked d346d23d68ed0adcbddb23e8342aaa5c470b929a
+----------------------------------------
+Cherry-picking db97d2f3720a8f0fd1bee4d0c0f904a8eb58ffaa
+[main 03b6000b1864] ext4: fix potential htree corruption when growing large_dir directories
+ Author: Theodore Ts'o <tytso@mit.edu>
+ Date: Wed Aug 4 14:23:55 2021 -0400
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked db97d2f3720a8f0fd1bee4d0c0f904a8eb58ffaa
+----------------------------------------
+Cherry-picking a4e8e60e3fc1fff59ac4e6461fcd8d6f62389cb1
+Auto-merging drivers/tty/serial/8250/8250_port.c
+[main cfcd54053ce1] serial: 8250: Mask out floating 16/32-bit bus bits
+ Author: Maciej W. Rozycki <macro@orcam.me.uk>
+ Date: Sat Jun 26 06:11:05 2021 +0200
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+Successfully cherry-picked a4e8e60e3fc1fff59ac4e6461fcd8d6f62389cb1
+----------------------------------------
+Cherry-picking 1ff630a6b8853e68a2b3f18eee5ee305e5a010aa
+[main 44f496f84207] MIPS: Malta: Do not byte-swap accesses to the CBUS UART
+ Author: Maciej W. Rozycki <macro@orcam.me.uk>
+ Date: Sat Jun 26 06:11:13 2021 +0200
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 1ff630a6b8853e68a2b3f18eee5ee305e5a010aa
+----------------------------------------
+Cherry-picking 75a8a40d881102973124ad38bd9c1f79f9ab2331
+[main 55cccee2a270] pcmcia: i82092: fix a null pointer dereference bug
+ Author: Zheyu Ma <zheyuma97@gmail.com>
+ Date: Tue Jun 22 07:11:31 2021 +0000
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 75a8a40d881102973124ad38bd9c1f79f9ab2331
+----------------------------------------
+Cherry-picking ff056817560d72363b463ddac27822dc8c121280
+[main 162da9e21352] spi: meson-spicc: fix memory leak in meson_spicc_remove
+ Author: Dongliang Mu <mudongliangabcd@gmail.com>
+ Date: Tue Jul 20 18:01:16 2021 +0800
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked ff056817560d72363b463ddac27822dc8c121280
+----------------------------------------
+Cherry-picking 254f73e235eec6d278fec6eb463225bbfc75b617
+[main 4a000fb52631] perf/x86/amd: Don't touch the AMD64_EVENTSEL_HOSTONLY bit inside the guest
+ Author: Like Xu <likexu@tencent.com>
+ Date: Mon Aug 2 15:08:50 2021 +0800
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 254f73e235eec6d278fec6eb463225bbfc75b617
+----------------------------------------
+Cherry-picking da2861064fd338e114f80928ea81bf803bfe8075
+Auto-merging drivers/net/usb/qmi_wwan.c
+[main 1ffb89f71419] qmi_wwan: add network device usage statistics for qmimux devices
+ Author: Reinhard Speyerer <rspmn@arcor.de>
+ Date: Wed Jun 12 19:02:46 2019 +0200
+ 1 file changed, 71 insertions(+), 5 deletions(-)
+Successfully cherry-picked da2861064fd338e114f80928ea81bf803bfe8075
+----------------------------------------
+Cherry-picking 010594adafd2d6d07354a64c2cb219a8e9d6aee8
+[main e37b275f8f2c] libata: fix ata_pio_sector for CONFIG_HIGHMEM
+ Author: Christoph Hellwig <hch@lst.de>
+ Date: Fri Jul 9 15:02:37 2021 +0200
+ 1 file changed, 27 insertions(+), 8 deletions(-)
+Successfully cherry-picked 010594adafd2d6d07354a64c2cb219a8e9d6aee8
+----------------------------------------
+Cherry-picking 3593093803ebd092f53f75d48428f51d36444833
+[main 9cc884364ea7] reiserfs: add check for root_inode in reiserfs_fill_super
+ Author: Yu Kuai <yukuai3@huawei.com>
+ Date: Fri Jul 2 12:07:43 2021 +0800
+ 1 file changed, 8 insertions(+)
+Successfully cherry-picked 3593093803ebd092f53f75d48428f51d36444833
+----------------------------------------
+Cherry-picking 7dc28a8a10cac76df8d2400b8bfcf3b2dfd732e1
+[main 546efa16c576] reiserfs: check directory items on read from disk
+ Author: Shreyansh Chouhan <chouhan.shreyansh630@gmail.com>
+ Date: Fri Jul 9 20:59:29 2021 +0530
+ 1 file changed, 26 insertions(+), 5 deletions(-)
+Successfully cherry-picked 7dc28a8a10cac76df8d2400b8bfcf3b2dfd732e1
+----------------------------------------
+Cherry-picking 56893b8fe3a4cb1ee93a67218d777617a07f513e
+[main 57a6d9df7fad] alpha: Send stop IPI to send to online CPUs
+ Author: Prarit Bhargava <prarit@redhat.com>
+ Date: Tue Jan 5 10:16:27 2021 -0500
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 56893b8fe3a4cb1ee93a67218d777617a07f513e
+----------------------------------------
+Cherry-picking 7fdd390a344d19aae6689f64824c905ea30984a7
+[main bafb1a0de05f] net/qla3xxx: fix schedule while atomic in ql_wait_for_drvr_lock and ql_adapter_reset
+ Author: Letu Ren <fantasquex@gmail.com>
+ Date: Sun Jul 25 21:45:12 2021 +0800
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Successfully cherry-picked 7fdd390a344d19aae6689f64824c905ea30984a7
+----------------------------------------
+Cherry-picking 6589c9cdc7b9c57ccd3b91470c2a273f65a8eafa
+Auto-merging drivers/usb/host/ehci-pci.c
+[main 58dcf22c034a] USB:ehci:fix Kunpeng920 ehci hardware problem
+ Author: Longfang Liu <liulongfang@huawei.com>
+ Date: Fri Apr 9 16:48:01 2021 +0800
+ 1 file changed, 3 insertions(+)
+Successfully cherry-picked 6589c9cdc7b9c57ccd3b91470c2a273f65a8eafa
+----------------------------------------
+Cherry-picking f2fa74800da1aa01fb4e12fbe90f8632293cabf3
+Auto-merging drivers/net/ppp/ppp_generic.c
+[main d96717c1573e] ppp: Fix generating ppp unit id when ifname is not specified
+ Author: Pali Rohár <pali@kernel.org>
+ Date: Sat Aug 7 18:00:50 2021 +0200
+ 1 file changed, 15 insertions(+), 4 deletions(-)
+Successfully cherry-picked f2fa74800da1aa01fb4e12fbe90f8632293cabf3
+----------------------------------------
+Cherry-picking 517b875dfbf58f0c6c9e32dc90f5cf42d71a42ce
+Auto-merging fs/namespace.c
+[main ece32e3d1671] ovl: prevent private clone if bind mount is not allowed
+ Author: Miklos Szeredi <mszeredi@redhat.com>
+ Date: Mon Aug 9 10:19:47 2021 +0200
+ 1 file changed, 28 insertions(+), 14 deletions(-)
+Successfully cherry-picked 517b875dfbf58f0c6c9e32dc90f5cf42d71a42ce
+----------------------------------------
+Cherry-picking 1994eacac7af52da86e4b0cb6ae61621bef7393f
+[main 246de8a3c238] net: xilinx_emaclite: Do not print real IOMEM pointer
+ Author: YueHaibing <yuehaibing@huawei.com>
+ Date: Wed May 19 10:47:04 2021 +0800
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+Successfully cherry-picked 1994eacac7af52da86e4b0cb6ae61621bef7393f
+----------------------------------------
+Cherry-picking 162b95d01320370b80cb2d5724cea4ae538ac740
+[main 7b5a0f92d7e1] Linux 4.14.244
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Sun Aug 15 13:03:33 2021 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 162b95d01320370b80cb2d5724cea4ae538ac740
+----------------------------------------
+Cherry-picking 4a3f87be666756022382e16e67e68e67c0d6921a
+Auto-merging drivers/iio/humidity/hdc100x.c
+[main caf5b689d136] iio: humidity: hdc100x: Add margin to the conversion time
+ Author: Chris Lesiak <chris.lesiak@licor.com>
+ Date: Mon Jun 14 09:18:20 2021 -0500
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+Successfully cherry-picked 4a3f87be666756022382e16e67e68e67c0d6921a
+----------------------------------------
+Cherry-picking 6b13aec1ff29b30f404053eee55fca13d0c10540
+[main b9f6fd4e24bd] iio: adc: Fix incorrect exit of for-loop
+ Author: Colin Ian King <colin.king@canonical.com>
+ Date: Fri Jul 30 08:16:51 2021 +0100
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked 6b13aec1ff29b30f404053eee55fca13d0c10540
+----------------------------------------
+Cherry-picking a13c9a954a784c93804f83b70ab4a756b99d5380
+[main 8f73201949ec] ASoC: intel: atom: Fix reference to PCM buffer address
+ Author: Takashi Iwai <tiwai@suse.de>
+ Date: Wed Jul 28 13:23:50 2021 +0200
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+Successfully cherry-picked a13c9a954a784c93804f83b70ab4a756b99d5380
+----------------------------------------
+Cherry-picking 6360224854bf1e4aa6ff57bec8f150e297728cca
+[main d2b4c63d3058] i2c: dev: zero out array used for i2c reads from userspace
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Thu Jul 29 16:35:32 2021 +0200
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+Successfully cherry-picked 6360224854bf1e4aa6ff57bec8f150e297728cca
+----------------------------------------
+Cherry-picking c32db9cf82f701dafefa3f7e9654c54aac907736
+Auto-merging drivers/acpi/nfit/core.c
+[main 6df45b9dd647] ACPI: NFIT: Fix support for virtual SPA ranges
+ Author: Dan Williams <dan.j.williams@intel.com>
+ Date: Wed Aug 11 11:53:37 2021 -0700
+ 1 file changed, 3 insertions(+)
+Successfully cherry-picked c32db9cf82f701dafefa3f7e9654c54aac907736
+----------------------------------------
+Cherry-picking f0b7f47951600af138a28b64cd8232e10ea7c687
+[main 2f965eedbd80] ASoC: cs42l42: Correct definition of ADC Volume control
+ Author: Richard Fitzgerald <rf@opensource.cirrus.com>
+ Date: Thu Jul 29 18:09:27 2021 +0100
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+Successfully cherry-picked f0b7f47951600af138a28b64cd8232e10ea7c687
+----------------------------------------
+Cherry-picking 84708766c543fabd5d986adc9098a0e483d8aa10
+[main 88d3296e1ca3] ASoC: cs42l42: Don't allow SND_SOC_DAIFMT_LEFT_J
+ Author: Richard Fitzgerald <rf@opensource.cirrus.com>
+ Date: Thu Jul 29 18:09:28 2021 +0100
+ 1 file changed, 1 deletion(-)
+Successfully cherry-picked 84708766c543fabd5d986adc9098a0e483d8aa10
+----------------------------------------
+Cherry-picking 75ce995fd897d544b017fa3410f18822626143de
+[main 00d03deb937b] ASoC: cs42l42: Fix inversion of ADC Notch Switch control
+ Author: Richard Fitzgerald <rf@opensource.cirrus.com>
+ Date: Tue Aug 3 17:08:33 2021 +0100
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 75ce995fd897d544b017fa3410f18822626143de
+----------------------------------------
+Cherry-picking 7a4c268b6df0d3eb8c0c8bbcc9238beb452b327f
+[main 50f11d3d6c98] ASoC: cs42l42: Remove duplicate control for WNF filter frequency
+ Author: Richard Fitzgerald <rf@opensource.cirrus.com>
+ Date: Tue Aug 3 17:08:34 2021 +0100
+ 1 file changed, 10 deletions(-)
+Successfully cherry-picked 7a4c268b6df0d3eb8c0c8bbcc9238beb452b327f
+----------------------------------------
+Cherry-picking d06a8ce79e7e20099a3974c3fd1c3e47d29ebc39
+[main cd98608fb2f0] net: dsa: mt7530: add the missing RxUnicast MIB counter
+ Author: DENG Qingfang <dqfext@gmail.com>
+ Date: Fri Aug 6 12:05:27 2021 +0800
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked d06a8ce79e7e20099a3974c3fd1c3e47d29ebc39
+----------------------------------------
+Cherry-picking d0ba3f1f582ecad702514dbf374b7984d04272de
+Auto-merging drivers/net/ppp/ppp_generic.c
+[main d4529ee14091] ppp: Fix generating ifname when empty IFLA_IFNAME is specified
+ Author: Pali Rohár <pali@kernel.org>
+ Date: Sat Aug 7 15:27:03 2021 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked d0ba3f1f582ecad702514dbf374b7984d04272de
+----------------------------------------
+Cherry-picking 0ef55cb32d04d6e8ed9336400db45c87aafc94cd
+[main 01c9c0669759] psample: Add a fwd declaration for skbuff
+ Author: Roi Dayan <roid@nvidia.com>
+ Date: Sun Aug 8 09:52:42 2021 +0300
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked 0ef55cb32d04d6e8ed9336400db45c87aafc94cd
+----------------------------------------
+Cherry-picking a0d5422c673a0992ec48e6285c3bc97b0acf92e4
+[main 8f3dc2c8ba67] net: Fix memory leak in ieee802154_raw_deliver
+ Author: Takeshi Misawa <jeliantsurux@gmail.com>
+ Date: Thu Aug 5 16:54:14 2021 +0900
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+Successfully cherry-picked a0d5422c673a0992ec48e6285c3bc97b0acf92e4
+----------------------------------------
+Cherry-picking b123e6b2886fc9bae952119d945cc6424cfa56f4
+[main 8bba9dcea7ca] net: bridge: fix memleak in br_add_if()
+ Author: Yang Yingliang <yangyingliang@huawei.com>
+ Date: Mon Aug 9 21:20:23 2021 +0800
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked b123e6b2886fc9bae952119d945cc6424cfa56f4
+----------------------------------------
+Cherry-picking e0f5a8ed1c9eeb6c30acf41e5ccd79ceb61bbe2b
+[main 8ab94fb61247] tcp_bbr: fix u32 wrap bug in round logic if bbr_init() called after 2B packets
+ Author: Neal Cardwell <ncardwell@google.com>
+ Date: Tue Aug 10 22:40:56 2021 -0400
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked e0f5a8ed1c9eeb6c30acf41e5ccd79ceb61bbe2b
+----------------------------------------
+Cherry-picking 47501793183e28578338ee4f32936d99e28a6bc1
+[main d3fb3bc0761d] xen/events: Fix race in set_evtchn_to_irq
+ Author: Maximilian Heyne <mheyne@amazon.de>
+ Date: Thu Aug 12 13:09:27 2021 +0000
+ 1 file changed, 14 insertions(+), 6 deletions(-)
+Successfully cherry-picked 47501793183e28578338ee4f32936d99e28a6bc1
+----------------------------------------
+Cherry-picking 8dc6941d5b991d605999c8ec01d46d51d6afc55e
+[main cd2df567f766] vsock/virtio: avoid potential deadlock when vsock device remove
+ Author: Longpeng(Mike) <longpeng2@huawei.com>
+ Date: Thu Aug 12 13:30:56 2021 +0800
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+Successfully cherry-picked 8dc6941d5b991d605999c8ec01d46d51d6afc55e
+----------------------------------------
+Cherry-picking 8f26208084a933d19c407bdacdb1f9a6c75a0ef3
+[main e0a7e931d49c] powerpc/kprobes: Fix kprobe Oops happens in booke
+ Author: Pu Lehui <pulehui@huawei.com>
+ Date: Mon Aug 9 10:36:58 2021 +0800
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 8f26208084a933d19c407bdacdb1f9a6c75a0ef3
+----------------------------------------
+Cherry-picking 33c2c00aa112ff5543b9f8157697cf2f110724f3
+[main 5526fb6554b5] x86/tools: Fix objdump version check again
+ Author: Randy Dunlap <rdunlap@infradead.org>
+ Date: Fri Jul 30 17:01:46 2021 -0700
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 33c2c00aa112ff5543b9f8157697cf2f110724f3
+----------------------------------------
+Cherry-picking a9cedbba7e86250f56cad2571ed6c9388d35cb0c
+[main 4e9dad4f8303] x86/resctrl: Fix default monitoring groups reporting
+ Author: Babu Moger <Babu.Moger@amd.com>
+ Date: Mon Aug 2 14:38:58 2021 -0500
+ 1 file changed, 13 insertions(+), 14 deletions(-)
+Successfully cherry-picked a9cedbba7e86250f56cad2571ed6c9388d35cb0c
+----------------------------------------
+Cherry-picking a7e5343678758a55e4942a44c4260cf509ee5874
+[main 75ee5cc39cce] PCI/MSI: Enable and mask MSI-X early
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Thu Jul 29 23:51:40 2021 +0200
+ 1 file changed, 15 insertions(+), 13 deletions(-)
+Successfully cherry-picked a7e5343678758a55e4942a44c4260cf509ee5874
+----------------------------------------
+Cherry-picking a4e854548a5bfcbacbec69561b775cb392ecfa39
+[main 0e8140aa1996] PCI/MSI: Do not set invalid bits in MSI mask
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Thu Jul 29 23:51:44 2021 +0200
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Successfully cherry-picked a4e854548a5bfcbacbec69561b775cb392ecfa39
+----------------------------------------
+Cherry-picking aacbb0d7d13c510cd72e31e4e36159ae59707ebd
+[main ba6c1925f6e9] PCI/MSI: Correct misleading comments
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Thu Jul 29 23:51:45 2021 +0200
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+Successfully cherry-picked aacbb0d7d13c510cd72e31e4e36159ae59707ebd
+----------------------------------------
+Cherry-picking e45820c3d25fb02521a9618b0d31d98b655f0db1
+[main f00ee73c87bb] PCI/MSI: Use msi_mask_irq() in pci_msi_shutdown()
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Thu Jul 29 23:51:46 2021 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked e45820c3d25fb02521a9618b0d31d98b655f0db1
+----------------------------------------
+Cherry-picking dd3df556f9cbb60e968b74dd6d33196ff9e2092a
+Auto-merging include/linux/device.h
+[main 5349fb9f2830] PCI/MSI: Protect msi_desc::masked for multi-MSI
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Thu Jul 29 23:51:47 2021 +0200
+ 4 files changed, 13 insertions(+), 10 deletions(-)
+Successfully cherry-picked dd3df556f9cbb60e968b74dd6d33196ff9e2092a
+----------------------------------------
+Cherry-picking e1d5e8a561baaafed6e35d72a6ad53d248580d6c
+[main ec3ba7f8c8fa] PCI/MSI: Mask all unused MSI-X entries
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Thu Jul 29 23:51:41 2021 +0200
+ 1 file changed, 28 insertions(+), 12 deletions(-)
+Successfully cherry-picked e1d5e8a561baaafed6e35d72a6ad53d248580d6c
+----------------------------------------
+Cherry-picking e206635e2456997a9ee5ffb0756c417925ee0574
+[main c393c453e0b5] PCI/MSI: Enforce that MSI-X table entry is masked for update
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Thu Jul 29 23:51:42 2021 +0200
+ 1 file changed, 15 insertions(+)
+Successfully cherry-picked e206635e2456997a9ee5ffb0756c417925ee0574
+----------------------------------------
+Cherry-picking 603c94b16a2efdc8cada73b5bd3c47ae35836532
+[main b6e08268ce36] PCI/MSI: Enforce MSI[X] entry updates to be visible
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Thu Jul 29 23:51:43 2021 +0200
+ 1 file changed, 5 insertions(+)
+Successfully cherry-picked 603c94b16a2efdc8cada73b5bd3c47ae35836532
+----------------------------------------
+Cherry-picking 7b77a6cec99c9d6234c100554f4929cfb1723464
+Auto-merging include/asm-generic/vmlinux.lds.h
+[main b1d6b76fc1e2] vmlinux.lds.h: Handle clang's module.{c,d}tor sections
+ Author: Nathan Chancellor <nathan@kernel.org>
+ Date: Fri Jul 30 19:31:08 2021 -0700
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 7b77a6cec99c9d6234c100554f4929cfb1723464
+----------------------------------------
+Cherry-picking 60986d1097ade1eaea48f6ad87b3a01857bf9014
+[main 2a5e45afd298] mac80211: drop data frames without key on encrypted links
+ Author: Johannes Berg <johannes.berg@intel.com>
+ Date: Thu Mar 26 15:09:42 2020 +0200
+ 4 files changed, 12 insertions(+), 3 deletions(-)
+Successfully cherry-picked 60986d1097ade1eaea48f6ad87b3a01857bf9014
+----------------------------------------
+Cherry-picking 6ed198381ed2496fbc82214108e56a441d3b0213
+[main 311f5e83f039] KVM: nSVM: always intercept VMLOAD/VMSAVE when nested (CVE-2021-3656)
+ Author: Maxim Levitsky <mlevitsk@redhat.com>
+ Date: Mon Aug 16 16:02:36 2021 +0200
+ 1 file changed, 3 insertions(+)
+Successfully cherry-picked 6ed198381ed2496fbc82214108e56a441d3b0213
+----------------------------------------
+Cherry-picking 26af47bdc45e454877f15fa7658a167bb9799681
+[main 79e2e6d9ef6a] KVM: nSVM: avoid picking up unsupported bits from L2 in int_ctl (CVE-2021-3653)
+ Author: Maxim Levitsky <mlevitsk@redhat.com>
+ Date: Mon Aug 16 16:02:29 2021 +0200
+ 2 files changed, 10 insertions(+), 7 deletions(-)
+Successfully cherry-picked 26af47bdc45e454877f15fa7658a167bb9799681
+----------------------------------------
+Cherry-picking af3da506c67bbbf6f08f1c2bd320d7e3e5de96ef
+Auto-merging arch/x86/kernel/fpu/xstate.c
+[main 40465f3dc3a4] x86/fpu: Make init_fpstate correct with optimized XSAVE
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Fri Jun 18 16:18:25 2021 +0200
+ 2 files changed, 43 insertions(+), 25 deletions(-)
+Successfully cherry-picked af3da506c67bbbf6f08f1c2bd320d7e3e5de96ef
+----------------------------------------
+Cherry-picking 2cbb22fd4b4fb4d0822d185bf5bd6d027107bfda
+[main ba63e01ce587] ath: Use safer key clearing with key cache entries
+ Author: Jouni Malinen <jouni@codeaurora.org>
+ Date: Mon Dec 14 19:21:14 2020 +0200
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+Successfully cherry-picked 2cbb22fd4b4fb4d0822d185bf5bd6d027107bfda
+----------------------------------------
+Cherry-picking 20e7de09cbdb76a38f28fb71709fae347123ddb7
+[main d813ce23d145] ath9k: Clear key cache explicitly on disabling hardware
+ Author: Jouni Malinen <jouni@codeaurora.org>
+ Date: Mon Dec 14 19:21:15 2020 +0200
+ 1 file changed, 5 insertions(+)
+Successfully cherry-picked 20e7de09cbdb76a38f28fb71709fae347123ddb7
+----------------------------------------
+Cherry-picking 995586a56748c532850870523d3a9080492b3433
+[main 43ac49c6d2ab] ath: Export ath_hw_keysetmac()
+ Author: Jouni Malinen <jouni@codeaurora.org>
+ Date: Mon Dec 14 19:21:16 2020 +0200
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+Successfully cherry-picked 995586a56748c532850870523d3a9080492b3433
+----------------------------------------
+Cherry-picking f4d4f4473129e9ee55b8562250adc53217bad529
+[main cef6c94092a2] ath: Modify ath_key_delete() to not need full key entry
+ Author: Jouni Malinen <jouni@codeaurora.org>
+ Date: Mon Dec 14 19:21:17 2020 +0200
+ 5 files changed, 22 insertions(+), 23 deletions(-)
+Successfully cherry-picked f4d4f4473129e9ee55b8562250adc53217bad529
+----------------------------------------
+Cherry-picking 61b014a8f8de02bedc56f76620170437f5638588
+[main 3b39dbdfae4f] ath9k: Postpone key cache entry deletion for TXQ frames reference it
+ Author: Jouni Malinen <jouni@codeaurora.org>
+ Date: Mon Dec 14 19:21:18 2020 +0200
+ 2 files changed, 87 insertions(+), 1 deletion(-)
+Successfully cherry-picked 61b014a8f8de02bedc56f76620170437f5638588
+----------------------------------------
+Cherry-picking 9a24b6a13ece0545f6863c177b17a19d82261f1c
+[main 5bfecac83a99] dmaengine: usb-dmac: Fix PM reference leak in usb_dmac_probe()
+ Author: Yu Kuai <yukuai3@huawei.com>
+ Date: Tue Jul 6 20:45:21 2021 +0800
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 9a24b6a13ece0545f6863c177b17a19d82261f1c
+----------------------------------------
+Cherry-picking b5df9e6026cfe9ea188dce3f6685201865ce12ba
+[main b6ce6552f859] ARM: dts: am43x-epos-evm: Reduce i2c0 bus speed for tps65218
+ Author: Dave Gerlach <d-gerlach@ti.com>
+ Date: Fri Jul 16 09:07:30 2021 -0700
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked b5df9e6026cfe9ea188dce3f6685201865ce12ba
+----------------------------------------
+Cherry-picking 8175f0826c50dd2d06be788c90da7ba74af39c82
+[main c805942ec320] dmaengine: of-dma: router_xlate to return -EPROBE_DEFER if controller is not yet available
+ Author: Peter Ujfalusi <peter.ujfalusi@gmail.com>
+ Date: Sat Jul 17 22:00:21 2021 +0300
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+Successfully cherry-picked 8175f0826c50dd2d06be788c90da7ba74af39c82
+----------------------------------------
+Cherry-picking 3b90de19790becf15df38ef900862633c91d001f
+[main b037a567a72d] scsi: megaraid_mm: Fix end of loop tests for list_for_each_entry()
+ Author: Harshvardhan Jha <harshvardhan.jha@oracle.com>
+ Date: Thu Jul 8 13:16:42 2021 +0530
+ 1 file changed, 15 insertions(+), 6 deletions(-)
+Successfully cherry-picked 3b90de19790becf15df38ef900862633c91d001f
+----------------------------------------
+Cherry-picking 19cbfd3150d721f84fe124179dd360342b6b976c
+[main 0d5ea17f4d5f] scsi: scsi_dh_rdac: Avoid crash during rdac_bus_attach()
+ Author: Ye Bin <yebin10@huawei.com>
+ Date: Wed Jan 13 14:31:03 2021 +0800
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked 19cbfd3150d721f84fe124179dd360342b6b976c
+----------------------------------------
+Cherry-picking 53fb1ce7f9f2a9477af5c48317bab74ae14d32b8
+Auto-merging drivers/scsi/scsi_scan.c
+[main a41252533d55] scsi: core: Avoid printing an error if target_alloc() returns -ENXIO
+ Author: Sreekanth Reddy <sreekanth.reddy@broadcom.com>
+ Date: Mon Jul 26 17:24:02 2021 +0530
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 53fb1ce7f9f2a9477af5c48317bab74ae14d32b8
+----------------------------------------
+Cherry-picking f7d864031e6b229e5ed2fa4bd2f2c58dd8d7ef92
+[main cffb376f0b2f] ARM: dts: nomadik: Fix up interrupt controller node names
+ Author: Sudeep Holla <sudeep.holla@arm.com>
+ Date: Sat Jun 26 02:01:03 2021 +0200
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked f7d864031e6b229e5ed2fa4bd2f2c58dd8d7ef92
+----------------------------------------
+Cherry-picking d15995a9db6fd1cba64920862e6783ae1ceb3679
+[main 95240bb8fa80] net: usb: lan78xx: don't modify phy_device state concurrently
+ Author: Ivan T. Ivanov <iivanov@suse.de>
+ Date: Wed Aug 4 11:13:39 2021 +0300
+ 1 file changed, 12 insertions(+), 4 deletions(-)
+Successfully cherry-picked d15995a9db6fd1cba64920862e6783ae1ceb3679
+----------------------------------------
+Cherry-picking 49146a68f94e5333c44c6c75650133920f420846
+[main 1cfc08f69db6] Bluetooth: hidp: use correct wait queue when removing ctrl_wait
+ Author: Ole Bjørn Midtbø <omidtbo@cisco.com>
+ Date: Sat Oct 17 13:15:44 2020 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 49146a68f94e5333c44c6c75650133920f420846
+----------------------------------------
+Cherry-picking 91cc40b9f19e7af8daf0362810fedb45dae00268
+[main a8495e539aa0] dccp: add do-while-0 stubs for dccp_pr_debug macros
+ Author: Randy Dunlap <rdunlap@infradead.org>
+ Date: Sun Aug 8 16:04:40 2021 -0700
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Successfully cherry-picked 91cc40b9f19e7af8daf0362810fedb45dae00268
+----------------------------------------
+Cherry-picking 152962a7dc236de90884e3e5950aae5dbada2a58
+Auto-merging drivers/vhost/vhost.c
+[main 32aeff32b678] vhost: Fix the calculation in vhost_overflow()
+ Author: Xie Yongji <xieyongji@bytedance.com>
+ Date: Wed Jul 28 21:07:56 2021 +0800
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+Successfully cherry-picked 152962a7dc236de90884e3e5950aae5dbada2a58
+----------------------------------------
+Cherry-picking bffcedb51ffc866a7d128ed0296989831b1a0b28
+[main e5f305936834] bnxt: don't lock the tx queue from napi poll
+ Author: Jakub Kicinski <kuba@kernel.org>
+ Date: Thu Aug 12 14:42:39 2021 -0700
+ 1 file changed, 32 insertions(+), 22 deletions(-)
+Successfully cherry-picked bffcedb51ffc866a7d128ed0296989831b1a0b28
+----------------------------------------
+Cherry-picking 5e0e782874ad03ae6d47d3e55aff378da0b51104
+[main 7caf1ca995c5] net: 6pack: fix slab-out-of-bounds in decode_data
+ Author: Pavel Skripkin <paskripkin@gmail.com>
+ Date: Fri Aug 13 18:14:33 2021 +0300
+ 1 file changed, 6 insertions(+)
+Successfully cherry-picked 5e0e782874ad03ae6d47d3e55aff378da0b51104
+----------------------------------------
+Cherry-picking c075da320684a0387d96f9bd13db822c2c58d18e
+[main c0d12f68f197] ptp_pch: Restore dependency on PCI
+ Author: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+ Date: Fri Aug 13 20:33:27 2021 +0300
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked c075da320684a0387d96f9bd13db822c2c58d18e
+----------------------------------------
+Cherry-picking 3e5f98336e91f6d4c33b38bfd20c297b41a7b8af
+[main d2fe7af2c64a] net: qlcnic: add missed unlock in qlcnic_83xx_flash_read32
+ Author: Dinghao Liu <dinghao.liu@zju.edu.cn>
+ Date: Mon Aug 16 21:14:04 2021 +0800
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Successfully cherry-picked 3e5f98336e91f6d4c33b38bfd20c297b41a7b8af
+----------------------------------------
+Cherry-picking 1757014dd55143b948144b545265bedf2dbee593
+[main cb53867cf8b4] net: mdio-mux: Don't ignore memory allocation errors
+ Author: Saravana Kannan <saravanak@google.com>
+ Date: Tue Aug 17 20:38:02 2021 -0700
+ 1 file changed, 18 insertions(+), 10 deletions(-)
+Successfully cherry-picked 1757014dd55143b948144b545265bedf2dbee593
+----------------------------------------
+Cherry-picking 22c589d08576580a8b8ee66c67207d63029ad99e
+[main 4acf09201111] net: mdio-mux: Handle -EPROBE_DEFER correctly
+ Author: Saravana Kannan <saravanak@google.com>
+ Date: Tue Aug 17 20:38:03 2021 -0700
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+Successfully cherry-picked 22c589d08576580a8b8ee66c67207d63029ad99e
+----------------------------------------
+Cherry-picking 1d89eeccf20aed4b9bcb26471903f910ce57d471
+[main e4329d99015b] mmc: dw_mmc: Fix hang on data CRC error
+ Author: Vincent Whitchurch <vincent.whitchurch@axis.com>
+ Date: Wed Jun 30 12:22:32 2021 +0200
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Successfully cherry-picked 1d89eeccf20aed4b9bcb26471903f910ce57d471
+----------------------------------------
+Cherry-picking ae870337fb0faa9e8962ae0f8454bef496c7873f
+[main 8210a876b3ee] ALSA: hda - fix the 'Capture Switch' value change notifications
+ Author: Jaroslav Kysela <perex@perex.cz>
+ Date: Wed Aug 11 18:14:41 2021 +0200
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+Successfully cherry-picked ae870337fb0faa9e8962ae0f8454bef496c7873f
+----------------------------------------
+Cherry-picking b06ed72c6d1213dadbdae0ab1e5a2a43ccb40d62
+[main ece9138d48c7] ipack: tpci200: fix many double free issues in tpci200_pci_probe
+ Author: Dongliang Mu <mudongliangabcd@gmail.com>
+ Date: Tue Aug 10 18:03:18 2021 +0800
+ 1 file changed, 18 insertions(+), 18 deletions(-)
+Successfully cherry-picked b06ed72c6d1213dadbdae0ab1e5a2a43ccb40d62
+----------------------------------------
+Cherry-picking 585015c16d69bceb074255350b4fc4fcabbc5f19
+Auto-merging fs/btrfs/inode.c
+[main 3eaa519110d1] btrfs: prevent rename2 from exchanging a subvol with a directory from different parents
+ Author: NeilBrown <neilb@suse.de>
+ Date: Fri Aug 6 14:26:24 2021 +1000
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+Successfully cherry-picked 585015c16d69bceb074255350b4fc4fcabbc5f19
+----------------------------------------
+Cherry-picking 846b0dc704552f467b2e221c9a93545006dc4bd8
+[main acde333a64b3] ASoC: intel: atom: Fix breakage for PCM buffer address setup
+ Author: Takashi Iwai <tiwai@suse.de>
+ Date: Thu Aug 19 17:29:45 2021 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 846b0dc704552f467b2e221c9a93545006dc4bd8
+----------------------------------------
+Cherry-picking 65c8fef215483892cd5dd3a4fe35ef7ae3cdb679
+Auto-merging fs/namespace.c
+[main 0aefb86fc510] locks: print a warning when mount fails due to lack of "mand" support
+ Author: Jeff Layton <jlayton@kernel.org>
+ Date: Thu Aug 15 15:21:17 2019 -0400
+ 2 files changed, 18 insertions(+), 3 deletions(-)
+Successfully cherry-picked 65c8fef215483892cd5dd3a4fe35ef7ae3cdb679
+----------------------------------------
+Cherry-picking 74ea7ecef90ae09e21c47f76b88d4d77d3069e32
+Auto-merging fs/namespace.c
+[main d02bd78f40c8] fs: warn about impending deprecation of mandatory locks
+ Author: Jeff Layton <jlayton@kernel.org>
+ Date: Fri Aug 20 09:29:50 2021 -0400
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+Successfully cherry-picked 74ea7ecef90ae09e21c47f76b88d4d77d3069e32
+----------------------------------------
+Cherry-picking 41e34d650bdfb7a5288c66efe0229b785c5b2510
+[main ed73ba95453f] netfilter: nft_exthdr: fix endianness of tcp option cast
+ Author: Sergey Marinkevich <sergey.marinkevich@eltex-co.ru>
+ Date: Sun Mar 29 19:19:14 2020 +0700
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+Successfully cherry-picked 41e34d650bdfb7a5288c66efe0229b785c5b2510
+----------------------------------------
+Cherry-picking 35c4ba160ab6133e548468bd0bd1109990dc7736
+[main 1ad1da3257ea] Linux 4.14.245
+ Author: Sasha Levin <sashal@kernel.org>
+ Date: Thu Aug 26 08:57:28 2021 -0400
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 35c4ba160ab6133e548468bd0bd1109990dc7736
+----------------------------------------
+Cherry-picking c1635eff280ee406186e96570a7ba332259f4be1
+[main cbd6b314d515] ARC: Fix CONFIG_STACKDEPOT
+ Author: Guenter Roeck <linux@roeck-us.net>
+ Date: Sat Jul 10 07:50:33 2021 -0700
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked c1635eff280ee406186e96570a7ba332259f4be1
+----------------------------------------
+Cherry-picking 251b1f1ec9fdb2285a4e41ac473d2c111f3f8780
+[main f15109648259] can: usb: esd_usb2: esd_usb2_rx_event(): fix the interchange of the CAN RX and TX error counters
+ Author: Stefan Mätje <stefan.maetje@esd.eu>
+ Date: Wed Aug 25 23:52:27 2021 +0200
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked 251b1f1ec9fdb2285a4e41ac473d2c111f3f8780
+----------------------------------------
+Cherry-picking 86363c32aed6c193ab9d6a5d909d14c5195d047f
+[main 6baaab8c6c6f] Revert "USB: serial: ch341: fix character loss at high transfer rates"
+ Author: Johan Hovold <johan@kernel.org>
+ Date: Tue Aug 24 14:19:26 2021 +0200
+ 1 file changed, 1 deletion(-)
+Successfully cherry-picked 86363c32aed6c193ab9d6a5d909d14c5195d047f
+----------------------------------------
+Cherry-picking 13078d2d20fbeab1d8b82d1bb13b10ae71116b89
+[main 16a10fb169af] USB: serial: option: add new VID/PID to support Fibocom FG150
+ Author: Zhengjun Zhang <zhangzhengjun@aicrobo.com>
+ Date: Mon Aug 9 21:35:53 2021 +0800
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked 13078d2d20fbeab1d8b82d1bb13b10ae71116b89
+----------------------------------------
+Cherry-picking 24749050f167ee4734f8b6183b6cb7403c7a09b6
+[main 6b7952bb7c6b] usb: dwc3: gadget: Fix dwc3_calc_trbs_left()
+ Author: Thinh Nguyen <Thinh.Nguyen@synopsys.com>
+ Date: Thu Aug 19 03:17:03 2021 +0200
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+Successfully cherry-picked 24749050f167ee4734f8b6183b6cb7403c7a09b6
+----------------------------------------
+Cherry-picking a58d290e7cd85aaef2500ad1daea14202d0570c7
+[main 4c4dd9043846] usb: dwc3: gadget: Stop EP0 transfers during pullup disable
+ Author: Wesley Cheng <wcheng@codeaurora.org>
+ Date: Tue Aug 24 21:28:55 2021 -0700
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+Successfully cherry-picked a58d290e7cd85aaef2500ad1daea14202d0570c7
+----------------------------------------
+Cherry-picking ba86c6a693b95cdb66459851a62c86264e251a90
+[main 79358b10ccda] IB/hfi1: Fix possible null-pointer dereference in _extend_sdma_tx_descs()
+ Author: Tuo Li <islituo@gmail.com>
+ Date: Fri Aug 6 06:30:29 2021 -0700
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+Successfully cherry-picked ba86c6a693b95cdb66459851a62c86264e251a90
+----------------------------------------
+Cherry-picking 82657502ef1f71bbe88144df7b43e55b6650a5c2
+[main aa193bc2044a] e1000e: Fix the max snoop/no-snoop latency for 10M
+ Author: Sasha Neftin <sasha.neftin@intel.com>
+ Date: Sun Jul 4 10:11:41 2021 +0300
+ 2 files changed, 16 insertions(+), 1 deletion(-)
+Successfully cherry-picked 82657502ef1f71bbe88144df7b43e55b6650a5c2
+----------------------------------------
+Cherry-picking 99279223a37b46dc7716ec4e0ed4b3e03f1cfa4c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 3927 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 99279223a37b.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_181651.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 99279223a37b46dc7716ec4e0ed4b3e03f1cfa4c
+No conflicted files found but cherry-pick failed, attempting to skip commit 99279223a37b46dc7716ec4e0ed4b3e03f1cfa4c
+----------------------------------------
+Cherry-picking 076662bfbf05637f0871c40a70828ca3da5e23a8
+[main 2e471a63e37d] xgene-v2: Fix a resource leak in the error handling path of 'xge_probe()'
+ Author: Christophe JAILLET <christophe.jaillet@wanadoo.fr>
+ Date: Sat Aug 21 09:35:23 2021 +0200
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Successfully cherry-picked 076662bfbf05637f0871c40a70828ca3da5e23a8
+----------------------------------------
+Cherry-picking 11f2193a1b4edbdd39982144fe5052add3d77636
+[main c13090a86062] net: marvell: fix MVNETA_TX_IN_PRGRS bit number
+ Author: Maxim Kiselev <bigunclemax@gmail.com>
+ Date: Fri Aug 20 18:39:51 2021 +0300
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 11f2193a1b4edbdd39982144fe5052add3d77636
+----------------------------------------
+Cherry-picking 69451fe8a877a12baa3e00f9c972a76ab0c37739
+[main 62dba1c99cb2] usb: gadget: u_audio: fix race condition on endpoint stop
+ Author: Jerome Brunet <jbrunet@baylibre.com>
+ Date: Fri Aug 27 11:29:27 2021 +0200
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+Successfully cherry-picked 69451fe8a877a12baa3e00f9c972a76ab0c37739
+----------------------------------------
+Cherry-picking b84caa3ff66c51b6437f050e69ce6cdfaa6660fa
+[main 95fc4ef5307a] opp: remove WARN when no valid OPPs remain
+ Author: Michał Mirosław <mirq-linux@rere.qmqm.pl>
+ Date: Mon Jul 26 10:30:56 2021 +0200
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+Successfully cherry-picked b84caa3ff66c51b6437f050e69ce6cdfaa6660fa
+----------------------------------------
+Cherry-picking 4fbaac3e3c2f4bcc9b8ad64c0a143aeb0a7a7f46
+[main 74672dafb903] virtio: Improve vq->broken access to avoid any compiler optimization
+ Author: Parav Pandit <parav@nvidia.com>
+ Date: Wed Jul 21 17:26:45 2021 +0300
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+Successfully cherry-picked 4fbaac3e3c2f4bcc9b8ad64c0a143aeb0a7a7f46
+----------------------------------------
+Cherry-picking c6cd6452926f19fd14f820be1e26ec52a8fee242
+[main 9ff58a32e277] vringh: Use wiov->used to check for read/write desc order
+ Author: Neeraj Upadhyay <neeraju@codeaurora.org>
+ Date: Fri Jun 25 08:55:02 2021 +0530
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked c6cd6452926f19fd14f820be1e26ec52a8fee242
+----------------------------------------
+Cherry-picking 5f9d527e1dbb72d50477bb730601793cd055a660
+Auto-merging drivers/gpu/drm/drm_ioc32.c
+[main ec47ae00c027] drm: Copy drm_wait_vblank to user before returning
+ Author: Mark Yacoub <markyacoub@google.com>
+ Date: Thu Aug 12 15:49:17 2021 -0400
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+Successfully cherry-picked 5f9d527e1dbb72d50477bb730601793cd055a660
+----------------------------------------
+Cherry-picking cdd9f1fa85bb13d9c94eadb9b008132746be913f
+[main bc058131e285] drm/nouveau/disp: power down unused DP links during init
+ Author: Ben Skeggs <bskeggs@redhat.com>
+ Date: Mon Aug 9 16:40:48 2021 +1000
+ 3 files changed, 11 insertions(+), 1 deletion(-)
+Successfully cherry-picked cdd9f1fa85bb13d9c94eadb9b008132746be913f
+----------------------------------------
+Cherry-picking a2db4a6ce8326d7ece73e207e7c14d9224fd8f87
+[main a2aed8cdc8f6] net/rds: dma_map_sg is entitled to merge entries
+ Author: Gerd Rausch <gerd.rausch@oracle.com>
+ Date: Tue Aug 17 10:04:37 2021 -0700
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked a2db4a6ce8326d7ece73e207e7c14d9224fd8f87
+----------------------------------------
+Cherry-picking 3f488313d96fc6512a4a0fe3ed56cce92cbeec94
+[main d7afe35e3107] vt_kdsetmode: extend console locking
+ Author: Linus Torvalds <torvalds@linux-foundation.org>
+ Date: Mon Aug 30 08:55:18 2021 -0700
+ 1 file changed, 7 insertions(+), 4 deletions(-)
+Successfully cherry-picked 3f488313d96fc6512a4a0fe3ed56cce92cbeec94
+----------------------------------------
+Cherry-picking 688dffd8db440196d33b801ad641036954125100
+Auto-merging drivers/video/fbdev/core/fbmem.c
+[main e76780cada80] fbmem: add margin check to fb_check_caps()
+ Author: George Kennedy <george.kennedy@oracle.com>
+ Date: Tue Jul 7 15:26:03 2020 -0400
+ 1 file changed, 4 insertions(+)
+Successfully cherry-picked 688dffd8db440196d33b801ad641036954125100
+----------------------------------------
+Cherry-picking 3d1c01e5359a8e6e0d691f7ec6b40700230f6d45
+Auto-merging arch/x86/kvm/mmu.c
+[main 40b28c707afd] KVM: x86/mmu: Treat NX as used (not reserved) for all !TDP shadow MMUs
+ Author: Sean Christopherson <seanjc@google.com>
+ Date: Tue Jun 22 10:56:47 2021 -0700
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+Successfully cherry-picked 3d1c01e5359a8e6e0d691f7ec6b40700230f6d45
+----------------------------------------
+Cherry-picking cea9e8ee3b8059bd2b36d68f1f428d165e5d13ce
+Auto-merging arch/x86/kvm/paging_tmpl.h
+[main 29f4ecae1ea8] KVM: X86: MMU: Use the correct inherited permissions to get shadow page
+ Author: Lai Jiangshan <laijs@linux.alibaba.com>
+ Date: Thu Jun 3 13:24:55 2021 +0800
+ 2 files changed, 11 insertions(+), 7 deletions(-)
+Successfully cherry-picked cea9e8ee3b8059bd2b36d68f1f428d165e5d13ce
+----------------------------------------
+Cherry-picking 4ac05376dbb8539d882ffa2069be680859920ce7
+[main e2e6c9406d81] Revert "floppy: reintroduce O_NDELAY fix"
+ Author: Denis Efremov <efremov@linux.com>
+ Date: Sat Aug 7 10:37:02 2021 +0300
+ 1 file changed, 13 insertions(+), 14 deletions(-)
+Successfully cherry-picked 4ac05376dbb8539d882ffa2069be680859920ce7
+----------------------------------------
+Cherry-picking f96eb53cbd76415edfba99c2cfa88567a885a428
+[main b8163f0b8d95] Linux 4.14.246
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Fri Sep 3 09:56:26 2021 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked f96eb53cbd76415edfba99c2cfa88567a885a428
+----------------------------------------
+Cherry-picking 9569234645f102025aaf0fc83d3dcbf1b8cbf2dc
+Auto-merging fs/ext4/inline.c
+[main 280104b181bf] ext4: fix race writing to an inline_data file while its xattrs are changing
+ Author: Theodore Ts'o <tytso@mit.edu>
+ Date: Fri Aug 20 23:44:17 2021 -0400
+ 1 file changed, 6 insertions(+)
+Successfully cherry-picked 9569234645f102025aaf0fc83d3dcbf1b8cbf2dc
+----------------------------------------
+Cherry-picking f5f68d775aacb922a84bde4de36549a83f63b68c
+[main a6541596c2da] xtensa: fix kconfig unmet dependency warning for HAVE_FUTEX_CMPXCHG
+ Author: Randy Dunlap <rdunlap@infradead.org>
+ Date: Wed May 26 00:03:37 2021 -0700
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked f5f68d775aacb922a84bde4de36549a83f63b68c
+----------------------------------------
+Cherry-picking 959f994607044c640878568e614688493045a9df
+[main e9c10d930f72] qed: Fix the VF msix vectors flow
+ Author: Shai Malin <smalin@marvell.com>
+ Date: Sun Aug 22 22:21:14 2021 +0300
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+Successfully cherry-picked 959f994607044c640878568e614688493045a9df
+----------------------------------------
+Cherry-picking 5d7c8097adc0f143db8fe1ef9047b6cc09340583
+[main 904b1ae2c907] net: macb: Add a NULL check on desc_ptp
+ Author: Harini Katakam <harini.katakam@xilinx.com>
+ Date: Tue Aug 24 15:32:09 2021 +0530
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+Successfully cherry-picked 5d7c8097adc0f143db8fe1ef9047b6cc09340583
+----------------------------------------
+Cherry-picking 54015fa25eb05f6066f1caf32f27815bf72570a3
+[main 7cf68fde7e4e] qede: Fix memset corruption
+ Author: Shai Malin <smalin@marvell.com>
+ Date: Tue Aug 24 19:52:49 2021 +0300
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 54015fa25eb05f6066f1caf32f27815bf72570a3
+----------------------------------------
+Cherry-picking 154ed3ecac88d94fb8a8e46661bf93775eb2a8ce
+[main 136b5a6284ac] perf/x86/intel/pt: Fix mask of num_address_ranges
+ Author: Xiaoyao Li <xiaoyao.li@intel.com>
+ Date: Tue Aug 24 12:06:22 2021 +0800
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 154ed3ecac88d94fb8a8e46661bf93775eb2a8ce
+----------------------------------------
+Cherry-picking 7cb7b441f5f5c734801eb64e4a78844e4daf5905
+[main c568f8ca6906] perf/x86/amd/ibs: Work around erratum #1197
+ Author: Kim Phillips <kim.phillips@amd.com>
+ Date: Tue Aug 17 17:10:42 2021 -0500
+ 1 file changed, 8 insertions(+)
+Successfully cherry-picked 7cb7b441f5f5c734801eb64e4a78844e4daf5905
+----------------------------------------
+Cherry-picking da113c32ec3924bece52a0c0e42698ad4f97f881
+[main f168dc1c34ee] cryptoloop: add a deprecation warning
+ Author: Christoph Hellwig <hch@lst.de>
+ Date: Fri Aug 27 18:32:50 2021 +0200
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+Successfully cherry-picked da113c32ec3924bece52a0c0e42698ad4f97f881
+----------------------------------------
+Cherry-picking 71e15ed2c83d389c0c644c5a53518c71cb16bdbd
+Auto-merging arch/arm/kernel/Makefile
+[main 942afce741b9] ARM: 8918/2: only build return_address() if needed
+ Author: Ben Dooks <ben-linux@fluff.org>
+ Date: Mon Nov 4 18:15:15 2019 +0100
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+Successfully cherry-picked 71e15ed2c83d389c0c644c5a53518c71cb16bdbd
+----------------------------------------
+Cherry-picking 4a62351ee6ba07508a3b948bc30d5c9396930b77
+Auto-merging sound/core/pcm_lib.c
+[main 5129ca88c7eb] ALSA: pcm: fix divide error in snd_pcm_lib_ioctl
+ Author: Zubin Mithra <zsm@chromium.org>
+ Date: Fri Aug 27 08:37:35 2021 -0700
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 4a62351ee6ba07508a3b948bc30d5c9396930b77
+----------------------------------------
+Cherry-picking bd0970398a7a50d5f4e09bfca73cb6249e7d5edc
+Auto-merging drivers/clk/clk.c
+[main d7efea1ae1fb] clk: fix build warning for orphan_list
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Mon Sep 6 10:31:20 2021 +0200
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+Successfully cherry-picked bd0970398a7a50d5f4e09bfca73cb6249e7d5edc
+----------------------------------------
+Cherry-picking 4b8488c3c533ec81a2ec9f410d7a395df9191137
+[main 42b652181bfb] media: stkwebcam: fix memory leak in stk_camera_probe
+ Author: Pavel Skripkin <paskripkin@gmail.com>
+ Date: Wed Jul 7 19:54:30 2021 +0200
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+Successfully cherry-picked 4b8488c3c533ec81a2ec9f410d7a395df9191137
+----------------------------------------
+Cherry-picking 78967749984cf3614de346c90f3e259ff8272735
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 3954 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 78967749984c.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_181651.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 78967749984cf3614de346c90f3e259ff8272735
+No conflicted files found but cherry-pick failed, attempting to skip commit 78967749984cf3614de346c90f3e259ff8272735
+----------------------------------------
+Cherry-picking fd2c76451453747d6bdcf7e45c90c1ffe931861c
+[main 68afc2be90a3] USB: serial: mos7720: improve OOM-handling in read_mos_reg()
+ Author: Tom Rix <trix@redhat.com>
+ Date: Mon Jan 11 14:09:04 2021 -0800
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Successfully cherry-picked fd2c76451453747d6bdcf7e45c90c1ffe931861c
+----------------------------------------
+Cherry-picking 2a18f941bccbb3669e3f8f7262f15d7f5267aa0f
+Auto-merging fs/f2fs/segment.c
+CONFLICT (content): Merge conflict in fs/f2fs/segment.c
+error: could not apply 2a18f941bccb... f2fs: fix potential overflow
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 2a18f941bccbb3669e3f8f7262f15d7f5267aa0f
+Auto-resolving conflicts by accepting incoming changes...
