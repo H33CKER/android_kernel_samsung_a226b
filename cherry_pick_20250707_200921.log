@@ -1599,3 +1599,320 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 88e509104e8eebd2b84021d0368f468d3cfd589d
 Auto-resolving conflicts by accepting incoming changes...
+[main 73a1f64fce59] bpf: introduce bpf_spin_lock
+ Author: Alexei Starovoitov <ast@kernel.org>
+ Date: Thu Jan 31 15:40:04 2019 -0800
+ 15 files changed, 953 insertions(+), 28 deletions(-)
+----------------------------------------
+Cherry-picking ac457ce07794367839157733ee3dc42059054fad
+[main 662b9c7fc447] SQUASH! bpf: Add a bpf_sock pointer to __sk_buff and a bpf_sk_fullsock helpe
+ Author: Roberto Sartori <roberto.sartori.android@gmail.com>
+ Date: Fri Oct 25 00:21:02 2024 +0200
+ 4 files changed, 187 insertions(+), 52 deletions(-)
+Successfully cherry-picked ac457ce07794367839157733ee3dc42059054fad
+----------------------------------------
+Cherry-picking de476803f3a7c5828ef5629902c9a69ff91b0647
+[main 20d09c4697d8] bpf: Add helper to retrieve socket in BPF
+ Author: Joe Stringer <joe@wand.net.nz>
+ Date: Tue Oct 2 13:35:36 2018 -0700
+ 3 files changed, 232 insertions(+), 1 deletion(-)
+Successfully cherry-picked de476803f3a7c5828ef5629902c9a69ff91b0647
+----------------------------------------
+Cherry-picking 25bf2a4ec0c0c179af9cc17953eb7f560d72b434
+Auto-merging kernel/bpf/core.c
+[main ccf2393063e4] bpf: undo prog rejection on read-only lock failure
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Thu Jun 28 23:34:59 2018 +0200
+ 2 files changed, 11 insertions(+), 75 deletions(-)
+Successfully cherry-picked 25bf2a4ec0c0c179af9cc17953eb7f560d72b434
+----------------------------------------
+Cherry-picking 215f466952117cd620669fff28208e8802a7be38
+[main ea1ddd3a6617] fixup: add back code missed during BPF picking
+ Author: Roberto Sartori <roberto.sartori.android@gmail.com>
+ Date: Fri Oct 25 20:18:50 2024 +0200
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+Successfully cherry-picked 215f466952117cd620669fff28208e8802a7be38
+----------------------------------------
+Cherry-picking 83acc577ea918b894dc96fc6de0594a38c869441
+[main 1ee923014a16] xfrm: add documentation for xfrm device offload api
+ Author: Shannon Nelson <shannon.nelson@oracle.com>
+ Date: Mon Nov 20 14:26:07 2017 -0800
+ 2 files changed, 134 insertions(+)
+ create mode 100644 Documentation/networking/xfrm_device.txt
+Successfully cherry-picked 83acc577ea918b894dc96fc6de0594a38c869441
+----------------------------------------
+Cherry-picking c7ea34d5b3ddde4db64ae6a5b0c8fcc5c351dfdb
+Auto-merging include/linux/skbuff.h
+Auto-merging net/Kconfig
+Auto-merging net/core/skbuff.c
+Auto-merging net/ipv4/ip_output.c
+Auto-merging net/ipv6/ip6_output.c
+[main 435391746c57] sk_buff: add skb extension infrastructure
+ Author: Florian Westphal <fw@strlen.de>
+ Date: Tue Dec 18 17:15:16 2018 +0100
+ 5 files changed, 257 insertions(+), 1 deletion(-)
+Successfully cherry-picked c7ea34d5b3ddde4db64ae6a5b0c8fcc5c351dfdb
+----------------------------------------
+Cherry-picking 1cf0d66c3192e095aa045cdc320203bdb12d00ed
+[main 6e4fd910c439] netfilter: meta: secpath support
+ Author: Florian Westphal <fw@strlen.de>
+ Date: Wed Dec 6 16:18:16 2017 +0100
+ 2 files changed, 42 insertions(+)
+Successfully cherry-picked 1cf0d66c3192e095aa045cdc320203bdb12d00ed
+----------------------------------------
+Cherry-picking eb69d005b0cd1450c0fae765d5c7022ef000590b
+Auto-merging include/linux/skbuff.h
+Auto-merging include/net/xfrm.h
+[main 5d4d3c1b4389] net: move secpath_exist helper to sk_buff.h
+ Author: Florian Westphal <fw@strlen.de>
+ Date: Tue Dec 18 17:15:19 2018 +0100
+ 3 files changed, 11 insertions(+), 13 deletions(-)
+Successfully cherry-picked eb69d005b0cd1450c0fae765d5c7022ef000590b
+----------------------------------------
+Cherry-picking 3c430bf5d5b0ec020dbf6aadb55027a0f9df87a1
+Auto-merging include/net/xfrm.h
+Auto-merging net/ipv4/esp4_offload.c
+Auto-merging net/ipv6/esp6_offload.c
+[main 54932771f98e] xfrm: Separate ESP handling from segmentation for GRO packets.
+ Author: Steffen Klassert <steffen.klassert@secunet.com>
+ Date: Wed Dec 20 10:41:31 2017 +0100
+ 7 files changed, 119 insertions(+), 135 deletions(-)
+Successfully cherry-picked 3c430bf5d5b0ec020dbf6aadb55027a0f9df87a1
+----------------------------------------
+Cherry-picking e2966b15b0b61bc6e2918cb85c4a2864950d0c1e
+Auto-merging include/linux/netdevice.h
+Auto-merging include/net/xfrm.h
+Auto-merging net/packet/af_packet.c
+Auto-merging net/sched/sch_generic.c
+[main e745efaa4c88] net: Add asynchronous callbacks for xfrm on layer 2.
+ Author: Steffen Klassert <steffen.klassert@secunet.com>
+ Date: Wed Dec 20 10:41:36 2017 +0100
+ 8 files changed, 174 insertions(+), 34 deletions(-)
+Successfully cherry-picked e2966b15b0b61bc6e2918cb85c4a2864950d0c1e
+----------------------------------------
+Cherry-picking 5d9b639d8a334092be227b0550b83408c310fa5c
+Auto-merging net/netfilter/Kconfig
+Auto-merging net/netfilter/Makefile
+[main 0bff7d04a481] netfilter: nf_tables: add support for native socket matching
+ Author: Máté Eckl <ecklm94@gmail.com>
+ Date: Mon May 28 09:15:33 2018 +0200
+ 4 files changed, 178 insertions(+)
+ create mode 100644 net/netfilter/nft_socket.c
+Successfully cherry-picked 5d9b639d8a334092be227b0550b83408c310fa5c
+----------------------------------------
+Cherry-picking 2fb299223ee3e2d78741a46a5874117db1f01803
+Auto-merging net/core/Makefile
+[main 9ad87d7a4be9] xdp: base API for new XDP rx-queue info concept
+ Author: Jesper Dangaard Brouer <brouer@redhat.com>
+ Date: Wed Jan 3 11:25:13 2018 +0100
+ 4 files changed, 117 insertions(+), 1 deletion(-)
+ create mode 100644 include/net/xdp.h
+ create mode 100644 net/core/xdp.c
+Successfully cherry-picked 2fb299223ee3e2d78741a46a5874117db1f01803
+----------------------------------------
+Cherry-picking 0237a843a1ec308ec32d41c742a1c89bafee0709
+[main b3ad49fe25dd] net: avoid including xdp.h in filter.h
+ Author: Jesper Dangaard Brouer <brouer@redhat.com>
+ Date: Tue Feb 13 14:15:36 2018 +0100
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 0237a843a1ec308ec32d41c742a1c89bafee0709
+----------------------------------------
+Cherry-picking d4f6105e4534f98c160a1332d7195f36f1f27d0f
+[main 5d7cc5e9ff7f] xdp: move struct xdp_buff from filter.h to xdp.h
+ Author: Jesper Dangaard Brouer <brouer@redhat.com>
+ Date: Tue Apr 17 16:45:37 2018 +0200
+ 2 files changed, 24 insertions(+), 23 deletions(-)
+Successfully cherry-picked d4f6105e4534f98c160a1332d7195f36f1f27d0f
+----------------------------------------
+Cherry-picking 99a072ee271e8b401fb66b4bbf28157b5b9fdd27
+Auto-merging include/linux/netdevice.h
+[main ca65fbdaca51] xdp: generic XDP handling of xdp_rxq_info
+ Author: Jesper Dangaard Brouer <brouer@redhat.com>
+ Date: Wed Jan 3 11:26:09 2018 +0100
+ 2 files changed, 60 insertions(+), 10 deletions(-)
+Successfully cherry-picked 99a072ee271e8b401fb66b4bbf28157b5b9fdd27
+----------------------------------------
+Cherry-picking dfa54f9d787f1214e5a26d2f579ff7b14ce2c70e
+[main 73e89f69b916] bpf: Extend the sk_lookup() helper to XDP hookpoint.
+ Author: Nitin Hande <nitin.hande@gmail.com>
+ Date: Sun Oct 28 21:02:45 2018 -0700
+ 2 files changed, 98 insertions(+), 16 deletions(-)
+Successfully cherry-picked dfa54f9d787f1214e5a26d2f579ff7b14ce2c70e
+----------------------------------------
+Cherry-picking 43bc351a12b0ce61f914fd8b9fc94dc9bf485859
+[main 4b84aea7bf6e] bpf: Support socket lookup in CGROUP_SOCK_ADDR progs
+ Author: Andrey Ignatov <rdna@fb.com>
+ Date: Fri Nov 9 10:54:01 2018 -0800
+ 1 file changed, 45 insertions(+)
+Successfully cherry-picked 43bc351a12b0ce61f914fd8b9fc94dc9bf485859
+----------------------------------------
+Cherry-picking 4f9da4e05fb4d4df62849865b0272f92103ae122
+[main 77762bd57d2f] bpf: Add struct bpf_tcp_sock and BPF_FUNC_tcp_sock
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Sat Feb 9 23:22:24 2019 -0800
+ 4 files changed, 228 insertions(+), 2 deletions(-)
+Successfully cherry-picked 4f9da4e05fb4d4df62849865b0272f92103ae122
+----------------------------------------
+Cherry-picking bf6809da9882203316495b2e3ac6477ddfff7f25
+Auto-merging kernel/trace/bpf_trace.c
+[main 9e86dd178d68] bpf: add writable context for raw tracepoints
+ Author: Matt Mullins <mmullins@fb.com>
+ Date: Fri Apr 26 11:49:47 2019 -0700
+ 8 files changed, 92 insertions(+), 4 deletions(-)
+Successfully cherry-picked bf6809da9882203316495b2e3ac6477ddfff7f25
+----------------------------------------
+Cherry-picking 9dd6aaf86ee44bf4dd6b1c542384ef5c4009f6bc
+[main 53ddab406584] bpf: allow map helpers access to map values directly
+ Author: Paul Chaignon <paul.chaignon@orange.com>
+ Date: Tue Apr 24 15:07:54 2018 +0200
+ 1 file changed, 7 insertions(+), 15 deletions(-)
+Successfully cherry-picked 9dd6aaf86ee44bf4dd6b1c542384ef5c4009f6bc
+----------------------------------------
+Cherry-picking 5e5e4a1ff21627e6b9714b6e080b4ef7a59bc6f3
+[main 5e4a62772d2d] bpf/verifier: add ARG_PTR_TO_UNINIT_MAP_VALUE
+ Author: Mauricio Vasquez B <mauricio.vasquez@polito.it>
+ Date: Thu Oct 18 15:16:20 2018 +0200
+ 2 files changed, 7 insertions(+), 3 deletions(-)
+Successfully cherry-picked 5e5e4a1ff21627e6b9714b6e080b4ef7a59bc6f3
+----------------------------------------
+Cherry-picking 0175e5069651ab4cf00f09746a2c1d9688d6b15d
+[main 28b68cd0ea11] bpf: Introduce ARG_PTR_TO_{INT,LONG} arg types
+ Author: Andrey Ignatov <rdna@fb.com>
+ Date: Mon Mar 18 16:57:10 2019 -0700
+ 2 files changed, 29 insertions(+)
+Successfully cherry-picked 0175e5069651ab4cf00f09746a2c1d9688d6b15d
+----------------------------------------
+Cherry-picking 5085e906aa25a3dee7db8ebb5791a573e5b29101
+Auto-merging kernel/bpf/hashtab.c
+Auto-merging kernel/bpf/helpers.c
+[main 240f402e2596] bpf: introduce BPF_F_LOCK flag
+ Author: Alexei Starovoitov <ast@kernel.org>
+ Date: Thu Jan 31 15:40:09 2019 -0800
+ 7 files changed, 116 insertions(+), 15 deletions(-)
+Successfully cherry-picked 5085e906aa25a3dee7db8ebb5791a573e5b29101
+----------------------------------------
+Cherry-picking 663d56d72add1698e26caf8113ef7427b8098bf1
+Auto-merging include/net/sock.h
+Auto-merging net/core/Makefile
+[main 893f7652b08f] bpf: Introduce bpf sk local storage
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Fri Apr 26 16:39:39 2019 -0700
+ 11 files changed, 913 insertions(+), 5 deletions(-)
+ create mode 100644 include/net/bpf_sk_storage.h
+ create mode 100644 net/core/bpf_sk_storage.c
+Successfully cherry-picked 663d56d72add1698e26caf8113ef7427b8098bf1
+----------------------------------------
+Cherry-picking ab7c0e08242303bbe1eb66073ed9f65ade8a2808
+Auto-merging net/socket.c
+[main 048c77df7c58] net: socket: add __sys_getsockopt() helper; remove in-kernel call to syscall
+ Author: Dominik Brodowski <linux@dominikbrodowski.net>
+ Date: Tue Mar 13 20:15:04 2018 +0100
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+Successfully cherry-picked ab7c0e08242303bbe1eb66073ed9f65ade8a2808
+----------------------------------------
+Cherry-picking 9452d8fcea23e2707268923e8ac0884e5213f832
+Auto-merging net/socket.c
+[main 48c5a77aea9c] net: socket: add __sys_setsockopt() helper; remove in-kernel call to syscall
+ Author: Dominik Brodowski <linux@dominikbrodowski.net>
+ Date: Tue Mar 13 20:10:59 2018 +0100
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+Successfully cherry-picked 9452d8fcea23e2707268923e8ac0884e5213f832
+----------------------------------------
+Cherry-picking 35867a8b69e62379d373b12dda84658b35e17211
+Auto-merging kernel/bpf/core.c
+Auto-merging net/socket.c
+[main b1655ed6f709] bpf: implement getsockopt and setsockopt hooks
+ Author: Stanislav Fomichev <sdf@google.com>
+ Date: Thu Jun 27 13:38:47 2019 -0700
+ 11 files changed, 456 insertions(+), 1 deletion(-)
+Successfully cherry-picked 35867a8b69e62379d373b12dda84658b35e17211
+----------------------------------------
+Cherry-picking 3231776fd18723b3686c3efea9b05b62ad201163
+Auto-merging include/net/tcp.h
+[main 8b1ee671627f] bpf: sockmap, refactor sockmap routines to work with hashmap
+ Author: John Fastabend <john.fastabend@gmail.com>
+ Date: Mon May 14 10:00:16 2018 -0700
+ 4 files changed, 95 insertions(+), 88 deletions(-)
+Successfully cherry-picked 3231776fd18723b3686c3efea9b05b62ad201163
+----------------------------------------
+Cherry-picking 38361f602bf224f805d3fb784e5a92ab61edb4ac
+Auto-merging kernel/bpf/core.c
+[main f9dd1a085302] bpf: sockmap, add hash map support
+ Author: John Fastabend <john.fastabend@gmail.com>
+ Date: Mon May 14 10:00:17 2018 -0700
+ 7 files changed, 584 insertions(+), 21 deletions(-)
+Successfully cherry-picked 38361f602bf224f805d3fb784e5a92ab61edb4ac
+----------------------------------------
+Cherry-picking 7a80089f48d03aba0db8dccd8f2ffef1f4dcb1d7
+[main 2b7fdcaa645f] sockmap: convert refcnt to an atomic refcnt
+ Author: John Fastabend <john.fastabend@gmail.com>
+ Date: Sun Mar 18 12:56:54 2018 -0700
+ 1 file changed, 9 insertions(+), 11 deletions(-)
+Successfully cherry-picked 7a80089f48d03aba0db8dccd8f2ffef1f4dcb1d7
+----------------------------------------
+Cherry-picking 1013142777db8bb452279dc696ea4ea0816bf132
+Auto-merging net/ipv4/tcp.c
+[main 74f05f927d65] net: do_tcp_sendpages flag to avoid SKBTX_SHARED_FRAG
+ Author: John Fastabend <john.fastabend@gmail.com>
+ Date: Sun Mar 18 12:57:00 2018 -0700
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+Successfully cherry-picked 1013142777db8bb452279dc696ea4ea0816bf132
+----------------------------------------
+Cherry-picking a6223b57a3eeb8f6030987e0ad0e47910f660a33
+Auto-merging include/net/sock.h
+Auto-merging net/core/sock.c
+[main 38f99b28f770] sock: make static tls function alloc_sg generic sock helper
+ Author: John Fastabend <john.fastabend@gmail.com>
+ Date: Sun Mar 18 12:56:49 2018 -0700
+ 3 files changed, 65 insertions(+), 63 deletions(-)
+Successfully cherry-picked a6223b57a3eeb8f6030987e0ad0e47910f660a33
+----------------------------------------
+Cherry-picking 6695d0e826b985ec2c2af697c1d65c836dcdbf7f
+Auto-merging include/net/sock.h
+Auto-merging net/core/sock.c
+[main 02fd8e1b51fd] net: generalize sk_alloc_sg to work with scatterlist rings
+ Author: John Fastabend <john.fastabend@gmail.com>
+ Date: Sun Mar 18 12:57:05 2018 -0700
+ 3 files changed, 18 insertions(+), 14 deletions(-)
+Successfully cherry-picked 6695d0e826b985ec2c2af697c1d65c836dcdbf7f
+----------------------------------------
+Cherry-picking 6aaa61a0836b1e16de0ce593f13ace9ab8397c18
+[main 986ffb224c6f] lib/scatterlist: add sg_init_marker() helper
+ Author: Prashant Bhole <bhole_prashant_q7@lab.ntt.co.jp>
+ Date: Fri Mar 30 09:20:59 2018 +0900
+ 2 files changed, 18 insertions(+), 8 deletions(-)
+Successfully cherry-picked 6aaa61a0836b1e16de0ce593f13ace9ab8397c18
+----------------------------------------
+Cherry-picking be364d66b09f5bdefb98b58747b27a61c350a045
+[main 120ae5d811be] bpf: sockmap: fix typos
+ Author: Roberto Sartori <roberto.sartori.android@gmail.com>
+ Date: Sat Oct 26 17:41:04 2024 +0200
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Successfully cherry-picked be364d66b09f5bdefb98b58747b27a61c350a045
+----------------------------------------
+Cherry-picking eae1d1c006b723897de7bcd5b96a832f0c9ba372
+Auto-merging include/net/tcp.h
+[main 94083db0a58e] bpf: sockmap, convert bpf_compute_data_pointers to bpf_*_sk_skb
+ Author: John Fastabend <john.fastabend@gmail.com>
+ Date: Thu Jul 5 08:50:15 2018 -0700
+ 2 files changed, 92 insertions(+), 7 deletions(-)
+Successfully cherry-picked eae1d1c006b723897de7bcd5b96a832f0c9ba372
+----------------------------------------
+Cherry-picking 21d7aa53e05f5fb578fb59ad558c8db8427fe320
+Auto-merging include/net/sock.h
+Auto-merging include/net/tcp.h
+Auto-merging kernel/bpf/core.c
+Auto-merging net/Kconfig
+Auto-merging net/core/Makefile
+CONFLICT (content): Merge conflict in net/core/Makefile
+Auto-merging net/ipv4/Makefile
+Auto-merging net/ipv4/tcp.c
+error: could not apply 21d7aa53e05f... bpf, sockmap: convert to generic sk_msg interface
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 21d7aa53e05f5fb578fb59ad558c8db8427fe320
+Auto-resolving conflicts by accepting incoming changes...
