@@ -11,6 +11,9 @@ END_COMMIT=$2
 LOG_FILE="cherry_pick_$(date +%Y%m%d_%H%M%S).log"
 echo "Cherry-picking from $START_COMMIT to $END_COMMIT" | tee "$LOG_FILE"
 
+# Disable editor for commit messages so cherry-pick --continue doesn't hang
+export GIT_EDITOR=true
+
 commits=$(git rev-list --reverse ${START_COMMIT}^..${END_COMMIT})
 
 for commit in $commits; do
@@ -44,7 +47,6 @@ for commit in $commits; do
       fi
 
     else
-      # No conflicted files but cherry-pick failed — try skip as fallback
       echo "No conflicted files found but cherry-pick failed, attempting to skip commit $commit" | tee -a "$LOG_FILE"
       git cherry-pick --skip >>"$LOG_FILE" 2>&1
       status=$?
