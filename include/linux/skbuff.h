@@ -41,10 +41,6 @@
 #include <linux/if_packet.h>
 #include <net/flow.h>
 
-
-#define NET_RX_BATCH_SOLUTION 1
-
-
 /* The interface for checksum offload between the stack and networking drivers
  * is as follows...
  *
@@ -574,8 +570,6 @@ enum {
 	SKB_GSO_ESP = 1 << 15,
 
 	SKB_GSO_UDP = 1 << 16,
-
-	SKB_GSO_UDP_L4 = 1 << 17,
 };
 
 #if BITS_PER_LONG > 32
@@ -678,9 +672,7 @@ struct sk_buff {
 			};
 		};
 		struct rb_node		rbnode; /* used in netem, ip4 defrag, and tcp stack */
-#ifndef NET_RX_BATCH_SOLUTION
 		struct list_head	list;
-#endif
 	};
 
 	union {
@@ -699,9 +691,7 @@ struct sk_buff {
 	 * first. This is owned by whoever has the skb queued ATM.
 	 */
 	char			cb[48] __aligned(8);
-#ifdef NET_RX_BATCH_SOLUTION
-	struct list_head list;
-#endif
+
 	unsigned long		_skb_refdst;
 	void			(*destructor)(struct sk_buff *skb);
 #ifdef CONFIG_XFRM
@@ -1350,11 +1340,6 @@ static inline void skb_mark_not_on_list(struct sk_buff *skb)
 	skb->next = NULL;
 }
 
-/* Iterate through singly-linked GSO fragments of an skb. */
-#define skb_list_walk_safe(first, skb, next_skb)                               \
-	for ((skb) = (first), (next_skb) = (skb) ? (skb)->next : NULL; (skb);  \
-	     (skb) = (next_skb), (next_skb) = (skb) ? (skb)->next : NULL)
-
 static inline void skb_list_del_init(struct sk_buff *skb)
 {
 	__list_del_entry(&skb->list);
@@ -1768,11 +1753,10 @@ static inline void __skb_insert(struct sk_buff *newsk,
 	WRITE_ONCE(newsk->prev, prev);
 	WRITE_ONCE(next->prev, newsk);
 	WRITE_ONCE(prev->next, newsk);
-	WRITE_ONCE(list->qlen, list->qlen + 1);
+	list->qlen++;
 }
 
-static inline void __attribute__((no_sanitize("object-size")))
-	__skb_queue_splice(const struct sk_buff_head *list,
+static inline void __skb_queue_splice(const struct sk_buff_head *list,
 				      struct sk_buff *prev,
 				      struct sk_buff *next)
 {
@@ -1870,8 +1854,7 @@ static inline void __skb_queue_after(struct sk_buff_head *list,
 void skb_append(struct sk_buff *old, struct sk_buff *newsk,
 		struct sk_buff_head *list);
 
-static inline void __attribute__((no_sanitize("object-size")))
-	__skb_queue_before(struct sk_buff_head *list,
+static inline void __skb_queue_before(struct sk_buff_head *list,
 				      struct sk_buff *next,
 				      struct sk_buff *newsk)
 {
@@ -2794,15 +2777,6 @@ static inline void skb_propagate_pfmemalloc(struct page *page,
 {
 	if (page_is_pfmemalloc(page))
 		skb->pfmemalloc = true;
-}
-
-/**
- * skb_frag_off() - Returns the offset of a skb fragment
- * @frag: the paged fragment
- */
-static inline unsigned int skb_frag_off(const skb_frag_t *frag)
-{
-	return frag->page_offset;
 }
 
 /**
