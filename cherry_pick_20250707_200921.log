@@ -1022,3 +1022,580 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 83ffeb9bf17ab5347f4f93f70d77719be0da8d1e
 Auto-resolving conflicts by accepting incoming changes...
+[main df0a72d92f51] bpf: extend bpf_prog_array to store pointers to the cgroup storage
+ Author: Roman Gushchin <guro@fb.com>
+ Date: Thu Aug 2 14:27:21 2018 -0700
+ 4 files changed, 405 insertions(+), 55 deletions(-)
+----------------------------------------
+Cherry-picking d959e344cb48c5f7ac2d6df6e9b53169e3936bda
+[main f1c9b7198ec1] bpf/verifier: introduce BPF_PTR_TO_MAP_VALUE
+ Author: Roman Gushchin <guro@fb.com>
+ Date: Thu Aug 2 14:27:22 2018 -0700
+ 2 files changed, 7 insertions(+), 2 deletions(-)
+Successfully cherry-picked d959e344cb48c5f7ac2d6df6e9b53169e3936bda
+----------------------------------------
+Cherry-picking 6cd56dc73009e1b3e93df0a054a4d0be0a3d5eba
+Auto-merging kernel/bpf/core.c
+Auto-merging kernel/bpf/helpers.c
+Auto-merging net/core/filter.c
+[main ea2d2ca91f8f] bpf: introduce the bpf_get_local_storage() helper function
+ Author: Roman Gushchin <guro@fb.com>
+ Date: Thu Aug 2 14:27:24 2018 -0700
+ 7 files changed, 80 insertions(+), 1 deletion(-)
+Successfully cherry-picked 6cd56dc73009e1b3e93df0a054a4d0be0a3d5eba
+----------------------------------------
+Cherry-picking 9d41779e2ee86c3c2430da4608931b984dfe72d7
+Auto-merging kernel/bpf/core.c
+Auto-merging kernel/bpf/helpers.c
+Auto-merging kernel/trace/bpf_trace.c
+[main 3579f939a3a2] bpf: implement bpf_get_current_cgroup_id() helper
+ Author: Yonghong Song <yhs@fb.com>
+ Date: Sun Jun 3 15:59:41 2018 -0700
+ 5 files changed, 22 insertions(+), 1 deletion(-)
+Successfully cherry-picked 9d41779e2ee86c3c2430da4608931b984dfe72d7
+----------------------------------------
+Cherry-picking c27a7a158749811c63f91f9b90e5e2dccaef8a4e
+[main 735e6bc622ea] bpf: permit CGROUP_DEVICE programs accessing helper bpf_get_current_cgroup_id()
+ Author: Yonghong Song <yhs@fb.com>
+ Date: Thu Sep 27 14:37:30 2018 -0700
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked c27a7a158749811c63f91f9b90e5e2dccaef8a4e
+----------------------------------------
+Cherry-picking 0691a98412bbe9021c44c8023228b14027f1153a
+Auto-merging kernel/bpf/helpers.c
+[main 32a0e4d8f980] bpf: extend cgroup bpf core to allow multiple cgroup storage types
+ Author: Roman Gushchin <guro@fb.com>
+ Date: Fri Sep 28 14:45:36 2018 +0000
+ 7 files changed, 118 insertions(+), 51 deletions(-)
+Successfully cherry-picked 0691a98412bbe9021c44c8023228b14027f1153a
+----------------------------------------
+Cherry-picking 96f06660aca6cffa92b5ce51665e1b796cdb07ba
+Auto-merging net/core/filter.c
+[main af76188f55af] bpf: Add PTR_TO_SOCKET verifier type
+ Author: Joe Stringer <joe@wand.net.nz>
+ Date: Tue Oct 2 13:35:33 2018 -0700
+ 4 files changed, 148 insertions(+), 33 deletions(-)
+Successfully cherry-picked 96f06660aca6cffa92b5ce51665e1b796cdb07ba
+----------------------------------------
+Cherry-picking 67f9ead873e4ec43a1242c83df5212caa3e4ff17
+[main f38dd535f39d] bpf: offload: ignore namespace moves
+ Author: Jakub Kicinski <jakub.kicinski@netronome.com>
+ Date: Mon Nov 20 15:21:57 2017 -0800
+ 1 file changed, 4 insertions(+)
+Successfully cherry-picked 67f9ead873e4ec43a1242c83df5212caa3e4ff17
+----------------------------------------
+Cherry-picking a3bb91af26c16721c370bdfb1739a9f708d25fb5
+[main 6485ba031642] bpf: offload: don't require rtnl for dev list manipulation
+ Author: Jakub Kicinski <jakub.kicinski@netronome.com>
+ Date: Wed Dec 27 18:39:03 2017 -0800
+ 1 file changed, 25 insertions(+), 10 deletions(-)
+Successfully cherry-picked a3bb91af26c16721c370bdfb1739a9f708d25fb5
+----------------------------------------
+Cherry-picking 64d4ce9ff369a56fe2620ab055cfbddaceffbf19
+[main ce5f805c064c] nsfs: generalize ns_get_path() for path resolution with a task
+ Author: Jakub Kicinski <jakub.kicinski@netronome.com>
+ Date: Wed Dec 27 18:39:08 2017 -0800
+ 2 files changed, 25 insertions(+), 4 deletions(-)
+Successfully cherry-picked 64d4ce9ff369a56fe2620ab055cfbddaceffbf19
+----------------------------------------
+Cherry-picking ec8a8647eb5b660cc1f9b6315aa52d5eb934d891
+[main c6c468ae5266] nsfs: unobfuscate
+ Author: Al Viro <viro@zeniv.linux.org.uk>
+ Date: Fri Mar 22 23:26:22 2019 -0400
+ 1 file changed, 9 insertions(+), 14 deletions(-)
+Successfully cherry-picked ec8a8647eb5b660cc1f9b6315aa52d5eb934d891
+----------------------------------------
+Cherry-picking c7002e28f1d237ed44f5de1b8d96d70b8f3708e6
+Auto-merging tools/include/uapi/linux/bpf.h
+[main 13994e1b76ea] bpf: offload: report device information for offloaded programs
+ Author: Jakub Kicinski <jakub.kicinski@netronome.com>
+ Date: Wed Dec 27 18:39:09 2017 -0800
+ 5 files changed, 73 insertions(+)
+Successfully cherry-picked c7002e28f1d237ed44f5de1b8d96d70b8f3708e6
+----------------------------------------
+Cherry-picking 3d62e389e24173efb40b5e375ed5ff80db93deaf
+[main f6847afeb916] bpf: offload: free program id when device disappears
+ Author: Jakub Kicinski <jakub.kicinski@netronome.com>
+ Date: Wed Dec 27 18:39:07 2017 -0800
+ 3 files changed, 12 insertions(+), 2 deletions(-)
+Successfully cherry-picked 3d62e389e24173efb40b5e375ed5ff80db93deaf
+----------------------------------------
+Cherry-picking 234a194e202e2cab797180a17a06952c153a7116
+Auto-merging include/linux/netdevice.h
+[main 830ad4779b56] bpf: offload: allow netdev to disappear while verifier is running
+ Author: Jakub Kicinski <jakub.kicinski@netronome.com>
+ Date: Wed Dec 27 18:39:05 2017 -0800
+ 5 files changed, 32 insertions(+), 48 deletions(-)
+Successfully cherry-picked 234a194e202e2cab797180a17a06952c153a7116
+----------------------------------------
+Cherry-picking 54fbb5c5efd423df0f7a7f17ff67173b230ab0ba
+[main 072823dbe4aa] bpf: rename bpf_dev_offload -> bpf_prog_offload
+ Author: Jakub Kicinski <jakub.kicinski@netronome.com>
+ Date: Thu Jan 11 20:29:07 2018 -0800
+ 2 files changed, 7 insertions(+), 7 deletions(-)
+Successfully cherry-picked 54fbb5c5efd423df0f7a7f17ff67173b230ab0ba
+----------------------------------------
+Cherry-picking 605c18bbe0062e29e900cdc27b138d6a8490aecf
+[main e6f525bbc22d] bpf: offload: factor out netdev checking at allocation time
+ Author: Jakub Kicinski <jakub.kicinski@netronome.com>
+ Date: Thu Jan 11 20:29:08 2018 -0800
+ 1 file changed, 21 insertions(+), 8 deletions(-)
+Successfully cherry-picked 605c18bbe0062e29e900cdc27b138d6a8490aecf
+----------------------------------------
+Cherry-picking bb83f260880b98cfcba181373f9194dbeac7ac66
+[main 7629aa726b7d] bpf: add map_alloc_check callback
+ Author: Jakub Kicinski <jakub.kicinski@netronome.com>
+ Date: Thu Jan 11 20:29:03 2018 -0800
+ 2 files changed, 14 insertions(+), 4 deletions(-)
+Successfully cherry-picked bb83f260880b98cfcba181373f9194dbeac7ac66
+----------------------------------------
+Cherry-picking bc93b3866914e1f2cc440d495dbf477276ed0750
+Auto-merging include/linux/netdevice.h
+[main 0e1130f95b3a] bpf: offload: add map offload infrastructure
+ Author: Jakub Kicinski <jakub.kicinski@netronome.com>
+ Date: Thu Jan 11 20:29:09 2018 -0800
+ 6 files changed, 245 insertions(+), 12 deletions(-)
+Successfully cherry-picked bc93b3866914e1f2cc440d495dbf477276ed0750
+----------------------------------------
+Cherry-picking fff2c7d8fe0b99b4ac5edbf75416767e46301d9c
+[main 580e13fd98f9] bpf: offload: report device information about offloaded maps
+ Author: Jakub Kicinski <jakub.kicinski@netronome.com>
+ Date: Wed Jan 17 19:13:28 2018 -0800
+ 4 files changed, 58 insertions(+)
+Successfully cherry-picked fff2c7d8fe0b99b4ac5edbf75416767e46301d9c
+----------------------------------------
+Cherry-picking 9f20f51f69a9c557a4d470df7eaa3c7b3c3e3099
+[main 4bf193310e72] bpf_obj_do_pin(): switch to vfs_mkobj(), quit abusing ->mknod()
+ Author: Al Viro <viro@zeniv.linux.org.uk>
+ Date: Fri Dec 1 17:22:19 2017 -0500
+ 1 file changed, 22 insertions(+), 29 deletions(-)
+Successfully cherry-picked 9f20f51f69a9c557a4d470df7eaa3c7b3c3e3099
+----------------------------------------
+Cherry-picking e7c6fd71931d219796b5dfe6c80546be2de57587
+Auto-merging fs/namei.c
+Auto-merging include/linux/fs.h
+[main ad02b26d0af4] new primitive: vfs_mkobj()
+ Author: Al Viro <viro@zeniv.linux.org.uk>
+ Date: Fri Dec 1 17:12:45 2017 -0500
+ 2 files changed, 24 insertions(+)
+Successfully cherry-picked e7c6fd71931d219796b5dfe6c80546be2de57587
+----------------------------------------
+Cherry-picking aa642295d66294a02faded02c47607c72ca1c434
+[main de69d3d4c246] nsfs: clean-up ns_get_path() signature to return int
+ Author: Aleksa Sarai <cyphar@cyphar.com>
+ Date: Sat Dec 7 01:13:27 2019 +1100
+ 4 files changed, 25 insertions(+), 25 deletions(-)
+Successfully cherry-picked aa642295d66294a02faded02c47607c72ca1c434
+----------------------------------------
+Cherry-picking fd7a49bc7f72245e430c4ff3d29a14a9f8902899
+Auto-merging kernel/events/core.c
+[main 84ed5039e328] bpf: btf: Add pretty print support to the basic arraymap
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Wed Apr 18 15:56:03 2018 -0700
+ 6 files changed, 213 insertions(+), 8 deletions(-)
+Successfully cherry-picked fd7a49bc7f72245e430c4ff3d29a14a9f8902899
+----------------------------------------
+Cherry-picking dc02e850d0fb9189d559c1e9b441c5c6942b2e89
+[main b48d4221e711] bpf: btf: Introduce BTF ID
+ Author: Matin KaFai Lau <kafai@fb.com>
+ Date: Fri May 4 14:49:51 2018 -0700
+ 4 files changed, 115 insertions(+), 11 deletions(-)
+Successfully cherry-picked dc02e850d0fb9189d559c1e9b441c5c6942b2e89
+----------------------------------------
+Cherry-picking b1b35c788c9685800e2689d25291fa0a2c90bd52
+[main 88d5578df784] bpf: move instruction printing into a separate file
+ Author: Jakub Kicinski <jakub.kicinski@netronome.com>
+ Date: Mon Oct 9 10:30:12 2017 -0700
+ 4 files changed, 249 insertions(+), 178 deletions(-)
+ create mode 100644 kernel/bpf/disasm.c
+ create mode 100644 kernel/bpf/disasm.h
+Successfully cherry-picked b1b35c788c9685800e2689d25291fa0a2c90bd52
+----------------------------------------
+Cherry-picking 1ae220deab7426535849d933549054e6eab47da8
+[main f6d4d16985bb] bpf: squash of log related commits
+ Author: Roberto Sartori <roberto.sartori.android@gmail.com>
+ Date: Wed Oct 23 14:29:08 2024 +0200
+ 4 files changed, 375 insertions(+), 225 deletions(-)
+Successfully cherry-picked 1ae220deab7426535849d933549054e6eab47da8
+----------------------------------------
+Cherry-picking ccca941aeb830e9e9a17c68385a55f134b1a2125
+Auto-merging net/core/filter.c
+Auto-merging net/sched/cls_bpf.c
+[main 0c3dbe1a8dd8] bpf: rename bpf_compute_data_end into bpf_compute_data_pointers
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Mon Sep 25 02:25:50 2017 +0200
+ 8 files changed, 22 insertions(+), 19 deletions(-)
+Successfully cherry-picked ccca941aeb830e9e9a17c68385a55f134b1a2125
+----------------------------------------
+Cherry-picking 1e7728091335ac62f8671db10ad21d62e0836d22
+Auto-merging drivers/net/tun.c
+Auto-merging include/linux/skbuff.h
+Auto-merging net/core/filter.c
+Auto-merging net/core/skbuff.c
+[main ac6eff590b46] bpf: add meta pointer for direct access
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Mon Sep 25 02:25:51 2017 +0200
+ 11 files changed, 271 insertions(+), 55 deletions(-)
+Successfully cherry-picked 1e7728091335ac62f8671db10ad21d62e0836d22
+----------------------------------------
+Cherry-picking 436065b8170024f5ed39eb7570bb5372f7003f11
+[main 800b9903f900] bpf: also improve pattern matches for meta access
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Wed Nov 1 23:58:10 2017 +0100
+ 1 file changed, 96 insertions(+), 40 deletions(-)
+Successfully cherry-picked 436065b8170024f5ed39eb7570bb5372f7003f11
+----------------------------------------
+Cherry-picking a73cb1a95eabdf827e739b5b4b13a8a2cce01f6d
+[main 76932f5e03f2] bpf: print liveness info to verifier log
+ Author: Alexei Starovoitov <ast@fb.com>
+ Date: Thu Nov 30 21:31:36 2017 -0800
+ 1 file changed, 20 insertions(+), 4 deletions(-)
+Successfully cherry-picked a73cb1a95eabdf827e739b5b4b13a8a2cce01f6d
+----------------------------------------
+Cherry-picking f06f6a15282db2ebf7a06d250e48478b4606f445
+[main 39facb1e140a] bpf: cleanup register_is_null()
+ Author: Alexei Starovoitov <ast@fb.com>
+ Date: Thu Nov 30 21:31:40 2017 -0800
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+Successfully cherry-picked f06f6a15282db2ebf7a06d250e48478b4606f445
+----------------------------------------
+Cherry-picking ef7d361c2a010dcde6b65e683864e374c14b2db9
+[main 71cdd1c64737] bpf: introduce function calls (verification)
+ Author: Alexei Starovoitov <ast@fb.com>
+ Date: Thu Dec 14 17:55:06 2017 -0800
+ 2 files changed, 590 insertions(+), 158 deletions(-)
+Successfully cherry-picked ef7d361c2a010dcde6b65e683864e374c14b2db9
+----------------------------------------
+Cherry-picking fbe8f5dbbf84f829bf3ff6b1be90eb6b65bf4858
+Auto-merging kernel/bpf/core.c
+[main a550ec3f4a5e] bpf: add support for bpf_call to interpreter
+ Author: Alexei Starovoitov <ast@fb.com>
+ Date: Thu Dec 14 17:55:13 2017 -0800
+ 4 files changed, 120 insertions(+), 31 deletions(-)
+Successfully cherry-picked fbe8f5dbbf84f829bf3ff6b1be90eb6b65bf4858
+----------------------------------------
+Cherry-picking c17dc4df373cc00deec9c074db53a32b08c63e42
+Auto-merging arch/arm64/net/bpf_jit_comp.c
+Auto-merging kernel/bpf/core.c
+[main bd2c9c258695] bpf: fix net.core.bpf_jit_enable race
+ Author: Alexei Starovoitov <ast@fb.com>
+ Date: Thu Dec 14 17:55:14 2017 -0800
+ 8 files changed, 11 insertions(+), 9 deletions(-)
+Successfully cherry-picked c17dc4df373cc00deec9c074db53a32b08c63e42
+----------------------------------------
+Cherry-picking 16374ed897cec70b0a3d005ec41f7f1fc70d0b89
+Auto-merging kernel/bpf/core.c
+[main 03f3c58e9632] bpf: x64: add JIT support for multi-function programs
+ Author: Alexei Starovoitov <ast@fb.com>
+ Date: Thu Dec 14 17:55:15 2017 -0800
+ 6 files changed, 184 insertions(+), 6 deletions(-)
+Successfully cherry-picked 16374ed897cec70b0a3d005ec41f7f1fc70d0b89
+----------------------------------------
+Cherry-picking b9a003fe499998ded869df1d50573d9adb95dcba
+[main d15021cea0cc] bpf: Add bpf_patch_call_args prototype to include/linux/bpf.h
+ Author: Andrii Nakryiko <andrii@kernel.org>
+ Date: Mon Jan 11 23:55:14 2021 -0800
+ 2 files changed, 18 insertions(+), 6 deletions(-)
+Successfully cherry-picked b9a003fe499998ded869df1d50573d9adb95dcba
+----------------------------------------
+Cherry-picking 21723f6d0569266290b7aa27b73edd8273923122
+Auto-merging kernel/kallsyms.c
+[main d249ff7f1f4a] stop using '%pK' for /proc/kallsyms pointer values
+ Author: Linus Torvalds <torvalds@linux-foundation.org>
+ Date: Wed Nov 8 12:51:04 2017 -0800
+ 1 file changed, 35 insertions(+)
+Successfully cherry-picked 21723f6d0569266290b7aa27b73edd8273923122
+----------------------------------------
+Cherry-picking 92f166a3fb3e1960e85b145602cea5965b0115ba
+Auto-merging include/linux/kallsyms.h
+Auto-merging kernel/kallsyms.c
+Auto-merging kernel/module.c
+[main 26f89f87e478] /proc/module: use the same logic as /proc/kallsyms for address exposure
+ Author: Linus Torvalds <torvalds@linux-foundation.org>
+ Date: Sun Nov 12 18:44:23 2017 -0800
+ 3 files changed, 28 insertions(+), 3 deletions(-)
+Successfully cherry-picked 92f166a3fb3e1960e85b145602cea5965b0115ba
+----------------------------------------
+Cherry-picking 96174225d5fe8616426536cd551cc41dfa0a65c3
+Auto-merging kernel/bpf/core.c
+[main b138423455c1] bpf: allow for correlation of maps and helpers in dump
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Wed Dec 20 13:42:57 2017 +0100
+ 6 files changed, 194 insertions(+), 24 deletions(-)
+Successfully cherry-picked 96174225d5fe8616426536cd551cc41dfa0a65c3
+----------------------------------------
+Cherry-picking 4cf33ba56d3efd2b8e8ea635cd39024441ac3e50
+[main 3218a26ee94d] bpf: annotate bpf_insn_print_t with __printf
+ Author: Jakub Kicinski <jakub.kicinski@netronome.com>
+ Date: Tue Jan 16 15:51:46 2018 -0800
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked 4cf33ba56d3efd2b8e8ea635cd39024441ac3e50
+----------------------------------------
+Cherry-picking 9d3b7e3686a9d2d5701b7f064fd91362e063fe01
+[main 06f3ed41257b] bpf: Remove struct bpf_verifier_env argument from print_bpf_insn
+ Author: Jiri Olsa <jolsa@kernel.org>
+ Date: Fri Mar 23 11:41:28 2018 +0100
+ 4 files changed, 55 insertions(+), 51 deletions(-)
+Successfully cherry-picked 9d3b7e3686a9d2d5701b7f064fd91362e063fe01
+----------------------------------------
+Cherry-picking 28f84e52d5490a0f0e4ada9ce305b517672d38cd
+[main c0f635a76e2d] bpf/verifier: refine retval R0 state for bpf_get_stack helper
+ Author: Yonghong Song <yhs@fb.com>
+ Date: Sat Apr 28 22:28:09 2018 -0700
+ 1 file changed, 27 insertions(+)
+Successfully cherry-picked 28f84e52d5490a0f0e4ada9ce305b517672d38cd
+----------------------------------------
+Cherry-picking 0b52f51c508016bff973d44af92bb52d9bec2e2a
+[main 867531214095] bpf: Add iterator for spilled registers
+ Author: Joe Stringer <joe@wand.net.nz>
+ Date: Tue Oct 2 13:35:29 2018 -0700
+ 2 files changed, 18 insertions(+), 9 deletions(-)
+Successfully cherry-picked 0b52f51c508016bff973d44af92bb52d9bec2e2a
+----------------------------------------
+Cherry-picking 9e05af01e451d0a28eda810184f6f2b7a74c59ae
+[main 2ba36cae591c] bpf: Generalize ptr_or_null regs check
+ Author: Joe Stringer <joe@wand.net.nz>
+ Date: Tue Oct 2 13:35:32 2018 -0700
+ 1 file changed, 18 insertions(+), 15 deletions(-)
+Successfully cherry-picked 9e05af01e451d0a28eda810184f6f2b7a74c59ae
+----------------------------------------
+Cherry-picking 37e768bc1114e49a18440c1f90c6960252a0b9d2
+[main a1b506683e03] bpf: Macrofy stack state copy
+ Author: Joe Stringer <joe@wand.net.nz>
+ Date: Tue Oct 2 13:35:34 2018 -0700
+ 1 file changed, 59 insertions(+), 45 deletions(-)
+Successfully cherry-picked 37e768bc1114e49a18440c1f90c6960252a0b9d2
+----------------------------------------
+Cherry-picking f8d9a9a4565537284b2acf0308a949568bebaff2
+[main 51afc2bb5658] bpf: introduce ARG_PTR_TO_MEM_OR_NULL
+ Author: Gianluca Borello <g.borello@gmail.com>
+ Date: Wed Nov 22 18:32:53 2017 +0000
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+Successfully cherry-picked f8d9a9a4565537284b2acf0308a949568bebaff2
+----------------------------------------
+Cherry-picking c0711038e6d9c3e30d4b4521f30b9c9712e7971b
+[main 22d38e455fa9] bpf, verifier: detect misconfigured mem, size argument pair
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Sat Jan 20 01:24:29 2018 +0100
+ 1 file changed, 53 insertions(+), 21 deletions(-)
+Successfully cherry-picked c0711038e6d9c3e30d4b4521f30b9c9712e7971b
+----------------------------------------
+Cherry-picking 99ff22f7402c3569ce43febe0c7f7f9bd7dc338b
+[main 9f5d18096301] bpf: properly enforce index mask to prevent out-of-bounds speculation
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Thu May 24 02:32:53 2018 +0200
+ 2 files changed, 62 insertions(+), 24 deletions(-)
+Successfully cherry-picked 99ff22f7402c3569ce43febe0c7f7f9bd7dc338b
+----------------------------------------
+Cherry-picking e02e50501b60a961cf7ceaec4ad41b40261f316c
+[main 21ef1a4b918c] bpf: Add reference tracking to verifier
+ Author: Joe Stringer <joe@wand.net.nz>
+ Date: Tue Oct 2 13:35:35 2018 -0700
+ 2 files changed, 300 insertions(+), 22 deletions(-)
+Successfully cherry-picked e02e50501b60a961cf7ceaec4ad41b40261f316c
+----------------------------------------
+Cherry-picking b105daa31d84c77f798f589552985a05f64fadc5
+Auto-merging kernel/bpf/hashtab.c
+[main 2f852d8a0616] bpf: decouple btf from seq bpf fs dump and enable more maps
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Sun Aug 12 01:59:17 2018 +0200
+ 10 files changed, 71 insertions(+), 18 deletions(-)
+Successfully cherry-picked b105daa31d84c77f798f589552985a05f64fadc5
+----------------------------------------
+Cherry-picking 3cf308003a463772b9e7ea4e3b4a70d83f5aa357
+[main 0c5dbf6bce1d] bpf, x64: fix memleak when not converging on calls
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Wed May 2 20:12:23 2018 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 3cf308003a463772b9e7ea4e3b4a70d83f5aa357
+----------------------------------------
+Cherry-picking d1956f8134b9c498d9d027926f3233af8e0626e8
+[main e6c2e072717c] bpf: fix maximum stack depth tracking logic
+ Author: Alexei Starovoitov <ast@kernel.org>
+ Date: Mon Dec 25 13:15:40 2017 -0800
+ 2 files changed, 67 insertions(+), 15 deletions(-)
+Successfully cherry-picked d1956f8134b9c498d9d027926f3233af8e0626e8
+----------------------------------------
+Cherry-picking 26a6248eeac5d988e4a249f68a4c1fbb50057bff
+[main 707511dc7b68] bpf: unify main prog and subprog
+ Author: Jiong Wang <jiong.wang@netronome.com>
+ Date: Wed May 2 16:17:17 2018 -0400
+ 2 files changed, 39 insertions(+), 27 deletions(-)
+Successfully cherry-picked 26a6248eeac5d988e4a249f68a4c1fbb50057bff
+----------------------------------------
+Cherry-picking e87756221bd3c82d0abbb194ff80f7c54cd9e283
+[main 31e575caba13] bpf: centre subprog information fields
+ Author: Jiong Wang <jiong.wang@netronome.com>
+ Date: Wed May 2 16:17:18 2018 -0400
+ 2 files changed, 48 insertions(+), 34 deletions(-)
+Successfully cherry-picked e87756221bd3c82d0abbb194ff80f7c54cd9e283
+----------------------------------------
+Cherry-picking 77d3564fc07f5bce8fe624e1a06c0c31ae5edb7e
+[main a3b36296a680] bpf: Add gpl_compatible flag to struct bpf_prog_info
+ Author: Jiri Olsa <jolsa@kernel.org>
+ Date: Wed Apr 25 19:41:06 2018 +0200
+ 2 files changed, 2 insertions(+)
+Successfully cherry-picked 77d3564fc07f5bce8fe624e1a06c0c31ae5edb7e
+----------------------------------------
+Cherry-picking eabf23256de02b509ad3b45c42704495b03c08e4
+[main 35af10c032d8] bpf: get kernel symbol addresses via syscall
+ Author: Sandipan Das <sandipan@linux.vnet.ibm.com>
+ Date: Thu May 24 12:26:48 2018 +0530
+ 3 files changed, 28 insertions(+), 5 deletions(-)
+Successfully cherry-picked eabf23256de02b509ad3b45c42704495b03c08e4
+----------------------------------------
+Cherry-picking aa6372915c13e06f709607b51e5ce3d67231fb1d
+[main ba1e733eb9b6] bpf: get JITed image lengths of functions via syscall
+ Author: Sandipan Das <sandipan@linux.vnet.ibm.com>
+ Date: Thu May 24 12:26:52 2018 +0530
+ 2 files changed, 23 insertions(+)
+Successfully cherry-picked aa6372915c13e06f709607b51e5ce3d67231fb1d
+----------------------------------------
+Cherry-picking 4756b503e08f3ad364e5247a8b97e253527e8c57
+Auto-merging kernel/bpf/core.c
+[main ae35e5e7a0c5] bpf: Append prog->aux->name in bpf_get_prog_name()
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Thu Oct 5 21:52:13 2017 -0700
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+Successfully cherry-picked 4756b503e08f3ad364e5247a8b97e253527e8c57
+----------------------------------------
+Cherry-picking 0eb44128a4833429eb72a8b1a961338814afa4d2
+[main e306750e4656] bpf: Expose check_uarg_tail_zero()
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Tue May 22 15:03:31 2018 -0700
+ 2 files changed, 8 insertions(+), 6 deletions(-)
+Successfully cherry-picked 0eb44128a4833429eb72a8b1a961338814afa4d2
+----------------------------------------
+Cherry-picking 6504b89e97887c877ff2a89510133f03eedc05b1
+[main a3928532db80] bpf: fix bpf_prog_get_info_by_fd to return 0 func_lens for unpriv
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Fri Nov 2 11:35:46 2018 +0100
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 6504b89e97887c877ff2a89510133f03eedc05b1
+----------------------------------------
+Cherry-picking 4170fb98d2ad84dbbd0ed2c4b00a1c59c06b040a
+[main 0868da2370ea] bpf: btf: Add BTF_KIND_FUNC and BTF_KIND_FUNC_PROTO
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Mon Nov 19 15:29:08 2018 -0800
+ 2 files changed, 337 insertions(+), 53 deletions(-)
+Successfully cherry-picked 4170fb98d2ad84dbbd0ed2c4b00a1c59c06b040a
+----------------------------------------
+Cherry-picking f1473b74bcc2085122c54b208d68e319c665d2ae
+Auto-merging kernel/bpf/core.c
+[main 4078de2be721] bpf: Introduce bpf_func_info
+ Author: Yonghong Song <yhs@fb.com>
+ Date: Mon Nov 19 15:29:11 2018 -0800
+ 8 files changed, 205 insertions(+), 11 deletions(-)
+Successfully cherry-picked f1473b74bcc2085122c54b208d68e319c665d2ae
+----------------------------------------
+Cherry-picking 4d381511ac51f00a515443e6481a0d9cecb5e615
+Auto-merging kernel/bpf/core.c
+[main 4c07c98b116b] bpf: btf: support proper non-jit func info
+ Author: Yonghong Song <yhs@fb.com>
+ Date: Sat Nov 24 23:20:44 2018 -0800
+ 5 files changed, 62 insertions(+), 44 deletions(-)
+Successfully cherry-picked 4d381511ac51f00a515443e6481a0d9cecb5e615
+----------------------------------------
+Cherry-picking 792114a16395e816c3a46f7d801cab2eba66ed47
+[main 88e05fa481a5] bpf: don't leave partial mangled prog in jit_subprogs error path
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Thu Jul 12 21:44:28 2018 +0200
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+Successfully cherry-picked 792114a16395e816c3a46f7d801cab2eba66ed47
+----------------------------------------
+Cherry-picking bff6104ac544bf408325a8b48da9165c558523c0
+Auto-merging kernel/bpf/core.c
+[main 751f8cffcfa9] bpf: Add bpf_line_info support
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Fri Dec 7 16:42:25 2018 -0800
+ 10 files changed, 393 insertions(+), 29 deletions(-)
+Successfully cherry-picked bff6104ac544bf408325a8b48da9165c558523c0
+----------------------------------------
+Cherry-picking ecf51ccd5f5a1916f76b538530dceea69d704254
+Auto-merging kernel/bpf/core.c
+[main dcf1ac5a81ad] bpf: reject any prog that failed read-only lock
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Fri Jun 15 02:30:48 2018 +0200
+ 3 files changed, 81 insertions(+), 28 deletions(-)
+Successfully cherry-picked ecf51ccd5f5a1916f76b538530dceea69d704254
+----------------------------------------
+Cherry-picking 725dd13b1c09259a85bea51471c4df83fb9a2d20
+[main d43795998008] bpf: Create a new btf_name_by_offset() for non type name use case
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Thu Dec 13 10:41:46 2018 -0800
+ 3 files changed, 18 insertions(+), 11 deletions(-)
+Successfully cherry-picked 725dd13b1c09259a85bea51471c4df83fb9a2d20
+----------------------------------------
+Cherry-picking 7ad43791bef45c705850417baedff566cf9d6402
+[main fbbe02a8fa91] bpf: fix a compilation error when CONFIG_BPF_SYSCALL is not defined
+ Author: Yonghong Song <yhs@fb.com>
+ Date: Tue Nov 20 14:08:20 2018 -0800
+ 1 file changed, 15 insertions(+)
+Successfully cherry-picked 7ad43791bef45c705850417baedff566cf9d6402
+----------------------------------------
+Cherry-picking 766f8a6f7f381c95afe53f8d7f3188f46ed5bce5
+[main 36812832d561] bpf: btf: Rename btf_key_id and btf_value_id in bpf_map_info
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Tue May 22 14:57:21 2018 -0700
+ 4 files changed, 18 insertions(+), 16 deletions(-)
+Successfully cherry-picked 766f8a6f7f381c95afe53f8d7f3188f46ed5bce5
+----------------------------------------
+Cherry-picking 2debbfda724ed95a723b5880cf92bae06afa6624
+Auto-merging kernel/bpf/helpers.c
+[main 89369ffec1ab] bpf: introduce per-cpu cgroup local storage
+ Author: Roman Gushchin <guro@fb.com>
+ Date: Fri Sep 28 14:45:43 2018 +0000
+ 8 files changed, 170 insertions(+), 26 deletions(-)
+Successfully cherry-picked 2debbfda724ed95a723b5880cf92bae06afa6624
+----------------------------------------
+Cherry-picking 2b21314346e0194749caf840b90c0308dade4a86
+[main 900a119d9f9b] bpf: Define cgroup_bpf_enabled for CONFIG_CGROUP_BPF=n
+ Author: Andrey Ignatov <rdna@fb.com>
+ Date: Fri May 25 08:55:22 2018 -0700
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 2b21314346e0194749caf840b90c0308dade4a86
+----------------------------------------
+Cherry-picking 45d66d02561ad06a34f8b6a87868299821b8d3bb
+[main 8b8729e50b89] bpf: pass struct btf pointer to the map_check_btf() callback
+ Author: Roman Gushchin <guroan@gmail.com>
+ Date: Mon Dec 10 15:43:00 2018 -0800
+ 4 files changed, 7 insertions(+), 1 deletion(-)
+Successfully cherry-picked 45d66d02561ad06a34f8b6a87868299821b8d3bb
+----------------------------------------
+Cherry-picking 46ba90eaeaf0fb303f34a562b3c1063e71ea3f9b
+[main e0b8704c5d46] bpf: add bpffs pretty print for cgroup local storage maps
+ Author: Roman Gushchin <guroan@gmail.com>
+ Date: Mon Dec 10 15:43:01 2018 -0800
+ 3 files changed, 113 insertions(+), 1 deletion(-)
+Successfully cherry-picked 46ba90eaeaf0fb303f34a562b3c1063e71ea3f9b
+----------------------------------------
+Cherry-picking a88c6f8a91a344f3e778dfb6767ddd82f1de4a16
+[main 16412e809f32] bpf: btf: fix struct/union/fwd types with kind_flag
+ Author: Yonghong Song <yhs@fb.com>
+ Date: Sat Dec 15 22:13:51 2018 -0800
+ 2 files changed, 265 insertions(+), 22 deletions(-)
+Successfully cherry-picked a88c6f8a91a344f3e778dfb6767ddd82f1de4a16
+----------------------------------------
+Cherry-picking 4d3e022139ab2d41cfa7763121a6072e52fb704d
+[main bce62f5c4e4d] bpf: enable cgroup local storage map pretty print with kind_flag
+ Author: Yonghong Song <yhs@fb.com>
+ Date: Sat Dec 15 22:13:52 2018 -0800
+ 3 files changed, 35 insertions(+), 23 deletions(-)
+Successfully cherry-picked 4d3e022139ab2d41cfa7763121a6072e52fb704d
+----------------------------------------
+Cherry-picking 88e509104e8eebd2b84021d0368f468d3cfd589d
+Auto-merging kernel/Kconfig.locks
+Auto-merging kernel/bpf/core.c
+Auto-merging kernel/bpf/hashtab.c
+Auto-merging kernel/bpf/helpers.c
+Auto-merging net/core/filter.c
+CONFLICT (content): Merge conflict in net/core/filter.c
+error: could not apply 88e509104e8e... bpf: introduce bpf_spin_lock
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 88e509104e8eebd2b84021d0368f468d3cfd589d
+Auto-resolving conflicts by accepting incoming changes...
