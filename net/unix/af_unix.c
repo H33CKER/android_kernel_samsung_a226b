@@ -797,11 +797,11 @@ static struct sock *unix_create1(struct net *net, struct socket *sock, int kern)
 	sk->sk_write_space	= unix_write_space;
 	sk->sk_max_ack_backlog	= net->unx.sysctl_max_dgram_qlen;
 	sk->sk_destruct		= unix_sock_destructor;
-	u = unix_sk(sk);
-	u->inflight = 0;
+	u	  = unix_sk(sk);
 	u->path.dentry = NULL;
 	u->path.mnt = NULL;
 	spin_lock_init(&u->lock);
+	atomic_long_set(&u->inflight, 0);
 	INIT_LIST_HEAD(&u->link);
 	mutex_init(&u->iolock); /* single task reading lock */
 	mutex_init(&u->bindlock); /* single task binding lock */
@@ -1521,45 +1521,6 @@ out:
 	return err;
 }
 
-static void unix_peek_fds(struct scm_cookie *scm, struct sk_buff *skb)
-{
-	scm->fp = scm_fp_dup(UNIXCB(skb).fp);
-
-	/* Garbage collection of unix sockets starts by selecting a set of
-	 * candidate sockets which have reference only from being in flight
-	 * (total_refs == inflight_refs).  This condition is checked once during
-	 * the candidate collection phase, and candidates are marked as such, so
-	 * that non-candidates can later be ignored.  While inflight_refs is
-	 * protected by unix_gc_lock, total_refs (file count) is not, hence this
-	 * is an instantaneous decision.
-	 * Once a candidate, however, the socket must not be reinstalled into a
-	 * file descriptor while the garbage collection is in progress.
-	 * If the above conditions are met, then the directed graph of
-	 * candidates (*) does not change while unix_gc_lock is held.
-	 * Any operations that changes the file count through file descriptors
-	 * (dup, close, sendmsg) does not change the graph since candidates are
-	 * not installed in fds.
-	 * Dequeing a candidate via recvmsg would install it into an fd, but
-	 * that takes unix_gc_lock to decrement the inflight count, so it's
-	 * serialized with garbage collection.
-	 * MSG_PEEK is special in that it does not change the inflight count,
-	 * yet does install the socket into an fd.  The following lock/unlock
-	 * pair is to ensure serialization with garbage collection.  It must be
-	 * done between incrementing the file count and installing the file into
-	 * an fd.
-	 * If garbage collection starts after the barrier provided by the
-	 * lock/unlock, then it will see the elevated refcount and not mark this
-	 * as a candidate.  If a garbage collection is already in progress
-	 * before the file count was incremented, then the lock/unlock pair will
-	 * ensure that garbage collection is finished before progressing to
-	 * installing the fd.
-	 * (*) A -> B where B is on the queue of A or B is on the queue of C
-	 * which is on the queue of listening socket A.
-	 */
-	spin_lock(&unix_gc_lock);
-	spin_unlock(&unix_gc_lock);
-}
-
 static int unix_scm_to_skb(struct scm_cookie *scm, struct sk_buff *skb, bool send_fds)
 {
 	int err = 0;
@@ -1958,7 +1919,6 @@ static ssize_t unix_stream_sendpage(struct socket *socket, struct page *page,
 
 	if (false) {
 alloc_skb:
-		spin_unlock(&other->sk_receive_queue.lock);
 		unix_state_unlock(other);
 		mutex_unlock(&unix_sk(other)->iolock);
 		newskb = sock_alloc_send_pskb(sk, 0, 0, flags & MSG_DONTWAIT,
@@ -1998,7 +1958,6 @@ alloc_skb:
 		init_scm = false;
 	}
 
-	spin_lock(&other->sk_receive_queue.lock);
 	skb = skb_peek_tail(&other->sk_receive_queue);
 	if (tail && tail == skb) {
 		skb = newskb;
@@ -2029,11 +1988,14 @@ alloc_skb:
 	refcount_add(size, &sk->sk_wmem_alloc);
 
 	if (newskb) {
-		unix_scm_to_skb(&scm, skb, false);
+		err = unix_scm_to_skb(&scm, skb, false);
+		if (err)
+			goto err_state_unlock;
+		spin_lock(&other->sk_receive_queue.lock);
 		__skb_queue_tail(&other->sk_receive_queue, newskb);
+		spin_unlock(&other->sk_receive_queue.lock);
 	}
 
-	spin_unlock(&other->sk_receive_queue.lock);
 	unix_state_unlock(other);
 	mutex_unlock(&unix_sk(other)->iolock);
 
@@ -2184,7 +2146,7 @@ static int unix_dgram_recvmsg(struct socket *sock, struct msghdr *msg,
 		sk_peek_offset_fwd(sk, size);
 
 		if (UNIXCB(skb).fp)
-			unix_peek_fds(&scm, skb);
+			scm.fp = scm_fp_dup(UNIXCB(skb).fp);
 	}
 	err = (flags & MSG_TRUNC) ? skb->len - skip : size;
 
@@ -2425,7 +2387,7 @@ unlock:
 			/* It is questionable, see note in unix_dgram_recvmsg.
 			 */
 			if (UNIXCB(skb).fp)
-				unix_peek_fds(&scm, skb);
+				scm.fp = scm_fp_dup(UNIXCB(skb).fp);
 
 			sk_peek_offset_fwd(sk, chunk);
 

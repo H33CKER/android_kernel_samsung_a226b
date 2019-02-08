@@ -28616,3 +28616,55 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 10a089bae827ec30ad9b6cb7048020a62fae0cfa
 Auto-resolving conflicts by accepting incoming changes...
+[main 8809ea660ad6] spi: spi-fsl-dspi: Fix a resource leak in an error handling path
+ Author: Christophe JAILLET <christophe.jaillet@wanadoo.fr>
+ Date: Sun May 9 21:12:27 2021 +0200
+ 2 files changed, 1483 insertions(+), 7 deletions(-)
+----------------------------------------
+Cherry-picking 6acd1a6ec697b99aea98637c290e25d90e135eb4
+Auto-merging drivers/usb/host/xhci-ring.c
+Auto-merging drivers/usb/host/xhci.h
+[main 514e2207dcc8] xhci: add xhci_get_virt_ep() helper
+ Author: Mathias Nyman <mathias.nyman@linux.intel.com>
+ Date: Fri Jan 29 15:00:22 2021 +0200
+ 2 files changed, 47 insertions(+), 14 deletions(-)
+Successfully cherry-picked 6acd1a6ec697b99aea98637c290e25d90e135eb4
+----------------------------------------
+Cherry-picking ce4d1565392b2dc8ea33032615c934c3dc6a32bb
+[main 160452a2c468] Linux 4.14.241
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Wed Jul 28 11:12:20 2021 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked ce4d1565392b2dc8ea33032615c934c3dc6a32bb
+----------------------------------------
+Cherry-picking 53e61d6ec0ea1add13e9f0e927bdd534632f7ce5
+[main 04700570ada9] selftest: fix build error in tools/testing/selftests/vm/userfaultfd.c
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Wed Jul 28 13:51:58 2021 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 53e61d6ec0ea1add13e9f0e927bdd534632f7ce5
+----------------------------------------
+Cherry-picking 7b6b8db362d2949c09b88ffdfb095796ae854972
+Auto-merging arch/x86/kvm/x86.c
+[main 8864b6d5d92d] KVM: x86: determine if an exception has an error code only when injecting it.
+ Author: Maxim Levitsky <mlevitsk@redhat.com>
+ Date: Thu Feb 25 17:41:32 2021 +0200
+ 1 file changed, 9 insertions(+), 4 deletions(-)
+Successfully cherry-picked 7b6b8db362d2949c09b88ffdfb095796ae854972
+----------------------------------------
+Cherry-picking eee65a1282369eedfcbb664d0c865a0ef3eb7017
+Auto-merging include/net/af_unix.h
+Auto-merging net/unix/af_unix.c
+CONFLICT (content): Merge conflict in net/unix/af_unix.c
+Auto-merging net/unix/garbage.c
+Auto-merging net/unix/scm.c
+CONFLICT (add/add): Merge conflict in net/unix/scm.c
+error: could not apply eee65a128236... net: split out functions related to registering inflight socket files
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of eee65a1282369eedfcbb664d0c865a0ef3eb7017
+Auto-resolving conflicts by accepting incoming changes...
