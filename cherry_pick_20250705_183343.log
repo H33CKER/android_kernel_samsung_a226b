@@ -376,3 +376,27 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of d1f7217b7a75cb7f59b295d7ceab1776a0affe95
 Auto-resolving conflicts by accepting incoming changes...
+[main 599a8e8b2d02] 9p/trans_fd: abort p9_read_work if req status changed
+ Author: Dominique Martinet <dominique.martinet@cea.fr>
+ Date: Tue Oct 9 11:18:52 2018 +0900
+ 2 files changed, 34 insertions(+), 31 deletions(-)
+----------------------------------------
+Cherry-picking 019221c5e5152b6417e7cd8bb98417fe9719fc4c
+[main 5b5c2169cefe] 9p/trans_fd: Fix concurrency del of req_list in p9_fd_cancelled/p9_read_work
+ Author: Wang Hai <wanghai38@huawei.com>
+ Date: Fri Jun 12 17:08:33 2020 +0800
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+Successfully cherry-picked 019221c5e5152b6417e7cd8bb98417fe9719fc4c
+----------------------------------------
+Cherry-picking 53993bba307dbfaaaa04b52888081114a77e72bf
+Auto-merging arch/x86/kernel/vmlinux.lds.S
+CONFLICT (content): Merge conflict in arch/x86/kernel/vmlinux.lds.S
+error: could not apply 53993bba307d... x86/build/lto: Fix truncated .bss with -fdata-sections
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 53993bba307dbfaaaa04b52888081114a77e72bf
+Auto-resolving conflicts by accepting incoming changes...
