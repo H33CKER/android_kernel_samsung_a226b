@@ -566,3 +566,35 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of c5ac6879a963a9a144293da13e54109c477be12d
 Auto-resolving conflicts by accepting incoming changes...
+[main 81ac3c4a9c58] BACKPORT: FROMGIT: userfaultfd: add minor fault registration mode
+ Author: Axel Rasmussen <axelrasmussen@google.com>
+ Date: Thu Mar 18 17:01:50 2021 +1100
+ 11 files changed, 775 insertions(+), 92 deletions(-)
+----------------------------------------
+Cherry-picking aa5d7cac3077e19de526e5f4b0f237d2eaedb5b7
+[main ddf484b37266] FROMGIT: userfaultfd: disable huge PMD sharing for MINOR registered VMAs
+ Author: Axel Rasmussen <axelrasmussen@google.com>
+ Date: Thu Mar 18 17:01:50 2021 +1100
+ 1 file changed, 10 insertions(+), 3 deletions(-)
+Successfully cherry-picked aa5d7cac3077e19de526e5f4b0f237d2eaedb5b7
+----------------------------------------
+Cherry-picking aa7b0977f6938d82e59edd43196f871912bf6ef7
+[main a57a88a02fda] BACKPORT: FROMGIT: userfaultfd: hugetlbfs: only compile UFFD helpers if config enabled
+ Author: Axel Rasmussen <axelrasmussen@google.com>
+ Date: Thu Mar 18 17:01:50 2021 +1100
+ 2 files changed, 6 insertions(+)
+Successfully cherry-picked aa7b0977f6938d82e59edd43196f871912bf6ef7
+----------------------------------------
+Cherry-picking df1e699930a51ace7f4c6ac3c69eed709db1fb6f
+Auto-merging Documentation/sysctl/vm.txt
+Auto-merging kernel/sysctl.c
+CONFLICT (content): Merge conflict in kernel/sysctl.c
+error: could not apply df1e699930a5... BACKPORT: userfaultfd/sysctl: add vm.unprivileged_userfaultfd
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of df1e699930a51ace7f4c6ac3c69eed709db1fb6f
+Auto-resolving conflicts by accepting incoming changes...
