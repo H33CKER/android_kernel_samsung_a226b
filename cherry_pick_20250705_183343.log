@@ -10766,3 +10766,35 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of e23efd6da3a660168a053122b6e26917231bfcdf
 Auto-resolving conflicts by accepting incoming changes...
+[main 5669cc7b87fa] btrfs: Remove redundant extent_buffer_get in get_old_root
+ Author: Nikolay Borisov <nborisov@suse.com>
+ Date: Wed Aug 15 18:26:53 2018 +0300
+ 2 files changed, 648 insertions(+), 38 deletions(-)
+----------------------------------------
+Cherry-picking 8ab36da262fd529059045e41b4d5af387bae833f
+[main 001a71f66228] btrfs: Remove extraneous extent_buffer_get from tree_mod_log_rewind
+ Author: Nikolay Borisov <nborisov@suse.com>
+ Date: Wed Aug 15 18:26:54 2018 +0300
+ 1 file changed, 1 deletion(-)
+Successfully cherry-picked 8ab36da262fd529059045e41b4d5af387bae833f
+----------------------------------------
+Cherry-picking a6d4a84d569f49affa53959889d2b9acf885a97c
+[main 342853f9f44b] btrfs: set the lockdep class for log tree extent buffers
+ Author: Josef Bacik <josef@toxicpanda.com>
+ Date: Mon Aug 10 11:42:31 2020 -0400
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+Successfully cherry-picked a6d4a84d569f49affa53959889d2b9acf885a97c
+----------------------------------------
+Cherry-picking f4abfb03a387c0991dc9de3a5512fa84ab0663b9
+Auto-merging include/linux/uaccess.h
+Auto-merging mm/maccess.c
+CONFLICT (content): Merge conflict in mm/maccess.c
+error: could not apply f4abfb03a387... uaccess: Add non-pagefault user-space read functions
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of f4abfb03a387c0991dc9de3a5512fa84ab0663b9
+Auto-resolving conflicts by accepting incoming changes...
