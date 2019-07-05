@@ -17627,3 +17627,71 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of b6d38137c19f96f46496a689c533e882943bc409
 Auto-resolving conflicts by accepting incoming changes...
+[main 7f75203477ce] lib/string.c: implement stpcpy
+ Author: Nick Desaulniers <ndesaulniers@google.com>
+ Date: Fri Sep 25 21:19:18 2020 -0700
+ 2 files changed, 644 insertions(+), 40 deletions(-)
+----------------------------------------
+Cherry-picking 5639b8cb857f3a9998421c697fccb28c54a1c2b1
+[main 8d54a7e1e946] ata: define AC_ERR_OK
+ Author: Jiri Slaby <jslaby@suse.cz>
+ Date: Thu Oct 31 10:59:44 2019 +0100
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 5639b8cb857f3a9998421c697fccb28c54a1c2b1
+----------------------------------------
+Cherry-picking 306a1c5b5683c1d37565e575386139a64bdbec6f
+Auto-merging drivers/ata/libata-core.c
+Auto-merging drivers/ata/libata-sff.c
+Auto-merging drivers/ata/sata_mv.c
+Auto-merging drivers/ata/sata_rcar.c
+[main 9bab3c3837d3] ata: make qc_prep return ata_completion_errors
+ Author: Jiri Slaby <jslaby@suse.cz>
+ Date: Thu Oct 31 10:59:45 2019 +0100
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+Successfully cherry-picked 306a1c5b5683c1d37565e575386139a64bdbec6f
+----------------------------------------
+Cherry-picking b7d9b2ec6d95b82b6da47bbcb61c64a6923f20d2
+Auto-merging drivers/ata/sata_mv.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4544 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit b7d9b2ec6d95.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of b7d9b2ec6d95b82b6da47bbcb61c64a6923f20d2
+No conflicted files found but cherry-pick failed, attempting to skip commit b7d9b2ec6d95b82b6da47bbcb61c64a6923f20d2
+----------------------------------------
+Cherry-picking bae31eef2a167ef160ab2703b6a2f5bbecd98d92
+[main 5bdce30a9dc0] Linux 4.14.200
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Thu Oct 1 13:12:53 2020 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked bae31eef2a167ef160ab2703b6a2f5bbecd98d92
+----------------------------------------
+Cherry-picking 2404380b95ee0838ab92df61f5324e1e7e0556f1
+Auto-merging net/vmw_vsock/virtio_transport.c
+CONFLICT (content): Merge conflict in net/vmw_vsock/virtio_transport.c
+error: could not apply 2404380b95ee... vsock/virtio: use RCU to avoid use-after-free on the_virtio_vsock
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 2404380b95ee0838ab92df61f5324e1e7e0556f1
+Auto-resolving conflicts by accepting incoming changes...
