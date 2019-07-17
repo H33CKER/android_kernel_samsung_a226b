@@ -6678,3 +6678,80 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 55069b03922aa29705e3b5d249a182e3c2a32d54
 Auto-resolving conflicts by accepting incoming changes...
+[main f0fa091ed050] powerpc/mm: Only read faulting instruction when necessary in do_page_fault()
+ Author: Christophe Leroy <christophe.leroy@c-s.fr>
+ Date: Wed May 23 10:53:22 2018 +0200
+ 2 files changed, 142 insertions(+), 5 deletions(-)
+----------------------------------------
+Cherry-picking 8af919714c19513e2bea7645d2524be093bf683a
+[main 316bafa3d03a] powerpc: Allow 4224 bytes of stack expansion for the signal frame
+ Author: Michael Ellerman <mpe@ellerman.id.au>
+ Date: Fri Jul 24 19:25:25 2020 +1000
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+Successfully cherry-picked 8af919714c19513e2bea7645d2524be093bf683a
+----------------------------------------
+Cherry-picking 847745154e2e8afe1fb965baea2c94357ada0eef
+Auto-merging fs/btrfs/ctree.h
+Auto-merging fs/btrfs/super.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4458 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 847745154e2e.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 847745154e2e8afe1fb965baea2c94357ada0eef
+No conflicted files found but cherry-pick failed, attempting to skip commit 847745154e2e8afe1fb965baea2c94357ada0eef
+----------------------------------------
+Cherry-picking 82ba99cfbdc46075c6c9f8941e6ed6bac0a5dacc
+Auto-merging fs/btrfs/super.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4458 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 82ba99cfbdc4.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 82ba99cfbdc46075c6c9f8941e6ed6bac0a5dacc
+No conflicted files found but cherry-pick failed, attempting to skip commit 82ba99cfbdc46075c6c9f8941e6ed6bac0a5dacc
+----------------------------------------
+Cherry-picking c05c73db96b3fb47bab80c43651972ecc1c8c461
+Auto-merging fs/btrfs/inode.c
+CONFLICT (content): Merge conflict in fs/btrfs/inode.c
+error: could not apply c05c73db96b3... btrfs: Move free_pages_out label in inline extent handling branch in compress_file_range
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of c05c73db96b3fb47bab80c43651972ecc1c8c461
+Auto-resolving conflicts by accepting incoming changes...
