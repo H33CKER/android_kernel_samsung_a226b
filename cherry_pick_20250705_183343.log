@@ -7675,3 +7675,45 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 85ce79dd934362c5533c1e4897d5aed663600296
 Auto-resolving conflicts by accepting incoming changes...
+[main 9d9730bd9f48] mm/hugetlb: fix calculation of adjust_range_if_pmd_sharing_possible
+ Author: Peter Xu <peterx@redhat.com>
+ Date: Thu Aug 6 23:26:11 2020 -0700
+ 2 files changed, 63 insertions(+), 112 deletions(-)
+----------------------------------------
+Cherry-picking 877ed468614c08e995c4c3ec5fad7806ce125268
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4463 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 877ed468614c.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 877ed468614c08e995c4c3ec5fad7806ce125268
+No conflicted files found but cherry-pick failed, attempting to skip commit 877ed468614c08e995c4c3ec5fad7806ce125268
+----------------------------------------
+Cherry-picking f114a36246812b5c06b0a6066412215e45b3ac8c
+Auto-merging drivers/clk/clk.c
+CONFLICT (content): Merge conflict in drivers/clk/clk.c
+error: could not apply f114a3624681... clk: Evict unregistered clks from parent caches
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of f114a36246812b5c06b0a6066412215e45b3ac8c
+Auto-resolving conflicts by accepting incoming changes...
