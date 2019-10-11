@@ -5237,3 +5237,59 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of c796d007533ee918b7114c46381366de23a567e7
 Auto-resolving conflicts by accepting incoming changes...
+[main f6aa6188c2d8] bnxt_en: Protect bnxt_set_eee() and bnxt_set_pauseparam() with mutex.
+ Author: Michael Chan <michael.chan@broadcom.com>
+ Date: Sun Sep 20 21:08:56 2020 -0400
+ 2 files changed, 202 insertions(+), 7 deletions(-)
+----------------------------------------
+Cherry-picking 65325a90d601c630953f866fd3d23d8759276f32
+[main 3f29ef14dec1] net: phy: Avoid NPD upon phy_detach() when driver is unbound
+ Author: Florian Fainelli <f.fainelli@gmail.com>
+ Date: Wed Sep 16 20:43:09 2020 -0700
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 65325a90d601c630953f866fd3d23d8759276f32
+----------------------------------------
+Cherry-picking 81a38306341c6d0518576fa686ef4e60b7e6065b
+Auto-merging include/linux/skbuff.h
+[main 87f271ca0fb2] net: add __must_check to skb_put_padto()
+ Author: Eric Dumazet <edumazet@google.com>
+ Date: Wed Sep 9 01:27:40 2020 -0700
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+Successfully cherry-picked 81a38306341c6d0518576fa686ef4e60b7e6065b
+----------------------------------------
+Cherry-picking f415c264176e6095e9dee823e09c5bdd0ee0d337
+Auto-merging net/ipv4/route.c
+[main d8c217462b65] ipv4: Update exception handling for multipath routes via same device
+ Author: David Ahern <dsahern@kernel.org>
+ Date: Mon Sep 14 21:03:54 2020 -0600
+ 1 file changed, 7 insertions(+), 4 deletions(-)
+Successfully cherry-picked f415c264176e6095e9dee823e09c5bdd0ee0d337
+----------------------------------------
+Cherry-picking 494648fc5286830b149bc1c1a059a827a45df3c8
+Auto-merging drivers/net/geneve.c
+[main 5515fae94391] geneve: add transport ports in route lookup for geneve
+ Author: Mark Gray <mark.d.gray@redhat.com>
+ Date: Wed Sep 16 05:19:35 2020 -0400
+ 1 file changed, 27 insertions(+), 10 deletions(-)
+Successfully cherry-picked 494648fc5286830b149bc1c1a059a827a45df3c8
+----------------------------------------
+Cherry-picking a351bdff6dbf5fc4e4306cda5e36c187f5682538
+Auto-merging drivers/tty/serial/8250/8250_core.c
+[main b45bcb28fffe] serial: 8250: Avoid error message on reprobe
+ Author: Lukas Wunner <lukas@wunner.de>
+ Date: Tue May 12 14:40:01 2020 +0200
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+Successfully cherry-picked a351bdff6dbf5fc4e4306cda5e36c187f5682538
+----------------------------------------
+Cherry-picking 90fad04bd42104bf7a0a23b52c883d8f4e4174c0
+Auto-merging mm/memory.c
+CONFLICT (content): Merge conflict in mm/memory.c
+error: could not apply 90fad04bd421... mm: fix double page fault on arm64 if PTE_AF is cleared
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 90fad04bd42104bf7a0a23b52c883d8f4e4174c0
+Auto-resolving conflicts by accepting incoming changes...
