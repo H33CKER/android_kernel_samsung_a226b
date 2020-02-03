@@ -32536,3 +32536,28 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of c2e9833b3f67cbd87ef18526dbd7b82ac7ceedc9
 Auto-resolving conflicts by accepting incoming changes...
+[main 3293e0fe02df] x86/resctrl: Remove superfluous kernfs_get() calls to prevent refcount leak
+ Author: Xiaochen Shen <xiaochen.shen@intel.com>
+ Date: Tue Dec 1 01:27:08 2020 +0800
+ 2 files changed, 431 insertions(+), 71 deletions(-)
+----------------------------------------
+Cherry-picking fdf6268c66e42a86d69fd4dc425dfa50cf524c51
+[main 1402be1c415d] x86/resctrl: Add necessary kernfs_put() calls to prevent refcount leak
+ Author: Xiaochen Shen <xiaochen.shen@intel.com>
+ Date: Tue Dec 1 01:28:49 2020 +0800
+ 1 file changed, 25 insertions(+), 7 deletions(-)
+Successfully cherry-picked fdf6268c66e42a86d69fd4dc425dfa50cf524c51
+----------------------------------------
+Cherry-picking 5a77c5050ee4f93e3c0696e6b2d7e8683e63cc95
+Auto-merging drivers/usb/core/config.c
+Auto-merging drivers/usb/core/quirks.c
+CONFLICT (content): Merge conflict in drivers/usb/core/quirks.c
+error: could not apply 5a77c5050ee4... USB: core: add endpoint-blacklist quirk
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 5a77c5050ee4f93e3c0696e6b2d7e8683e63cc95
+Auto-resolving conflicts by accepting incoming changes...
