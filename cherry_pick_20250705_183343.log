@@ -50375,3 +50375,20 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of bf42c5461fd9e53978eaf7c2c47b07e5de4887d5
 Auto-resolving conflicts by accepting incoming changes...
+[main f33f1f67ed44] icmp: allow icmpv6_ndo_send to work with CONFIG_IPV6=n
+ Author: Jason A. Donenfeld <Jason@zx2c4.com>
+ Date: Tue Feb 25 18:05:35 2020 +0800
+ 2 files changed, 20 insertions(+), 43 deletions(-)
+----------------------------------------
+Cherry-picking 19ca89dd151a5bf05b9be9277dcecc78947be2e3
+Auto-merging drivers/net/gtp.c
+CONFLICT (content): Merge conflict in drivers/net/gtp.c
+error: could not apply 19ca89dd151a... gtp: use icmp_ndo_send helper
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 19ca89dd151a5bf05b9be9277dcecc78947be2e3
+Auto-resolving conflicts by accepting incoming changes...
