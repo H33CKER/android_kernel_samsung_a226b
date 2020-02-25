@@ -50358,3 +50358,20 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 77c49eeb42c224777d7dd21db3b41fd882a40a65
 Auto-resolving conflicts by accepting incoming changes...
+[main ede03cfe20c3] icmp: introduce helper for nat'd source address in network device context
+ Author: Jason A. Donenfeld <Jason@zx2c4.com>
+ Date: Tue Feb 11 20:47:05 2020 +0100
+ 5 files changed, 198 insertions(+), 47 deletions(-)
+----------------------------------------
+Cherry-picking bf42c5461fd9e53978eaf7c2c47b07e5de4887d5
+Auto-merging include/linux/icmpv6.h
+CONFLICT (content): Merge conflict in include/linux/icmpv6.h
+error: could not apply bf42c5461fd9... icmp: allow icmpv6_ndo_send to work with CONFIG_IPV6=n
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of bf42c5461fd9e53978eaf7c2c47b07e5de4887d5
+Auto-resolving conflicts by accepting incoming changes...
