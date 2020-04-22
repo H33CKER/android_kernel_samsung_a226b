@@ -11428,3 +11428,21 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of be52e6223e66c00b775d799dda403b7c5a49a2c4
 Auto-resolving conflicts by accepting incoming changes...
+[main 9c42d822c4c7] vfio-pci: Fault mmaps to enable vma tracking
+ Author: Alex Williamson <alex.williamson@redhat.com>
+ Date: Tue Apr 28 13:12:20 2020 -0600
+ 3 files changed, 391 insertions(+), 285 deletions(-)
+----------------------------------------
+Cherry-picking 1356c3e8539ac48b9362e60b1fa80ec06bb960ec
+Auto-merging drivers/vfio/pci/vfio_pci_config.c
+CONFLICT (content): Merge conflict in drivers/vfio/pci/vfio_pci_config.c
+Auto-merging drivers/vfio/pci/vfio_pci_intrs.c
+error: could not apply 1356c3e8539a... vfio-pci: Invalidate mmaps and block MMIO access on disabled memory
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 1356c3e8539ac48b9362e60b1fa80ec06bb960ec
+Auto-resolving conflicts by accepting incoming changes...

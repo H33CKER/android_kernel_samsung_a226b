@@ -401,15 +401,9 @@ static inline void p_setd(struct perm_bits *p, int off, u32 virt, u32 write)
 /* Caller should hold memory_lock semaphore */
 bool __vfio_pci_memory_enabled(struct vfio_pci_device *vdev)
 {
-	struct pci_dev *pdev = vdev->pdev;
 	u16 cmd = le16_to_cpu(*(__le16 *)&vdev->vconfig[PCI_COMMAND]);
 
-	/*
-	 * SR-IOV VF memory enable is handled by the MSE bit in the
-	 * PF SR-IOV capability, there's therefore no need to trigger
-	 * faults based on the virtual value.
-	 */
-	return pdev->is_virtfn || (cmd & PCI_COMMAND_MEMORY);
+	return cmd & PCI_COMMAND_MEMORY;
 }
 
 /*
@@ -1579,7 +1573,7 @@ static int vfio_ecap_init(struct vfio_pci_device *vdev)
 			if (len == 0xFF) {
 				len = vfio_ext_cap_len(vdev, ecap, epos);
 				if (len < 0)
-					return len;
+					return ret;
 			}
 		}
 
@@ -1738,15 +1732,6 @@ int vfio_config_init(struct vfio_pci_device *vdev)
 				 vconfig[PCI_INTERRUPT_PIN]);
 
 		vconfig[PCI_INTERRUPT_PIN] = 0; /* Gratuitous for good VFs */
-
-		/*
-		 * VFs do no implement the memory enable bit of the COMMAND
-		 * register therefore we'll not have it set in our initial
-		 * copy of config space after pci_enable_device().  For
-		 * consistency with PFs, set the virtual enable bit here.
-		 */
-		*(__le16 *)&vconfig[PCI_COMMAND] |=
-					cpu_to_le16(PCI_COMMAND_MEMORY);
 	}
 
 	if (!IS_ENABLED(CONFIG_VFIO_PCI_INTX) || vdev->nointx)
