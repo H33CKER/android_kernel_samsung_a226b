@@ -35,6 +35,12 @@
 
 #define FONT_DATA ((unsigned char *)font_vga_8x16.data)
 
+/* borrowed from fbcon.c */
+#define REFCOUNT(fd)	(((int *)(fd))[-1])
+#define FNTSIZE(fd)	(((int *)(fd))[-2])
+#define FNTCHARCNT(fd)	(((int *)(fd))[-3])
+#define FONT_EXTRA_WORDS 3
+
 static unsigned char *font_data[MAX_NR_CONSOLES];
 
 static struct newport_regs *npregs;
@@ -516,7 +522,6 @@ static int newport_set_font(int unit, struct console_font *op)
 	FNTSIZE(new_data) = size;
 	FNTCHARCNT(new_data) = op->charcount;
 	REFCOUNT(new_data) = 0;	/* usage counter */
-	FNTSUM(new_data) = 0;
 
 	p = new_data;
 	for (i = 0; i < op->charcount; i++) {
@@ -671,12 +676,12 @@ static bool newport_scroll(struct vc_data *vc, unsigned int t, unsigned int b,
 	return true;
 }
 
-static int newport_set_origin(struct vc_data *vc)
+static int newport_dummy(struct vc_data *c)
 {
 	return 0;
 }
 
-static void newport_save_screen(struct vc_data *vc) { }
+#define DUMMY (void *) newport_dummy
 
 const struct consw newport_con = {
 	.owner		  = THIS_MODULE,
@@ -692,8 +697,8 @@ const struct consw newport_con = {
 	.con_blank	  = newport_blank,
 	.con_font_set	  = newport_font_set,
 	.con_font_default = newport_font_default,
-	.con_set_origin	  = newport_set_origin,
-	.con_save_screen  = newport_save_screen
+	.con_set_origin	  = DUMMY,
+	.con_save_screen  = DUMMY
 };
 
 static int newport_probe(struct gio_device *dev,
