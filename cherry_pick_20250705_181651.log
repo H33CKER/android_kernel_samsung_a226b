@@ -4263,3 +4263,88 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of fcc0896148c820627a5b9314d53dcf4950a63fb5
 Auto-resolving conflicts by accepting incoming changes...
+[main c56c1f30bd96] KVM: arm64: Defer guest entry when an asynchronous exception is pending
+ Author: James Morse <james.morse@arm.com>
+ Date: Fri Sep 4 12:24:35 2020 +0100
+ 2 files changed, 58 insertions(+), 23 deletions(-)
+----------------------------------------
+Cherry-picking 74ecd51bc6b63f73cfc0c2fd191aa9f12891b79c
+Auto-merging arch/arm64/kvm/hyp/hyp-entry.S
+Auto-merging arch/arm64/kvm/hyp/switch.c
+[main 8a4923bc23ee] KVM: arm64: Survive synchronous exceptions caused by AT instructions
+ Author: James Morse <james.morse@arm.com>
+ Date: Fri Sep 4 12:24:36 2020 +0100
+ 3 files changed, 42 insertions(+), 6 deletions(-)
+Successfully cherry-picked 74ecd51bc6b63f73cfc0c2fd191aa9f12891b79c
+----------------------------------------
+Cherry-picking 54ffbb8c929629ee9515af088ffe1b2d108af61b
+[main bf599edb5233] KVM: arm64: Set HCR_EL2.PTW to prevent AT taking synchronous exception
+ Author: James Morse <james.morse@arm.com>
+ Date: Fri Sep 4 12:24:37 2020 +0100
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 54ffbb8c929629ee9515af088ffe1b2d108af61b
+----------------------------------------
+Cherry-picking b7d6cfba234cb6ffe7367d17c33af1b04cc79afb
+Auto-merging scripts/checkpatch.pl
+[main e12f5e700496] checkpatch: fix the usage of capture group ( ... )
+ Author: Mrinal Pandey <mrinalmni@gmail.com>
+ Date: Fri Sep 4 16:35:52 2020 -0700
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked b7d6cfba234cb6ffe7367d17c33af1b04cc79afb
+----------------------------------------
+Cherry-picking c4b219136040bc57e9704afee8f5c5a9430795a5
+Auto-merging mm/hugetlb.c
+[main e613b9887c25] mm/hugetlb: fix a race between hugetlb sysctl handlers
+ Author: Muchun Song <songmuchun@bytedance.com>
+ Date: Fri Sep 4 16:36:13 2020 -0700
+ 1 file changed, 20 insertions(+), 6 deletions(-)
+Successfully cherry-picked c4b219136040bc57e9704afee8f5c5a9430795a5
+----------------------------------------
+Cherry-picking 02015d244d9c043414509afa370f8f7d471e14b5
+[main 26daf244d5f0] cfg80211: regulatory: reject invalid hints
+ Author: Johannes Berg <johannes.berg@intel.com>
+ Date: Wed Aug 19 10:46:48 2020 +0200
+ 1 file changed, 3 insertions(+)
+Successfully cherry-picked 02015d244d9c043414509afa370f8f7d471e14b5
+----------------------------------------
+Cherry-picking 2886fd1af2db6810dbf5f7ac91eb39755142ca8a
+[main eb36be1a983a] net: usb: Fix uninit-was-stored issue in asix_read_phy_addr()
+ Author: Himadri Pandya <himadrispandya@gmail.com>
+ Date: Thu Aug 27 12:23:55 2020 +0530
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 2886fd1af2db6810dbf5f7ac91eb39755142ca8a
+----------------------------------------
+Cherry-picking 458a534cac0c808fce164cc961f8384ffc8c455e
+[main c78d6ef1cb29] Linux 4.14.197
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Wed Sep 9 19:03:14 2020 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 458a534cac0c808fce164cc961f8384ffc8c455e
+----------------------------------------
+Cherry-picking d0ebd34bbf38b44b977eecb3e6da09741675de76
+[main 0d1721c128ba] ALSA; firewire-tascam: exclude Tascam FE-8 from detection
+ Author: Takashi Sakamoto <o-takashi@sakamocchi.jp>
+ Date: Sun Aug 23 16:55:37 2020 +0900
+ 1 file changed, 29 insertions(+), 1 deletion(-)
+Successfully cherry-picked d0ebd34bbf38b44b977eecb3e6da09741675de76
+----------------------------------------
+Cherry-picking 9b45c01364448d37e87dbb02ae5599cd32f29b46
+Auto-merging block/blk-core.c
+[main f5d05b91df30] block: ensure bdi->io_pages is always initialized
+ Author: Jens Axboe <axboe@kernel.dk>
+ Date: Mon Aug 31 11:20:02 2020 -0600
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked 9b45c01364448d37e87dbb02ae5599cd32f29b46
+----------------------------------------
+Cherry-picking e0dc293b49c41981e6f71d026f83bc6d8702365d
+Auto-merging drivers/vfio/vfio_iommu_type1.c
+CONFLICT (content): Merge conflict in drivers/vfio/vfio_iommu_type1.c
+error: could not apply e0dc293b49c4... vfio/type1: Support faulting PFNMAP vmas
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of e0dc293b49c41981e6f71d026f83bc6d8702365d
+Auto-resolving conflicts by accepting incoming changes...
