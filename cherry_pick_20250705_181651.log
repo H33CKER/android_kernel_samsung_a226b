@@ -3470,3 +3470,140 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 7a44fce0d135fcb6ce362bf6c5773766dc09e6de
 Auto-resolving conflicts by accepting incoming changes...
+[main c165e31e9bd2] scsi: ufs: Fix possible infinite loop in ufshcd_hold
+ Author: Stanley Chu <stanley.chu@mediatek.com>
+ Date: Sun Aug 9 13:07:34 2020 +0800
+ 2 files changed, 282 insertions(+), 2426 deletions(-)
+----------------------------------------
+Cherry-picking 8965d8231117016c1fb391721cf8446a3e3d0dde
+[main 5e4c0b8454eb] scsi: ufs: Improve interrupt handling for shared interrupts
+ Author: Adrian Hunter <adrian.hunter@intel.com>
+ Date: Tue Aug 11 16:39:36 2020 +0300
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Successfully cherry-picked 8965d8231117016c1fb391721cf8446a3e3d0dde
+----------------------------------------
+Cherry-picking a803d5eac7fb721930bfc44fa67cdd1a400323a3
+[main 17cda7616664] scsi: ufs: Clean up completed request without interrupt notification
+ Author: Stanley Chu <stanley.chu@mediatek.com>
+ Date: Tue Aug 11 16:18:58 2020 +0200
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked a803d5eac7fb721930bfc44fa67cdd1a400323a3
+----------------------------------------
+Cherry-picking 0acc2a6371280b015ce3a7be69e4d45bb61b440e
+[main 873fdff04115] net: gianfar: Add of_node_put() before goto statement
+ Author: Sumera Priyadarsini <sylphrenadin@gmail.com>
+ Date: Wed Aug 19 00:22:41 2020 +0530
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Successfully cherry-picked 0acc2a6371280b015ce3a7be69e4d45bb61b440e
+----------------------------------------
+Cherry-picking d6fdc62d97627a1207976e3f26ad83391a45992e
+Auto-merging arch/powerpc/perf/core-book3s.c
+[main 3496641b4487] powerpc/perf: Fix soft lockups due to missed interrupt accounting
+ Author: Athira Rajeev <atrajeev@linux.vnet.ibm.com>
+ Date: Thu Aug 6 08:46:32 2020 -0400
+ 1 file changed, 4 insertions(+)
+Successfully cherry-picked d6fdc62d97627a1207976e3f26ad83391a45992e
+----------------------------------------
+Cherry-picking 6006627128436d518fef32bc511d6008cbe62200
+[main be1df3cee535] HID: i2c-hid: Always sleep 60ms after I2C_HID_PWR_ON commands
+ Author: Hans de Goede <hdegoede@redhat.com>
+ Date: Tue Aug 11 15:39:58 2020 +0200
+ 1 file changed, 13 insertions(+), 9 deletions(-)
+Successfully cherry-picked 6006627128436d518fef32bc511d6008cbe62200
+----------------------------------------
+Cherry-picking 8b5638b71483f74ad3bf4eec7b994e8f85c09c1e
+[main 6e63f25c7d7f] btrfs: fix space cache memory leak after transaction abort
+ Author: Filipe Manana <fdmanana@suse.com>
+ Date: Fri Aug 14 11:04:09 2020 +0100
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 8b5638b71483f74ad3bf4eec7b994e8f85c09c1e
+----------------------------------------
+Cherry-picking 2c455e9c5865861f5ce09c5f596909495ed7657c
+Auto-merging drivers/video/fbdev/core/fbcon.c
+[main d0857172d576] fbcon: prevent user font height or width change from causing potential out-of-bounds access
+ Author: George Kennedy <george.kennedy@oracle.com>
+ Date: Fri Jul 31 12:33:11 2020 -0400
+ 1 file changed, 23 insertions(+), 2 deletions(-)
+Successfully cherry-picked 2c455e9c5865861f5ce09c5f596909495ed7657c
+----------------------------------------
+Cherry-picking 0aa219d64fc0851db30544d066d053669083cae8
+[main f87bc99d29d3] USB: lvtest: return proper error code in probe
+ Author: Evgeny Novikov <novikov@ispras.ru>
+ Date: Wed Aug 5 12:06:43 2020 +0300
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 0aa219d64fc0851db30544d066d053669083cae8
+----------------------------------------
+Cherry-picking 47b7a50f8ace0b3b64c63dba61b5cd6099b670ed
+Auto-merging drivers/tty/vt/vt.c
+[main 5e0e41d5a087] vt: defer kfree() of vc_screenbuf in vc_do_resize()
+ Author: Tetsuo Handa <penguin-kernel@I-love.SAKURA.ne.jp>
+ Date: Wed Jul 29 23:57:01 2020 +0900
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+Successfully cherry-picked 47b7a50f8ace0b3b64c63dba61b5cd6099b670ed
+----------------------------------------
+Cherry-picking 422ef2b827a9e7bc7d9eef8bb664ca297e80995d
+[main 6af08d091a4e] vt_ioctl: change VT_RESIZEX ioctl to check for error return from vc_resize()
+ Author: George Kennedy <george.kennedy@oracle.com>
+ Date: Fri Jul 31 12:33:12 2020 -0400
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+Successfully cherry-picked 422ef2b827a9e7bc7d9eef8bb664ca297e80995d
+----------------------------------------
+Cherry-picking d1fff1120df8a0ba25e57c3a7aa749f078bf2e32
+[main 77c5899e567e] serial: samsung: Removes the IRQ not found warning
+ Author: Tamseel Shams <m.shams@samsung.com>
+ Date: Mon Aug 10 08:30:21 2020 +0530
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+Successfully cherry-picked d1fff1120df8a0ba25e57c3a7aa749f078bf2e32
+----------------------------------------
+Cherry-picking 4ad066160a36ceb0b3b65785911ebd7711fe9fb8
+[main aacccf81d5bf] serial: pl011: Fix oops on -EPROBE_DEFER
+ Author: Lukas Wunner <lukas@wunner.de>
+ Date: Thu Aug 13 12:52:40 2020 +0200
+ 1 file changed, 5 insertions(+), 6 deletions(-)
+Successfully cherry-picked 4ad066160a36ceb0b3b65785911ebd7711fe9fb8
+----------------------------------------
+Cherry-picking fe5d0805aac97d0937cb015f859c93e869909d2f
+[main 615a2b00ed26] serial: pl011: Don't leak amba_ports entry on driver register error
+ Author: Lukas Wunner <lukas@wunner.de>
+ Date: Thu Aug 13 12:59:54 2020 +0200
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Successfully cherry-picked fe5d0805aac97d0937cb015f859c93e869909d2f
+----------------------------------------
+Cherry-picking 8284edbf3754cf96c9d5fcdacec4d9e855871e60
+Auto-merging drivers/tty/serial/8250/8250_exar.c
+[main f670ab29b03c] serial: 8250_exar: Fix number of ports for Commtech PCIe cards
+ Author: Valmer Huhn <valmer.huhn@concurrent-rt.com>
+ Date: Thu Aug 13 12:52:55 2020 -0400
+ 1 file changed, 21 insertions(+), 3 deletions(-)
+Successfully cherry-picked 8284edbf3754cf96c9d5fcdacec4d9e855871e60
+----------------------------------------
+Cherry-picking 5026ce65aacbf009f3bc9e51f66c98fa936bdf88
+Auto-merging drivers/tty/serial/8250/8250_port.c
+[main 46e1b29e15f0] serial: 8250: change lock order in serial8250_do_startup()
+ Author: Sergey Senozhatsky <sergey.senozhatsky@gmail.com>
+ Date: Mon Aug 17 11:26:46 2020 +0900
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+Successfully cherry-picked 5026ce65aacbf009f3bc9e51f66c98fa936bdf88
+----------------------------------------
+Cherry-picking 0fa1f08619ccc5a7a59c9ebd7375c4b0ba688b67
+Auto-merging fs/fs-writeback.c
+[main 2a012fe9fedf] writeback: Protect inode->i_io_list with inode->i_lock
+ Author: Jan Kara <jack@suse.cz>
+ Date: Wed Jun 10 17:36:03 2020 +0200
+ 1 file changed, 7 insertions(+)
+Successfully cherry-picked 0fa1f08619ccc5a7a59c9ebd7375c4b0ba688b67
+----------------------------------------
+Cherry-picking 856fa4ebf57c083fb5d6b190f0243f0abd27cbea
+Auto-merging fs/fs-writeback.c
+CONFLICT (content): Merge conflict in fs/fs-writeback.c
+Auto-merging include/linux/fs.h
+CONFLICT (content): Merge conflict in include/linux/fs.h
+error: could not apply 856fa4ebf57c... writeback: Avoid skipping inode writeback
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 856fa4ebf57c083fb5d6b190f0243f0abd27cbea
+Auto-resolving conflicts by accepting incoming changes...
