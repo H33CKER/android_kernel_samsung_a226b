@@ -9418,3 +9418,20 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 856fa4ebf57c083fb5d6b190f0243f0abd27cbea
 Auto-resolving conflicts by accepting incoming changes...
+[main c7d96901e4d7] writeback: Avoid skipping inode writeback
+ Author: Jan Kara <jack@suse.cz>
+ Date: Fri May 29 15:05:22 2020 +0200
+ 3 files changed, 235 insertions(+), 49 deletions(-)
+----------------------------------------
+Cherry-picking 77322edb99f0176ec67a300b9f263719ba391b89
+Auto-merging include/trace/events/writeback.h
+CONFLICT (content): Merge conflict in include/trace/events/writeback.h
+error: could not apply 77322edb99f0... writeback: Fix sync livelock due to b_dirty_time processing
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 77322edb99f0176ec67a300b9f263719ba391b89
+Auto-resolving conflicts by accepting incoming changes...
