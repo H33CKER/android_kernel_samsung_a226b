@@ -5774,3 +5774,72 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of afd39cbaca880da82f35b726fabbc6111da20ac3
 Auto-resolving conflicts by accepting incoming changes...
+[main e7348bffc91c] kprobes: Fix NULL pointer dereference at kprobe_ftrace_handler
+ Author: Muchun Song <songmuchun@bytedance.com>
+ Date: Tue Jul 28 14:45:36 2020 +0800
+ 2 files changed, 255 insertions(+), 15 deletions(-)
+----------------------------------------
+Cherry-picking c3bb307dc629225a9730bff0bb9b73b0cd726361
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4439 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit c3bb307dc629.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of c3bb307dc629225a9730bff0bb9b73b0cd726361
+No conflicted files found but cherry-pick failed, attempting to skip commit c3bb307dc629225a9730bff0bb9b73b0cd726361
+----------------------------------------
+Cherry-picking c9e38a3cc4b3917ae59a9446fa56bda05f1ab43d
+Auto-merging kernel/trace/ftrace.c
+Auto-merging kernel/trace/trace_events.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4439 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit c9e38a3cc4b3.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of c9e38a3cc4b3917ae59a9446fa56bda05f1ab43d
+No conflicted files found but cherry-pick failed, attempting to skip commit c9e38a3cc4b3917ae59a9446fa56bda05f1ab43d
+----------------------------------------
+Cherry-picking e60f0961e9c706fc92017b4cace9d6ce347b0532
+Auto-merging drivers/watchdog/f71808e_wdt.c
+CONFLICT (content): Merge conflict in drivers/watchdog/f71808e_wdt.c
+error: could not apply e60f0961e9c7... watchdog: f71808e_wdt: indicate WDIOF_CARDRESET support in watchdog_info.options
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of e60f0961e9c706fc92017b4cace9d6ce347b0532
+Auto-resolving conflicts by accepting incoming changes...
