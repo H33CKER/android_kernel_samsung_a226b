@@ -18732,3 +18732,180 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 95080b446ad686c6e0c3d19a12cb5e6692ecb77a
 Auto-resolving conflicts by accepting incoming changes...
+[main 4d778465a727] ext4: check journal inode extents more carefully
+ Author: Jan Kara <jack@suse.cz>
+ Date: Wed Mar 17 17:44:14 2021 +0100
+ 7 files changed, 451 insertions(+), 239 deletions(-)
+----------------------------------------
+Cherry-picking 92df5a174c6e7a3078e81b919c4d859d4f9f3f2e
+[main c8120b8a1e6d] bpf: Fix off-by-one for area size in creating mask to left
+ Author: Piotr Krysiuk <piotras@gmail.com>
+ Date: Tue Mar 16 08:20:16 2021 +0100
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked 92df5a174c6e7a3078e81b919c4d859d4f9f3f2e
+----------------------------------------
+Cherry-picking 59ce8e5ecf2dc409736f564d80dd25f7101739b3
+[main 49d8e5e4ce32] bpf: Simplify alu_limit masking for pointer arithmetic
+ Author: Piotr Krysiuk <piotras@gmail.com>
+ Date: Tue Mar 16 08:26:25 2021 +0100
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+Successfully cherry-picked 59ce8e5ecf2dc409736f564d80dd25f7101739b3
+----------------------------------------
+Cherry-picking b4aa37d9632de0c61fe0ea14569f9debf56d4e38
+[main a9596bb32c30] bpf: Add sanity check for upper ptr_limit
+ Author: Piotr Krysiuk <piotras@gmail.com>
+ Date: Tue Mar 16 09:47:02 2021 +0100
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+Successfully cherry-picked b4aa37d9632de0c61fe0ea14569f9debf56d4e38
+----------------------------------------
+Cherry-picking 4d8880bd8255e599d5f203036242fbe3948d70b4
+Auto-merging drivers/net/dsa/bcm_sf2.c
+[main 3fe9e6e29a3e] net: dsa: b53: Support setting learning on port
+ Author: Florian Fainelli <f.fainelli@gmail.com>
+ Date: Mon Feb 22 14:30:10 2021 -0800
+ 4 files changed, 28 insertions(+)
+Successfully cherry-picked 4d8880bd8255e599d5f203036242fbe3948d70b4
+----------------------------------------
+Cherry-picking c49e70a5e7f24b8be2969e5ccf9ba6acd779abbb
+[main 1fdb678af7f0] bpf: Prohibit alu ops for pointer types not defining ptr_limit
+ Author: Piotr Krysiuk <piotras@gmail.com>
+ Date: Tue Mar 16 09:47:02 2021 +0100
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+Successfully cherry-picked c49e70a5e7f24b8be2969e5ccf9ba6acd779abbb
+----------------------------------------
+Cherry-picking 866f290149fb46cbabe897fc64f569abed4b348e
+[main d9dab2923e33] Revert "PM: runtime: Update device status before letting suppliers suspend"
+ Author: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
+ Date: Fri Mar 19 15:47:25 2021 +0100
+ 1 file changed, 25 insertions(+), 37 deletions(-)
+Successfully cherry-picked 866f290149fb46cbabe897fc64f569abed4b348e
+----------------------------------------
+Cherry-picking 3c9decd4fc68d06e2b26e598ad26473a7e4aad09
+[main bd7b7a3ca63f] perf tools: Use %define api.pure full instead of %pure-parser
+ Author: Jiri Olsa <jolsa@redhat.com>
+ Date: Sun Jan 12 20:22:59 2020 +0100
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+Successfully cherry-picked 3c9decd4fc68d06e2b26e598ad26473a7e4aad09
+----------------------------------------
+Cherry-picking e95a27359babea91956331539849e730378e505f
+[main d65ba5b842ff] tools build feature: Check if get_current_dir_name() is available
+ Author: Arnaldo Carvalho de Melo <acme@redhat.com>
+ Date: Mon Nov 19 16:56:22 2018 -0300
+ 8 files changed, 48 insertions(+)
+ create mode 100644 tools/build/feature/test-get_current_dir_name.c
+ create mode 100644 tools/perf/util/get_current_dir_name.c
+Successfully cherry-picked e95a27359babea91956331539849e730378e505f
+----------------------------------------
+Cherry-picking 45c4df37e6c920242e63f736e48fc42cf0d69298
+[main acd2fde079ec] tools build feature: Check if eventfd() is available
+ Author: Arnaldo Carvalho de Melo <acme@redhat.com>
+ Date: Wed Nov 21 17:42:00 2018 -0300
+ 5 files changed, 23 insertions(+), 1 deletion(-)
+ create mode 100644 tools/build/feature/test-eventfd.c
+Successfully cherry-picked 45c4df37e6c920242e63f736e48fc42cf0d69298
+----------------------------------------
+Cherry-picking aa8a33764bd53cc2ac9a6c341b5d10fd94145b48
+[main f921b3f4590f] tools build: Check if gettid() is available before providing helper
+ Author: Arnaldo Carvalho de Melo <acme@redhat.com>
+ Date: Thu Jun 13 12:04:19 2019 -0300
+ 6 files changed, 27 insertions(+)
+ create mode 100644 tools/build/feature/test-gettid.c
+Successfully cherry-picked aa8a33764bd53cc2ac9a6c341b5d10fd94145b48
+----------------------------------------
+Cherry-picking 635a002105dd3b03eadcd8401cbbb7054bbf1b69
+[main 50eca50f0d51] perf: Make perf able to build with latest libbfd
+ Author: Changbin Du <changbin.du@gmail.com>
+ Date: Tue Jan 28 23:29:38 2020 +0800
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+Successfully cherry-picked 635a002105dd3b03eadcd8401cbbb7054bbf1b69
+----------------------------------------
+Cherry-picking bb1256630524bcd57886b2ae76294313d65de744
+[main 0b250fa5a156] tools build feature: Check if pthread_barrier_t is available
+ Author: Arnaldo Carvalho de Melo <acme@redhat.com>
+ Date: Tue Dec 5 10:14:42 2017 -0300
+ 5 files changed, 26 insertions(+)
+ create mode 100644 tools/build/feature/test-pthread-barrier.c
+Successfully cherry-picked bb1256630524bcd57886b2ae76294313d65de744
+----------------------------------------
+Cherry-picking 0fbf41006d8c850963049c35563e7775fe7c2164
+[main ec763cd932f1] btrfs: fix race when cloning extent buffer during rewind of an old root
+ Author: Filipe Manana <fdmanana@suse.com>
+ Date: Thu Mar 11 14:31:05 2021 +0000
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked 0fbf41006d8c850963049c35563e7775fe7c2164
+----------------------------------------
+Cherry-picking 09537286477e32b47bd920d810f8056989bd04da
+[main 755c739ccb2f] nvmet: don't check iosqes,iocqes for discovery controllers
+ Author: Sagi Grimberg <sagi@grimberg.me>
+ Date: Mon Mar 15 15:34:51 2021 -0700
+ 1 file changed, 14 insertions(+), 3 deletions(-)
+Successfully cherry-picked 09537286477e32b47bd920d810f8056989bd04da
+----------------------------------------
+Cherry-picking 39e2d3ebcabf60b8a694281fa306899bdb77612b
+[main 63994c9d88ab] NFSD: Repair misuse of sv_lock in 5.10.16-rt30.
+ Author: Joe Korty <joe.korty@concurrent-rt.com>
+ Date: Fri Feb 26 09:38:20 2021 -0500
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked 39e2d3ebcabf60b8a694281fa306899bdb77612b
+----------------------------------------
+Cherry-picking 28e89394dde121a05ef2139d85eaf4fe54018a96
+[main 5ddf386572e1] svcrdma: disable timeouts on rdma backchannel
+ Author: Timo Rothenpieler <timo@rothenpieler.org>
+ Date: Tue Feb 23 00:36:19 2021 +0100
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Successfully cherry-picked 28e89394dde121a05ef2139d85eaf4fe54018a96
+----------------------------------------
+Cherry-picking a1507d7f825dd45758f569c340a3b2fc7bfb5220
+Auto-merging net/sunrpc/svc.c
+[main f94ea6a1b069] sunrpc: fix refcount leak for rpc auth modules
+ Author: Daniel Kobras <kobras@puzzle-itc.de>
+ Date: Sat Feb 27 00:04:37 2021 +0100
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+Successfully cherry-picked a1507d7f825dd45758f569c340a3b2fc7bfb5220
+----------------------------------------
+Cherry-picking 84cee271cfdbea847c184a78cf82f57d225ce76e
+Auto-merging net/qrtr/qrtr.c
+[main 381a4634aa3f] net/qrtr: fix __netdev_alloc_skb call
+ Author: Pavel Skripkin <paskripkin@gmail.com>
+ Date: Mon Mar 1 02:22:40 2021 +0300
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 84cee271cfdbea847c184a78cf82f57d225ce76e
+----------------------------------------
+Cherry-picking b6b7158beb0f21d79707d43238a31c109808d0e2
+[main 440745f8ddc7] scsi: lpfc: Fix some error codes in debugfs
+ Author: Dan Carpenter <dan.carpenter@oracle.com>
+ Date: Fri Mar 12 10:42:11 2021 +0300
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked b6b7158beb0f21d79707d43238a31c109808d0e2
+----------------------------------------
+Cherry-picking 2fd9191081769137d08b15e423cfbd2c3859c991
+Auto-merging drivers/nvme/host/rdma.c
+[main 38037f74a39b] nvme-rdma: fix possible hang when failing to set io queues
+ Author: Sagi Grimberg <sagi@grimberg.me>
+ Date: Mon Mar 15 14:04:27 2021 -0700
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+Successfully cherry-picked 2fd9191081769137d08b15e423cfbd2c3859c991
+----------------------------------------
+Cherry-picking 8ca5de14229b084c5eee88fad56e894c6c1bd059
+Auto-merging drivers/usb/storage/transport.c
+[main cf83c41c4cac] usb-storage: Add quirk to defeat Kindle's automatic unload
+ Author: Alan Stern <stern@rowland.harvard.edu>
+ Date: Wed Mar 17 15:06:54 2021 -0400
+ 3 files changed, 21 insertions(+)
+Successfully cherry-picked 8ca5de14229b084c5eee88fad56e894c6c1bd059
+----------------------------------------
+Cherry-picking e93575764f70a5e59813d02a8f7cf7e1497d8185
+Auto-merging drivers/usb/gadget/composite.c
+Auto-merging drivers/usb/gadget/configfs.c
+CONFLICT (content): Merge conflict in drivers/usb/gadget/configfs.c
+Auto-merging drivers/usb/gadget/usbstring.c
+CONFLICT (content): Merge conflict in drivers/usb/gadget/usbstring.c
+error: could not apply e93575764f70... USB: replace hardcode maximum usb string length by definition
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of e93575764f70a5e59813d02a8f7cf7e1497d8185
+Auto-resolving conflicts by accepting incoming changes...
