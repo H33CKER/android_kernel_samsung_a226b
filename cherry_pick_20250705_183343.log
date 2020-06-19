@@ -50392,3 +50392,45 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 19ca89dd151a5bf05b9be9277dcecc78947be2e3
 Auto-resolving conflicts by accepting incoming changes...
+[main 518a87cf16cd] gtp: use icmp_ndo_send helper
+ Author: Jason A. Donenfeld <Jason@zx2c4.com>
+ Date: Tue Feb 11 20:47:06 2020 +0100
+ 2 files changed, 18 insertions(+)
+----------------------------------------
+Cherry-picking 86b9572a9629d284044a9b09b4aa2346b59d6f1b
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4886 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 86b9572a9629.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 86b9572a9629d284044a9b09b4aa2346b59d6f1b
+No conflicted files found but cherry-pick failed, attempting to skip commit 86b9572a9629d284044a9b09b4aa2346b59d6f1b
+----------------------------------------
+Cherry-picking 8b779e11bc55616fc100d5cecf3c1d3c317c39e4
+Auto-merging net/ipv6/icmp.c
+CONFLICT (content): Merge conflict in net/ipv6/icmp.c
+error: could not apply 8b779e11bc55... ipv6: icmp6: avoid indirect call for icmpv6_send()
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 8b779e11bc55616fc100d5cecf3c1d3c317c39e4
+Auto-resolving conflicts by accepting incoming changes...
