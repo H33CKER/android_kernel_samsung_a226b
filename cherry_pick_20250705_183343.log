@@ -5899,3 +5899,96 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of f3513136ffe0aa1c1a8b7f04a1ad09766414cbc7
 Auto-resolving conflicts by accepting incoming changes...
+[main 4a26a7d5075c] perf intel-pt: Fix FUP packet state
+ Author: Adrian Hunter <adrian.hunter@intel.com>
+ Date: Fri Jul 10 18:10:53 2020 +0300
+ 2 files changed, 57 insertions(+), 8 deletions(-)
+----------------------------------------
+Cherry-picking 81c62cae5e0a93f5e4fc618a28a22ef700a5eebd
+Auto-merging drivers/gpu/drm/imx/imx-ldb.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4443 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 81c62cae5e0a.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 81c62cae5e0a93f5e4fc618a28a22ef700a5eebd
+No conflicted files found but cherry-pick failed, attempting to skip commit 81c62cae5e0a93f5e4fc618a28a22ef700a5eebd
+----------------------------------------
+Cherry-picking 545017c9c8c46a04236c964336a4bcea853b590c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4443 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 545017c9c8c4.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 545017c9c8c46a04236c964336a4bcea853b590c
+No conflicted files found but cherry-pick failed, attempting to skip commit 545017c9c8c46a04236c964336a4bcea853b590c
+----------------------------------------
+Cherry-picking 198f9960a740be4cf66a995a41f8c56260cd3a61
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4443 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 198f9960a740.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 198f9960a740be4cf66a995a41f8c56260cd3a61
+No conflicted files found but cherry-pick failed, attempting to skip commit 198f9960a740be4cf66a995a41f8c56260cd3a61
+----------------------------------------
+Cherry-picking abb9d1a281c6249aff4a144252f3176c5b1f8bc1
+Auto-merging drivers/usb/serial/ftdi_sio.c
+CONFLICT (content): Merge conflict in drivers/usb/serial/ftdi_sio.c
+error: could not apply abb9d1a281c6... USB: serial: ftdi_sio: make process-packet buffer unsigned
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of abb9d1a281c6249aff4a144252f3176c5b1f8bc1
+Auto-resolving conflicts by accepting incoming changes...
