@@ -1070,3 +1070,33 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of ca4f2c56d4162a4a5236f2099b55453fb98296f9
 Auto-resolving conflicts by accepting incoming changes...
+[main d015b52d7447] Linux 4.14.192
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Wed Aug 5 10:06:53 2020 +0200
+ 2 files changed, 207 insertions(+), 11 deletions(-)
+----------------------------------------
+Cherry-picking 2d6a7108ed74e0c857f78809d74511f52dbf9c85
+Auto-merging drivers/scsi/libsas/sas_ata.c
+Auto-merging drivers/scsi/libsas/sas_port.c
+[main 4b0c468edb7e] Revert "scsi: libsas: direct call probe and destruct"
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Wed Aug 5 11:49:14 2020 +0200
+ 7 files changed, 22 insertions(+), 27 deletions(-)
+Successfully cherry-picked 2d6a7108ed74e0c857f78809d74511f52dbf9c85
+----------------------------------------
+Cherry-picking 583bcbc024f6bf8daa266f4f71b99e9d6e78c40b
+Auto-merging drivers/char/random.c
+Auto-merging include/linux/random.h
+CONFLICT (content): Merge conflict in include/linux/random.h
+Auto-merging kernel/time/timer.c
+Auto-merging lib/random32.c
+CONFLICT (content): Merge conflict in lib/random32.c
+error: could not apply 583bcbc024f6... random32: update the net random state on interrupt and activity
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 583bcbc024f6bf8daa266f4f71b99e9d6e78c40b
+Auto-resolving conflicts by accepting incoming changes...
