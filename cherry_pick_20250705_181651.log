@@ -2082,3 +2082,122 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 6fa2227bb563179772163d02697703493e2e1606
 Auto-resolving conflicts by accepting incoming changes...
+[main 48be489325ab] ALSA: usb-audio: fix overeager device match for MacroSilicon MS2109
+ Author: Hector Martin <marcan@marcan.st>
+ Date: Mon Aug 10 13:53:19 2020 +0900
+ 2 files changed, 118 insertions(+)
+----------------------------------------
+Cherry-picking 17b84284d2a2b49f5fe625d063cd0a0ac58e10e1
+[main bd062325726b] ALSA: usb-audio: add quirk for Pioneer DDJ-RB
+ Author: Hector Martin <marcan@marcan.st>
+ Date: Mon Aug 10 17:25:02 2020 +0900
+ 1 file changed, 56 insertions(+)
+Successfully cherry-picked 17b84284d2a2b49f5fe625d063cd0a0ac58e10e1
+----------------------------------------
+Cherry-picking 454b00bb81679c95f763d3ecdb706d985d053f7a
+[main 31ba8d9102be] crypto: qat - fix double free in qat_uclo_create_batch_init_list
+ Author: Tom Rix <trix@redhat.com>
+ Date: Mon Jul 13 07:06:34 2020 -0700
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+Successfully cherry-picked 454b00bb81679c95f763d3ecdb706d985d053f7a
+----------------------------------------
+Cherry-picking 99e69b921dae3ebe63d2c424ce00f91b4cab2826
+[main 0311d952d558] crypto: ccp - Fix use of merged scatterlists
+ Author: John Allen <john.allen@amd.com>
+ Date: Mon Jun 22 15:24:02 2020 -0500
+ 2 files changed, 27 insertions(+), 11 deletions(-)
+Successfully cherry-picked 99e69b921dae3ebe63d2c424ce00f91b4cab2826
+----------------------------------------
+Cherry-picking a2c4136587cf19066758091eb60694a8f5120897
+[main 7097cd5b0969] crypto: cpt - don't sleep of CRYPTO_TFM_REQ_MAY_SLEEP was not specified
+ Author: Mikulas Patocka <mpatocka@redhat.com>
+ Date: Wed Jun 17 09:48:56 2020 -0400
+ 3 files changed, 9 insertions(+), 6 deletions(-)
+Successfully cherry-picked a2c4136587cf19066758091eb60694a8f5120897
+----------------------------------------
+Cherry-picking b4840e848efa4648a551e3d833bfe7cebde344d2
+[main e577ec6f52d4] bitfield.h: don't compile-time validate _val in FIELD_FIT
+ Author: Jakub Kicinski <kuba@kernel.org>
+ Date: Mon Aug 10 11:21:11 2020 -0700
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked b4840e848efa4648a551e3d833bfe7cebde344d2
+----------------------------------------
+Cherry-picking 3c775629a5ffe3f6305f9a4f53d8167f629435ad
+[main 663cc74d5fbb] fs/minix: check return value of sb_getblk()
+ Author: Eric Biggers <ebiggers@google.com>
+ Date: Tue Aug 11 18:35:24 2020 -0700
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+Successfully cherry-picked 3c775629a5ffe3f6305f9a4f53d8167f629435ad
+----------------------------------------
+Cherry-picking 12490f06ef084bc34f5e5dbda104aa034e376f2e
+[main b4d4af8d376a] fs/minix: don't allow getting deleted inodes
+ Author: Eric Biggers <ebiggers@google.com>
+ Date: Tue Aug 11 18:35:27 2020 -0700
+ 1 file changed, 14 insertions(+)
+Successfully cherry-picked 12490f06ef084bc34f5e5dbda104aa034e376f2e
+----------------------------------------
+Cherry-picking 0900097ef667097b0a4afb0155a4f5add77ece19
+[main aa56c62e40a1] fs/minix: reject too-large maximum file size
+ Author: Eric Biggers <ebiggers@google.com>
+ Date: Tue Aug 11 18:35:30 2020 -0700
+ 1 file changed, 20 insertions(+), 2 deletions(-)
+Successfully cherry-picked 0900097ef667097b0a4afb0155a4f5add77ece19
+----------------------------------------
+Cherry-picking ff114bcd7635211d051c6031fac800fd45424ece
+Auto-merging sound/usb/card.h
+Auto-merging sound/usb/pcm.c
+Auto-merging sound/usb/quirks.c
+[main c628578ceaa4] ALSA: usb-audio: work around streaming quirk for MacroSilicon MS2109
+ Author: Hector Martin <marcan@marcan.st>
+ Date: Mon Aug 10 17:24:00 2020 +0900
+ 4 files changed, 11 insertions(+)
+Successfully cherry-picked ff114bcd7635211d051c6031fac800fd45424ece
+----------------------------------------
+Cherry-picking f337f8a302f715ba280477ecf2cdaeae0d86b45e
+[main 481fa953a6eb] 9p: Fix memory leak in v9fs_mount
+ Author: Zheng Bin <zhengbin13@huawei.com>
+ Date: Mon Jun 15 09:21:53 2020 +0800
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+Successfully cherry-picked f337f8a302f715ba280477ecf2cdaeae0d86b45e
+----------------------------------------
+Cherry-picking 2fd8f313a9fdeb06986bd2bb8caa7c87602b9729
+Auto-merging drivers/spi/spidev.c
+[main 52a3f53eea50] spi: spidev: Align buffers for DMA
+ Author: Christian Eggers <ceggers@arri.de>
+ Date: Tue Jul 28 12:08:32 2020 +0200
+ 1 file changed, 13 insertions(+), 8 deletions(-)
+Successfully cherry-picked 2fd8f313a9fdeb06986bd2bb8caa7c87602b9729
+----------------------------------------
+Cherry-picking 337be2b46991cf3d5afe3dbb114440946b84fe42
+[main b39bea67a287] mtd: rawnand: qcom: avoid write to unavailable register
+ Author: Sivaprakash Murugesan <sivaprak@codeaurora.org>
+ Date: Fri Jun 12 13:28:15 2020 +0530
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+Successfully cherry-picked 337be2b46991cf3d5afe3dbb114440946b84fe42
+----------------------------------------
+Cherry-picking 0ca974e9e527afb1e9941f5f13c0cecac8d2b7b6
+[main 8596a7c2e71d] parisc: Implement __smp_store_release and __smp_load_acquire barriers
+ Author: John David Anglin <dave.anglin@bell.net>
+ Date: Thu Jul 30 08:59:12 2020 -0400
+ 1 file changed, 61 insertions(+)
+Successfully cherry-picked 0ca974e9e527afb1e9941f5f13c0cecac8d2b7b6
+----------------------------------------
+Cherry-picking b1dd9a06bcc8e724ee8e5acbc83b29f05f598211
+[main 8760228f73c4] parisc: mask out enable and reserved bits from sba imask
+ Author: Sven Schnelle <svens@stackframe.org>
+ Date: Tue Aug 11 18:19:19 2020 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked b1dd9a06bcc8e724ee8e5acbc83b29f05f598211
+----------------------------------------
+Cherry-picking 86a92de7833342f34e1cb98429ac100797605f73
+Auto-merging arch/arm/kernel/stacktrace.c
+CONFLICT (content): Merge conflict in arch/arm/kernel/stacktrace.c
+error: could not apply 86a92de78333... ARM: 8992/1: Fix unwind_frame for clang-built kernels
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 86a92de7833342f34e1cb98429ac100797605f73
+Auto-resolving conflicts by accepting incoming changes...
