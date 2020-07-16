@@ -1504,3 +1504,20 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 041a5a238a1e31992b5f22ef4f9792729d3b46ca
 Auto-resolving conflicts by accepting incoming changes...
+[main 7f100bc0ddeb] vgacon: Fix for missing check in scrollback handling
+ Author: Yunhai Zhang <zhangyunhai@nsfocus.com>
+ Date: Tue Jul 28 09:58:03 2020 +0800
+ 2 files changed, 426 insertions(+), 43 deletions(-)
+----------------------------------------
+Cherry-picking 389c74c218d3b182e9cd767e98cee0e0fd0dabaa
+Auto-merging drivers/mtd/mtdchar.c
+CONFLICT (content): Merge conflict in drivers/mtd/mtdchar.c
+error: could not apply 389c74c218d3... mtd: properly check all write ioctls for permissions
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 389c74c218d3b182e9cd767e98cee0e0fd0dabaa
+Auto-resolving conflicts by accepting incoming changes...
