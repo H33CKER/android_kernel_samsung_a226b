@@ -6118,3 +6118,71 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of b52fc176607f1f4607bf5a23ae64334474938baa
 Auto-resolving conflicts by accepting incoming changes...
+[main aa91e45efdd7] i2c: rcar: slave: only send STOP event when we have been addressed
+ Author: Wolfram Sang <wsa+renesas@sang-engineering.com>
+ Date: Mon Jun 29 17:38:07 2020 +0200
+ 2 files changed, 129 insertions(+), 6 deletions(-)
+----------------------------------------
+Cherry-picking f8d95b2ac42e76967e635bc1d6e0855b22369310
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4446 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit f8d95b2ac42e.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of f8d95b2ac42e76967e635bc1d6e0855b22369310
+No conflicted files found but cherry-pick failed, attempting to skip commit f8d95b2ac42e76967e635bc1d6e0855b22369310
+----------------------------------------
+Cherry-picking b215b29ca28c4b9e909662c2443e0477b0d19bd9
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4446 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit b215b29ca28c.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of b215b29ca28c4b9e909662c2443e0477b0d19bd9
+No conflicted files found but cherry-pick failed, attempting to skip commit b215b29ca28c4b9e909662c2443e0477b0d19bd9
+----------------------------------------
+Cherry-picking 0999f2835cd4ecb5e6374d86d57a2e041333a504
+Auto-merging tools/build/Makefile.feature
+CONFLICT (content): Merge conflict in tools/build/Makefile.feature
+Auto-merging tools/build/feature/Makefile
+error: could not apply 0999f2835cd4... tools build feature: Use CC and CXX from parent
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 0999f2835cd4ecb5e6374d86d57a2e041333a504
+Auto-resolving conflicts by accepting incoming changes...
