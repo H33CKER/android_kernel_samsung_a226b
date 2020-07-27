@@ -1005,3 +1005,70 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 5eed80ea8f60cc3935f46ec848fa1677b5e1a31a
 Auto-resolving conflicts by accepting incoming changes...
+[main 23c82753c910] usb: xhci: define IDs for various ASMedia host controllers
+ Author: Forest Crossman <cyrozap@gmail.com>
+ Date: Mon Jul 27 23:24:07 2020 -0500
+ 2 files changed, 113 insertions(+), 2 deletions(-)
+----------------------------------------
+Cherry-picking c5021d4fa888ad248b4168947eb1e569de75fdb1
+[main 972eea5434f9] usb: xhci: Fix ASMedia ASM1142 DMA addressing
+ Author: Forest Crossman <cyrozap@gmail.com>
+ Date: Mon Jul 27 23:24:08 2020 -0500
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Successfully cherry-picked c5021d4fa888ad248b4168947eb1e569de75fdb1
+----------------------------------------
+Cherry-picking ccafbed8b2f6a9d9298534b39e76da9cb40ff717
+[main 746d5d4f9879] ALSA: seq: oss: Serialize ioctls
+ Author: Takashi Iwai <tiwai@suse.de>
+ Date: Tue Aug 4 20:58:15 2020 +0200
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+Successfully cherry-picked ccafbed8b2f6a9d9298534b39e76da9cb40ff717
+----------------------------------------
+Cherry-picking 79c70607e5403d31d267e31a1a34e5334318326d
+Auto-merging drivers/staging/android/ashmem.c
+[main 5fb8c9b5230e] staging: android: ashmem: Fix lockdep warning for write operation
+ Author: Suren Baghdasaryan <surenb@google.com>
+ Date: Thu Jul 30 12:26:32 2020 -0700
+ 1 file changed, 12 insertions(+)
+Successfully cherry-picked 79c70607e5403d31d267e31a1a34e5334318326d
+----------------------------------------
+Cherry-picking d91299b8382b129156708708d69876e753b9ade6
+[main 099e14f46f83] Bluetooth: Fix slab-out-of-bounds read in hci_extended_inquiry_result_evt()
+ Author: Peilin Ye <yepeilin.cs@gmail.com>
+ Date: Fri Jul 10 12:09:15 2020 -0400
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked d91299b8382b129156708708d69876e753b9ade6
+----------------------------------------
+Cherry-picking 8b0861f956f65f063662f9553a4dcad574a95b37
+[main e2780aa7a580] Bluetooth: Prevent out-of-bounds read in hci_inquiry_result_evt()
+ Author: Peilin Ye <yepeilin.cs@gmail.com>
+ Date: Fri Jul 10 17:39:18 2020 -0400
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 8b0861f956f65f063662f9553a4dcad574a95b37
+----------------------------------------
+Cherry-picking 68bb9eddbf5da767131079325b2097341ab05dca
+[main 8f94b62446f4] Bluetooth: Prevent out-of-bounds read in hci_inquiry_result_with_rssi_evt()
+ Author: Peilin Ye <yepeilin.cs@gmail.com>
+ Date: Fri Jul 10 17:45:26 2020 -0400
+ 1 file changed, 7 insertions(+)
+Successfully cherry-picked 68bb9eddbf5da767131079325b2097341ab05dca
+----------------------------------------
+Cherry-picking 9a0cb0a6bc88bc4684d7b1e8e8fc3892bb921ed1
+[main 255c44c45df2] omapfb: dss: Fix max fclk divider for omap36xx
+ Author: Adam Ford <aford173@gmail.com>
+ Date: Tue Jun 30 13:26:36 2020 -0500
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 9a0cb0a6bc88bc4684d7b1e8e8fc3892bb921ed1
+----------------------------------------
+Cherry-picking f40f289b96bf856e1613f17bf9426140e8b89393
+Auto-merging drivers/android/binder.c
+CONFLICT (content): Merge conflict in drivers/android/binder.c
+error: could not apply f40f289b96bf... binder: Prevent context manager from incrementing ref 0
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of f40f289b96bf856e1613f17bf9426140e8b89393
+Auto-resolving conflicts by accepting incoming changes...
