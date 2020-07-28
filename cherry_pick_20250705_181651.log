@@ -899,3 +899,109 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of ca4f2c56d4162a4a5236f2099b55453fb98296f9
 Auto-resolving conflicts by accepting incoming changes...
+[main 3afa41daf9c2] Linux 4.14.192
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Wed Aug 5 10:06:53 2020 +0200
+ 2 files changed, 113 insertions(+), 179 deletions(-)
+ mode change 100755 => 100644 Makefile
+----------------------------------------
+Cherry-picking 2d6a7108ed74e0c857f78809d74511f52dbf9c85
+[main e6334325cf96] Revert "scsi: libsas: direct call probe and destruct"
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Wed Aug 5 11:49:14 2020 +0200
+ 7 files changed, 22 insertions(+), 27 deletions(-)
+Successfully cherry-picked 2d6a7108ed74e0c857f78809d74511f52dbf9c85
+----------------------------------------
+Cherry-picking 583bcbc024f6bf8daa266f4f71b99e9d6e78c40b
+Auto-merging drivers/char/random.c
+Auto-merging kernel/time/timer.c
+[main 03cd84cdbea3] random32: update the net random state on interrupt and activity
+ Author: Willy Tarreau <w@1wt.eu>
+ Date: Fri Jul 10 15:23:19 2020 +0200
+ 4 files changed, 13 insertions(+), 1 deletion(-)
+Successfully cherry-picked 583bcbc024f6bf8daa266f4f71b99e9d6e78c40b
+----------------------------------------
+Cherry-picking eec3b3c667ae875a3d88b7be8f659a1a076b0c3b
+[main 7fc9c08b5080] ARM: percpu.h: fix build error
+ Author: Grygorii Strashko <grygorii.strashko@ti.com>
+ Date: Thu Jul 30 22:05:01 2020 +0300
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked eec3b3c667ae875a3d88b7be8f659a1a076b0c3b
+----------------------------------------
+Cherry-picking 8de9a00bf997a62df8a2a1ba3d0d8eb73f55b463
+[main fb18c31d9ec3] random: fix circular include dependency on arm64 after addition of percpu.h
+ Author: Willy Tarreau <w@1wt.eu>
+ Date: Thu Jul 30 07:59:24 2020 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 8de9a00bf997a62df8a2a1ba3d0d8eb73f55b463
+----------------------------------------
+Cherry-picking 8dacd74f7987c1e744e988cb12fd18ab1aa2d6e0
+[main 89ee08c6709b] random32: remove net_rand_state from the latent entropy gcc plugin
+ Author: Linus Torvalds <torvalds@linux-foundation.org>
+ Date: Wed Jul 29 19:11:00 2020 -0700
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked 8dacd74f7987c1e744e988cb12fd18ab1aa2d6e0
+----------------------------------------
+Cherry-picking 35cd3649ad750a1c9ff579d8ad59ad624419205f
+[main 5ba4ba61866b] random32: move the pseudo-random 32-bit definitions to prandom.h
+ Author: Linus Torvalds <torvalds@linux-foundation.org>
+ Date: Fri Jul 31 07:51:14 2020 +0200
+ 2 files changed, 82 insertions(+), 62 deletions(-)
+ create mode 100644 include/linux/prandom.h
+Successfully cherry-picked 35cd3649ad750a1c9ff579d8ad59ad624419205f
+----------------------------------------
+Cherry-picking baf191c492c6592430ce684fb3464120d47d11f9
+Auto-merging fs/ext4/inode.c
+[main 0db01ec6d280] ext4: fix direct I/O read error
+ Author: Jiang Ying <jiangying8582@126.com>
+ Date: Wed Aug 5 15:57:21 2020 +0800
+ 1 file changed, 5 insertions(+)
+Successfully cherry-picked baf191c492c6592430ce684fb3464120d47d11f9
+----------------------------------------
+Cherry-picking e4efec8c28bce3be6078657f0846e59ccded593b
+[main fd445d2ad12a] ARM: 8702/1: head-common.S: Clear lr before jumping to start_kernel()
+ Author: Geert Uytterhoeven <geert@linux-m68k.org>
+ Date: Tue Oct 3 19:14:38 2017 +0100
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked e4efec8c28bce3be6078657f0846e59ccded593b
+----------------------------------------
+Cherry-picking 14b58326976de6ef3998eefec1dd7f8b38b97a75
+[main 03807fbed32d] Linux 4.14.193
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Fri Aug 7 09:38:42 2020 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 14b58326976de6ef3998eefec1dd7f8b38b97a75
+----------------------------------------
+Cherry-picking 1bad105bad58122fbb7bf7a67ae7730c3fd9443e
+[main bcf88eb428d5] USB: serial: qcserial: add EM7305 QDL product ID
+ Author: Erik Ekman <erik@kryo.se>
+ Date: Fri Jul 17 20:51:18 2020 +0200
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 1bad105bad58122fbb7bf7a67ae7730c3fd9443e
+----------------------------------------
+Cherry-picking ec2cbe4b8abf949a16574ba81d8255e52980186c
+[main c057d9cc57a8] net/mlx5e: Don't support phys switch id if not in switchdev mode
+ Author: Roi Dayan <roid@mellanox.com>
+ Date: Thu Aug 6 19:05:42 2020 -0700
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked ec2cbe4b8abf949a16574ba81d8255e52980186c
+----------------------------------------
+Cherry-picking ad9db0326bc4516980b0f6fd85724561bca5e474
+[main 7085c1719cb0] USB: iowarrior: fix up report size handling for some devices
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Sun Jul 26 11:49:39 2020 +0200
+ 1 file changed, 25 insertions(+), 10 deletions(-)
+Successfully cherry-picked ad9db0326bc4516980b0f6fd85724561bca5e474
+----------------------------------------
+Cherry-picking 5eed80ea8f60cc3935f46ec848fa1677b5e1a31a
+Auto-merging drivers/usb/host/xhci-pci.c
+CONFLICT (content): Merge conflict in drivers/usb/host/xhci-pci.c
+error: could not apply 5eed80ea8f60... usb: xhci: define IDs for various ASMedia host controllers
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 5eed80ea8f60cc3935f46ec848fa1677b5e1a31a
+Auto-resolving conflicts by accepting incoming changes...
