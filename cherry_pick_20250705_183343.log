@@ -9194,3 +9194,71 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 2c455e9c5865861f5ce09c5f596909495ed7657c
 Auto-resolving conflicts by accepting incoming changes...
+[main 177a3a2df20a] fbcon: prevent user font height or width change from causing potential out-of-bounds access
+ Author: George Kennedy <george.kennedy@oracle.com>
+ Date: Fri Jul 31 12:33:11 2020 -0400
+ 2 files changed, 619 insertions(+), 28 deletions(-)
+----------------------------------------
+Cherry-picking 0aa219d64fc0851db30544d066d053669083cae8
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4472 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 0aa219d64fc0.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 0aa219d64fc0851db30544d066d053669083cae8
+No conflicted files found but cherry-pick failed, attempting to skip commit 0aa219d64fc0851db30544d066d053669083cae8
+----------------------------------------
+Cherry-picking 47b7a50f8ace0b3b64c63dba61b5cd6099b670ed
+Auto-merging drivers/tty/vt/vt.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4472 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 47b7a50f8ace.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 47b7a50f8ace0b3b64c63dba61b5cd6099b670ed
+No conflicted files found but cherry-pick failed, attempting to skip commit 47b7a50f8ace0b3b64c63dba61b5cd6099b670ed
+----------------------------------------
+Cherry-picking 422ef2b827a9e7bc7d9eef8bb664ca297e80995d
+Auto-merging drivers/tty/vt/vt_ioctl.c
+CONFLICT (content): Merge conflict in drivers/tty/vt/vt_ioctl.c
+error: could not apply 422ef2b827a9... vt_ioctl: change VT_RESIZEX ioctl to check for error return from vc_resize()
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 422ef2b827a9e7bc7d9eef8bb664ca297e80995d
+Auto-resolving conflicts by accepting incoming changes...
