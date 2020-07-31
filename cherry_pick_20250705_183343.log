@@ -1100,3 +1100,59 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 583bcbc024f6bf8daa266f4f71b99e9d6e78c40b
 Auto-resolving conflicts by accepting incoming changes...
+[main 6da7dd20921f] random32: update the net random state on interrupt and activity
+ Author: Willy Tarreau <w@1wt.eu>
+ Date: Fri Jul 10 15:23:19 2020 +0200
+ 5 files changed, 279 insertions(+), 287 deletions(-)
+----------------------------------------
+Cherry-picking eec3b3c667ae875a3d88b7be8f659a1a076b0c3b
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4417 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit eec3b3c667ae.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of eec3b3c667ae875a3d88b7be8f659a1a076b0c3b
+No conflicted files found but cherry-pick failed, attempting to skip commit eec3b3c667ae875a3d88b7be8f659a1a076b0c3b
+----------------------------------------
+Cherry-picking 8de9a00bf997a62df8a2a1ba3d0d8eb73f55b463
+[main e4c5f4b6c40d] random: fix circular include dependency on arm64 after addition of percpu.h
+ Author: Willy Tarreau <w@1wt.eu>
+ Date: Thu Jul 30 07:59:24 2020 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 8de9a00bf997a62df8a2a1ba3d0d8eb73f55b463
+----------------------------------------
+Cherry-picking 8dacd74f7987c1e744e988cb12fd18ab1aa2d6e0
+[main 8638144b470f] random32: remove net_rand_state from the latent entropy gcc plugin
+ Author: Linus Torvalds <torvalds@linux-foundation.org>
+ Date: Wed Jul 29 19:11:00 2020 -0700
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked 8dacd74f7987c1e744e988cb12fd18ab1aa2d6e0
+----------------------------------------
+Cherry-picking 35cd3649ad750a1c9ff579d8ad59ad624419205f
+Auto-merging include/linux/prandom.h
+CONFLICT (add/add): Merge conflict in include/linux/prandom.h
+error: could not apply 35cd3649ad75... random32: move the pseudo-random 32-bit definitions to prandom.h
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 35cd3649ad750a1c9ff579d8ad59ad624419205f
+Auto-resolving conflicts by accepting incoming changes...
