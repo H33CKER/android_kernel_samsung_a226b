@@ -1307,3 +1307,27 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 5eed80ea8f60cc3935f46ec848fa1677b5e1a31a
 Auto-resolving conflicts by accepting incoming changes...
+[main f5f8485983e4] usb: xhci: define IDs for various ASMedia host controllers
+ Author: Forest Crossman <cyrozap@gmail.com>
+ Date: Mon Jul 27 23:24:07 2020 -0500
+ 2 files changed, 153 insertions(+), 10 deletions(-)
+----------------------------------------
+Cherry-picking c5021d4fa888ad248b4168947eb1e569de75fdb1
+[main db92daf06da9] usb: xhci: Fix ASMedia ASM1142 DMA addressing
+ Author: Forest Crossman <cyrozap@gmail.com>
+ Date: Mon Jul 27 23:24:08 2020 -0500
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Successfully cherry-picked c5021d4fa888ad248b4168947eb1e569de75fdb1
+----------------------------------------
+Cherry-picking ccafbed8b2f6a9d9298534b39e76da9cb40ff717
+Auto-merging sound/core/seq/oss/seq_oss.c
+CONFLICT (content): Merge conflict in sound/core/seq/oss/seq_oss.c
+error: could not apply ccafbed8b2f6... ALSA: seq: oss: Serialize ioctls
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of ccafbed8b2f6a9d9298534b39e76da9cb40ff717
+Auto-resolving conflicts by accepting incoming changes...
