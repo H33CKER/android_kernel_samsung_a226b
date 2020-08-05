@@ -797,3 +797,105 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of a15a67e3eb42af79d0b0470578d19462ce9c68ad
 Auto-resolving conflicts by accepting incoming changes...
+[main 5d537fae0c05] arm64/alternatives: move length validation inside the subsection
+ Author: Sami Tolvanen <samitolvanen@google.com>
+ Date: Thu Jul 30 08:37:01 2020 -0700
+ 2 files changed, 313 insertions(+), 15 deletions(-)
+----------------------------------------
+Cherry-picking 565089445b39c2c35f2cb977b50246291f568a78
+[main 2f0aece20d28] arm64: csum: Fix handling of bad packets
+ Author: Robin Murphy <robin.murphy@arm.com>
+ Date: Thu Jul 30 10:56:49 2020 +0100
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+Successfully cherry-picked 565089445b39c2c35f2cb977b50246291f568a78
+----------------------------------------
+Cherry-picking 9358267414ca4cefc73ddc29542ec5b1433cd3de
+[main 51fc7689e0f9] usb: hso: Fix debug compile warning on sparc32
+ Author: Geert Uytterhoeven <geert@linux-m68k.org>
+ Date: Mon Jul 13 13:05:13 2020 +0200
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+Successfully cherry-picked 9358267414ca4cefc73ddc29542ec5b1433cd3de
+----------------------------------------
+Cherry-picking 5727ef24ba9d51ce21f49b92669dfdf03b31de59
+[main f2b83df7f840] qed: Disable "MFW indication via attention" SPAM every 5 minutes
+ Author: Laurence Oberman <loberman@redhat.com>
+ Date: Tue Jul 14 18:08:05 2020 -0400
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 5727ef24ba9d51ce21f49b92669dfdf03b31de59
+----------------------------------------
+Cherry-picking b10dc328b3c7892944693db2150c0bc340743f3f
+[main 4bb9316d0ed5] nfc: s3fwrn5: add missing release on skb in s3fwrn5_recv_frame
+ Author: Navid Emamdoost <navid.emamdoost@gmail.com>
+ Date: Sat Jul 18 00:31:49 2020 -0500
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked b10dc328b3c7892944693db2150c0bc340743f3f
+----------------------------------------
+Cherry-picking 9e3f4267f73ee3f747ae4826f7bdb171dbab2303
+[main ffc4214567a7] parisc: add support for cmpxchg on u8 pointers
+ Author: Liam Beguin <liambeguin@gmail.com>
+ Date: Sat Jul 18 16:10:21 2020 -0400
+ 2 files changed, 14 insertions(+)
+Successfully cherry-picked 9e3f4267f73ee3f747ae4826f7bdb171dbab2303
+----------------------------------------
+Cherry-picking 850a971a4e2955b966eead9910e375233b15e935
+[main 3ad5b6fe1c4f] net: ethernet: ravb: exit if re-initialization fails in tx timeout
+ Author: Yoshihiro Shimoda <yoshihiro.shimoda.uh@renesas.com>
+ Date: Tue Jul 21 15:23:12 2020 +0900
+ 1 file changed, 24 insertions(+), 2 deletions(-)
+Successfully cherry-picked 850a971a4e2955b966eead9910e375233b15e935
+----------------------------------------
+Cherry-picking 24bc07356c49789937026632363efbd83a3e368d
+[main e8b02c131a94] Revert "i2c: cadence: Fix the hold bit setting"
+ Author: Raviteja Narayanam <raviteja.narayanam@xilinx.com>
+ Date: Fri Jul 3 19:25:49 2020 +0530
+ 1 file changed, 2 insertions(+), 7 deletions(-)
+Successfully cherry-picked 24bc07356c49789937026632363efbd83a3e368d
+----------------------------------------
+Cherry-picking cc5324cc0cae449e232931623cb0436f1acbb3e6
+[main 535a4919b525] x86/unwind/orc: Fix ORC for newly forked tasks
+ Author: Josh Poimboeuf <jpoimboe@redhat.com>
+ Date: Fri Jul 17 09:04:25 2020 -0500
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+Successfully cherry-picked cc5324cc0cae449e232931623cb0436f1acbb3e6
+----------------------------------------
+Cherry-picking 11e2db546c1bf909a0381415590c45bb5fb88d12
+Auto-merging drivers/net/ethernet/chelsio/cxgb4/sge.c
+[main d1de6961407a] cxgb4: add missing release on skb in uld_send()
+ Author: Navid Emamdoost <navid.emamdoost@gmail.com>
+ Date: Wed Jul 22 21:58:39 2020 -0500
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 11e2db546c1bf909a0381415590c45bb5fb88d12
+----------------------------------------
+Cherry-picking d1245833e0d7652ed5e2a3545f976cf086ee87e0
+[main 1219a1c9c7f1] xen-netfront: fix potential deadlock in xennet_remove()
+ Author: Andrea Righi <andrea.righi@canonical.com>
+ Date: Fri Jul 24 10:59:10 2020 +0200
+ 1 file changed, 42 insertions(+), 22 deletions(-)
+Successfully cherry-picked d1245833e0d7652ed5e2a3545f976cf086ee87e0
+----------------------------------------
+Cherry-picking ba53d9deccbac6e0670bd9b1849663ecda54d648
+[main ad15aafeea0b] KVM: LAPIC: Prevent setting the tscdeadline timer if the lapic is hw disabled
+ Author: Wanpeng Li <wanpengli@tencent.com>
+ Date: Fri Jul 31 11:12:19 2020 +0800
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked ba53d9deccbac6e0670bd9b1849663ecda54d648
+----------------------------------------
+Cherry-picking ba6e4d6a92c9d02153861e5693665d4a89caf5d0
+[main 97f3e47d2619] x86/i8259: Use printk_deferred() to prevent deadlock
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Wed Jul 29 10:53:28 2020 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked ba6e4d6a92c9d02153861e5693665d4a89caf5d0
+----------------------------------------
+Cherry-picking ca4f2c56d4162a4a5236f2099b55453fb98296f9
+Auto-merging Makefile
+CONFLICT (content): Merge conflict in Makefile
+error: could not apply ca4f2c56d416... Linux 4.14.192
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of ca4f2c56d4162a4a5236f2099b55453fb98296f9
+Auto-resolving conflicts by accepting incoming changes...
