@@ -1829,3 +1829,196 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 8a8841b9f3eb1f46e3fc6d56a9b9299c53f4f86f
 Auto-resolving conflicts by accepting incoming changes...
+[main f82137d73967] usb: dwc2: Fix error path in gadget registration
+ Author: Marek Szyprowski <m.szyprowski@samsung.com>
+ Date: Thu Jul 16 14:09:48 2020 +0200
+ 2 files changed, 519 insertions(+), 2 deletions(-)
+----------------------------------------
+Cherry-picking 74d1e724b115abb7ed40498c9cd75b1ff2c69f1e
+[main f8c501b2f0b4] scsi: mesh: Fix panic after host or bus reset
+ Author: Finn Thain <fthain@telegraphics.com.au>
+ Date: Thu Jul 23 09:25:51 2020 +1000
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+Successfully cherry-picked 74d1e724b115abb7ed40498c9cd75b1ff2c69f1e
+----------------------------------------
+Cherry-picking 5af2995953ec553ee190a5ba8d544d2f942efd76
+[main 2747110443ff] net: dsa: mv88e6xxx: MV88E6097 does not support jumbo configuration
+ Author: Chris Packham <chris.packham@alliedtelesis.co.nz>
+ Date: Fri Jul 24 11:21:20 2020 +1200
+ 1 file changed, 1 deletion(-)
+Successfully cherry-picked 5af2995953ec553ee190a5ba8d544d2f942efd76
+----------------------------------------
+Cherry-picking 12917b448aa665cfa032f37925a10ae5f43bee35
+[main 68cd359e1845] Smack: fix another vsscanf out of bounds
+ Author: Dan Carpenter <dan.carpenter@oracle.com>
+ Date: Thu Jul 23 18:22:19 2020 +0300
+ 1 file changed, 4 insertions(+)
+Successfully cherry-picked 12917b448aa665cfa032f37925a10ae5f43bee35
+----------------------------------------
+Cherry-picking 75f8b5a67b62b40d6308f3f2998de2cfa264f212
+[main ad3a43877912] Smack: prevent underflow in smk_set_cipso()
+ Author: Dan Carpenter <dan.carpenter@oracle.com>
+ Date: Thu Jul 23 18:23:05 2020 +0300
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 75f8b5a67b62b40d6308f3f2998de2cfa264f212
+----------------------------------------
+Cherry-picking ca869971a904aa67813a1b04624df4cd83e06196
+[main da23c9d05887] power: supply: check if calc_soc succeeded in pm860x_init_battery
+ Author: Tom Rix <trix@redhat.com>
+ Date: Sun Jul 12 12:23:51 2020 -0700
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+Successfully cherry-picked ca869971a904aa67813a1b04624df4cd83e06196
+----------------------------------------
+Cherry-picking 36bac0f1d441fc6603017dd5881a3641f011fbd5
+[main 9311b6cd064e] Bluetooth: hci_serdev: Only unregister device if it was registered
+ Author: Nicolas Boichat <drinkcat@chromium.org>
+ Date: Tue Jul 21 10:37:16 2020 +0800
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 36bac0f1d441fc6603017dd5881a3641f011fbd5
+----------------------------------------
+Cherry-picking 1700e567440ccadb5b5a1ddaebc700f0f8c4fdcf
+[main 2cc3661fca68] selftests/powerpc: Fix CPU affinity for child process
+ Author: Harish <harish@linux.ibm.com>
+ Date: Tue Jun 9 13:44:23 2020 +0530
+ 1 file changed, 16 insertions(+), 5 deletions(-)
+Successfully cherry-picked 1700e567440ccadb5b5a1ddaebc700f0f8c4fdcf
+----------------------------------------
+Cherry-picking 581752c3f34936dbf0f2491a45d9cb57b89f688d
+[main 47453bad6f5c] PCI: Release IVRS table in AMD ACS quirk
+ Author: Hanjun Guo <guohanjun@huawei.com>
+ Date: Wed Jul 22 17:44:28 2020 +0800
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked 581752c3f34936dbf0f2491a45d9cb57b89f688d
+----------------------------------------
+Cherry-picking 0f85a744df434cfe37ce8eea24b84bdb444b7a2e
+[main c52abcf557bc] selftests/powerpc: Fix online CPU selection
+ Author: Sandipan Das <sandipan@linux.ibm.com>
+ Date: Thu Jul 30 10:38:46 2020 +0530
+ 1 file changed, 25 insertions(+), 12 deletions(-)
+Successfully cherry-picked 0f85a744df434cfe37ce8eea24b84bdb444b7a2e
+----------------------------------------
+Cherry-picking 75d838fab1538eb4906d02efbb7eb8779937e795
+[main bd6babbca306] s390/qeth: don't process empty bridge port events
+ Author: Julian Wiedmann <jwi@linux.ibm.com>
+ Date: Thu Jul 30 17:01:20 2020 +0200
+ 1 file changed, 4 insertions(+)
+Successfully cherry-picked 75d838fab1538eb4906d02efbb7eb8779937e795
+----------------------------------------
+Cherry-picking 96f448206b4b6679b93a25dc30feb0ce1f996278
+[main f434506f8de4] wl1251: fix always return 0 error
+ Author: Wang Hai <wanghai38@huawei.com>
+ Date: Thu Jul 30 15:39:39 2020 +0800
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 96f448206b4b6679b93a25dc30feb0ce1f996278
+----------------------------------------
+Cherry-picking 431a1b512ee33f7b765e2cd6737ae802b292ea58
+[main fb515d5c0f9e] tools, build: Propagate build failures from tools/build/Makefile.build
+ Author: Andrii Nakryiko <andriin@fb.com>
+ Date: Thu Jul 30 19:42:44 2020 -0700
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 431a1b512ee33f7b765e2cd6737ae802b292ea58
+----------------------------------------
+Cherry-picking f5cf824da9a4300d7cd8ce5457e2562c091d583c
+[main 65bf2dc6bdc4] net: ethernet: aquantia: Fix wrong return value
+ Author: Tianjia Zhang <tianjia.zhang@linux.alibaba.com>
+ Date: Sun Aug 2 19:15:37 2020 +0800
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked f5cf824da9a4300d7cd8ce5457e2562c091d583c
+----------------------------------------
+Cherry-picking 927b8e3acb5858d975a93b47708f61c8fbf675c5
+[main a5c7dea1e3cd] liquidio: Fix wrong return value in cn23xx_get_pf_num()
+ Author: Tianjia Zhang <tianjia.zhang@linux.alibaba.com>
+ Date: Sun Aug 2 19:15:44 2020 +0800
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 927b8e3acb5858d975a93b47708f61c8fbf675c5
+----------------------------------------
+Cherry-picking 5184569002c4296c8bb94dc012b11b6ede9d9ea4
+[main 28a8bd3a0ec5] net: spider_net: Fix the size used in a 'dma_free_coherent()' call
+ Author: Christophe JAILLET <christophe.jaillet@wanadoo.fr>
+ Date: Sun Aug 2 15:53:33 2020 +0200
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked 5184569002c4296c8bb94dc012b11b6ede9d9ea4
+----------------------------------------
+Cherry-picking 178c6c8d0c47e4bd97ee65474979ef695ffbc0e7
+[main 5f135b196116] fsl/fman: use 32-bit unsigned integer
+ Author: Florinel Iordache <florinel.iordache@nxp.com>
+ Date: Mon Aug 3 10:07:30 2020 +0300
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+Successfully cherry-picked 178c6c8d0c47e4bd97ee65474979ef695ffbc0e7
+----------------------------------------
+Cherry-picking b13f68bc6480bd8db6bcb10cd570221b9e453a5b
+[main 828a919e3137] fsl/fman: fix dereference null return value
+ Author: Florinel Iordache <florinel.iordache@nxp.com>
+ Date: Mon Aug 3 10:07:31 2020 +0300
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+Successfully cherry-picked b13f68bc6480bd8db6bcb10cd570221b9e453a5b
+----------------------------------------
+Cherry-picking 80c8e386044c422894b49410acf64c729cf84947
+[main ea8e0091c31d] fsl/fman: fix unreachable code
+ Author: Florinel Iordache <florinel.iordache@nxp.com>
+ Date: Mon Aug 3 10:07:32 2020 +0300
+ 1 file changed, 1 deletion(-)
+Successfully cherry-picked 80c8e386044c422894b49410acf64c729cf84947
+----------------------------------------
+Cherry-picking ee11e170e8205d1918e1f2f9b9b9868de96eb9a1
+[main 3237defc3299] fsl/fman: check dereferencing null pointer
+ Author: Florinel Iordache <florinel.iordache@nxp.com>
+ Date: Mon Aug 3 10:07:33 2020 +0300
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+Successfully cherry-picked ee11e170e8205d1918e1f2f9b9b9868de96eb9a1
+----------------------------------------
+Cherry-picking 4ac2e3425382667ceb957d0837c81e81dc02a2dc
+[main 87933ac41c04] fsl/fman: fix eth hash table allocation
+ Author: Florinel Iordache <florinel.iordache@nxp.com>
+ Date: Mon Aug 3 10:07:34 2020 +0300
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 4ac2e3425382667ceb957d0837c81e81dc02a2dc
+----------------------------------------
+Cherry-picking 2f0bd77337c2810271c04ab09a9b5154e9fa2188
+[main a80d3fcce9ce] dlm: Fix kobject memleak
+ Author: Wang Hai <wanghai38@huawei.com>
+ Date: Mon Jun 15 11:25:33 2020 +0800
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Successfully cherry-picked 2f0bd77337c2810271c04ab09a9b5154e9fa2188
+----------------------------------------
+Cherry-picking ac67d2b38a800387f108899e5ae57e1dd9a758b6
+[main 33e66748f786] pinctrl-single: fix pcs_parse_pinconf() return value
+ Author: Drew Fustini <drew@beagleboard.org>
+ Date: Mon Jun 8 14:51:43 2020 +0200
+ 1 file changed, 7 insertions(+), 4 deletions(-)
+Successfully cherry-picked ac67d2b38a800387f108899e5ae57e1dd9a758b6
+----------------------------------------
+Cherry-picking 7ee1fff8cd878bd961a2c9aeded72dc0c7700d13
+[main ec2238b892b6] x86/fsgsbase/64: Fix NULL deref in 86_fsgsbase_read_task
+ Author: Eric Dumazet <edumazet@google.com>
+ Date: Fri Aug 14 11:16:17 2020 -0700
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 7ee1fff8cd878bd961a2c9aeded72dc0c7700d13
+----------------------------------------
+Cherry-picking ffe484d867918a019b55a16b7e1821d2504b89d8
+[main aa4e646a1e99] crypto: aesni - add compatibility with IAS
+ Author: Jian Cai <caij2003@gmail.com>
+ Date: Mon Jun 22 16:24:33 2020 -0700
+ 1 file changed, 3 insertions(+), 11 deletions(-)
+Successfully cherry-picked ffe484d867918a019b55a16b7e1821d2504b89d8
+----------------------------------------
+Cherry-picking a1b1a3d2dff2ac034682eb8610eec83e0efd33b0
+Auto-merging net/packet/af_packet.c
+[main 7ae465b962b5] af_packet: TPACKET_V3: fix fill status rwlock imbalance
+ Author: John Ogness <john.ogness@linutronix.de>
+ Date: Thu Aug 13 21:45:25 2020 +0206
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+Successfully cherry-picked a1b1a3d2dff2ac034682eb8610eec83e0efd33b0
+----------------------------------------
+Cherry-picking beafe1d05798982ae21db383884611bb389a1639
+Auto-merging drivers/net/wan/lapbether.c
+CONFLICT (content): Merge conflict in drivers/net/wan/lapbether.c
+error: could not apply beafe1d05798... drivers/net/wan/lapbether: Added needed_headroom and a skb->len check
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of beafe1d05798982ae21db383884611bb389a1639
+Auto-resolving conflicts by accepting incoming changes...
