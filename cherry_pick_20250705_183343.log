@@ -7651,3 +7651,27 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 7867516bcbc50a9c9951f5c3a28f2a53c32b89a4
 Auto-resolving conflicts by accepting incoming changes...
+[main addc5ade576e] epoll: Keep a reference on files added to the check list
+ Author: Marc Zyngier <maz@kernel.org>
+ Date: Wed Aug 19 17:12:17 2020 +0100
+ 2 files changed, 946 insertions(+), 37 deletions(-)
+----------------------------------------
+Cherry-picking 6875d79ba740f47a480908cf9fa791715ea0e4f1
+[main 41fdef4ba118] do_epoll_ctl(): clean the failure exits up a bit
+ Author: Al Viro <viro@zeniv.linux.org.uk>
+ Date: Sat Aug 22 18:25:52 2020 -0400
+ 1 file changed, 4 insertions(+), 6 deletions(-)
+Successfully cherry-picked 6875d79ba740f47a480908cf9fa791715ea0e4f1
+----------------------------------------
+Cherry-picking 85ce79dd934362c5533c1e4897d5aed663600296
+Auto-merging mm/hugetlb.c
+CONFLICT (content): Merge conflict in mm/hugetlb.c
+error: could not apply 85ce79dd9343... mm/hugetlb: fix calculation of adjust_range_if_pmd_sharing_possible
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 85ce79dd934362c5533c1e4897d5aed663600296
+Auto-resolving conflicts by accepting incoming changes...
