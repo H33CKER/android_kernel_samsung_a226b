@@ -3439,3 +3439,34 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 1517868cacc964a108c5f9abb244570ef79b365c
 Auto-resolving conflicts by accepting incoming changes...
+[main 4208d1550b7a] fs: prevent BUG_ON in submit_bh_wbc()
+ Author: Xianting Tian <xianting_tian@126.com>
+ Date: Fri Jul 31 12:10:25 2020 -0400
+ 3 files changed, 464 insertions(+), 363 deletions(-)
+----------------------------------------
+Cherry-picking 488efbc0b49ad36a2db85b6aa5ffcd0eb3b03335
+[main 609df1572a56] spi: stm32: fix stm32_spi_prepare_mbr in case of odd clk_rate
+ Author: Amelie Delaunay <amelie.delaunay@st.com>
+ Date: Mon Aug 10 09:12:36 2020 +0200
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 488efbc0b49ad36a2db85b6aa5ffcd0eb3b03335
+----------------------------------------
+Cherry-picking cd124e99afd4049c12739d321ddc34a03e04d187
+[main ad21e918f185] s390/cio: add cond_resched() in the slow_eval_known_fn() loop
+ Author: Vineeth Vijayan <vneethv@linux.ibm.com>
+ Date: Thu Jun 18 16:42:45 2020 +0200
+ 1 file changed, 5 insertions(+)
+Successfully cherry-picked cd124e99afd4049c12739d321ddc34a03e04d187
+----------------------------------------
+Cherry-picking 7a44fce0d135fcb6ce362bf6c5773766dc09e6de
+Auto-merging drivers/scsi/ufs/ufshcd.c
+CONFLICT (content): Merge conflict in drivers/scsi/ufs/ufshcd.c
+error: could not apply 7a44fce0d135... scsi: ufs: Fix possible infinite loop in ufshcd_hold
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 7a44fce0d135fcb6ce362bf6c5773766dc09e6de
+Auto-resolving conflicts by accepting incoming changes...
