@@ -10798,3 +10798,29 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of f4abfb03a387c0991dc9de3a5512fa84ab0663b9
 Auto-resolving conflicts by accepting incoming changes...
+[main 8b47a3ec3e66] uaccess: Add non-pagefault user-space read functions
+ Author: Masami Hiramatsu <mhiramat@kernel.org>
+ Date: Wed May 15 14:38:18 2019 +0900
+ 2 files changed, 36 insertions(+), 41 deletions(-)
+----------------------------------------
+Cherry-picking 6aa022755fa184cde7c1af02f45357d7f483b1f7
+Auto-merging include/linux/uaccess.h
+[main 887a20220e89] uaccess: Add non-pagefault user-space write function
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Sat Nov 2 00:17:56 2019 +0100
+ 1 file changed, 41 insertions(+), 4 deletions(-)
+Successfully cherry-picked 6aa022755fa184cde7c1af02f45357d7f483b1f7
+----------------------------------------
+Cherry-picking 80c8b74ce1fdf384c6ae43654501d9979802e8e1
+Auto-merging fs/btrfs/extent_io.c
+Auto-merging fs/btrfs/ioctl.c
+CONFLICT (content): Merge conflict in fs/btrfs/ioctl.c
+error: could not apply 80c8b74ce1fd... btrfs: fix potential deadlock in the search ioctl
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 80c8b74ce1fdf384c6ae43654501d9979802e8e1
+Auto-resolving conflicts by accepting incoming changes...
