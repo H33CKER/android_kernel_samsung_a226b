@@ -2022,3 +2022,63 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of beafe1d05798982ae21db383884611bb389a1639
 Auto-resolving conflicts by accepting incoming changes...
+[main 6dd605571186] drivers/net/wan/lapbether: Added needed_headroom and a skb->len check
+ Author: Xie He <xie.he.0141@gmail.com>
+ Date: Wed Aug 5 18:50:40 2020 -0700
+ 2 files changed, 209 insertions(+), 1 deletion(-)
+----------------------------------------
+Cherry-picking 980415fffec6952602edac586eb8c3a7d3f50b43
+[main 4e0ab463caeb] net/nfc/rawsock.c: add CAP_NET_RAW check.
+ Author: Qingyu Li <ieatmuttonchuan@gmail.com>
+ Date: Mon Aug 10 09:51:00 2020 +0800
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+Successfully cherry-picked 980415fffec6952602edac586eb8c3a7d3f50b43
+----------------------------------------
+Cherry-picking 6de6d1ca5f3e8383cb175777f0e9aba7a3c397f5
+[main 0aabf9b52049] net: refactor bind_bucket fastreuse into helper
+ Author: Tim Froidcoeur <tim.froidcoeur@tessares.net>
+ Date: Tue Aug 11 20:33:23 2020 +0200
+ 2 files changed, 55 insertions(+), 42 deletions(-)
+Successfully cherry-picked 6de6d1ca5f3e8383cb175777f0e9aba7a3c397f5
+----------------------------------------
+Cherry-picking bb70a1cbe5e470cf740f33091190b144c8a99461
+[main dfbd364098a2] net: Set fput_needed iff FDPUT_FPUT is set
+ Author: Miaohe Lin <linmiaohe@huawei.com>
+ Date: Thu Aug 6 19:53:16 2020 +0800
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked bb70a1cbe5e470cf740f33091190b144c8a99461
+----------------------------------------
+Cherry-picking b00b89e16ecf186153a5c62b15a940b991a6a3ef
+[main bd6036ffec6f] USB: serial: cp210x: re-enable auto-RTS on open
+ Author: Brant Merryman <brant.merryman@silabs.com>
+ Date: Fri Jun 26 04:24:20 2020 +0000
+ 1 file changed, 17 insertions(+)
+Successfully cherry-picked b00b89e16ecf186153a5c62b15a940b991a6a3ef
+----------------------------------------
+Cherry-picking 11a800116d76d3466739c9de6d1056d248f6dc05
+[main dd92bd75392a] USB: serial: cp210x: enable usb generic throttle/unthrottle
+ Author: Brant Merryman <brant.merryman@silabs.com>
+ Date: Fri Jun 26 04:22:58 2020 +0000
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked 11a800116d76d3466739c9de6d1056d248f6dc05
+----------------------------------------
+Cherry-picking b10bafd333b75f9f85f99d2d96f5e33c50664679
+Auto-merging sound/usb/mixer_quirks.c
+[main 060a2006e1c4] ALSA: usb-audio: Creative USB X-Fi Pro SB1095 volume knob support
+ Author: Mirko Dietrich <buzz@l4m1.de>
+ Date: Thu Aug 6 14:48:50 2020 +0200
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked b10bafd333b75f9f85f99d2d96f5e33c50664679
+----------------------------------------
+Cherry-picking 6fa2227bb563179772163d02697703493e2e1606
+Auto-merging sound/usb/quirks-table.h
+CONFLICT (content): Merge conflict in sound/usb/quirks-table.h
+error: could not apply 6fa2227bb563... ALSA: usb-audio: fix overeager device match for MacroSilicon MS2109
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 6fa2227bb563179772163d02697703493e2e1606
+Auto-resolving conflicts by accepting incoming changes...
