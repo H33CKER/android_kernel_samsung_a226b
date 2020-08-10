@@ -4641,3 +4641,174 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 980415fffec6952602edac586eb8c3a7d3f50b43
 Auto-resolving conflicts by accepting incoming changes...
+[main f646c13b7a14] net/nfc/rawsock.c: add CAP_NET_RAW check.
+ Author: Qingyu Li <ieatmuttonchuan@gmail.com>
+ Date: Mon Aug 10 09:51:00 2020 +0800
+ 2 files changed, 19 insertions(+), 2 deletions(-)
+----------------------------------------
+Cherry-picking 6de6d1ca5f3e8383cb175777f0e9aba7a3c397f5
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4436 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 6de6d1ca5f3e.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 6de6d1ca5f3e8383cb175777f0e9aba7a3c397f5
+No conflicted files found but cherry-pick failed, attempting to skip commit 6de6d1ca5f3e8383cb175777f0e9aba7a3c397f5
+----------------------------------------
+Cherry-picking bb70a1cbe5e470cf740f33091190b144c8a99461
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4436 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit bb70a1cbe5e4.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of bb70a1cbe5e470cf740f33091190b144c8a99461
+No conflicted files found but cherry-pick failed, attempting to skip commit bb70a1cbe5e470cf740f33091190b144c8a99461
+----------------------------------------
+Cherry-picking b00b89e16ecf186153a5c62b15a940b991a6a3ef
+Auto-merging drivers/usb/serial/cp210x.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4436 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit b00b89e16ecf.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of b00b89e16ecf186153a5c62b15a940b991a6a3ef
+No conflicted files found but cherry-pick failed, attempting to skip commit b00b89e16ecf186153a5c62b15a940b991a6a3ef
+----------------------------------------
+Cherry-picking 11a800116d76d3466739c9de6d1056d248f6dc05
+Auto-merging drivers/usb/serial/cp210x.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4436 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 11a800116d76.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 11a800116d76d3466739c9de6d1056d248f6dc05
+No conflicted files found but cherry-pick failed, attempting to skip commit 11a800116d76d3466739c9de6d1056d248f6dc05
+----------------------------------------
+Cherry-picking b10bafd333b75f9f85f99d2d96f5e33c50664679
+Auto-merging sound/usb/mixer_quirks.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4436 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit b10bafd333b7.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of b10bafd333b75f9f85f99d2d96f5e33c50664679
+No conflicted files found but cherry-pick failed, attempting to skip commit b10bafd333b75f9f85f99d2d96f5e33c50664679
+----------------------------------------
+Cherry-picking 6fa2227bb563179772163d02697703493e2e1606
+Auto-merging sound/usb/quirks-table.h
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4436 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 6fa2227bb563.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 6fa2227bb563179772163d02697703493e2e1606
+No conflicted files found but cherry-pick failed, attempting to skip commit 6fa2227bb563179772163d02697703493e2e1606
+----------------------------------------
+Cherry-picking 17b84284d2a2b49f5fe625d063cd0a0ac58e10e1
+Auto-merging sound/usb/quirks-table.h
+CONFLICT (content): Merge conflict in sound/usb/quirks-table.h
+error: could not apply 17b84284d2a2... ALSA: usb-audio: add quirk for Pioneer DDJ-RB
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 17b84284d2a2b49f5fe625d063cd0a0ac58e10e1
+Auto-resolving conflicts by accepting incoming changes...
