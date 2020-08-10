@@ -4624,3 +4624,20 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of beafe1d05798982ae21db383884611bb389a1639
 Auto-resolving conflicts by accepting incoming changes...
+[main 72a85db6397b] drivers/net/wan/lapbether: Added needed_headroom and a skb->len check
+ Author: Xie He <xie.he.0141@gmail.com>
+ Date: Wed Aug 5 18:50:40 2020 -0700
+ 2 files changed, 508 insertions(+), 29 deletions(-)
+----------------------------------------
+Cherry-picking 980415fffec6952602edac586eb8c3a7d3f50b43
+Auto-merging net/nfc/rawsock.c
+CONFLICT (content): Merge conflict in net/nfc/rawsock.c
+error: could not apply 980415fffec6... net/nfc/rawsock.c: add CAP_NET_RAW check.
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 980415fffec6952602edac586eb8c3a7d3f50b43
+Auto-resolving conflicts by accepting incoming changes...
