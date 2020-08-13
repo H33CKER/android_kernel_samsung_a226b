@@ -1072,3 +1072,257 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of f40f289b96bf856e1613f17bf9426140e8b89393
 Auto-resolving conflicts by accepting incoming changes...
+[main ed9a9fb29abd] binder: Prevent context manager from incrementing ref 0
+ Author: Jann Horn <jannh@google.com>
+ Date: Mon Jul 27 14:04:24 2020 +0200
+ 2 files changed, 485 insertions(+), 1813 deletions(-)
+----------------------------------------
+Cherry-picking 041a5a238a1e31992b5f22ef4f9792729d3b46ca
+Auto-merging drivers/video/console/vgacon.c
+[main f3f9055928cc] vgacon: Fix for missing check in scrollback handling
+ Author: Yunhai Zhang <zhangyunhai@nsfocus.com>
+ Date: Tue Jul 28 09:58:03 2020 +0800
+ 1 file changed, 4 insertions(+)
+Successfully cherry-picked 041a5a238a1e31992b5f22ef4f9792729d3b46ca
+----------------------------------------
+Cherry-picking 389c74c218d3b182e9cd767e98cee0e0fd0dabaa
+[main b217a27fbd1a] mtd: properly check all write ioctls for permissions
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Thu Jul 16 13:53:46 2020 +0200
+ 1 file changed, 47 insertions(+), 9 deletions(-)
+Successfully cherry-picked 389c74c218d3b182e9cd767e98cee0e0fd0dabaa
+----------------------------------------
+Cherry-picking dbe4aa36c940dc309133e5d10a5771f3d0bf2d28
+[main f6f43c80d716] leds: wm831x-status: fix use-after-free on unbind
+ Author: Johan Hovold <johan@kernel.org>
+ Date: Mon Jun 1 15:39:49 2020 +0200
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+Successfully cherry-picked dbe4aa36c940dc309133e5d10a5771f3d0bf2d28
+----------------------------------------
+Cherry-picking 1452c5ffe79f34ded327310a84a67d653a00e68e
+[main dca732327fdf] leds: da903x: fix use-after-free on unbind
+ Author: Johan Hovold <johan@kernel.org>
+ Date: Mon Jun 1 15:39:46 2020 +0200
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+Successfully cherry-picked 1452c5ffe79f34ded327310a84a67d653a00e68e
+----------------------------------------
+Cherry-picking 661926601c318c4cf30272ac93ed2bf1c80ff778
+[main 3bcba00829a4] leds: lm3533: fix use-after-free on unbind
+ Author: Johan Hovold <johan@kernel.org>
+ Date: Mon Jun 1 15:39:47 2020 +0200
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+Successfully cherry-picked 661926601c318c4cf30272ac93ed2bf1c80ff778
+----------------------------------------
+Cherry-picking efe1c042fa521dcce374ca23560480ff6927a58e
+[main e264494fa102] leds: 88pm860x: fix use-after-free on unbind
+ Author: Johan Hovold <johan@kernel.org>
+ Date: Mon Jun 1 15:39:45 2020 +0200
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+Successfully cherry-picked efe1c042fa521dcce374ca23560480ff6927a58e
+----------------------------------------
+Cherry-picking e48afaff38159b7ca000bb9f00dcf1d0b277264d
+[main c2cad1fbb7f4] net/9p: validate fds in p9_fd_open
+ Author: Christoph Hellwig <hch@lst.de>
+ Date: Fri Jul 10 10:57:22 2020 +0200
+ 1 file changed, 16 insertions(+), 8 deletions(-)
+Successfully cherry-picked e48afaff38159b7ca000bb9f00dcf1d0b277264d
+----------------------------------------
+Cherry-picking 3793c4c127e34d1fded7e64158c1795b7f7d1983
+[main e1e5824fc521] drm/nouveau/fbcon: fix module unload when fbcon init has failed for some reason
+ Author: Ben Skeggs <bskeggs@redhat.com>
+ Date: Fri Jul 24 17:01:39 2020 +1000
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 3793c4c127e34d1fded7e64158c1795b7f7d1983
+----------------------------------------
+Cherry-picking 1a284881b0e66537a185973d72a54c5e7b4df47f
+[main e43733e20e89] drm/nouveau/fbcon: zero-initialise the mode_cmd2 structure
+ Author: Ben Skeggs <bskeggs@redhat.com>
+ Date: Fri Jul 24 17:02:48 2020 +1000
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 1a284881b0e66537a185973d72a54c5e7b4df47f
+----------------------------------------
+Cherry-picking fb49251695b1e735860b5fd953d691f6cf817873
+[main 1c9267063fdb] i2c: slave: improve sanity check when registering
+ Author: Wolfram Sang <wsa+renesas@sang-engineering.com>
+ Date: Sat Jul 25 21:50:52 2020 +0200
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+Successfully cherry-picked fb49251695b1e735860b5fd953d691f6cf817873
+----------------------------------------
+Cherry-picking 59822dace1c9258c22ebf16adb1b49a6eff0bdf2
+[main c188fba998b2] i2c: slave: add sanity check when unregistering
+ Author: Wolfram Sang <wsa+renesas@sang-engineering.com>
+ Date: Sat Jul 25 21:50:53 2020 +0200
+ 1 file changed, 3 insertions(+)
+Successfully cherry-picked 59822dace1c9258c22ebf16adb1b49a6eff0bdf2
+----------------------------------------
+Cherry-picking df1a89577ebbb6165f3f1d9e1da84fda80dd7e01
+Auto-merging net/wireless/nl80211.c
+[main 219d398bfeb1] cfg80211: check vendor command doit pointer before use
+ Author: Julian Squires <julian@cipht.net>
+ Date: Mon Jul 6 17:13:53 2020 -0400
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Successfully cherry-picked df1a89577ebbb6165f3f1d9e1da84fda80dd7e01
+----------------------------------------
+Cherry-picking ccc98c7861e20035025b5db05a9bb302c8e385eb
+[main 7be8cb36c62a] igb: reinit_locked() should be called with rtnl_lock
+ Author: Francesco Ruggeri <fruggeri@arista.com>
+ Date: Thu Jul 2 15:39:06 2020 -0700
+ 1 file changed, 9 insertions(+)
+Successfully cherry-picked ccc98c7861e20035025b5db05a9bb302c8e385eb
+----------------------------------------
+Cherry-picking 55939b710b1e35869af18983039559d04af3e0aa
+[main 1d62f420248c] atm: fix atm_dev refcnt leaks in atmtcp_remove_persistent
+ Author: Xin Xiong <xiongx18@fudan.edu.cn>
+ Date: Wed Jul 29 21:06:59 2020 +0800
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+Successfully cherry-picked 55939b710b1e35869af18983039559d04af3e0aa
+----------------------------------------
+Cherry-picking bbeab31912b7118e2238c2dd5eab7d10cdcd7d98
+[main ce614d89af47] tools lib traceevent: Fix memory leak in process_dynamic_array_len
+ Author: Philippe Duplessis-Guindon <pduplessis@efficios.com>
+ Date: Thu Jul 30 11:02:36 2020 -0400
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked bbeab31912b7118e2238c2dd5eab7d10cdcd7d98
+----------------------------------------
+Cherry-picking 152983b40ccd8a3b6acb1948c87b7fba2edf8707
+[main fcd862c2c9ba] Drivers: hv: vmbus: Ignore CHANNELMSG_TL_CONNECT_RESULT(23)
+ Author: Dexuan Cui <decui@microsoft.com>
+ Date: Sun Jan 19 15:29:22 2020 -0800
+ 3 files changed, 13 insertions(+), 14 deletions(-)
+Successfully cherry-picked 152983b40ccd8a3b6acb1948c87b7fba2edf8707
+----------------------------------------
+Cherry-picking 89f95b8cff15cbf1ef71602da0f6c0465c6d9e73
+Auto-merging fs/xattr.c
+Auto-merging include/linux/xattr.h
+[main a34aae998974] xattr: break delegations in {set,remove}xattr
+ Author: Frank van der Linden <fllinden@amazon.com>
+ Date: Tue Jun 23 22:39:18 2020 +0000
+ 2 files changed, 79 insertions(+), 7 deletions(-)
+Successfully cherry-picked 89f95b8cff15cbf1ef71602da0f6c0465c6d9e73
+----------------------------------------
+Cherry-picking cc6af908962ad436604d510e4812aabcbc218a48
+Auto-merging net/ipv4/fib_trie.c
+[main d6d88ff38400] ipv4: Silence suspicious RCU usage warning
+ Author: Ido Schimmel <idosch@mellanox.com>
+ Date: Wed Jul 29 11:37:13 2020 +0300
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked cc6af908962ad436604d510e4812aabcbc218a48
+----------------------------------------
+Cherry-picking da34873e8fb08a306de0c95457de1f63690114ce
+Auto-merging include/net/addrconf.h
+Auto-merging net/ipv6/ipv6_sockglue.c
+[main 06f83792d289] ipv6: fix memory leaks on IPV6_ADDRFORM path
+ Author: Cong Wang <xiyou.wangcong@gmail.com>
+ Date: Sat Jul 25 15:40:53 2020 -0700
+ 3 files changed, 14 insertions(+), 5 deletions(-)
+Successfully cherry-picked da34873e8fb08a306de0c95457de1f63690114ce
+----------------------------------------
+Cherry-picking 64ce1286449faf7a3ce066d46e81de1d03ad200b
+[main ef6284e2767d] net: ethernet: mtk_eth_soc: fix MTU warnings
+ Author: Landen Chao <landen.chao@mediatek.com>
+ Date: Wed Jul 29 10:15:17 2020 +0200
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked 64ce1286449faf7a3ce066d46e81de1d03ad200b
+----------------------------------------
+Cherry-picking 49a3f519e22690d902c7a161eeff1fbb391efd4e
+Auto-merging drivers/net/vxlan.c
+[main 8f7c5cc91351] vxlan: Ensure FDB dump is performed under RCU
+ Author: Ido Schimmel <idosch@mellanox.com>
+ Date: Wed Jul 29 11:34:36 2020 +0300
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+Successfully cherry-picked 49a3f519e22690d902c7a161eeff1fbb391efd4e
+----------------------------------------
+Cherry-picking 7105bb40072f3f7de6e06e0a52f804b0f20aa634
+[main 05d2b40ef5ab] net: lan78xx: replace bogus endpoint lookup
+ Author: Johan Hovold <johan@kernel.org>
+ Date: Tue Jul 28 14:10:31 2020 +0200
+ 1 file changed, 30 insertions(+), 87 deletions(-)
+Successfully cherry-picked 7105bb40072f3f7de6e06e0a52f804b0f20aa634
+----------------------------------------
+Cherry-picking 236a93cb8a0beae688ccc1146247d81bb2f1114a
+[main 155336ee09e8] hv_netvsc: do not use VF device if link is down
+ Author: Stephen Hemminger <stephen@networkplumber.org>
+ Date: Tue Aug 4 09:54:15 2020 -0700
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+Successfully cherry-picked 236a93cb8a0beae688ccc1146247d81bb2f1114a
+----------------------------------------
+Cherry-picking b3e3feb569e0c3628b8a0d68459a9318ce5d891e
+Auto-merging net/ipv4/gre_offload.c
+[main 690ce783df7c] net: gre: recompute gre csum for sctp over gre tunnels
+ Author: Lorenzo Bianconi <lorenzo@kernel.org>
+ Date: Fri Jul 31 20:12:05 2020 +0200
+ 1 file changed, 11 insertions(+), 2 deletions(-)
+Successfully cherry-picked b3e3feb569e0c3628b8a0d68459a9318ce5d891e
+----------------------------------------
+Cherry-picking bf4c61248445f08fc0e778c1b14f396b1c689b2e
+[main 6be2b45c4dce] openvswitch: Prevent kernel-infoleak in ovs_ct_put_key()
+ Author: Peilin Ye <yepeilin.cs@gmail.com>
+ Date: Fri Jul 31 00:48:38 2020 -0400
+ 1 file changed, 20 insertions(+), 18 deletions(-)
+Successfully cherry-picked bf4c61248445f08fc0e778c1b14f396b1c689b2e
+----------------------------------------
+Cherry-picking 4cbdf39a899a8028b9cedc13f65c0570ce44479c
+Auto-merging drivers/net/vxlan.c
+[main 4e4a5cdf58e0] Revert "vxlan: fix tos value before xmit"
+ Author: Hangbin Liu <liuhangbin@gmail.com>
+ Date: Wed Aug 5 10:41:31 2020 +0800
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked 4cbdf39a899a8028b9cedc13f65c0570ce44479c
+----------------------------------------
+Cherry-picking 5200f946ca1fe164bde8cadd1a170a728e9ae190
+[main eb3f2168d4a1] selftests/net: relax cpu affinity requirement in msg_zerocopy test
+ Author: Willem de Bruijn <willemb@google.com>
+ Date: Wed Aug 5 04:40:45 2020 -0400
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+Successfully cherry-picked 5200f946ca1fe164bde8cadd1a170a728e9ae190
+----------------------------------------
+Cherry-picking 226422a2bfff136455297792bea62470a4f0855c
+[main 7c97471ead8a] usb: hso: check for return value in hso_serial_common_create()
+ Author: Rustam Kovhaev <rkovhaev@gmail.com>
+ Date: Mon Jul 27 23:42:17 2020 -0700
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Successfully cherry-picked 226422a2bfff136455297792bea62470a4f0855c
+----------------------------------------
+Cherry-picking 6aa01b947c3ac40fc62c97a7f53b45a503a6d91b
+Auto-merging net/rxrpc/recvmsg.c
+Auto-merging net/rxrpc/sendmsg.c
+[main fac1c655e026] rxrpc: Fix race between recvmsg and sendmsg on immediate call failure
+ Author: David Howells <dhowells@redhat.com>
+ Date: Wed Jul 29 00:03:56 2020 +0100
+ 4 files changed, 28 insertions(+), 12 deletions(-)
+Successfully cherry-picked 6aa01b947c3ac40fc62c97a7f53b45a503a6d91b
+----------------------------------------
+Cherry-picking a963ddc8fffada154a87ca407fdfc850618ba49b
+[main ee93b6bf577c] Smack: fix use-after-free in smk_write_relabel_self()
+ Author: Eric Biggers <ebiggers@google.com>
+ Date: Wed Jul 8 13:15:20 2020 -0700
+ 1 file changed, 11 insertions(+), 2 deletions(-)
+Successfully cherry-picked a963ddc8fffada154a87ca407fdfc850618ba49b
+----------------------------------------
+Cherry-picking 25dfa86fe24396cc4b198228735b4a0e13f9a769
+[main eb4a2d3bded9] tracepoint: Mark __tracepoint_string's __used
+ Author: Nick Desaulniers <ndesaulniers@google.com>
+ Date: Thu Jul 30 15:45:54 2020 -0700
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 25dfa86fe24396cc4b198228735b4a0e13f9a769
+----------------------------------------
+Cherry-picking 2d5fdf1588074054c4a50213148cbcd35946a1c9
+Auto-merging drivers/hid/hid-input.c
+[main 23fc63977107] HID: input: Fix devices that return multiple bytes in battery report
+ Author: Grant Likely <grant.likely@secretlab.ca>
+ Date: Fri Jul 10 16:19:39 2020 +0100
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Successfully cherry-picked 2d5fdf1588074054c4a50213148cbcd35946a1c9
+----------------------------------------
+Cherry-picking 1bfba2f4270c64c912756fc76621bbce959ddf2e
+Auto-merging kernel/cgroup/cgroup.c
+CONFLICT (content): Merge conflict in kernel/cgroup/cgroup.c
+error: could not apply 1bfba2f4270c... cgroup: add missing skcd->no_refcnt check in cgroup_sk_clone()
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 1bfba2f4270c64c912756fc76621bbce959ddf2e
+Auto-resolving conflicts by accepting incoming changes...
