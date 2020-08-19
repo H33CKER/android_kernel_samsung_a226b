@@ -9521,3 +9521,71 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of fb545b9fc756332f4430307ccf7b58e4f3d5f64f
 Auto-resolving conflicts by accepting incoming changes...
+[main 71f7ca1581aa] device property: Fix the secondary firmware node handling in set_primary_fwnode()
+ Author: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+ Date: Fri Aug 21 13:53:42 2020 +0300
+ 2 files changed, 72 insertions(+), 21 deletions(-)
+----------------------------------------
+Cherry-picking 5430e7638ef41a4aa25e274577a0bb042f933a70
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4478 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 5430e7638ef4.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 5430e7638ef41a4aa25e274577a0bb042f933a70
+No conflicted files found but cherry-pick failed, attempting to skip commit 5430e7638ef41a4aa25e274577a0bb042f933a70
+----------------------------------------
+Cherry-picking 413092c085caf504d7e68ff308b57be1688984f2
+Auto-merging drivers/usb/misc/yurex.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4478 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 413092c085ca.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 413092c085caf504d7e68ff308b57be1688984f2
+No conflicted files found but cherry-pick failed, attempting to skip commit 413092c085caf504d7e68ff308b57be1688984f2
+----------------------------------------
+Cherry-picking de455746948afb1c039644cd17765e941d36f05a
+Auto-merging drivers/usb/storage/unusual_uas.h
+CONFLICT (content): Merge conflict in drivers/usb/storage/unusual_uas.h
+error: could not apply de455746948a... usb: uas: Add quirk for PNY Pro Elite
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of de455746948afb1c039644cd17765e941d36f05a
+Auto-resolving conflicts by accepting incoming changes...
