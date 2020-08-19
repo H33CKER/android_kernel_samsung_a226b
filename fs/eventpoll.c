@@ -34,7 +34,6 @@
 #include <linux/mutex.h>
 #include <linux/anon_inodes.h>
 #include <linux/device.h>
-#include <linux/freezer.h>
 #include <linux/uaccess.h>
 #include <asm/io.h>
 #include <asm/mman.h>
@@ -1396,13 +1395,13 @@ static int ep_create_wakeup_source(struct epitem *epi)
 	struct wakeup_source *ws;
 
 	if (!epi->ep->ws) {
-		epi->ep->ws = wakeup_source_register(NULL, "eventpoll");
+		epi->ep->ws = wakeup_source_register("eventpoll");
 		if (!epi->ep->ws)
 			return -ENOMEM;
 	}
 
 	name = epi->ffd.file->f_path.dentry->d_name.name;
-	ws = wakeup_source_register(NULL, name);
+	ws = wakeup_source_register(name);
 
 	if (!ws)
 		return -ENOMEM;
@@ -1462,22 +1461,6 @@ static int ep_insert(struct eventpoll *ep, struct epoll_event *event,
 		RCU_INIT_POINTER(epi->ws, NULL);
 	}
 
-	/* Add the current item to the list of active epoll hook for this file */
-	spin_lock(&tfile->f_lock);
-	list_add_tail_rcu(&epi->fllink, &tfile->f_ep_links);
-	spin_unlock(&tfile->f_lock);
-
-	/*
-	 * Add the current item to the RB tree. All RB tree operations are
-	 * protected by "mtx", and ep_insert() is called with "mtx" held.
-	 */
-	ep_rbtree_insert(ep, epi);
-
-	/* now check if we've created too many backpaths */
-	error = -EINVAL;
-	if (full_check && reverse_path_check())
-		goto error_remove_epi;
-
 	/* Initialize the poll table using the queue callback */
 	epq.epi = epi;
 	init_poll_funcptr(&epq.pt, ep_ptable_queue_proc);
@@ -1499,6 +1482,22 @@ static int ep_insert(struct eventpoll *ep, struct epoll_event *event,
 	error = -ENOMEM;
 	if (epi->nwait < 0)
 		goto error_unregister;
+
+	/* Add the current item to the list of active epoll hook for this file */
+	spin_lock(&tfile->f_lock);
+	list_add_tail_rcu(&epi->fllink, &tfile->f_ep_links);
+	spin_unlock(&tfile->f_lock);
+
+	/*
+	 * Add the current item to the RB tree. All RB tree operations are
+	 * protected by "mtx", and ep_insert() is called with "mtx" held.
+	 */
+	ep_rbtree_insert(ep, epi);
+
+	/* now check if we've created too many backpaths */
+	error = -EINVAL;
+	if (full_check && reverse_path_check())
+		goto error_remove_epi;
 
 	/* We have to drop the new item inside our item list to keep track of it */
 	spin_lock_irqsave(&ep->lock, flags);
@@ -1528,14 +1527,15 @@ static int ep_insert(struct eventpoll *ep, struct epoll_event *event,
 
 	return 0;
 
-error_unregister:
-	ep_unregister_pollwait(ep, epi);
 error_remove_epi:
 	spin_lock(&tfile->f_lock);
 	list_del_rcu(&epi->fllink);
 	spin_unlock(&tfile->f_lock);
 
 	rb_erase_cached(&epi->rbn, &ep->rbr);
+
+error_unregister:
+	ep_unregister_pollwait(ep, epi);
 
 	/*
 	 * We need to do this because an event could have been arrived on some
@@ -1826,8 +1826,7 @@ fetch_events:
 			}
 
 			spin_unlock_irqrestore(&ep->lock, flags);
-			if (!freezable_schedule_hrtimeout_range(to, slack,
-								HRTIMER_MODE_ABS))
+			if (!schedule_hrtimeout_range(to, slack, HRTIMER_MODE_ABS))
 				timed_out = 1;
 
 			spin_lock_irqsave(&ep->lock, flags);
@@ -1902,9 +1901,9 @@ static int ep_loop_check_proc(void *priv, void *cookie, int call_nests)
 			 * during ep_insert().
 			 */
 			if (list_empty(&epi->ffd.file->f_tfile_llink)) {
-				if (get_file_rcu(epi->ffd.file))
-					list_add(&epi->ffd.file->f_tfile_llink,
-						 &tfile_check_list);
+				get_file(epi->ffd.file);
+				list_add(&epi->ffd.file->f_tfile_llink,
+					 &tfile_check_list);
 			}
 		}
 	}
@@ -2100,8 +2099,10 @@ SYSCALL_DEFINE4(epoll_ctl, int, epfd, int, op, int, fd,
 			mutex_lock(&epmutex);
 			if (is_file_epoll(tf.file)) {
 				error = -ELOOP;
-				if (ep_loop_check(ep, tf.file) != 0)
+				if (ep_loop_check(ep, tf.file) != 0) {
+					clear_tfile_check_list();
 					goto error_tgt_fput;
+				}
 			} else {
 				get_file(tf.file);
 				list_add(&tf.file->f_tfile_llink,
@@ -2130,6 +2131,8 @@ SYSCALL_DEFINE4(epoll_ctl, int, epfd, int, op, int, fd,
 			error = ep_insert(ep, &epds, tf.file, fd, full_check);
 		} else
 			error = -EEXIST;
+		if (full_check)
+			clear_tfile_check_list();
 		break;
 	case EPOLL_CTL_DEL:
 		if (epi)
@@ -2152,10 +2155,8 @@ SYSCALL_DEFINE4(epoll_ctl, int, epfd, int, op, int, fd,
 	mutex_unlock(&ep->mtx);
 
 error_tgt_fput:
-	if (full_check) {
-		clear_tfile_check_list();
+	if (full_check)
 		mutex_unlock(&epmutex);
-	}
 
 	fdput(tf);
 error_fput:
