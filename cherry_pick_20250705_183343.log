@@ -9710,3 +9710,20 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of fc0019fac05f97068f0b7d53bb4c081ae2a23e95
 Auto-resolving conflicts by accepting incoming changes...
+[main 2e983076d22e] USB: gadget: u_f: add overflow checks to VLA macros
+ Author: Brooke Basile <brookebasile@gmail.com>
+ Date: Tue Aug 25 09:05:08 2020 -0400
+ 2 files changed, 125 insertions(+), 4 deletions(-)
+----------------------------------------
+Cherry-picking b88ad6e714284b33a47834f5f2a294c2b37c66aa
+Auto-merging drivers/usb/gadget/function/f_ncm.c
+CONFLICT (content): Merge conflict in drivers/usb/gadget/function/f_ncm.c
+error: could not apply b88ad6e71428... USB: gadget: f_ncm: add bounds checks to ncm_unwrap_ntb()
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of b88ad6e714284b33a47834f5f2a294c2b37c66aa
+Auto-resolving conflicts by accepting incoming changes...
