@@ -9435,3 +9435,20 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 77322edb99f0176ec67a300b9f263719ba391b89
 Auto-resolving conflicts by accepting incoming changes...
+[main ca6634346631] writeback: Fix sync livelock due to b_dirty_time processing
+ Author: Jan Kara <jack@suse.cz>
+ Date: Fri May 29 16:08:58 2020 +0200
+ 3 files changed, 53 insertions(+), 44 deletions(-)
+----------------------------------------
+Cherry-picking 881947cde19a6a823441f20a1ca3d45ba74c5dfc
+Auto-merging drivers/xen/events/events_base.c
+CONFLICT (content): Merge conflict in drivers/xen/events/events_base.c
+error: could not apply 881947cde19a... XEN uses irqdesc::irq_data_common::handler_data to store a per interrupt XEN data pointer which contains XEN specific information.
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 881947cde19a6a823441f20a1ca3d45ba74c5dfc
+Auto-resolving conflicts by accepting incoming changes...
