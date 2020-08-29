@@ -4700,3 +4700,149 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 5a023e34ee966b4e082dff5ed2b390584fb9bfca
 Auto-resolving conflicts by accepting incoming changes...
+[main b1f07fddcf3b] staging: wlan-ng: fix out of bounds read in prism2sta_probe_usb()
+ Author: Rustam Kovhaev <rkovhaev@gmail.com>
+ Date: Tue Aug 4 07:56:14 2020 -0700
+ 3 files changed, 360 insertions(+), 6 deletions(-)
+----------------------------------------
+Cherry-picking e24ef3003b80830193731fde509e2bfda645029c
+Auto-merging fs/btrfs/extent-tree.c
+[main a69e9d35b715] btrfs: require only sector size alignment for parent eb bytenr
+ Author: Qu Wenruo <wqu@suse.com>
+ Date: Wed Aug 26 17:26:43 2020 +0800
+ 2 files changed, 16 insertions(+), 15 deletions(-)
+Successfully cherry-picked e24ef3003b80830193731fde509e2bfda645029c
+----------------------------------------
+Cherry-picking 6e1edab84e8a71705aae885e1421f75aa559464d
+Auto-merging fs/btrfs/volumes.c
+[main 981252905835] btrfs: fix lockdep splat in add_missing_dev
+ Author: Josef Bacik <josef@toxicpanda.com>
+ Date: Mon Aug 31 10:52:42 2020 -0400
+ 1 file changed, 10 insertions(+)
+Successfully cherry-picked 6e1edab84e8a71705aae885e1421f75aa559464d
+----------------------------------------
+Cherry-picking ee3e33dc3c8a3ba7f3380daaa039c2b7227c24c1
+[main 0f9035a90b93] btrfs: fix wrong address when faulting in pages in the search ioctl
+ Author: Filipe Manana <fdmanana@suse.com>
+ Date: Mon Sep 14 09:01:04 2020 +0100
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked ee3e33dc3c8a3ba7f3380daaa039c2b7227c24c1
+----------------------------------------
+Cherry-picking 0d85ba0676a856259fe36abe8d21364842cc729e
+[main 2d2a0185a2a8] regulator: push allocation in set_consumer_device_supply() out of lock
+ Author: Michał Mirosław <mirq-linux@rere.qmqm.pl>
+ Date: Wed Aug 12 03:31:36 2020 +0200
+ 1 file changed, 26 insertions(+), 20 deletions(-)
+Successfully cherry-picked 0d85ba0676a856259fe36abe8d21364842cc729e
+----------------------------------------
+Cherry-picking 7c6e70f228a21fc1a964702999c3baa1a6fe6f5d
+[main 7822d642d970] scsi: target: iscsi: Fix data digest calculation
+ Author: Varun Prakash <varun@chelsio.com>
+ Date: Tue Aug 25 18:05:10 2020 +0530
+ 1 file changed, 15 insertions(+), 2 deletions(-)
+Successfully cherry-picked 7c6e70f228a21fc1a964702999c3baa1a6fe6f5d
+----------------------------------------
+Cherry-picking 52a110c327f72bef19bf6b689324faa870d85744
+[main 6585e6db6d47] scsi: target: iscsi: Fix hang in iscsit_access_np() when getting tpg->np_login_sem
+ Author: Hou Pu <houpu@bytedance.com>
+ Date: Wed Jul 29 09:03:43 2020 -0400
+ 3 files changed, 5 insertions(+), 7 deletions(-)
+Successfully cherry-picked 52a110c327f72bef19bf6b689324faa870d85744
+----------------------------------------
+Cherry-picking af4a88994936474294b2f484be01117dc7550e68
+[main 601a25c775ff] rbd: require global CAP_SYS_ADMIN for mapping and unmapping
+ Author: Ilya Dryomov <idryomov@gmail.com>
+ Date: Thu Sep 3 13:24:11 2020 +0200
+ 1 file changed, 12 insertions(+)
+Successfully cherry-picked af4a88994936474294b2f484be01117dc7550e68
+----------------------------------------
+Cherry-picking 99401ea1ff86a411c688716c008e8f4d0eb6907d
+[main 8f7dcb557a11] RDMA/rxe: Fix the parent sysfs read when the interface has 15 chars
+ Author: Yi Zhang <yi.zhang@redhat.com>
+ Date: Thu Aug 20 23:36:46 2020 +0800
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 99401ea1ff86a411c688716c008e8f4d0eb6907d
+----------------------------------------
+Cherry-picking 6e2e0735dadecc1c1657e458e8f88e0ca6a4ec04
+Auto-merging drivers/video/fbdev/core/fbcon.c
+[main 354d8cb4f486] fbcon: remove soft scrollback code
+ Author: Linus Torvalds <torvalds@linux-foundation.org>
+ Date: Mon Sep 7 11:45:27 2020 -0700
+ 1 file changed, 4 insertions(+), 330 deletions(-)
+Successfully cherry-picked 6e2e0735dadecc1c1657e458e8f88e0ca6a4ec04
+----------------------------------------
+Cherry-picking 0ae010dd46a4a81c6eda80254a86b8b4596cad6d
+Auto-merging drivers/video/fbdev/core/bitblit.c
+Auto-merging drivers/video/fbdev/core/fbcon.c
+Auto-merging drivers/video/fbdev/core/fbcon_ccw.c
+Auto-merging drivers/video/fbdev/core/fbcon_cw.c
+Auto-merging drivers/video/fbdev/core/fbcon_ud.c
+[main 73ed08dbb5cd] fbcon: remove now unusued 'softback_lines' cursor() argument
+ Author: Linus Torvalds <torvalds@linux-foundation.org>
+ Date: Tue Sep 8 10:56:27 2020 -0700
+ 7 files changed, 8 insertions(+), 44 deletions(-)
+Successfully cherry-picked 0ae010dd46a4a81c6eda80254a86b8b4596cad6d
+----------------------------------------
+Cherry-picking 34c050b531a72639e61a3be24b608604753f885a
+Auto-merging drivers/video/console/vgacon.c
+[main cdf6735152fc] vgacon: remove software scrollback support
+ Author: Linus Torvalds <torvalds@linux-foundation.org>
+ Date: Wed Sep 9 14:53:50 2020 -0700
+ 6 files changed, 1 insertion(+), 269 deletions(-)
+Successfully cherry-picked 34c050b531a72639e61a3be24b608604753f885a
+----------------------------------------
+Cherry-picking eb346c8d9eaf2850f90182b3090795e14856d926
+Auto-merging arch/x86/kvm/vmx.c
+[main 650f330ca5c9] KVM: VMX: Don't freeze guest when event delivery causes an APIC-access exit
+ Author: Wanpeng Li <wanpengli@tencent.com>
+ Date: Wed Aug 19 16:55:27 2020 +0800
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked eb346c8d9eaf2850f90182b3090795e14856d926
+----------------------------------------
+Cherry-picking e0db83ee7f61d21cd04c27589874370dd7141ac8
+[main db34f095e717] ARM: dts: vfxxx: Add syscon compatible with OCOTP
+ Author: Chris Healy <cphealy@gmail.com>
+ Date: Fri Aug 21 14:21:02 2020 -0700
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked e0db83ee7f61d21cd04c27589874370dd7141ac8
+----------------------------------------
+Cherry-picking 0472aa0c36c7bb3756629a3bbc834604167567f7
+[main 1cead7d7c22a] video: fbdev: fix OOB read in vga_8planes_imageblit()
+ Author: Tetsuo Handa <penguin-kernel@i-love.sakura.ne.jp>
+ Date: Mon Aug 31 19:37:00 2020 +0900
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 0472aa0c36c7bb3756629a3bbc834604167567f7
+----------------------------------------
+Cherry-picking 92ded53bd998fb56c36280fa25239b491d66a423
+[main f33431e48f4c] staging: greybus: audio: fix uninitialized value issue
+ Author: Vaibhav Agarwal <vaibhav.sr@gmail.com>
+ Date: Fri Aug 14 18:03:15 2020 +0530
+ 1 file changed, 15 insertions(+), 14 deletions(-)
+Successfully cherry-picked 92ded53bd998fb56c36280fa25239b491d66a423
+----------------------------------------
+Cherry-picking e94f445c951917e44d011c7b3380d443a4822c66
+[main 1063176b9c7d] usb: core: fix slab-out-of-bounds Read in read_descriptors
+ Author: Zeng Tao <prime.zeng@hisilicon.com>
+ Date: Fri Sep 4 14:37:44 2020 +0800
+ 1 file changed, 5 insertions(+)
+Successfully cherry-picked e94f445c951917e44d011c7b3380d443a4822c66
+----------------------------------------
+Cherry-picking e6d98e95f1dac22308ee3ebd072e211692f016ac
+[main 94952cea7aa6] USB: serial: ftdi_sio: add IDs for Xsens Mti USB converter
+ Author: Patrick Riphagen <patrick.riphagen@xsens.com>
+ Date: Thu Aug 6 13:55:47 2020 +0200
+ 2 files changed, 2 insertions(+)
+Successfully cherry-picked e6d98e95f1dac22308ee3ebd072e211692f016ac
+----------------------------------------
+Cherry-picking 12aa126a77f063c4e751a21343548f881008235b
+Auto-merging drivers/usb/serial/option.c
+CONFLICT (content): Merge conflict in drivers/usb/serial/option.c
+error: could not apply 12aa126a77f0... USB: serial: option: support dynamic Quectel USB compositions
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 12aa126a77f063c4e751a21343548f881008235b
+Auto-resolving conflicts by accepting incoming changes...
