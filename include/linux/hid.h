@@ -363,7 +363,6 @@ struct hid_item {
 #define HID_GROUP_RMI				0x0100
 #define HID_GROUP_WACOM				0x0101
 #define HID_GROUP_LOGITECH_DJ_DEVICE		0x0102
-#define HID_GROUP_STEAM				0x0103
 
 /*
  * HID protocol status
@@ -478,7 +477,7 @@ struct hid_report_enum {
 };
 
 #define HID_MIN_BUFFER_SIZE	64		/* make sure there is at least a packet size of space */
-#define HID_MAX_BUFFER_SIZE	4096		/* 4kb */
+#define HID_MAX_BUFFER_SIZE	8192		/* 8kb */
 #define HID_CONTROL_FIFO_SIZE	256		/* to init devices with >100 reports */
 #define HID_OUTPUT_FIFO_SIZE	64
 
@@ -806,11 +805,6 @@ static inline bool hid_is_using_ll_driver(struct hid_device *hdev,
 	return hdev->ll_driver == driver;
 }
 
-static inline bool hid_is_usb(struct hid_device *hdev)
-{
-	return hid_is_using_ll_driver(hdev, &usb_hid_driver);
-}
-
 #define	PM_HINT_FULLON	1<<5
 #define PM_HINT_NORMAL	1<<1
 
@@ -935,7 +929,6 @@ static inline void hid_map_usage(struct hid_input *hidinput,
 		__u8 type, unsigned int c)
 {
 	struct input_dev *input = hidinput->input;
-
 	unsigned long *bmap = NULL;
 	unsigned int limit = 0;
 
@@ -960,10 +953,11 @@ static inline void hid_map_usage(struct hid_input *hidinput,
 
 	if (unlikely(c > limit || !bmap)) {
 		pr_warn_ratelimited("%s: Invalid code %d type %d\n",
-				input->name, c, type);
+				    input->name, c, type);
 		*bit = NULL;
 		return;
 	}
+
 	usage->type = type;
 	usage->code = c;
 	*max = limit;

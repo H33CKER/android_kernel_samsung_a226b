@@ -3607,3 +3607,208 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 856fa4ebf57c083fb5d6b190f0243f0abd27cbea
 Auto-resolving conflicts by accepting incoming changes...
+[main 0b3b550cc29c] writeback: Avoid skipping inode writeback
+ Author: Jan Kara <jack@suse.cz>
+ Date: Fri May 29 15:05:22 2020 +0200
+ 3 files changed, 186 insertions(+), 134 deletions(-)
+----------------------------------------
+Cherry-picking 77322edb99f0176ec67a300b9f263719ba391b89
+Auto-merging include/trace/events/writeback.h
+[main 778c944ed9be] writeback: Fix sync livelock due to b_dirty_time processing
+ Author: Jan Kara <jack@suse.cz>
+ Date: Fri May 29 16:08:58 2020 +0200
+ 1 file changed, 17 insertions(+), 27 deletions(-)
+Successfully cherry-picked 77322edb99f0176ec67a300b9f263719ba391b89
+----------------------------------------
+Cherry-picking 881947cde19a6a823441f20a1ca3d45ba74c5dfc
+[main 10b475755f73] XEN uses irqdesc::irq_data_common::handler_data to store a per interrupt XEN data pointer which contains XEN specific information.
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Tue Aug 25 17:22:58 2020 +0200
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+Successfully cherry-picked 881947cde19a6a823441f20a1ca3d45ba74c5dfc
+----------------------------------------
+Cherry-picking a8a1ea8bc5224acca499b9f7ca3020861a393bd1
+Auto-merging drivers/usb/host/xhci-hub.c
+[main 2eb45b2025c7] xhci: Do warm-reset when both CAS and XDEV_RESUME are set
+ Author: Kai-Heng Feng <kai.heng.feng@canonical.com>
+ Date: Fri Aug 21 12:15:48 2020 +0300
+ 1 file changed, 10 insertions(+), 9 deletions(-)
+Successfully cherry-picked a8a1ea8bc5224acca499b9f7ca3020861a393bd1
+----------------------------------------
+Cherry-picking ef0a51a72bd2e3f6c78c1dd871aa4bc27ecc6bf5
+Auto-merging drivers/base/power/main.c
+[main 061775b14274] PM: sleep: core: Fix the handling of pending runtime resume requests
+ Author: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
+ Date: Mon Aug 24 19:35:31 2020 +0200
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+Successfully cherry-picked ef0a51a72bd2e3f6c78c1dd871aa4bc27ecc6bf5
+----------------------------------------
+Cherry-picking fb545b9fc756332f4430307ccf7b58e4f3d5f64f
+[main fae84cd3976b] device property: Fix the secondary firmware node handling in set_primary_fwnode()
+ Author: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+ Date: Fri Aug 21 13:53:42 2020 +0300
+ 1 file changed, 8 insertions(+), 4 deletions(-)
+Successfully cherry-picked fb545b9fc756332f4430307ccf7b58e4f3d5f64f
+----------------------------------------
+Cherry-picking 5430e7638ef41a4aa25e274577a0bb042f933a70
+[main 635ffe547e05] drm/amdgpu: Fix buffer overflow in INFO ioctl
+ Author: Alex Deucher <alexander.deucher@amd.com>
+ Date: Tue Aug 25 11:43:45 2020 -0400
+ 1 file changed, 4 insertions(+)
+Successfully cherry-picked 5430e7638ef41a4aa25e274577a0bb042f933a70
+----------------------------------------
+Cherry-picking 413092c085caf504d7e68ff308b57be1688984f2
+[main aea999601453] USB: yurex: Fix bad gfp argument
+ Author: Alan Stern <stern@rowland.harvard.edu>
+ Date: Mon Aug 10 14:29:54 2020 -0400
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 413092c085caf504d7e68ff308b57be1688984f2
+----------------------------------------
+Cherry-picking de455746948afb1c039644cd17765e941d36f05a
+[main 02f6a07f970e] usb: uas: Add quirk for PNY Pro Elite
+ Author: Thinh Nguyen <Thinh.Nguyen@synopsys.com>
+ Date: Tue Aug 18 19:27:47 2020 -0700
+ 1 file changed, 7 insertions(+)
+Successfully cherry-picked de455746948afb1c039644cd17765e941d36f05a
+----------------------------------------
+Cherry-picking c31e413a94ebe9a0fde73dfb1022d990d0a5bfcb
+Auto-merging drivers/usb/core/quirks.c
+[main 54c492386c49] USB: quirks: Add no-lpm quirk for another Raydium touchscreen
+ Author: Kai-Heng Feng <kai.heng.feng@canonical.com>
+ Date: Fri Jul 31 13:16:20 2020 +0800
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked c31e413a94ebe9a0fde73dfb1022d990d0a5bfcb
+----------------------------------------
+Cherry-picking 247dac52688a607260da5d2809efba5c85849fb6
+[main 62f1742506a9] USB: Ignore UAS for JMicron JMS567 ATA/ATAPI Bridge
+ Author: Cyril Roelandt <tipecaml@gmail.com>
+ Date: Tue Aug 25 23:22:31 2020 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 247dac52688a607260da5d2809efba5c85849fb6
+----------------------------------------
+Cherry-picking 68030a67f595f031d0d92bc54dc1008527c41d2a
+[main d79c0ba38887] usb: host: ohci-exynos: Fix error handling in exynos_ohci_probe()
+ Author: Tang Bin <tangbin@cmss.chinamobile.com>
+ Date: Wed Aug 26 22:49:31 2020 +0800
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+Successfully cherry-picked 68030a67f595f031d0d92bc54dc1008527c41d2a
+----------------------------------------
+Cherry-picking 80459b71e2ce64b39eafc2422212e4c99066d118
+Auto-merging drivers/md/dm-table.c
+Auto-merging include/linux/overflow.h
+[main 46ffe6e72f1e] overflow.h: Add allocation size calculation helpers
+ Author: Kees Cook <keescook@chromium.org>
+ Date: Mon May 7 16:47:02 2018 -0700
+ 1 file changed, 73 insertions(+)
+Successfully cherry-picked 80459b71e2ce64b39eafc2422212e4c99066d118
+----------------------------------------
+Cherry-picking fc0019fac05f97068f0b7d53bb4c081ae2a23e95
+[main d2b70e697bea] USB: gadget: u_f: add overflow checks to VLA macros
+ Author: Brooke Basile <brookebasile@gmail.com>
+ Date: Tue Aug 25 09:05:08 2020 -0400
+ 1 file changed, 27 insertions(+), 11 deletions(-)
+Successfully cherry-picked fc0019fac05f97068f0b7d53bb4c081ae2a23e95
+----------------------------------------
+Cherry-picking b88ad6e714284b33a47834f5f2a294c2b37c66aa
+[main 034960d06b15] USB: gadget: f_ncm: add bounds checks to ncm_unwrap_ntb()
+ Author: Brooke Basile <brookebasile@gmail.com>
+ Date: Tue Aug 25 09:07:27 2020 -0400
+ 1 file changed, 69 insertions(+), 12 deletions(-)
+Successfully cherry-picked b88ad6e714284b33a47834f5f2a294c2b37c66aa
+----------------------------------------
+Cherry-picking 13ae2b82fde021dc8d2efbab141828e40c62d0e3
+[main 6dbd23d70d5b] USB: gadget: u_f: Unbreak offset calculation in VLAs
+ Author: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+ Date: Wed Aug 26 22:21:19 2020 +0300
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Successfully cherry-picked 13ae2b82fde021dc8d2efbab141828e40c62d0e3
+----------------------------------------
+Cherry-picking f5429d349bce6ed50eef3b0429c7720c32d6ee20
+Auto-merging drivers/usb/class/cdc-acm.c
+[main 3bf813d51dc9] USB: cdc-acm: rework notification_buffer resizing
+ Author: Tom Rix <trix@redhat.com>
+ Date: Sat Aug 1 08:21:54 2020 -0700
+ 1 file changed, 10 insertions(+), 12 deletions(-)
+Successfully cherry-picked f5429d349bce6ed50eef3b0429c7720c32d6ee20
+----------------------------------------
+Cherry-picking 68ca0183bb3b57a9bb8274eb87d007ca0b0f6ac2
+[main 6dc5f9b9ae78] usb: storage: Add unusual_uas entry for Sony PSZ drives
+ Author: Alan Stern <stern@rowland.harvard.edu>
+ Date: Wed Aug 26 10:32:29 2020 -0400
+ 1 file changed, 7 insertions(+)
+Successfully cherry-picked 68ca0183bb3b57a9bb8274eb87d007ca0b0f6ac2
+----------------------------------------
+Cherry-picking 24ae96c55221bca12a01c136833419c4a8eb5250
+[main 736dec27d398] btrfs: check the right error variable in btrfs_del_dir_entries_in_log
+ Author: Josef Bacik <josef@toxicpanda.com>
+ Date: Mon Aug 10 17:31:16 2020 -0400
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+Successfully cherry-picked 24ae96c55221bca12a01c136833419c4a8eb5250
+----------------------------------------
+Cherry-picking 0a221a7442cc3a0da05cf97603ada6dcd6f33beb
+[main 52d81b08221f] tpm: Unify the mismatching TPM space buffer sizes
+ Author: Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>
+ Date: Mon Aug 31 14:58:49 2020 -0400
+ 4 files changed, 24 insertions(+), 19 deletions(-)
+Successfully cherry-picked 0a221a7442cc3a0da05cf97603ada6dcd6f33beb
+----------------------------------------
+Cherry-picking ff51a1a2dca3657a61d8df094587d7dee7c694d6
+[main d58ae9e2d60c] HID: hiddev: Fix slab-out-of-bounds write in hiddev_ioctl_usage()
+ Author: Peilin Ye <yepeilin.cs@gmail.com>
+ Date: Wed Jul 29 07:37:12 2020 -0400
+ 1 file changed, 4 insertions(+)
+Successfully cherry-picked ff51a1a2dca3657a61d8df094587d7dee7c694d6
+----------------------------------------
+Cherry-picking 79c16fe5893d325e831cb299bb536c7277c4e4a7
+[main b60e999536f8] ALSA: usb-audio: Update documentation comment for MS2109 quirk
+ Author: Hector Martin <marcan@marcan.st>
+ Date: Sun Aug 16 17:44:31 2020 +0900
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked 79c16fe5893d325e831cb299bb536c7277c4e4a7
+----------------------------------------
+Cherry-picking 2f166cdcf8a92fcf85524f2b5526cb28e16f0a60
+[main 7dfa126c9908] Linux 4.14.196
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Thu Sep 3 11:22:34 2020 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 2f166cdcf8a92fcf85524f2b5526cb28e16f0a60
+----------------------------------------
+Cherry-picking 9e5894b7e2229e6d89319864fb08304571fd44f7
+Auto-merging drivers/hid/hid-core.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 432 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 9e5894b7e222.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_181651.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 9e5894b7e2229e6d89319864fb08304571fd44f7
+No conflicted files found but cherry-pick failed, attempting to skip commit 9e5894b7e2229e6d89319864fb08304571fd44f7
+----------------------------------------
+Cherry-picking a083dcdcfa2568747112edf865b3e848d70835e5
+Auto-merging drivers/hid/hid-input.c
+Auto-merging include/linux/hid.h
+CONFLICT (content): Merge conflict in include/linux/hid.h
+error: could not apply a083dcdcfa25... HID: core: Sanitize event code and type when mapping input
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of a083dcdcfa2568747112edf865b3e848d70835e5
+Auto-resolving conflicts by accepting incoming changes...
