@@ -3812,3 +3812,231 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of a083dcdcfa2568747112edf865b3e848d70835e5
 Auto-resolving conflicts by accepting incoming changes...
+[main 57d8cba9a44e] HID: core: Sanitize event code and type when mapping input
+ Author: Marc Zyngier <maz@kernel.org>
+ Date: Tue Sep 1 10:52:33 2020 +0100
+ 2 files changed, 208 insertions(+), 9 deletions(-)
+----------------------------------------
+Cherry-picking 11519e7b9776cb27a008ccc1f3709b60c086ee3c
+[main 17a10ccaf062] perf record/stat: Explicitly call out event modifiers in the documentation
+ Author: Kim Phillips <kim.phillips@amd.com>
+ Date: Tue Sep 1 16:58:53 2020 -0500
+ 2 files changed, 8 insertions(+)
+Successfully cherry-picked 11519e7b9776cb27a008ccc1f3709b60c086ee3c
+----------------------------------------
+Cherry-picking 3d516e369e3a563e7da39c72b06d78c7f1b09b1e
+[main b1233a6c16e9] drm/msm: add shutdown support for display platform_driver
+ Author: Krishna Manikandan <mkrishn@codeaurora.org>
+ Date: Mon Jun 1 16:33:22 2020 +0530
+ 1 file changed, 8 insertions(+)
+Successfully cherry-picked 3d516e369e3a563e7da39c72b06d78c7f1b09b1e
+----------------------------------------
+Cherry-picking 3e740e7637a1434635f067af5502d1537c0906b9
+[main dc5f69aa581d] hwmon: (applesmc) check status earlier.
+ Author: Tom Rix <trix@redhat.com>
+ Date: Thu Aug 20 06:19:32 2020 -0700
+ 1 file changed, 16 insertions(+), 15 deletions(-)
+Successfully cherry-picked 3e740e7637a1434635f067af5502d1537c0906b9
+----------------------------------------
+Cherry-picking 06ced97a6ec86383cb020c4ff9da71355666d089
+[main 3d4b845c744d] nvmet: Disable keep-alive timer when kato is cleared to 0h
+ Author: Amit Engel <amit.engel@dell.com>
+ Date: Wed Aug 19 11:31:11 2020 +0300
+ 1 file changed, 6 insertions(+)
+Successfully cherry-picked 06ced97a6ec86383cb020c4ff9da71355666d089
+----------------------------------------
+Cherry-picking 1dd11998941e98885449e9745043e918f11baf20
+[main 0c6c5a62bc3f] ceph: don't allow setlease on cephfs
+ Author: Jeff Layton <jlayton@kernel.org>
+ Date: Thu Aug 20 11:00:26 2020 -0400
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 1dd11998941e98885449e9745043e918f11baf20
+----------------------------------------
+Cherry-picking 6f324263b54e13a0bf07cb141e6ee67c0aaaae5d
+Auto-merging drivers/cpuidle/cpuidle.c
+[main 4f7752fac365] cpuidle: Fixup IRQ state
+ Author: Peter Zijlstra <peterz@infradead.org>
+ Date: Thu Aug 20 16:47:24 2020 +0200
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 6f324263b54e13a0bf07cb141e6ee67c0aaaae5d
+----------------------------------------
+Cherry-picking 67e89bc48ac8e5505d04d98b0eac1c00e1f1f9eb
+[main 2ffa5efb74b3] s390: don't trace preemption in percpu macros
+ Author: Sven Schnelle <svens@linux.ibm.com>
+ Date: Thu Aug 20 09:48:23 2020 +0200
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+Successfully cherry-picked 67e89bc48ac8e5505d04d98b0eac1c00e1f1f9eb
+----------------------------------------
+Cherry-picking 570e187371203b09f78768a2e708b2563cc163a8
+[main 64b530734a65] xen/xenbus: Fix granting of vmalloc'd memory
+ Author: Simon Leiner <simon@leiner.me>
+ Date: Tue Aug 25 11:31:52 2020 +0200
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+Successfully cherry-picked 570e187371203b09f78768a2e708b2563cc163a8
+----------------------------------------
+Cherry-picking 34f79cd0d1bfb9c597e18893bebbec3ed3c017d5
+[main 55de5a9940c9] dmaengine: of-dma: Fix of_dma_router_xlate's of_dma_xlate handling
+ Author: Peter Ujfalusi <peter.ujfalusi@ti.com>
+ Date: Thu Aug 6 13:49:28 2020 +0300
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Successfully cherry-picked 34f79cd0d1bfb9c597e18893bebbec3ed3c017d5
+----------------------------------------
+Cherry-picking 8ddda2d99d1d9cee1d3601eca3111479e83e423e
+[main 7c17e24e5678] batman-adv: Avoid uninitialized chaddr when handling DHCP
+ Author: Sven Eckelmann <sven@narfation.org>
+ Date: Wed Jul 22 20:36:43 2020 +0200
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+Successfully cherry-picked 8ddda2d99d1d9cee1d3601eca3111479e83e423e
+----------------------------------------
+Cherry-picking 3e0e9d5e20aa6d7381076e28f641091376d72307
+[main 295de9a09b33] batman-adv: Fix own OGM check in aggregated OGMs
+ Author: Linus Lüssing <linus.luessing@c0d3.blue>
+ Date: Thu Jul 23 14:28:08 2020 +0200
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+Successfully cherry-picked 3e0e9d5e20aa6d7381076e28f641091376d72307
+----------------------------------------
+Cherry-picking fda74a64f5801ad6a0e0f51138ca2dcd02eaf776
+[main 91bd9812d8a4] batman-adv: bla: use netif_rx_ni when not in interrupt context
+ Author: Jussi Kivilinna <jussi.kivilinna@haltian.com>
+ Date: Tue Aug 18 17:46:10 2020 +0300
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Successfully cherry-picked fda74a64f5801ad6a0e0f51138ca2dcd02eaf776
+----------------------------------------
+Cherry-picking 1eac2071cbb4ac3516192a8a92965bbd68b54332
+[main 0678474faf76] dmaengine: at_hdmac: check return value of of_find_device_by_node() in at_dma_xlate()
+ Author: Yu Kuai <yukuai3@huawei.com>
+ Date: Mon Aug 17 19:57:26 2020 +0800
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked 1eac2071cbb4ac3516192a8a92965bbd68b54332
+----------------------------------------
+Cherry-picking 4c65a7832377893c68b3f347450194edfc097fe1
+[main a467d9da0af5] MIPS: mm: BMIPS5000 has inclusive physical caches
+ Author: Florian Fainelli <f.fainelli@gmail.com>
+ Date: Wed Aug 19 11:26:44 2020 -0700
+ 1 file changed, 4 insertions(+)
+Successfully cherry-picked 4c65a7832377893c68b3f347450194edfc097fe1
+----------------------------------------
+Cherry-picking f1a5d69cebeceb38476353c974ee0d555fc2dd71
+[main d4318d227e09] MIPS: BMIPS: Also call bmips_cpu_setup() for secondary cores
+ Author: Florian Fainelli <f.fainelli@gmail.com>
+ Date: Wed Aug 19 11:26:45 2020 -0700
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked f1a5d69cebeceb38476353c974ee0d555fc2dd71
+----------------------------------------
+Cherry-picking cfb399059d505705779930fc995cfe701b6f3c5b
+[main 7a635240bcf8] netfilter: nf_tables: add NFTA_SET_USERDATA if not null
+ Author: Pablo Neira Ayuso <pablo@netfilter.org>
+ Date: Thu Aug 20 14:12:54 2020 +0200
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked cfb399059d505705779930fc995cfe701b6f3c5b
+----------------------------------------
+Cherry-picking b2e1d023e026d89e28f637013a9b38c0f3ed4179
+[main 184066720f08] netfilter: nf_tables: incorrect enum nft_list_attributes definition
+ Author: Pablo Neira Ayuso <pablo@netfilter.org>
+ Date: Thu Aug 20 14:12:55 2020 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked b2e1d023e026d89e28f637013a9b38c0f3ed4179
+----------------------------------------
+Cherry-picking 1e1fc7726b1775058d56aa3540f98eb2ec9e07a1
+[main fc9185b5b539] netfilter: nf_tables: fix destination register zeroing
+ Author: Florian Westphal <fw@strlen.de>
+ Date: Thu Aug 20 21:05:50 2020 +0200
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+Successfully cherry-picked 1e1fc7726b1775058d56aa3540f98eb2ec9e07a1
+----------------------------------------
+Cherry-picking 9de4fede0b351128162d4e3612b33e34352a66a5
+[main 76c7a14a6ed5] net: hns: Fix memleak in hns_nic_dev_probe
+ Author: Dinghao Liu <dinghao.liu@zju.edu.cn>
+ Date: Mon Aug 24 13:44:42 2020 +0800
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+Successfully cherry-picked 9de4fede0b351128162d4e3612b33e34352a66a5
+----------------------------------------
+Cherry-picking 4b0a22bd0d496c562c34592c23f445540ca88f6b
+[main b4dbf53c2c06] net: systemport: Fix memleak in bcm_sysport_probe
+ Author: Dinghao Liu <dinghao.liu@zju.edu.cn>
+ Date: Mon Aug 24 13:58:31 2020 +0800
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+Successfully cherry-picked 4b0a22bd0d496c562c34592c23f445540ca88f6b
+----------------------------------------
+Cherry-picking 1f5c83c394225998101781c077aaa40424645089
+[main 630e27edd3e9] ravb: Fixed to be able to unload modules
+ Author: Yuusuke Ashizuka <ashiduka@fujitsu.com>
+ Date: Thu Aug 20 18:43:07 2020 +0900
+ 1 file changed, 55 insertions(+), 55 deletions(-)
+Successfully cherry-picked 1f5c83c394225998101781c077aaa40424645089
+----------------------------------------
+Cherry-picking 007a4850de1f29fcdb7020865874b203bb6921e3
+[main 36cc34d9c40b] net: arc_emac: Fix memleak in arc_mdio_probe
+ Author: Dinghao Liu <dinghao.liu@zju.edu.cn>
+ Date: Sun Aug 23 16:56:47 2020 +0800
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 007a4850de1f29fcdb7020865874b203bb6921e3
+----------------------------------------
+Cherry-picking b879326610bb45707f384d4a0eae4f819fb7cf2a
+[main a4ff802457c1] dmaengine: pl330: Fix burst length if burst size is smaller than bus width
+ Author: Marek Szyprowski <m.szyprowski@samsung.com>
+ Date: Tue Aug 25 08:46:17 2020 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked b879326610bb45707f384d4a0eae4f819fb7cf2a
+----------------------------------------
+Cherry-picking c05e296d77100102cf958a9ac65c556259cf53d5
+[main e33a177ae149] gtp: add GTPA_LINK info to msg sent to userspace
+ Author: Nicolas Dichtel <nicolas.dichtel@6wind.com>
+ Date: Tue Aug 25 14:59:40 2020 +0200
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked c05e296d77100102cf958a9ac65c556259cf53d5
+----------------------------------------
+Cherry-picking e19de8e3c0a64887f66907bab9c322e8bd518765
+Auto-merging drivers/net/ethernet/broadcom/bnxt/bnxt_ethtool.c
+[main 622ab70f0a12] bnxt_en: Check for zero dir entries in NVRAM.
+ Author: Vasundhara Volam <vasundhara-v.volam@broadcom.com>
+ Date: Wed Aug 26 01:08:33 2020 -0400
+ 1 file changed, 3 insertions(+)
+Successfully cherry-picked e19de8e3c0a64887f66907bab9c322e8bd518765
+----------------------------------------
+Cherry-picking 58a6d70b26c47b317254b2aec6486d34faca267a
+[main 6ca4b903abd3] bnxt_en: Fix PCI AER error recovery flow
+ Author: Vasundhara Volam <vasundhara-v.volam@broadcom.com>
+ Date: Wed Aug 26 01:08:35 2020 -0400
+ 1 file changed, 3 insertions(+)
+Successfully cherry-picked 58a6d70b26c47b317254b2aec6486d34faca267a
+----------------------------------------
+Cherry-picking 41cb677dad4c9cd424405e0d10c509ae4cdc7a9c
+[main 7ad5161c7df4] nvmet-fc: Fix a missed _irqsave version of spin_lock in 'nvmet_fc_fod_op_done()'
+ Author: Christophe JAILLET <christophe.jaillet@wanadoo.fr>
+ Date: Fri Aug 21 09:58:19 2020 +0200
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked 41cb677dad4c9cd424405e0d10c509ae4cdc7a9c
+----------------------------------------
+Cherry-picking dcd257f64ca5340ad96739c917f353383705a057
+[main 407b4da4ebe7] perf tools: Correct SNOOPX field offset
+ Author: Al Grant <al.grant@foss.arm.com>
+ Date: Tue Sep 1 12:10:14 2020 -0300
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked dcd257f64ca5340ad96739c917f353383705a057
+----------------------------------------
+Cherry-picking cfb5e057b7179767d6f3cef3381633417e4e3afb
+[main a089ea7533b6] net: ethernet: mlx4: Fix memory allocation in mlx4_buddy_init()
+ Author: Shung-Hsi Yu <shung-hsi.yu@suse.com>
+ Date: Mon Aug 31 22:37:09 2020 +0800
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked cfb5e057b7179767d6f3cef3381633417e4e3afb
+----------------------------------------
+Cherry-picking c5c6e00f6cc5d3ed0d6464b14e33f2f5c8505888
+[main 634cd768d223] fix regression in "epoll: Keep a reference on files added to the check list"
+ Author: Al Viro <viro@zeniv.linux.org.uk>
+ Date: Wed Sep 2 11:30:48 2020 -0400
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Successfully cherry-picked c5c6e00f6cc5d3ed0d6464b14e33f2f5c8505888
+----------------------------------------
+Cherry-picking 751deef5de35a497a3ea007e0953889ba1123a97
+CONFLICT (modify/delete): drivers/net/ethernet/broadcom/tg3.c deleted in HEAD and modified in 751deef5de35 (tg3: Fix soft lockup when tg3_reset_task() fails.).  Version 751deef5de35 (tg3: Fix soft lockup when tg3_reset_task() fails.) of drivers/net/ethernet/broadcom/tg3.c left in tree.
+error: could not apply 751deef5de35... tg3: Fix soft lockup when tg3_reset_task() fails.
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 751deef5de35a497a3ea007e0953889ba1123a97
+Auto-resolving conflicts by accepting incoming changes...
