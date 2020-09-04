@@ -4235,3 +4235,31 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 11cc56821513e76b5f14b2669a9bba1f17b553a2
 Auto-resolving conflicts by accepting incoming changes...
+[main bc8dd692f4c4] mm: slub: fix conversion of freelist_corrupted()
+ Author: Eugeniu Rosca <erosca@de.adit-jv.com>
+ Date: Fri Sep 4 16:35:30 2020 -0700
+ 2 files changed, 157 insertions(+), 235 deletions(-)
+----------------------------------------
+Cherry-picking 91532df62f61f8ba4e1db392ec943b3b13200ed1
+Auto-merging arch/arm64/kernel/vmlinux.lds.S
+Auto-merging arch/arm64/kvm/hyp/entry.S
+Auto-merging arch/arm64/kvm/hyp/hyp-entry.S
+Auto-merging arch/arm64/kvm/hyp/switch.c
+[main dde85743a48b] KVM: arm64: Add kvm_extable for vaxorcism code
+ Author: James Morse <james.morse@arm.com>
+ Date: Fri Sep 4 12:24:34 2020 +0100
+ 5 files changed, 96 insertions(+), 25 deletions(-)
+Successfully cherry-picked 91532df62f61f8ba4e1db392ec943b3b13200ed1
+----------------------------------------
+Cherry-picking fcc0896148c820627a5b9314d53dcf4950a63fb5
+Auto-merging arch/arm64/kvm/hyp/entry.S
+CONFLICT (content): Merge conflict in arch/arm64/kvm/hyp/entry.S
+error: could not apply fcc0896148c8... KVM: arm64: Defer guest entry when an asynchronous exception is pending
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of fcc0896148c820627a5b9314d53dcf4950a63fb5
+Auto-resolving conflicts by accepting incoming changes...
