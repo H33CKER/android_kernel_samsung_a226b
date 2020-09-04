@@ -4196,3 +4196,42 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 9f086cac518138da215f0b30db80776678142474
 Auto-resolving conflicts by accepting incoming changes...
+[main a72642ba1e84] block: Move SECTOR_SIZE and SECTOR_SHIFT definitions into <linux/blkdev.h>
+ Author: Bart Van Assche <bart.vanassche@wdc.com>
+ Date: Wed Mar 14 15:48:06 2018 -0700
+ 14 files changed, 217 insertions(+), 173 deletions(-)
+----------------------------------------
+Cherry-picking 7819f78f87e0f0ec3347a7a98f8b671931c2f11b
+Auto-merging drivers/ata/libata-scsi.c
+[main c4390c9842c5] libata: implement ATA_HORKAGE_MAX_TRIM_128M and apply to Sandisks
+ Author: Tejun Heo <tj@kernel.org>
+ Date: Wed Sep 2 12:32:45 2020 -0400
+ 3 files changed, 10 insertions(+), 4 deletions(-)
+Successfully cherry-picked 7819f78f87e0f0ec3347a7a98f8b671931c2f11b
+----------------------------------------
+Cherry-picking dd20b2c464a7b2db15126d3db2b69b4354b88f02
+[main 005d692daad4] dm cache metadata: Avoid returning cmd->bm wild pointer on error
+ Author: Ye Bin <yebin10@huawei.com>
+ Date: Tue Sep 1 14:25:42 2020 +0800
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+Successfully cherry-picked dd20b2c464a7b2db15126d3db2b69b4354b88f02
+----------------------------------------
+Cherry-picking eb71cd253b2adfbcb1f09636d18ee6394d6f774d
+[main 7a1283762024] dm thin metadata: Avoid returning cmd->bm wild pointer on error
+ Author: Ye Bin <yebin10@huawei.com>
+ Date: Tue Sep 1 14:25:43 2020 +0800
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+Successfully cherry-picked eb71cd253b2adfbcb1f09636d18ee6394d6f774d
+----------------------------------------
+Cherry-picking 11cc56821513e76b5f14b2669a9bba1f17b553a2
+Auto-merging mm/slub.c
+CONFLICT (content): Merge conflict in mm/slub.c
+error: could not apply 11cc56821513... mm: slub: fix conversion of freelist_corrupted()
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 11cc56821513e76b5f14b2669a9bba1f17b553a2
+Auto-resolving conflicts by accepting incoming changes...
