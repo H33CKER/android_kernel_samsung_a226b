@@ -5054,3 +5054,186 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 1a267aeef1dec8e20f0ad2e8a2798861e33a0556
 Auto-resolving conflicts by accepting incoming changes...
+[main a4ef9de5fa87] drm/mediatek: Add missing put_device() call in mtk_hdmi_dt_parse_pdata()
+ Author: Yu Kuai <yukuai3@huawei.com>
+ Date: Fri Sep 11 19:21:51 2020 +0800
+ 2 files changed, 245 insertions(+), 65 deletions(-)
+----------------------------------------
+Cherry-picking a71f0e405022f89afea758369ff65b9c0471f864
+Auto-merging drivers/usb/core/quirks.c
+[main 4b0bb3ae6e3d] USB: quirks: Add USB_QUIRK_IGNORE_REMOTE_WAKEUP quirk for BYD zhaoxin notebook
+ Author: Penghao <penghao@uniontech.com>
+ Date: Mon Sep 7 10:30:26 2020 +0800
+ 1 file changed, 4 insertions(+)
+Successfully cherry-picked a71f0e405022f89afea758369ff65b9c0471f864
+----------------------------------------
+Cherry-picking d0587191e2bfc447813d4b9eaccff5d7871db43d
+[main 9246b3c5af59] USB: UAS: fix disconnect by unplugging a hub
+ Author: Oliver Neukum <oneukum@suse.com>
+ Date: Wed Sep 16 11:40:25 2020 +0200
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+Successfully cherry-picked d0587191e2bfc447813d4b9eaccff5d7871db43d
+----------------------------------------
+Cherry-picking becb93b443851130f1bdf4547d4f8b87d2aabd16
+[main cf04b05a0a82] usblp: fix race between disconnect() and read()
+ Author: Oliver Neukum <oneukum@suse.com>
+ Date: Thu Sep 17 12:34:27 2020 +0200
+ 1 file changed, 5 insertions(+)
+Successfully cherry-picked becb93b443851130f1bdf4547d4f8b87d2aabd16
+----------------------------------------
+Cherry-picking 7e065e0242fc285cc29c5ea4a80d108262af5148
+[main 2d69e5aee63a] i2c: i801: Fix resume bug
+ Author: Volker Rümelin <vr_qemu@t-online.de>
+ Date: Tue Sep 1 15:22:21 2020 +0200
+ 1 file changed, 14 insertions(+), 7 deletions(-)
+Successfully cherry-picked 7e065e0242fc285cc29c5ea4a80d108262af5148
+----------------------------------------
+Cherry-picking 517274c185fa875a6eb4bf624f5c1ae4339a69b7
+[main cfadf6347df7] percpu: fix first chunk size calculation for populated bitmap
+ Author: Sunghyun Jin <mcsmonk@gmail.com>
+ Date: Thu Sep 3 21:41:16 2020 +0900
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 517274c185fa875a6eb4bf624f5c1ae4339a69b7
+----------------------------------------
+Cherry-picking d7c3f9ffcebdc47e94326b8511c4e5dbc3a3bef3
+[main 436b6b812c90] Input: trackpoint - add new trackpoint variant IDs
+ Author: Vincent Huang <vincent.huang@tw.synaptics.com>
+ Date: Mon Sep 14 12:19:08 2020 -0700
+ 2 files changed, 12 insertions(+), 8 deletions(-)
+Successfully cherry-picked d7c3f9ffcebdc47e94326b8511c4e5dbc3a3bef3
+----------------------------------------
+Cherry-picking f91a135df607beeb1b478e0e9e3b4caa584aa1ee
+Auto-merging drivers/input/serio/i8042-x86ia64io.h
+[main f34ca5e33da8] Input: i8042 - add Entroware Proteus EL07R4 to nomux and reset lists
+ Author: Hans de Goede <hdegoede@redhat.com>
+ Date: Tue Sep 8 16:27:29 2020 -0700
+ 1 file changed, 16 insertions(+)
+Successfully cherry-picked f91a135df607beeb1b478e0e9e3b4caa584aa1ee
+----------------------------------------
+Cherry-picking 5ebb9dc9ac60e81890b5c66614a54be3c038427a
+[main 9d2047a7d056] serial: 8250_pci: Add Realtek 816a and 816b
+ Author: Tobias Diedrich <tobiasdiedrich@gmail.com>
+ Date: Mon Sep 14 19:36:28 2020 +0200
+ 1 file changed, 11 insertions(+)
+Successfully cherry-picked 5ebb9dc9ac60e81890b5c66614a54be3c038427a
+----------------------------------------
+Cherry-picking 293036a0ea49b63a2dc449d41b6f81b3194fffeb
+[main 80a87adad6c4] ehci-hcd: Move include to keep CRC stable
+ Author: Quentin Perret <qperret@google.com>
+ Date: Wed Sep 16 18:18:25 2020 +0100
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 293036a0ea49b63a2dc449d41b6f81b3194fffeb
+----------------------------------------
+Cherry-picking 17a07a01c51af01da74e6d6ef25b220c1179e61e
+[main 7d6fcc0e86f8] powerpc/dma: Fix dma_map_ops::get_required_mask
+ Author: Alexey Kardashevskiy <aik@ozlabs.ru>
+ Date: Tue Sep 8 11:51:06 2020 +1000
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 17a07a01c51af01da74e6d6ef25b220c1179e61e
+----------------------------------------
+Cherry-picking 442497b27a34c1a7688d0f8ab29c3ebd9d6e37c1
+[main 1f089d9af16f] x86/defconfig: Enable CONFIG_USB_XHCI_HCD=y
+ Author: Adam Borowski <kilobyte@angband.pl>
+ Date: Tue Oct 9 08:28:03 2018 +0200
+ 2 files changed, 2 insertions(+)
+Successfully cherry-picked 442497b27a34c1a7688d0f8ab29c3ebd9d6e37c1
+----------------------------------------
+Cherry-picking ca87c82811906f4fc5e936705564ba8176ba497f
+[main a990967efb34] Linux 4.14.199
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Wed Sep 23 10:46:37 2020 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked ca87c82811906f4fc5e936705564ba8176ba497f
+----------------------------------------
+Cherry-picking 05570d97443f8e569a79cf6e140f5ed96e6ac172
+Auto-merging net/key/af_key.c
+[main 0fc79371982c] af_key: pfkey_dump needs parameter validation
+ Author: Mark Salyzyn <salyzyn@android.com>
+ Date: Wed Jul 22 04:00:53 2020 -0700
+ 1 file changed, 7 insertions(+)
+Successfully cherry-picked 05570d97443f8e569a79cf6e140f5ed96e6ac172
+----------------------------------------
+Cherry-picking ebc57091e4e853aa8b198b9276010fd8d147c0f2
+[main b08cc2288c00] phy: qcom-qmp: Use correct values for ipq8074 PCIe Gen2 PHY init
+ Author: Sivaprakash Murugesan <sivaprak@codeaurora.org>
+ Date: Wed Jul 29 21:00:03 2020 +0530
+ 1 file changed, 11 insertions(+), 7 deletions(-)
+Successfully cherry-picked ebc57091e4e853aa8b198b9276010fd8d147c0f2
+----------------------------------------
+Cherry-picking 40a023f681befd9b2862a3c16fb306a38b359ae5
+[main 6197ea2f6ef9] KVM: fix memory leak in kvm_io_bus_unregister_dev()
+ Author: Rustam Kovhaev <rkovhaev@gmail.com>
+ Date: Mon Sep 7 11:55:35 2020 -0700
+ 1 file changed, 12 insertions(+), 9 deletions(-)
+Successfully cherry-picked 40a023f681befd9b2862a3c16fb306a38b359ae5
+----------------------------------------
+Cherry-picking 32dcd10cf110ba842f7614635e2a18f3ed3cde07
+[main e12af0a551a3] kprobes: fix kill kprobe which has been marked as gone
+ Author: Muchun Song <songmuchun@bytedance.com>
+ Date: Fri Sep 18 21:20:21 2020 -0700
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+Successfully cherry-picked 32dcd10cf110ba842f7614635e2a18f3ed3cde07
+----------------------------------------
+Cherry-picking c0fdfbf01ab015515e1ff1bee3d2b9e5f86628aa
+Auto-merging mm/huge_memory.c
+[main 4d96a1a42fcd] mm/thp: fix __split_huge_pmd_locked() for migration PMD
+ Author: Ralph Campbell <rcampbell@nvidia.com>
+ Date: Fri Sep 18 21:20:24 2020 -0700
+ 1 file changed, 23 insertions(+), 17 deletions(-)
+Successfully cherry-picked c0fdfbf01ab015515e1ff1bee3d2b9e5f86628aa
+----------------------------------------
+Cherry-picking ef13017d65b003e35f6dbf3236b5e0d82c65a7a1
+[main 3b452720fb48] RDMA/ucma: ucma_context reference leak in error path
+ Author: Shamir Rabinovitch <shamir.rabinovitch@oracle.com>
+ Date: Thu Sep 24 18:24:49 2020 +0900
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Successfully cherry-picked ef13017d65b003e35f6dbf3236b5e0d82c65a7a1
+----------------------------------------
+Cherry-picking 8f0addb36dd1c61fe0f1a458a48b1a5ddc96aa24
+[main a69cd5e5705b] hdlc_ppp: add range checks in ppp_cp_parse_cr()
+ Author: Dan Carpenter <dan.carpenter@oracle.com>
+ Date: Wed Sep 9 12:46:48 2020 +0300
+ 1 file changed, 11 insertions(+), 5 deletions(-)
+Successfully cherry-picked 8f0addb36dd1c61fe0f1a458a48b1a5ddc96aa24
+----------------------------------------
+Cherry-picking 0339397d965d4fc45879236b43c9f49bfa4d8d4b
+Auto-merging net/ipv4/ip_output.c
+[main 1dd692e27edb] ip: fix tos reflection in ack and reset packets
+ Author: Wei Wang <weiwan@google.com>
+ Date: Tue Sep 8 14:09:34 2020 -0700
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 0339397d965d4fc45879236b43c9f49bfa4d8d4b
+----------------------------------------
+Cherry-picking be619e3cbe46b8276b3f75d86e4d4055d55f9471
+[main 42e8a7f28099] net: ipv6: fix kconfig dependency warning for IPV6_SEG6_HMAC
+ Author: Necip Fazil Yildiran <fazilyildiran@gmail.com>
+ Date: Thu Sep 17 19:46:43 2020 +0300
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked be619e3cbe46b8276b3f75d86e4d4055d55f9471
+----------------------------------------
+Cherry-picking 7241d653bcc17eaf4ccb9994f360168d8bfea32d
+[main 757c9a870fe8] tipc: fix shutdown() of connection oriented socket
+ Author: Tetsuo Handa <penguin-kernel@I-love.SAKURA.ne.jp>
+ Date: Sat Sep 5 15:14:47 2020 +0900
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+Successfully cherry-picked 7241d653bcc17eaf4ccb9994f360168d8bfea32d
+----------------------------------------
+Cherry-picking 40dbfc0be25f6ca92dcfe930c5349fab9d418a00
+[main 3692c33943f8] tipc: use skb_unshare() instead in tipc_buf_append()
+ Author: Xin Long <lucien.xin@gmail.com>
+ Date: Sun Sep 13 19:37:31 2020 +0800
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 40dbfc0be25f6ca92dcfe930c5349fab9d418a00
+----------------------------------------
+Cherry-picking c796d007533ee918b7114c46381366de23a567e7
+Auto-merging drivers/net/ethernet/broadcom/bnxt/bnxt_ethtool.c
+CONFLICT (content): Merge conflict in drivers/net/ethernet/broadcom/bnxt/bnxt_ethtool.c
+error: could not apply c796d007533e... bnxt_en: Protect bnxt_set_eee() and bnxt_set_pauseparam() with mutex.
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of c796d007533ee918b7114c46381366de23a567e7
+Auto-resolving conflicts by accepting incoming changes...
