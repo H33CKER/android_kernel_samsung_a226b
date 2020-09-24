@@ -18292,3 +18292,40 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 052841a35d32c4c3084e07749cdd5c6b412d6ed2
 Auto-resolving conflicts by accepting incoming changes...
+[main 0d71d15554de] fbdev, newport_con: Move FONT_EXTRA_WORDS macros into linux/font.h
+ Author: Peilin Ye <yepeilin.cs@gmail.com>
+ Date: Thu Sep 24 09:40:53 2020 -0400
+ 3 files changed, 598 insertions(+), 11 deletions(-)
+----------------------------------------
+Cherry-picking 2832691e0106b31823b0b1ca51f6f7ba34875279
+Auto-merging lib/fonts/font_10x18.c
+CONFLICT (content): Merge conflict in lib/fonts/font_10x18.c
+Auto-merging lib/fonts/font_6x10.c
+CONFLICT (content): Merge conflict in lib/fonts/font_6x10.c
+Auto-merging lib/fonts/font_6x11.c
+CONFLICT (content): Merge conflict in lib/fonts/font_6x11.c
+Auto-merging lib/fonts/font_7x14.c
+CONFLICT (content): Merge conflict in lib/fonts/font_7x14.c
+Auto-merging lib/fonts/font_8x16.c
+CONFLICT (content): Merge conflict in lib/fonts/font_8x16.c
+Auto-merging lib/fonts/font_8x8.c
+CONFLICT (content): Merge conflict in lib/fonts/font_8x8.c
+Auto-merging lib/fonts/font_acorn_8x8.c
+CONFLICT (content): Merge conflict in lib/fonts/font_acorn_8x8.c
+Auto-merging lib/fonts/font_mini_4x6.c
+CONFLICT (content): Merge conflict in lib/fonts/font_mini_4x6.c
+Auto-merging lib/fonts/font_pearl_8x8.c
+CONFLICT (content): Merge conflict in lib/fonts/font_pearl_8x8.c
+Auto-merging lib/fonts/font_sun12x22.c
+CONFLICT (content): Merge conflict in lib/fonts/font_sun12x22.c
+Auto-merging lib/fonts/font_sun8x16.c
+CONFLICT (content): Merge conflict in lib/fonts/font_sun8x16.c
+error: could not apply 2832691e0106... Fonts: Support FONT_EXTRA_WORDS macros for built-in fonts
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 2832691e0106b31823b0b1ca51f6f7ba34875279
+Auto-resolving conflicts by accepting incoming changes...
