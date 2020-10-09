@@ -12306,3 +12306,186 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of fd37413964cc11368db3f55f7bba2637db98e823
 Auto-resolving conflicts by accepting incoming changes...
+[main 0a5a2f7086d4] soc: mediatek: Check if power domains can be powered on at boot time
+ Author: Nicolas Boichat <drinkcat@chromium.org>
+ Date: Mon Sep 28 11:31:35 2020 +0800
+ 2 files changed, 834 insertions(+), 596 deletions(-)
+----------------------------------------
+Cherry-picking 604f1f43d62f1841c472cab2c82f73d04e32eeed
+[main 566fccfb198b] RDMA/bnxt_re: Set queue pair state when being queried
+ Author: Kamal Heib <kamalheib1@gmail.com>
+ Date: Wed Oct 21 14:49:52 2020 +0300
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 604f1f43d62f1841c472cab2c82f73d04e32eeed
+----------------------------------------
+Cherry-picking ce7acf72db8c4dbf7e9e9aa942ab26342a60ab7c
+Auto-merging security/selinux/hooks.c
+[main 5da1d426c1b2] selinux: fix error initialization in inode_doinit_with_dentry()
+ Author: Tianyue Ren <rentianyue@kylinos.cn>
+ Date: Fri Oct 9 09:36:30 2020 +0800
+ 1 file changed, 16 insertions(+), 3 deletions(-)
+Successfully cherry-picked ce7acf72db8c4dbf7e9e9aa942ab26342a60ab7c
+----------------------------------------
+Cherry-picking 1100b71de7e5ebe01a73b7a162666568839b10fa
+[main 1cd648bfe42f] RDMA/rxe: Compute PSN windows correctly
+ Author: Bob Pearson <rpearsonhpe@gmail.com>
+ Date: Tue Oct 13 12:07:42 2020 -0500
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 1100b71de7e5ebe01a73b7a162666568839b10fa
+----------------------------------------
+Cherry-picking 3d0db14d7b9513a72567191feb33de7ee89b055b
+[main 0e068396dae5] x86/mm/ident_map: Check for errors from ident_pud_init()
+ Author: Arvind Sankar <nivedita@alum.mit.edu>
+ Date: Tue Oct 27 19:06:48 2020 -0400
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+Successfully cherry-picked 3d0db14d7b9513a72567191feb33de7ee89b055b
+----------------------------------------
+Cherry-picking 93543a276647d0bfebfbca80f05367dc6c107b90
+[main 646945e30268] ARM: p2v: fix handling of LPAE translation in BE mode
+ Author: Ard Biesheuvel <ardb@kernel.org>
+ Date: Mon Sep 21 00:10:16 2020 +0200
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+Successfully cherry-picked 93543a276647d0bfebfbca80f05367dc6c107b90
+----------------------------------------
+Cherry-picking f4689cad10f5c92d1a2f5589ce1fba1c84b724e2
+Auto-merging kernel/sched/deadline.c
+Auto-merging kernel/sched/sched.h
+[main 3668a0ca9105] sched/deadline: Fix sched_dl_global_validate()
+ Author: Peng Liu <iwtbavbm@gmail.com>
+ Date: Thu Oct 8 23:49:42 2020 +0800
+ 2 files changed, 21 insertions(+), 26 deletions(-)
+Successfully cherry-picked f4689cad10f5c92d1a2f5589ce1fba1c84b724e2
+----------------------------------------
+Cherry-picking 1295b6d7e4c958c1667ea9641890c328ec5d822b
+Auto-merging kernel/sched/core.c
+[main 1e416929d1c5] sched: Reenable interrupts in do_sched_yield()
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Tue Oct 20 16:46:55 2020 +0200
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+Successfully cherry-picked 1295b6d7e4c958c1667ea9641890c328ec5d822b
+----------------------------------------
+Cherry-picking fea0cdd44706b9c499df4f7cde40f6f75f501f7f
+[main 670fe50843a8] crypto: talitos - Fix return type of current_desc_hdr()
+ Author: Christophe Leroy <christophe.leroy@csgroup.eu>
+ Date: Thu Oct 8 09:34:56 2020 +0000
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Successfully cherry-picked fea0cdd44706b9c499df4f7cde40f6f75f501f7f
+----------------------------------------
+Cherry-picking 2e1efddfd9c40c022d7055b83ada90dadf93f9de
+[main a250b1f9e0b4] spi: img-spfi: fix reference leak in img_spfi_resume
+ Author: Zhang Qilong <zhangqilong3@huawei.com>
+ Date: Mon Nov 2 22:56:51 2020 +0800
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Successfully cherry-picked 2e1efddfd9c40c022d7055b83ada90dadf93f9de
+----------------------------------------
+Cherry-picking 00a2ac6000203a0dc7d6ebf6be4fe288445d90de
+Auto-merging sound/soc/soc-pcm.c
+[main d36df356ce65] ASoC: pcm: DRAIN support reactivation
+ Author: Cezary Rojewski <cezary.rojewski@intel.com>
+ Date: Mon Oct 26 11:01:29 2020 +0100
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked 00a2ac6000203a0dc7d6ebf6be4fe288445d90de
+----------------------------------------
+Cherry-picking 44f5d9fecd8038d79342e0d03e9acbd120c4621f
+Auto-merging security/selinux/hooks.c
+[main e341f8dc2e99] selinux: fix inode_doinit_with_dentry() LABEL_INVALID error handling
+ Author: Paul Moore <paul@paul-moore.com>
+ Date: Tue Nov 3 11:49:38 2020 -0500
+ 1 file changed, 13 insertions(+), 18 deletions(-)
+Successfully cherry-picked 44f5d9fecd8038d79342e0d03e9acbd120c4621f
+----------------------------------------
+Cherry-picking 9054435396d7e99e6ddece2c8481afc5e0f418dd
+[main 2d47baf08d8e] arm64: dts: exynos: Correct psci compatible used on Exynos7
+ Author: Paweł Chmiel <pawel.mikolaj.chmiel@gmail.com>
+ Date: Sat Nov 7 14:39:26 2020 +0100
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Successfully cherry-picked 9054435396d7e99e6ddece2c8481afc5e0f418dd
+----------------------------------------
+Cherry-picking 4113f6f73f6e8d215609bde8c0c14ca9f8a476c5
+[main 9bca9f3b7672] Bluetooth: Fix null pointer dereference in hci_event_packet()
+ Author: Anmol Karn <anmol.karan123@gmail.com>
+ Date: Wed Sep 30 19:48:13 2020 +0530
+ 1 file changed, 5 insertions(+)
+Successfully cherry-picked 4113f6f73f6e8d215609bde8c0c14ca9f8a476c5
+----------------------------------------
+Cherry-picking 1d0d30e1e5e6b846e919418111e9f2a959201179
+[main c08bd0c0e5a0] spi: spi-ti-qspi: fix reference leak in ti_qspi_setup
+ Author: Zhang Qilong <zhangqilong3@huawei.com>
+ Date: Tue Nov 3 22:09:47 2020 +0800
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 1d0d30e1e5e6b846e919418111e9f2a959201179
+----------------------------------------
+Cherry-picking 345f6b3bfc9f41f00a4837139d7e04f8a245abfc
+[main 049fab90be6f] spi: tegra20-slink: fix reference leak in slink ops of tegra20
+ Author: Zhang Qilong <zhangqilong3@huawei.com>
+ Date: Tue Nov 3 22:13:45 2020 +0800
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked 345f6b3bfc9f41f00a4837139d7e04f8a245abfc
+----------------------------------------
+Cherry-picking 70a7d4e41de6433535040034064703e68ef8bfbb
+[main 554bf38a6d3c] spi: tegra20-sflash: fix reference leak in tegra_sflash_resume
+ Author: Zhang Qilong <zhangqilong3@huawei.com>
+ Date: Tue Nov 3 22:13:23 2020 +0800
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 70a7d4e41de6433535040034064703e68ef8bfbb
+----------------------------------------
+Cherry-picking 8b564332bd89af8c75fd099c3dacd1e083880379
+[main 642d8513054c] spi: tegra114: fix reference leak in tegra spi ops
+ Author: Zhang Qilong <zhangqilong3@huawei.com>
+ Date: Tue Nov 3 22:13:06 2020 +0800
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked 8b564332bd89af8c75fd099c3dacd1e083880379
+----------------------------------------
+Cherry-picking ec2851c66adf14f29fe02746113e57bad4815084
+[main cbadb9b99b5a] mwifiex: fix mwifiex_shutdown_sw() causing sw reset failure
+ Author: Tsuchiya Yuto <kitakar@gmail.com>
+ Date: Wed Oct 28 23:21:09 2020 +0900
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked ec2851c66adf14f29fe02746113e57bad4815084
+----------------------------------------
+Cherry-picking bfb632881b41bed999055f450b2730a1a40bce88
+[main 13494a169042] ASoC: wm8998: Fix PM disable depth imbalance on error
+ Author: Zhang Qilong <zhangqilong3@huawei.com>
+ Date: Wed Nov 11 12:13:26 2020 +0800
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Successfully cherry-picked bfb632881b41bed999055f450b2730a1a40bce88
+----------------------------------------
+Cherry-picking 524321a0ef36caf0b7a9d3e63812724bc5723ee6
+[main ad6fe7b78252] ASoC: arizona: Fix a wrong free in wm8997_probe
+ Author: Zhang Qilong <zhangqilong3@huawei.com>
+ Date: Wed Nov 11 21:09:20 2020 +0800
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked 524321a0ef36caf0b7a9d3e63812724bc5723ee6
+----------------------------------------
+Cherry-picking 070e410c4cbdc698e4dcca47cc741c87d69c411b
+[main ea4a0208ed5e] RDMa/mthca: Work around -Wenum-conversion warning
+ Author: Arnd Bergmann <arnd@arndb.de>
+ Date: Mon Oct 26 22:12:30 2020 +0100
+ 2 files changed, 1 insertion(+), 2 deletions(-)
+Successfully cherry-picked 070e410c4cbdc698e4dcca47cc741c87d69c411b
+----------------------------------------
+Cherry-picking 71da483c1d89e2f4153cf86c25e1cbfe7198bc45
+[main b2d74ca1972e] MIPS: BCM47XX: fix kconfig dependency bug for BCM47XX_BCMA
+ Author: Necip Fazil Yildiran <fazilyildiran@gmail.com>
+ Date: Tue Nov 3 00:34:01 2020 +0300
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 71da483c1d89e2f4153cf86c25e1cbfe7198bc45
+----------------------------------------
+Cherry-picking 57080b740dd211892da38520434e6dbd7b0a1ce7
+[main 447318588ed5] staging: greybus: codecs: Fix reference counter leak in error handling
+ Author: Zhang Qilong <zhangqilong3@huawei.com>
+ Date: Mon Nov 9 21:13:46 2020 +0800
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked 57080b740dd211892da38520434e6dbd7b0a1ce7
+----------------------------------------
+Cherry-picking aa2c75ce06dc79c12639ffbf469d4507f8dfc068
+CONFLICT (modify/delete): drivers/media/platform/mtk-vcodec/mtk_vcodec_dec_pm.c deleted in HEAD and modified in aa2c75ce06dc (media: mtk-vcodec: add missing put_device() call in mtk_vcodec_release_dec_pm()).  Version aa2c75ce06dc (media: mtk-vcodec: add missing put_device() call in mtk_vcodec_release_dec_pm()) of drivers/media/platform/mtk-vcodec/mtk_vcodec_dec_pm.c left in tree.
+error: could not apply aa2c75ce06dc... media: mtk-vcodec: add missing put_device() call in mtk_vcodec_release_dec_pm()
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of aa2c75ce06dc79c12639ffbf469d4507f8dfc068
+Auto-resolving conflicts by accepting incoming changes...
