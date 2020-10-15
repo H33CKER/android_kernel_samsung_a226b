@@ -6911,3 +6911,272 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of b7107a74cac786bc1cef4872645000ab61998773
 Auto-resolving conflicts by accepting incoming changes...
+[main 945b586534a6] mm: khugepaged: recalculate min_free_kbytes after memory hotplug as expected by khugepaged
+ Author: Vijay Balakrishna <vijayb@linux.microsoft.com>
+ Date: Sat Oct 10 23:16:40 2020 -0700
+ 4 files changed, 1055 insertions(+), 308 deletions(-)
+----------------------------------------
+Cherry-picking f578c4fbe49ddcda182933852259d13f172eda09
+[main bf57f66acd2d] net: usb: rtl8150: set random MAC address when set_ethernet_addr() fails
+ Author: Anant Thazhemadam <anant.thazhemadam@gmail.com>
+ Date: Mon Oct 5 18:59:58 2020 +0530
+ 1 file changed, 12 insertions(+), 4 deletions(-)
+Successfully cherry-picked f578c4fbe49ddcda182933852259d13f172eda09
+----------------------------------------
+Cherry-picking a21a9b514b8821af1230fb1a751600d847aeb1a2
+[main 3d0586e84e9a] Linux 4.14.201
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Wed Oct 14 09:51:14 2020 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked a21a9b514b8821af1230fb1a751600d847aeb1a2
+----------------------------------------
+Cherry-picking 8c773157951bb4a833957504b7231113dd274780
+[main cf02d8a18c97] Bluetooth: fix kernel oops in store_pending_adv_report
+ Author: Alain Michaud <alainm@chromium.org>
+ Date: Mon Jul 27 20:48:55 2020 +0000
+ 1 file changed, 17 insertions(+), 5 deletions(-)
+Successfully cherry-picked 8c773157951bb4a833957504b7231113dd274780
+----------------------------------------
+Cherry-picking d53b1e94d08c032754a9aabeb3df309209c00347
+[main 5c6c29c84c9b] Bluetooth: A2MP: Fix not initializing all members
+ Author: Luiz Augusto von Dentz <luiz.von.dentz@intel.com>
+ Date: Thu Aug 6 11:17:11 2020 -0700
+ 1 file changed, 21 insertions(+), 1 deletion(-)
+Successfully cherry-picked d53b1e94d08c032754a9aabeb3df309209c00347
+----------------------------------------
+Cherry-picking 2acf87436517894275a804210caa33b9a08cf93c
+[main 98ea459da310] Bluetooth: L2CAP: Fix calling sk_filter on non-socket based channel
+ Author: Luiz Augusto von Dentz <luiz.von.dentz@intel.com>
+ Date: Thu Aug 6 11:17:12 2020 -0700
+ 3 files changed, 20 insertions(+), 3 deletions(-)
+Successfully cherry-picked 2acf87436517894275a804210caa33b9a08cf93c
+----------------------------------------
+Cherry-picking 1e4e736e04b9671eae96957e72ef7b87ecf5b8e6
+[main 0e21a99256ed] Bluetooth: MGMT: Fix not checking if BT_HS is enabled
+ Author: Luiz Augusto von Dentz <luiz.von.dentz@intel.com>
+ Date: Thu Aug 6 11:17:14 2020 -0700
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+Successfully cherry-picked 1e4e736e04b9671eae96957e72ef7b87ecf5b8e6
+----------------------------------------
+Cherry-picking 7c9748f455b9206b279a4710210c902cb1f275e2
+[main c3f8cc6d22cc] Bluetooth: Consolidate encryption handling in hci_encrypt_cfm
+ Author: Luiz Augusto von Dentz <luiz.von.dentz@intel.com>
+ Date: Tue May 19 13:25:19 2020 -0700
+ 2 files changed, 21 insertions(+), 27 deletions(-)
+Successfully cherry-picked 7c9748f455b9206b279a4710210c902cb1f275e2
+----------------------------------------
+Cherry-picking 9bc82009a22538f1019f3e9e06f0e33983e98a39
+[main e0311b2c8d01] Bluetooth: Fix update of connection state in `hci_encrypt_cfm`
+ Author: Patrick Steinhardt <ps@pks.im>
+ Date: Wed Jul 15 19:43:33 2020 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 9bc82009a22538f1019f3e9e06f0e33983e98a39
+----------------------------------------
+Cherry-picking 03523cde108e4f5d110c066d931864420c1f2d1e
+[main 05087e8c1668] Bluetooth: Disconnect if E0 is used for Level 4
+ Author: Luiz Augusto von Dentz <luiz.von.dentz@intel.com>
+ Date: Wed May 20 14:20:14 2020 -0700
+ 3 files changed, 31 insertions(+), 16 deletions(-)
+Successfully cherry-picked 03523cde108e4f5d110c066d931864420c1f2d1e
+----------------------------------------
+Cherry-picking 24217072bf906c4628b75cf6b68c07ef22c1f391
+[main 19dee2fdc2cc] media: usbtv: Fix refcounting mixup
+ Author: Oliver Neukum <oneukum@suse.com>
+ Date: Thu Sep 24 11:14:10 2020 +0200
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 24217072bf906c4628b75cf6b68c07ef22c1f391
+----------------------------------------
+Cherry-picking 2da5a3b69818e640f3bb49ba0425125a7c350d43
+[main 7cdf5619ff2d] USB: serial: option: add Cellient MPL200 card
+ Author: Wilken Gottwalt <wilken.gottwalt@mailbox.org>
+ Date: Sat Oct 3 11:40:29 2020 +0200
+ 1 file changed, 3 insertions(+)
+Successfully cherry-picked 2da5a3b69818e640f3bb49ba0425125a7c350d43
+----------------------------------------
+Cherry-picking c87efc02d140010fbb377edd074ce0f0696709e9
+[main bef7c25ccc29] USB: serial: option: Add Telit FT980-KS composition
+ Author: Leonid Bloch <lb.workbox@gmail.com>
+ Date: Sun Oct 4 18:58:13 2020 +0300
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked c87efc02d140010fbb377edd074ce0f0696709e9
+----------------------------------------
+Cherry-picking 709fd75140321812ccb8fc24a71e2348a5c74eb5
+[main 208aa09ec168] staging: comedi: check validity of wMaxPacketSize of usb endpoints found
+ Author: Anant Thazhemadam <anant.thazhemadam@gmail.com>
+ Date: Sat Oct 10 13:59:32 2020 +0530
+ 1 file changed, 3 insertions(+)
+Successfully cherry-picked 709fd75140321812ccb8fc24a71e2348a5c74eb5
+----------------------------------------
+Cherry-picking 5ba0089e419350da6d489df346c6f67272aaf90b
+[main f16d0fd4051d] USB: serial: pl2303: add device-id for HP GC device
+ Author: Scott Chen <scott@labau.com.tw>
+ Date: Thu Sep 24 14:27:45 2020 +0800
+ 2 files changed, 2 insertions(+)
+Successfully cherry-picked 5ba0089e419350da6d489df346c6f67272aaf90b
+----------------------------------------
+Cherry-picking 491bba5c9a632496518c25a5de98f5d8b9a30e4b
+[main 6e2fbf0f5616] USB: serial: ftdi_sio: add support for FreeCalypso JTAG+UART adapters
+ Author: Mychaela N. Falconia <falcon@freecalypso.org>
+ Date: Wed Sep 16 01:56:29 2020 +0000
+ 2 files changed, 12 insertions(+)
+Successfully cherry-picked 491bba5c9a632496518c25a5de98f5d8b9a30e4b
+----------------------------------------
+Cherry-picking bd0bef47c51499396a2ccaf7efa77fc8849a46c0
+[main 4b916898f5ac] reiserfs: Initialize inode keys properly
+ Author: Jan Kara <jack@suse.cz>
+ Date: Mon Sep 21 15:08:50 2020 +0200
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+Successfully cherry-picked bd0bef47c51499396a2ccaf7efa77fc8849a46c0
+----------------------------------------
+Cherry-picking e2b6b34324c44944051bc11477ecf2b3a45ec0f4
+[main ec1ef98f89ea] reiserfs: Fix oops during mount
+ Author: Jan Kara <jack@suse.cz>
+ Date: Wed Sep 30 17:08:20 2020 +0200
+ 1 file changed, 7 insertions(+)
+Successfully cherry-picked e2b6b34324c44944051bc11477ecf2b3a45ec0f4
+----------------------------------------
+Cherry-picking e47af171227445e71262a228f1b541deb1963b3d
+[main f2fae4a28730] drivers/net/ethernet/marvell/mvmdio.c: Fix non OF case
+ Author: Arnaud Patard <arnaud.patard@rtp-net.org>
+ Date: Fri Aug 2 10:32:40 2019 +0200
+ 1 file changed, 16 insertions(+), 6 deletions(-)
+Successfully cherry-picked e47af171227445e71262a228f1b541deb1963b3d
+----------------------------------------
+Cherry-picking aafb6c5652ef9687b6734a4a99240f1fb9cf41b2
+[main 2f830189c5d1] crypto: bcm - Verify GCM/CCM key length in setkey
+ Author: Herbert Xu <herbert@gondor.apana.org.au>
+ Date: Fri Oct 2 17:55:22 2020 +1000
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+Successfully cherry-picked aafb6c5652ef9687b6734a4a99240f1fb9cf41b2
+----------------------------------------
+Cherry-picking ead2d9d18dda8d8ec4d9550350e722e743dffd41
+[main 77e892f4da22] crypto: qat - check cipher length for aead AES-CBC-HMAC-SHA
+ Author: Dominik Przychodni <dominik.przychodni@intel.com>
+ Date: Mon Aug 31 11:59:59 2020 +0100
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+Successfully cherry-picked ead2d9d18dda8d8ec4d9550350e722e743dffd41
+----------------------------------------
+Cherry-picking 5b7a52cd2eef952cee8a72512ef370bcdef46636
+[main 72d1afd9024d] Linux 4.14.202
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Sat Oct 17 10:29:55 2020 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 5b7a52cd2eef952cee8a72512ef370bcdef46636
+----------------------------------------
+Cherry-picking acf6efa6502d1e7c0b1a03b36eb8bfa01e940521
+Auto-merging drivers/net/ethernet/ibm/ibmveth.c
+[main 6360ee12bac6] ibmveth: Switch order of ibmveth_helper calls.
+ Author: David Wilder <dwilder@us.ibm.com>
+ Date: Tue Oct 13 16:20:13 2020 -0700
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+Successfully cherry-picked acf6efa6502d1e7c0b1a03b36eb8bfa01e940521
+----------------------------------------
+Cherry-picking cc8a5643ede8837bd851bb679b087ff0fa715395
+Auto-merging drivers/net/ethernet/ibm/ibmveth.c
+[main 88b736a69867] ibmveth: Identify ingress large send packets.
+ Author: David Wilder <dwilder@us.ibm.com>
+ Date: Tue Oct 13 16:20:14 2020 -0700
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+Successfully cherry-picked cc8a5643ede8837bd851bb679b087ff0fa715395
+----------------------------------------
+Cherry-picking f6b47285c4a47f9d8ad9a29161f0df2fdd40e432
+Auto-merging net/ipv4/route.c
+[main 4948efa322c5] ipv4: Restore flowi4_oif update before call to xfrm_lookup_route
+ Author: David Ahern <dsahern@kernel.org>
+ Date: Fri Oct 9 11:01:01 2020 -0700
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Successfully cherry-picked f6b47285c4a47f9d8ad9a29161f0df2fdd40e432
+----------------------------------------
+Cherry-picking b09bf8410dcf78cd61e1e52a95e7fb3d97677241
+[main afc0fe218512] mlx4: handle non-napi callers to napi_poll
+ Author: Jonathan Lemon <bsd@fb.com>
+ Date: Thu Oct 8 11:45:26 2020 -0700
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+Successfully cherry-picked b09bf8410dcf78cd61e1e52a95e7fb3d97677241
+----------------------------------------
+Cherry-picking 732016c026b7f63badde10a2c2dc13fcdb8f394f
+Auto-merging drivers/net/usb/qmi_wwan.c
+[main 072634e54ed9] net: usb: qmi_wwan: add Cellient MPL200 card
+ Author: Wilken Gottwalt <wilken.gottwalt@mailbox.org>
+ Date: Thu Oct 8 09:21:38 2020 +0200
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 732016c026b7f63badde10a2c2dc13fcdb8f394f
+----------------------------------------
+Cherry-picking cdc27eb1f52fe17857496df266da248cdb158d3f
+[main 568eea3743ee] tipc: fix the skb_unshare() in tipc_buf_append()
+ Author: Cong Wang <xiyou.wangcong@gmail.com>
+ Date: Wed Oct 7 21:12:50 2020 -0700
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked cdc27eb1f52fe17857496df266da248cdb158d3f
+----------------------------------------
+Cherry-picking af4ccfdb43df537daedd43b3272f45a51c21c4a2
+Auto-merging include/net/ip.h
+[main 666db9445aca] net/ipv4: always honour route mtu during forwarding
+ Author: Maciej Żenczykowski <maze@google.com>
+ Date: Wed Sep 23 13:18:15 2020 -0700
+ 1 file changed, 6 insertions(+)
+Successfully cherry-picked af4ccfdb43df537daedd43b3272f45a51c21c4a2
+----------------------------------------
+Cherry-picking 7ed96d96bfe93d1c8fe1d387105aa27c5791ba65
+[main 5c4a74e25ba9] r8169: fix data corruption issue on RTL8402
+ Author: Heiner Kallweit <hkallweit1@gmail.com>
+ Date: Thu Oct 1 09:23:02 2020 +0200
+ 1 file changed, 56 insertions(+), 52 deletions(-)
+Successfully cherry-picked 7ed96d96bfe93d1c8fe1d387105aa27c5791ba65
+----------------------------------------
+Cherry-picking d4c49b6733c3125c3cc71617399d22f5b8ff962f
+[main 078c0024b86c] binder: fix UAF when releasing todo list
+ Author: Todd Kjos <tkjos@google.com>
+ Date: Fri Oct 9 16:24:55 2020 -0700
+ 1 file changed, 10 insertions(+), 25 deletions(-)
+Successfully cherry-picked d4c49b6733c3125c3cc71617399d22f5b8ff962f
+----------------------------------------
+Cherry-picking 8ae01b6ed7e07c3a3a0655a8185e20d09324147e
+[main 3d21e77229f5] ALSA: bebob: potential info leak in hwdep_read()
+ Author: Dan Carpenter <dan.carpenter@oracle.com>
+ Date: Wed Oct 7 10:49:28 2020 +0300
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+Successfully cherry-picked 8ae01b6ed7e07c3a3a0655a8185e20d09324147e
+----------------------------------------
+Cherry-picking 63881790add61f0dfe0a54193e7ba16c00ae0680
+[main 0c283f7ff82b] net: hdlc: In hdlc_rcv, check to make sure dev is an HDLC device
+ Author: Xie He <xie.he.0141@gmail.com>
+ Date: Mon Oct 19 18:31:52 2020 -0700
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+Successfully cherry-picked 63881790add61f0dfe0a54193e7ba16c00ae0680
+----------------------------------------
+Cherry-picking 712777b2bc9b2b5c66ef33774ac6d05ef8bb0321
+[main cddfc6a0c335] net: hdlc_raw_eth: Clear the IFF_TX_SKB_SHARING flag after calling ether_setup
+ Author: Xie He <xie.he.0141@gmail.com>
+ Date: Mon Oct 19 23:34:20 2020 -0700
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 712777b2bc9b2b5c66ef33774ac6d05ef8bb0321
+----------------------------------------
+Cherry-picking 8ac1b0a94a722f35bfaefb86382def18a66142e9
+[main d064c2db19e9] nfc: Ensure presence of NFC_ATTR_FIRMWARE_NAME attribute in nfc_genl_fw_download()
+ Author: Defang Bo <bodefang@126.com>
+ Date: Mon Oct 19 19:38:58 2020 +0800
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 8ac1b0a94a722f35bfaefb86382def18a66142e9
+----------------------------------------
+Cherry-picking c042da4b2987e42e4365134edb9106c5ee1dc10c
+Auto-merging net/ipv4/tcp_input.c
+[main 6104ca0b155b] tcp: fix to update snd_wl1 in bulk receiver fast path
+ Author: Neal Cardwell <ncardwell@google.com>
+ Date: Thu Oct 22 10:33:31 2020 -0400
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked c042da4b2987e42e4365134edb9106c5ee1dc10c
+----------------------------------------
+Cherry-picking e1b8b57623521b7f4974476a20bd6ff971fde6c4
+Auto-merging Documentation/networking/ip-sysctl.txt
+Auto-merging net/ipv4/icmp.c
+CONFLICT (content): Merge conflict in net/ipv4/icmp.c
+error: could not apply e1b8b5762352... icmp: randomize the global rate limiter
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of e1b8b57623521b7f4974476a20bd6ff971fde6c4
+Auto-resolving conflicts by accepting incoming changes...
