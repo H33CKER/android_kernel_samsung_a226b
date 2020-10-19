@@ -51419,3 +51419,86 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of c90507d39b74e552fef5d96db212f6f125a4913c
 Auto-resolving conflicts by accepting incoming changes...
+[main e48f4ef5fa8c] dm table: fix iterate_devices based device capability checks
+ Author: Jeffle Xu <jefflexu@linux.alibaba.com>
+ Date: Tue Mar 9 11:27:43 2021 +0800
+ 2 files changed, 160 insertions(+), 20 deletions(-)
+----------------------------------------
+Cherry-picking a70a4e8baa0b53b75299f07535e054804365c3fe
+[main f64d5a9e7178] dm table: fix DAX iterate_devices based device capability checks
+ Author: Jeffle Xu <jefflexu@linux.alibaba.com>
+ Date: Tue Mar 9 11:27:44 2021 +0800
+ 1 file changed, 4 insertions(+), 21 deletions(-)
+Successfully cherry-picked a70a4e8baa0b53b75299f07535e054804365c3fe
+----------------------------------------
+Cherry-picking 424415d0182ae802bbac261c1845b1486d588084
+[main 2c202071c776] dm table: fix zoned iterate_devices based device capability checks
+ Author: Jeffle Xu <jefflexu@linux.alibaba.com>
+ Date: Tue Mar 9 11:27:45 2021 +0800
+ 1 file changed, 17 insertions(+), 33 deletions(-)
+Successfully cherry-picked 424415d0182ae802bbac261c1845b1486d588084
+----------------------------------------
+Cherry-picking 8db59cb61db22eca300d0dd9fc8a6718fcd81b25
+Auto-merging drivers/iommu/amd_iommu.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4909 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 8db59cb61db2.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 8db59cb61db22eca300d0dd9fc8a6718fcd81b25
+No conflicted files found but cherry-pick failed, attempting to skip commit 8db59cb61db22eca300d0dd9fc8a6718fcd81b25
+----------------------------------------
+Cherry-picking 2c9eb9b3251f75b6c2aff162ed9eb3b213b76831
+Auto-merging drivers/net/wireless/marvell/mwifiex/pcie.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4909 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 2c9eb9b3251f.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 2c9eb9b3251f75b6c2aff162ed9eb3b213b76831
+No conflicted files found but cherry-pick failed, attempting to skip commit 2c9eb9b3251f75b6c2aff162ed9eb3b213b76831
+----------------------------------------
+Cherry-picking d2ddc3270fb8c898f77174e8cc70d6c8d0d67885
+Auto-merging drivers/platform/x86/acer-wmi.c
+CONFLICT (content): Merge conflict in drivers/platform/x86/acer-wmi.c
+error: could not apply d2ddc3270fb8... platform/x86: acer-wmi: Cleanup ACER_CAP_FOO defines
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of d2ddc3270fb8c898f77174e8cc70d6c8d0d67885
+Auto-resolving conflicts by accepting incoming changes...
