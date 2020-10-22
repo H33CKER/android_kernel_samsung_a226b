@@ -33618,3 +33618,27 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of a3d4350cc84902e725ca11928c4e73ecdf3c3d4b
 Auto-resolving conflicts by accepting incoming changes...
+[main d9773832fdd6] spi: bcm2835aux: Fix use-after-free on unbind
+ Author: Lukas Wunner <lukas@wunner.de>
+ Date: Thu Dec 10 20:20:01 2020 +0100
+ 2 files changed, 209 insertions(+), 2 deletions(-)
+----------------------------------------
+Cherry-picking 6bc96c1bb2090603aa3e15077400347fa07d79d0
+[main f7dd301b2a64] spi: bcm2835aux: Restore err assignment in bcm2835aux_spi_probe
+ Author: Nathan Chancellor <natechancellor@gmail.com>
+ Date: Thu Dec 10 20:20:02 2020 +0100
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 6bc96c1bb2090603aa3e15077400347fa07d79d0
+----------------------------------------
+Cherry-picking c04d5a3d004273878029cbbc238d7c16881df36f
+Auto-merging drivers/net/wireless/intel/iwlwifi/pcie/trans.c
+CONFLICT (content): Merge conflict in drivers/net/wireless/intel/iwlwifi/pcie/trans.c
+error: could not apply c04d5a3d0042... iwlwifi: pcie: limit memory read spin time
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of c04d5a3d004273878029cbbc238d7c16881df36f
+Auto-resolving conflicts by accepting incoming changes...
