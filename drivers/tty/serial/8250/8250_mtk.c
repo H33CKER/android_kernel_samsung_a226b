@@ -361,7 +361,7 @@ mtk8250_set_termios(struct uart_port *port, struct ktermios *termios,
 	}
 #endif
 
-	serial8250_do_set_termios(port, termios, old);
+	serial8250_do_set_termios(port, termios, NULL);
 
 	/*
 	 * Mediatek UARTs use an extra highspeed register (MTK_UART_HIGHS)
