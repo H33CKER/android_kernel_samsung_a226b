@@ -29671,3 +29671,22 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of e8947cebce49599fe00bf588954b42742d62c2b2
 Auto-resolving conflicts by accepting incoming changes...
+[main ae4861431595] xen/events: use a common cpu hotplug hook for event channels
+ Author: Juergen Gross <jgross@suse.com>
+ Date: Tue Nov 3 15:29:09 2020 +0100
+ 3 files changed, 171 insertions(+), 11 deletions(-)
+----------------------------------------
+Cherry-picking 4bca9cfde93cf6be2b5e34b87b348e0445dc9727
+Auto-merging Documentation/admin-guide/kernel-parameters.txt
+Auto-merging drivers/xen/events/events_2l.c
+Auto-merging drivers/xen/events/events_internal.h
+CONFLICT (content): Merge conflict in drivers/xen/events/events_internal.h
+error: could not apply 4bca9cfde93c... xen/events: defer eoi in case of excessive number of events
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 4bca9cfde93cf6be2b5e34b87b348e0445dc9727
+Auto-resolving conflicts by accepting incoming changes...
