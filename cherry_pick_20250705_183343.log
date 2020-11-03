@@ -29425,3 +29425,129 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 3cd62032ff7d99509286e3594df93e95248ff037
 Auto-resolving conflicts by accepting incoming changes...
+[main e8b4c797c545] perf/core: Fix bad use of igrab()
+ Author: Song Liu <songliubraving@fb.com>
+ Date: Tue Apr 17 23:29:07 2018 -0700
+ 2 files changed, 400 insertions(+), 16 deletions(-)
+----------------------------------------
+Cherry-picking 006f71167397127a53c95eed8fa8a2b0c4caf81b
+[main 083b9f18c7ce] perf/core: Fix crash when using HW tracing kernel filters
+ Author: Mathieu Poirier <mathieu.poirier@linaro.org>
+ Date: Mon Jul 16 17:13:51 2018 -0600
+ 1 file changed, 4 insertions(+)
+Successfully cherry-picked 006f71167397127a53c95eed8fa8a2b0c4caf81b
+----------------------------------------
+Cherry-picking 65c4000ccf7cc58a455977c5ec928525954058ac
+[main 685bb066b9b6] perf/core: Fix a memory leak in perf_event_parse_addr_filter()
+ Author: kiyin(尹亮) <kiyin@tencent.com>
+ Date: Wed Nov 4 08:23:22 2020 +0300
+ 1 file changed, 5 insertions(+), 7 deletions(-)
+Successfully cherry-picked 65c4000ccf7cc58a455977c5ec928525954058ac
+----------------------------------------
+Cherry-picking b559da71974b5eb93311f7f475b2e4b16c0f9bb3
+[main 0c2efda9a6e4] xen/events: avoid removing an event channel while handling it
+ Author: Juergen Gross <jgross@suse.com>
+ Date: Tue Nov 3 15:28:59 2020 +0100
+ 1 file changed, 35 insertions(+), 5 deletions(-)
+Successfully cherry-picked b559da71974b5eb93311f7f475b2e4b16c0f9bb3
+----------------------------------------
+Cherry-picking 025ea15db5665fa14d1c48e39aa788acaf30471b
+Auto-merging drivers/xen/events/events_2l.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4651 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 025ea15db566.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 025ea15db5665fa14d1c48e39aa788acaf30471b
+No conflicted files found but cherry-pick failed, attempting to skip commit 025ea15db5665fa14d1c48e39aa788acaf30471b
+----------------------------------------
+Cherry-picking 5bb3ef08f7042bbc8b5c65db43f48618ef5f6eb2
+Auto-merging drivers/xen/events/events_fifo.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4651 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 5bb3ef08f704.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 5bb3ef08f7042bbc8b5c65db43f48618ef5f6eb2
+No conflicted files found but cherry-pick failed, attempting to skip commit 5bb3ef08f7042bbc8b5c65db43f48618ef5f6eb2
+----------------------------------------
+Cherry-picking b454e8e950fc9acfa9dfb435660b38b42a113cf8
+[main 6811e45fc832] xen/events: add a new "late EOI" evtchn framework
+ Author: Juergen Gross <jgross@suse.com>
+ Date: Tue Nov 3 15:29:02 2020 +0100
+ 1 file changed, 134 insertions(+), 17 deletions(-)
+Successfully cherry-picked b454e8e950fc9acfa9dfb435660b38b42a113cf8
+----------------------------------------
+Cherry-picking 8cd83056c4bafcfb169bed5782f8d9e761a4873e
+Auto-merging drivers/block/xen-blkback/blkback.c
+Auto-merging drivers/block/xen-blkback/xenbus.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4652 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 8cd83056c4ba.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 8cd83056c4bafcfb169bed5782f8d9e761a4873e
+No conflicted files found but cherry-pick failed, attempting to skip commit 8cd83056c4bafcfb169bed5782f8d9e761a4873e
+----------------------------------------
+Cherry-picking 0cad6b264e35cc31de99c58ed11e42ba6e06d80f
+Auto-merging drivers/net/xen-netback/interface.c
+CONFLICT (content): Merge conflict in drivers/net/xen-netback/interface.c
+Auto-merging drivers/net/xen-netback/netback.c
+Auto-merging drivers/net/xen-netback/rx.c
+error: could not apply 0cad6b264e35... xen/netback: use lateeoi irq binding
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 0cad6b264e35cc31de99c58ed11e42ba6e06d80f
+Auto-resolving conflicts by accepting incoming changes...
