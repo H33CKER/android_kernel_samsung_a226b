@@ -10129,3 +10129,109 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 70618302fdc55bbd1f7edd37e2ce5fd01322d05f
 Auto-resolving conflicts by accepting incoming changes...
+[main e0729b092ec7] futex: Don't enable IRQs unconditionally in put_pi_state()
+ Author: Dan Carpenter <dan.carpenter@oracle.com>
+ Date: Fri Nov 6 11:52:05 2020 +0300
+ 2 files changed, 1695 insertions(+), 104 deletions(-)
+----------------------------------------
+Cherry-picking c3ea2654705758979a7213b7d08e70264dba2afd
+[main 39e6c59349a7] ocfs2: initialize ip_next_orphan
+ Author: Wengang Wang <wen.gang.wang@oracle.com>
+ Date: Fri Nov 13 22:52:23 2020 -0800
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked c3ea2654705758979a7213b7d08e70264dba2afd
+----------------------------------------
+Cherry-picking 531ef54548372c6b5b3eb5e5f264119b01a85ddb
+Auto-merging security/selinux/ibpkey.c
+[main c1455ad18d78] selinux: Fix error return code in sel_ib_pkey_sid_slow()
+ Author: Chen Zhou <chenzhou10@huawei.com>
+ Date: Thu Nov 12 21:53:32 2020 +0800
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Successfully cherry-picked 531ef54548372c6b5b3eb5e5f264119b01a85ddb
+----------------------------------------
+Cherry-picking 672164be3002db135b3e1b6ac5519afb7ca2f575
+Auto-merging kernel/exit.c
+[main 843234a5f685] don't dump the threads that had been already exiting when zapped.
+ Author: Al Viro <viro@zeniv.linux.org.uk>
+ Date: Wed Oct 28 16:39:49 2020 -0400
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Successfully cherry-picked 672164be3002db135b3e1b6ac5519afb7ca2f575
+----------------------------------------
+Cherry-picking e7053269fc75fe0fab8ad0945f6c4d667943246f
+[main 3c9abdcbc689] drm/gma500: Fix out-of-bounds access to struct drm_device.vblank[]
+ Author: Thomas Zimmermann <tzimmermann@suse.de>
+ Date: Thu Nov 5 20:02:56 2020 +0100
+ 1 file changed, 12 insertions(+), 22 deletions(-)
+Successfully cherry-picked e7053269fc75fe0fab8ad0945f6c4d667943246f
+----------------------------------------
+Cherry-picking 4fee6311e5404f425d270243a7b8f913066c6640
+[main 09f5657189a4] pinctrl: amd: use higher precision for 512 RtcClk
+ Author: Coiby Xu <coiby.xu@gmail.com>
+ Date: Fri Nov 6 07:19:10 2020 +0800
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 4fee6311e5404f425d270243a7b8f913066c6640
+----------------------------------------
+Cherry-picking ee06ff469ead43cc57534880b345d75c4220283e
+[main ad447a12dd25] pinctrl: amd: fix incorrect way to disable debounce filter
+ Author: Coiby Xu <coiby.xu@gmail.com>
+ Date: Fri Nov 6 07:19:09 2020 +0800
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked ee06ff469ead43cc57534880b345d75c4220283e
+----------------------------------------
+Cherry-picking b2e390fede7085120b06c99a05ca745c0f9851bb
+Auto-merging lib/swiotlb.c
+[main ce4e3b04c829] swiotlb: fix "x86: Don't panic if can not alloc buffer for swiotlb"
+ Author: Stefano Stabellini <stefano.stabellini@xilinx.com>
+ Date: Mon Oct 26 17:02:14 2020 -0700
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+Successfully cherry-picked b2e390fede7085120b06c99a05ca745c0f9851bb
+----------------------------------------
+Cherry-picking 631d8475dfb197140a8501f8079e8a8ae4f0638c
+[main d365ca9bc38f] IPv6: Set SIT tunnel hard_header_len to zero
+ Author: Oliver Herms <oliver.peter.herms@gmail.com>
+ Date: Tue Nov 3 11:41:33 2020 +0100
+ 1 file changed, 2 deletions(-)
+Successfully cherry-picked 631d8475dfb197140a8501f8079e8a8ae4f0638c
+----------------------------------------
+Cherry-picking 72f0eed0c6a443e6833b1c95c8738a3951e19f68
+[main 33056e7aaa80] net/af_iucv: fix null pointer dereference on shutdown
+ Author: Ursula Braun <ubraun@linux.ibm.com>
+ Date: Mon Nov 9 08:57:05 2020 +0100
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 72f0eed0c6a443e6833b1c95c8738a3951e19f68
+----------------------------------------
+Cherry-picking 05547c50cf9e8f83a066389c2b1941f5f3e1435d
+[main ac3536fe9c7e] net/x25: Fix null-ptr-deref in x25_connect
+ Author: Martin Schiller <ms@dev.tdt.de>
+ Date: Mon Nov 9 07:54:49 2020 +0100
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 05547c50cf9e8f83a066389c2b1941f5f3e1435d
+----------------------------------------
+Cherry-picking 8a67427dc854ac1ebab325047d906823d3b4469f
+[main cd3361825364] vrf: Fix fast path output packet handling with async Netfilter rules
+ Author: Martin Willi <martin@strongswan.org>
+ Date: Fri Nov 6 08:30:30 2020 +0100
+ 1 file changed, 69 insertions(+), 23 deletions(-)
+Successfully cherry-picked 8a67427dc854ac1ebab325047d906823d3b4469f
+----------------------------------------
+Cherry-picking 6c7cd7a91b5ddbef807895d035aae5bcb05c5970
+[main b7ca255b3bc6] r8169: fix potential skb double free in an error path
+ Author: Heiner Kallweit <hkallweit1@gmail.com>
+ Date: Thu Nov 5 15:28:42 2020 +0100
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 6c7cd7a91b5ddbef807895d035aae5bcb05c5970
+----------------------------------------
+Cherry-picking fc08b8e9d8928a21faf7fb5d31fc5d3f26a910a8
+Auto-merging net/ipv4/syncookies.c
+CONFLICT (content): Merge conflict in net/ipv4/syncookies.c
+Auto-merging net/ipv6/syncookies.c
+CONFLICT (content): Merge conflict in net/ipv6/syncookies.c
+error: could not apply fc08b8e9d892... net: Update window_clamp if SOCK_RCVBUF is set
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of fc08b8e9d8928a21faf7fb5d31fc5d3f26a910a8
+Auto-resolving conflicts by accepting incoming changes...
