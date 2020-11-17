@@ -16132,3 +16132,105 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of cfc6eb148982ce916112d50569ee4930c24f0758
 Auto-resolving conflicts by accepting incoming changes...
+[main 5f537938e4e1] tracing: Fix SKIP_STACK_VALIDATION=1 build due to bad merge with -mrecord-mcount
+ Author: Greg Thelen <gthelen@google.com>
+ Date: Fri Jun 8 14:47:46 2018 -0700
+ 2 files changed, 501 insertions(+), 97 deletions(-)
+----------------------------------------
+Cherry-picking 4480921923080f037efc8ae7c32fb9cdcf06573f
+[main f0ffe2e387f1] tracing: Avoid calling cc-option -mrecord-mcount for every Makefile
+ Author: Vasily Gorbik <gor@linux.ibm.com>
+ Date: Mon Aug 6 15:17:44 2018 +0200
+ 2 files changed, 10 insertions(+), 6 deletions(-)
+Successfully cherry-picked 4480921923080f037efc8ae7c32fb9cdcf06573f
+----------------------------------------
+Cherry-picking da2e2a5c88abfe0974b4b8575c798fcafb552fc9
+[main 29ac0abfdb1e] Xen/x86: don't bail early from clear_foreign_p2m_mapping()
+ Author: Jan Beulich <jbeulich@suse.com>
+ Date: Mon Feb 15 08:49:34 2021 +0100
+ 1 file changed, 5 insertions(+), 7 deletions(-)
+Successfully cherry-picked da2e2a5c88abfe0974b4b8575c798fcafb552fc9
+----------------------------------------
+Cherry-picking 232ba596896a7654a931ab28868562dd8b6b3904
+[main 7680b3f44f67] Xen/x86: also check kernel mapping in set_foreign_p2m_mapping()
+ Author: Jan Beulich <jbeulich@suse.com>
+ Date: Mon Feb 15 08:50:08 2021 +0100
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 232ba596896a7654a931ab28868562dd8b6b3904
+----------------------------------------
+Cherry-picking 84e240c8aab4831a8312746cb4b346ce77a8f568
+[main 58eb334bab76] Xen/gntdev: correct dev_bus_addr handling in gntdev_map_grant_pages()
+ Author: Jan Beulich <jbeulich@suse.com>
+ Date: Mon Feb 15 08:51:07 2021 +0100
+ 1 file changed, 13 insertions(+), 3 deletions(-)
+Successfully cherry-picked 84e240c8aab4831a8312746cb4b346ce77a8f568
+----------------------------------------
+Cherry-picking 9c12c61144be8d11d010646a71021c1da08d7710
+[main 83849fc319ab] Xen/gntdev: correct error checking in gntdev_map_grant_pages()
+ Author: Jan Beulich <jbeulich@suse.com>
+ Date: Mon Feb 15 08:52:27 2021 +0100
+ 2 files changed, 10 insertions(+), 8 deletions(-)
+Successfully cherry-picked 9c12c61144be8d11d010646a71021c1da08d7710
+----------------------------------------
+Cherry-picking 4514b5e3445540384fd647ce26afae2300274c6a
+[main 440f8534fd9f] xen/arm: don't ignore return errors from set_phys_to_machine
+ Author: Stefano Stabellini <stefano.stabellini@xilinx.com>
+ Date: Mon Feb 15 08:53:44 2021 +0100
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+Successfully cherry-picked 4514b5e3445540384fd647ce26afae2300274c6a
+----------------------------------------
+Cherry-picking fd8ec8c708953323feb7c6177d894d39a23b08e4
+[main ce4d3ca1c252] xen-blkback: don't "handle" error by BUG()
+ Author: Jan Beulich <jbeulich@suse.com>
+ Date: Mon Feb 15 08:54:51 2021 +0100
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+Successfully cherry-picked fd8ec8c708953323feb7c6177d894d39a23b08e4
+----------------------------------------
+Cherry-picking 9ca595810e8fbc541c388abdb4d2ed9ef20a2e06
+[main 6efab8744a8e] xen-netback: don't "handle" error by BUG()
+ Author: Jan Beulich <jbeulich@suse.com>
+ Date: Mon Feb 15 08:55:31 2021 +0100
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+Successfully cherry-picked 9ca595810e8fbc541c388abdb4d2ed9ef20a2e06
+----------------------------------------
+Cherry-picking 7910839db1ca4d0cd4789872621a023f985e50e0
+[main c05263d77cef] xen-scsiback: don't "handle" error by BUG()
+ Author: Jan Beulich <jbeulich@suse.com>
+ Date: Mon Feb 15 08:55:57 2021 +0100
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked 7910839db1ca4d0cd4789872621a023f985e50e0
+----------------------------------------
+Cherry-picking 5571633988e02a1107720544a57ab4878c4446be
+[main b265d4b554ad] xen-blkback: fix error handling in xen_blkbk_map()
+ Author: Jan Beulich <jbeulich@suse.com>
+ Date: Mon Feb 15 08:56:44 2021 +0100
+ 1 file changed, 14 insertions(+), 10 deletions(-)
+Successfully cherry-picked 5571633988e02a1107720544a57ab4878c4446be
+----------------------------------------
+Cherry-picking 944a2bc49082d73ca6fc700cc16ca3863b228617
+[main 4cda5488575f] scsi: qla2xxx: Fix crash during driver load on big endian machines
+ Author: Arun Easi <aeasi@marvell.com>
+ Date: Wed Dec 2 05:23:04 2020 -0800
+ 2 files changed, 6 insertions(+), 5 deletions(-)
+Successfully cherry-picked 944a2bc49082d73ca6fc700cc16ca3863b228617
+----------------------------------------
+Cherry-picking 2c7a2cf336a2fb94e6c78b9ae4331581a311d01f
+Auto-merging drivers/usb/gadget/function/u_ether.c
+[main 337d831ecff7] USB: Gadget Ethernet: Re-enable Jumbo frames.
+ Author: John Greb <h3x4m3r0n@gmail.com>
+ Date: Sun May 6 20:01:57 2018 +0000
+ 1 file changed, 4 insertions(+)
+Successfully cherry-picked 2c7a2cf336a2fb94e6c78b9ae4331581a311d01f
+----------------------------------------
+Cherry-picking 2afb9a5a42ab910589d3a3da96d365cb7085ff8b
+Auto-merging drivers/usb/gadget/function/u_ether.c
+CONFLICT (content): Merge conflict in drivers/usb/gadget/function/u_ether.c
+error: could not apply 2afb9a5a42ab... usb: gadget: u_ether: Fix MTU size mismatch with RX packet size
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 2afb9a5a42ab910589d3a3da96d365cb7085ff8b
+Auto-resolving conflicts by accepting incoming changes...
