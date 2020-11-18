@@ -32155,3 +32155,20 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 4b4c2882005f95c0015869529dc3dbbeaad41ed6
 Auto-resolving conflicts by accepting incoming changes...
+[main 4c6c8b505dd4] bnxt_en: fix error return code in bnxt_init_board()
+ Author: Zhang Changzhong <zhangchangzhong@huawei.com>
+ Date: Thu Nov 19 21:30:21 2020 +0800
+ 2 files changed, 462 insertions(+), 37 deletions(-)
+----------------------------------------
+Cherry-picking 94a36e15626e38399f74b3cd636fe9878eda27c1
+Auto-merging drivers/video/fbdev/hyperv_fb.c
+CONFLICT (content): Merge conflict in drivers/video/fbdev/hyperv_fb.c
+error: could not apply 94a36e15626e... video: hyperv_fb: Fix the cache type when mapping the VRAM
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 94a36e15626e38399f74b3cd636fe9878eda27c1
+Auto-resolving conflicts by accepting incoming changes...
