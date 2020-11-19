@@ -1572,15 +1572,6 @@
 
 	initrd=		[BOOT] Specify the location of the initial ramdisk
 
-	init_on_alloc=	[MM] Fill newly allocated pages and heap objects with
-			zeroes.
-			Format: 0 | 1
-			Default set by CONFIG_INIT_ON_ALLOC_DEFAULT_ON.
-
-	init_on_free=	[MM] Fill freed pages and heap objects with zeroes.
-			Format: 0 | 1
-			Default set by CONFIG_INIT_ON_FREE_DEFAULT_ON.
-
 	init_pkru=	[x86] Specify the default memory protection keys rights
 			register contents for all processes.  0x55555554 by
 			default (disallow access to all but pkey 0).  Can
@@ -2009,7 +2000,7 @@
 
 			Default is 'flush'.
 
-			For details see: Documentation/admin-guide/l1tf.rst
+			For details see: Documentation/admin-guide/hw-vuln/l1tf.rst
 
 	l2cr=		[PPC]
 
@@ -2456,7 +2447,6 @@
 					       tsx_async_abort=off [X86]
 					       kvm.nx_huge_pages=off [X86]
 					       no_entry_flush [PPC]
-					       no_uaccess_flush [PPC]
 
 				Exceptions:
 					       This does not have any effect on
@@ -2810,9 +2800,6 @@
 
 	nospec_store_bypass_disable
 			[HW] Disable all mitigations for the Speculative Store Bypass vulnerability
-
-	no_uaccess_flush
-	                [PPC] Don't flush the L1-D cache after accessing user data.
 
 	noxsave		[BUGS=X86] Disables x86 extended register state save
 			and restore using xsave. The kernel will fallback to
@@ -3447,10 +3434,6 @@
 	prompt_ramdisk=	[RAM] List of RAM disks to prompt for floppy disk
 			before loading.
 			See Documentation/blockdev/ramdisk.txt.
-
-	psi=		[KNL] Enable or disable pressure stall information
-			tracking.
-			Format: <bool>
 
 	psmouse.proto=	[HW,MOUSE] Highest PS2 mouse protocol extension to
 			probe for; one of (bare|imps|exps|lifebook|any).
@@ -4763,7 +4746,6 @@
 					device);
 				j = NO_REPORT_LUNS (don't use report luns
 					command, uas only);
-				k = NO_SAME (do not use WRITE_SAME, uas only)
 				l = NOT_LOCKABLE (don't try to lock and
 					unlock ejectable media, not on uas);
 				m = MAX_SECTORS_64 (don't transfer more
