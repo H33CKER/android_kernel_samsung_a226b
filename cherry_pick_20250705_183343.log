@@ -29902,3 +29902,23 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of db01cad9efe3c3838a6b3a3f68affd295c4b92d6
 Auto-resolving conflicts by accepting incoming changes...
+[main d5507fddbfc5] powerpc/64s: flush L1D on kernel entry
+ Author: Nicholas Piggin <npiggin@gmail.com>
+ Date: Fri Nov 20 10:52:39 2020 +1100
+ 11 files changed, 326 insertions(+), 137 deletions(-)
+ mode change 100755 => 100644 Documentation/admin-guide/kernel-parameters.txt
+----------------------------------------
+Cherry-picking b07673623d407aa89bb1f5b24339afe30871e35d
+Auto-merging arch/powerpc/include/asm/kup.h
+CONFLICT (add/add): Merge conflict in arch/powerpc/include/asm/kup.h
+Auto-merging arch/powerpc/include/asm/uaccess.h
+CONFLICT (content): Merge conflict in arch/powerpc/include/asm/uaccess.h
+error: could not apply b07673623d40... powerpc: Add a framework for user access tracking
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of b07673623d407aa89bb1f5b24339afe30871e35d
+Auto-resolving conflicts by accepting incoming changes...
