@@ -29922,3 +29922,42 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of b07673623d407aa89bb1f5b24339afe30871e35d
 Auto-resolving conflicts by accepting incoming changes...
+[main b4f136c06a87] powerpc: Add a framework for user access tracking
+ Author: Christophe Leroy <christophe.leroy@c-s.fr>
+ Date: Fri Nov 20 10:52:40 2020 +1100
+ 3 files changed, 51 insertions(+), 99 deletions(-)
+----------------------------------------
+Cherry-picking 24ed3d53a4bd16144cb319b3d5f406be15a1e3fa
+[main 2924bfe3f3c8] powerpc: Implement user_access_begin and friends
+ Author: Christophe Leroy <christophe.leroy@c-s.fr>
+ Date: Fri Nov 20 10:52:41 2020 +1100
+ 1 file changed, 57 insertions(+), 19 deletions(-)
+Successfully cherry-picked 24ed3d53a4bd16144cb319b3d5f406be15a1e3fa
+----------------------------------------
+Cherry-picking 6f830a304bf5fb768395642e49fb4e9375469e48
+[main d5f1e2dd68f5] powerpc: Fix __clear_user() with KUAP enabled
+ Author: Andrew Donnellan <ajd@linux.ibm.com>
+ Date: Fri Nov 20 10:52:42 2020 +1100
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+Successfully cherry-picked 6f830a304bf5fb768395642e49fb4e9375469e48
+----------------------------------------
+Cherry-picking 0ad53f1d6ccfb8afbdfc772fbd3cf0deec3be95a
+[main 6005a050d6e8] powerpc/uaccess: Evaluate macro arguments once, before user access is allowed
+ Author: Nicholas Piggin <npiggin@gmail.com>
+ Date: Fri Nov 20 10:52:43 2020 +1100
+ 1 file changed, 35 insertions(+), 14 deletions(-)
+Successfully cherry-picked 0ad53f1d6ccfb8afbdfc772fbd3cf0deec3be95a
+----------------------------------------
+Cherry-picking a1fe39636e6fb60c8fe7e3b87a32cb561585399f
+Auto-merging arch/powerpc/include/asm/book3s/64/kup-radix.h
+CONFLICT (add/add): Merge conflict in arch/powerpc/include/asm/book3s/64/kup-radix.h
+Auto-merging arch/powerpc/lib/feature-fixups.c
+error: could not apply a1fe39636e6f... powerpc/64s: flush L1D after user accesses
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of a1fe39636e6fb60c8fe7e3b87a32cb561585399f
+Auto-resolving conflicts by accepting incoming changes...
