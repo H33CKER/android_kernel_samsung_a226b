@@ -41951,3 +41951,86 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 6f721258b94c6036b239415a99842477f8a6340c
 Auto-resolving conflicts by accepting incoming changes...
+[main edb839b6999e] ACPI: scan: Harden acpi_device_add() against device ID overflows
+ Author: Dexuan Cui <decui@microsoft.com>
+ Date: Thu Jan 7 23:23:48 2021 -0800
+ 3 files changed, 529 insertions(+), 61 deletions(-)
+----------------------------------------
+Cherry-picking 399fecd2cfc6ca7af4e1781fc8f0e140872cac65
+[main 5e069859279d] mm/hugetlb: fix potential missing huge page size info
+ Author: Miaohe Lin <linmiaohe@huawei.com>
+ Date: Tue Jan 12 15:49:24 2021 -0800
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 399fecd2cfc6ca7af4e1781fc8f0e140872cac65
+----------------------------------------
+Cherry-picking 82355e525619257be5714ca8e422a16591b3b2cd
+Auto-merging drivers/md/dm-snap.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4773 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 82355e525619.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 82355e525619257be5714ca8e422a16591b3b2cd
+No conflicted files found but cherry-pick failed, attempting to skip commit 82355e525619257be5714ca8e422a16591b3b2cd
+----------------------------------------
+Cherry-picking 2a5090e8c03dbf97468e41d6154275495e173c8d
+Auto-merging drivers/net/usb/r8152.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4773 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 2a5090e8c03d.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 2a5090e8c03dbf97468e41d6154275495e173c8d
+No conflicted files found but cherry-pick failed, attempting to skip commit 2a5090e8c03dbf97468e41d6154275495e173c8d
+----------------------------------------
+Cherry-picking edef9d8bcfb3d1ab4dd0d9f8f075a25357a13b43
+[main 9b00bee9414a] ext4: fix bug for rename with RENAME_WHITEOUT
+ Author: yangerkun <yangerkun@huawei.com>
+ Date: Tue Jan 5 14:28:57 2021 +0800
+ 1 file changed, 9 insertions(+), 7 deletions(-)
+Successfully cherry-picked edef9d8bcfb3d1ab4dd0d9f8f075a25357a13b43
+----------------------------------------
+Cherry-picking 4c8e76fc73cb20db8b2bf26d3ecb26d51f5287c9
+Auto-merging arch/arc/Makefile
+CONFLICT (content): Merge conflict in arch/arc/Makefile
+error: could not apply 4c8e76fc73cb... ARC: build: remove non-existing bootpImage from KBUILD_IMAGE
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 4c8e76fc73cb20db8b2bf26d3ecb26d51f5287c9
+Auto-resolving conflicts by accepting incoming changes...
