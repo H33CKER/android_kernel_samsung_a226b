@@ -67373,3 +67373,152 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of e95dc5e919e4733fd4565789eea5daea021bcca2
 Auto-resolving conflicts by accepting incoming changes...
+[main a971d5c15b9a] Revert "niu: fix missing checks of niu_pci_eeprom_read"
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Mon May 3 13:56:49 2021 +0200
+ 2 files changed, 27 insertions(+), 25 deletions(-)
+----------------------------------------
+Cherry-picking d490681f846772b4333f5ed0cc0147876c1a95e2
+[main d760de002e2e] ethernet: sun: niu: fix missing checks of niu_pci_eeprom_read()
+ Author: Du Cheng <ducheng2@gmail.com>
+ Date: Mon May 3 13:56:50 2021 +0200
+ 1 file changed, 24 insertions(+), 10 deletions(-)
+Successfully cherry-picked d490681f846772b4333f5ed0cc0147876c1a95e2
+----------------------------------------
+Cherry-picking 49934796873d0070b67ca948f6ff4d8fe0ed1d7d
+[main d2d6b6d5f7bd] net: stmicro: handle clk_prepare() failure during init
+ Author: Anirudh Rayabharam <mail@anirudhrb.com>
+ Date: Mon May 3 13:56:48 2021 +0200
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+Successfully cherry-picked 49934796873d0070b67ca948f6ff4d8fe0ed1d7d
+----------------------------------------
+Cherry-picking 6ed41d48449bc47f4d16a39ded934c2b95fbefea
+[main db47603b11cc] net: rtlwifi: properly check for alloc_workqueue() failure
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Mon May 3 13:56:40 2021 +0200
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+Successfully cherry-picked 6ed41d48449bc47f4d16a39ded934c2b95fbefea
+----------------------------------------
+Cherry-picking 8bffe230048f4bd55fbc6f9e741c73daf5ee8d06
+[main a8b8fa0ee961] leds: lp5523: check return value of lp5xx_read and jump to cleanup code
+ Author: Phillip Potter <phil@philpotter.co.uk>
+ Date: Mon May 3 13:56:36 2021 +0200
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Successfully cherry-picked 8bffe230048f4bd55fbc6f9e741c73daf5ee8d06
+----------------------------------------
+Cherry-picking 734e2d3acd33ae12cfbc66ad3b1499cf5ecd160f
+[main 1a8ab98eda07] qlcnic: Add null check after calling netdev_alloc_skb
+ Author: Tom Seewald <tseewald@gmail.com>
+ Date: Mon May 3 13:56:52 2021 +0200
+ 1 file changed, 3 insertions(+)
+Successfully cherry-picked 734e2d3acd33ae12cfbc66ad3b1499cf5ecd160f
+----------------------------------------
+Cherry-picking b6e4e0a83b78bc98446e2041efc50ddb81e44cb2
+[main 044d6173fa59] video: hgafb: fix potential NULL pointer dereference
+ Author: Igor Matheus Andrade Torrente <igormtorrente@gmail.com>
+ Date: Mon May 3 13:57:06 2021 +0200
+ 1 file changed, 13 insertions(+), 8 deletions(-)
+Successfully cherry-picked b6e4e0a83b78bc98446e2041efc50ddb81e44cb2
+----------------------------------------
+Cherry-picking 19a58d940385f2cd7bbb59789f7d4e32ad6af4dc
+[main 4c631110fd28] vgacon: Record video mode changes with VT_RESIZEX
+ Author: Maciej W. Rozycki <macro@orcam.me.uk>
+ Date: Thu May 13 11:51:41 2021 +0200
+ 1 file changed, 11 insertions(+), 3 deletions(-)
+Successfully cherry-picked 19a58d940385f2cd7bbb59789f7d4e32ad6af4dc
+----------------------------------------
+Cherry-picking 0f7412c1319aaea2ee80efcce2ae60a9fcc49d49
+[main 79f53ab70026] vt: Fix character height handling with VT_RESIZEX
+ Author: Maciej W. Rozycki <macro@orcam.me.uk>
+ Date: Thu May 13 11:51:50 2021 +0200
+ 2 files changed, 25 insertions(+), 25 deletions(-)
+Successfully cherry-picked 0f7412c1319aaea2ee80efcce2ae60a9fcc49d49
+----------------------------------------
+Cherry-picking 63913d1d8106171918989ffdb2a11308f795fdc9
+Auto-merging drivers/tty/vt/vt.c
+[main b62b570e5467] tty: vt: always invoke vc->vc_sw->con_resize callback
+ Author: Tetsuo Handa <penguin-kernel@I-love.SAKURA.ne.jp>
+ Date: Sat May 15 03:00:37 2021 +0000
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 63913d1d8106171918989ffdb2a11308f795fdc9
+----------------------------------------
+Cherry-picking ed60687f1fb46c988d8efdd1b350c1a1a51332d3
+[main d1acc558dd99] video: hgafb: correctly handle card detect failure during probe
+ Author: Anirudh Rayabharam <mail@anirudhrb.com>
+ Date: Mon May 17 00:57:14 2021 +0530
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked ed60687f1fb46c988d8efdd1b350c1a1a51332d3
+----------------------------------------
+Cherry-picking 4555cee33f7d75c1ee69902c872c9d1e9568ebd5
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 5113 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 4555cee33f7d.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 4555cee33f7d75c1ee69902c872c9d1e9568ebd5
+No conflicted files found but cherry-pick failed, attempting to skip commit 4555cee33f7d75c1ee69902c872c9d1e9568ebd5
+----------------------------------------
+Cherry-picking ad8397a84e1e425e3f8221638cee2bfa237d9b2c
+[main 1ae827221ede] Linux 4.14.234
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Wed May 26 11:47:01 2021 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked ad8397a84e1e425e3f8221638cee2bfa237d9b2c
+----------------------------------------
+Cherry-picking 2fdd1a82216234d971785efb28fc73813aa1378b
+Auto-merging mm/vmstat.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 5114 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 2fdd1a822162.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 2fdd1a82216234d971785efb28fc73813aa1378b
+No conflicted files found but cherry-pick failed, attempting to skip commit 2fdd1a82216234d971785efb28fc73813aa1378b
+----------------------------------------
+Cherry-picking 5ea96edf5d75c3d1c3fa4f7bb70a33e183d04698
+Auto-merging scripts/bloat-o-meter
+CONFLICT (content): Merge conflict in scripts/bloat-o-meter
+Auto-merging scripts/diffconfig
+CONFLICT (content): Merge conflict in scripts/diffconfig
+Auto-merging scripts/tracing/draw_functrace.py
+error: could not apply 5ea96edf5d75... tweewide: Fix most Shebang lines
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 5ea96edf5d75c3d1c3fa4f7bb70a33e183d04698
+Auto-resolving conflicts by accepting incoming changes...
