@@ -33182,3 +33182,48 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of e9e0515b9ec9a2d5efca21573a89c9f7880db3b1
 Auto-resolving conflicts by accepting incoming changes...
+[main 189028660ab0] USB: serial: ch341: add new Product ID for CH341A
+ Author: Jan-Niklas Burfeind <kernel@aiyionpri.me>
+ Date: Thu Dec 3 04:03:59 2020 +0100
+ 2 files changed, 103 insertions(+), 4 deletions(-)
+----------------------------------------
+Cherry-picking 058e0da58be02b56248b7bf2ebe6f3b32fd44bf6
+[main e1abc579de48] USB: serial: ch341: sort device-id entries
+ Author: Johan Hovold <johan@kernel.org>
+ Date: Thu Dec 3 10:11:59 2020 +0100
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Successfully cherry-picked 058e0da58be02b56248b7bf2ebe6f3b32fd44bf6
+----------------------------------------
+Cherry-picking bc435a0dfb3c81b18ed8d9d4cfab42597416750e
+[main 0ea3c9e383c3] USB: serial: option: add Fibocom NL668 variants
+ Author: Vincent Palatin <vpalatin@chromium.org>
+ Date: Fri Nov 20 10:28:28 2020 +0100
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked bc435a0dfb3c81b18ed8d9d4cfab42597416750e
+----------------------------------------
+Cherry-picking 3f517f819096b36bc49e77bd8f7aee7fd4ac943a
+[main 6d047f50174b] USB: serial: option: add support for Thales Cinterion EXS82
+ Author: Giacinto Cifelli <gciofono@gmail.com>
+ Date: Wed Nov 25 15:53:04 2020 +0100
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked 3f517f819096b36bc49e77bd8f7aee7fd4ac943a
+----------------------------------------
+Cherry-picking 490c5c712402e6d194179437da863f9c75ade63f
+[main 147327277a26] USB: serial: option: fix Quectel BG96 matching
+ Author: Bjørn Mork <bjorn@mork.no>
+ Date: Tue Dec 1 11:03:18 2020 +0100
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+Successfully cherry-picked 490c5c712402e6d194179437da863f9c75ade63f
+----------------------------------------
+Cherry-picking 882e038d2cd276163a8fc7bbeffda59ae0924471
+Auto-merging drivers/tty/tty_jobctrl.c
+CONFLICT (content): Merge conflict in drivers/tty/tty_jobctrl.c
+error: could not apply 882e038d2cd2... tty: Fix ->pgrp locking in tiocspgrp()
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 882e038d2cd276163a8fc7bbeffda59ae0924471
+Auto-resolving conflicts by accepting incoming changes...
