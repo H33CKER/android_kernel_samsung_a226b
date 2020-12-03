@@ -11570,3 +11570,37 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 84f747ade2fbbe5ab5cc8ff6a0cbad434cb2c553
 Auto-resolving conflicts by accepting incoming changes...
+Auto packing the repository in background for optimum performance.
+See "git help gc" for manual housekeeping.
+[main 06d7b6b5998e] usb: gadget: f_fs: Use local copy of descriptors for userspace copy
+ Author: Vamsi Krishna Samavedam <vskrishn@codeaurora.org>
+ Date: Mon Nov 30 12:34:53 2020 -0800
+ 2 files changed, 181 insertions(+), 149 deletions(-)
+----------------------------------------
+Cherry-picking a345fe6935b1d47afd8d238578c156d349942588
+[main 05ee5cebf940] USB: serial: kl5kusb105: fix memleak on open
+ Author: Johan Hovold <johan@kernel.org>
+ Date: Fri Dec 4 09:55:19 2020 +0100
+ 1 file changed, 4 insertions(+), 6 deletions(-)
+Successfully cherry-picked a345fe6935b1d47afd8d238578c156d349942588
+----------------------------------------
+Cherry-picking e9e0515b9ec9a2d5efca21573a89c9f7880db3b1
+Auto-merging drivers/usb/serial/ch341.c
+[main 397299920379] USB: serial: ch341: add new Product ID for CH341A
+ Author: Jan-Niklas Burfeind <kernel@aiyionpri.me>
+ Date: Thu Dec 3 04:03:59 2020 +0100
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked e9e0515b9ec9a2d5efca21573a89c9f7880db3b1
+----------------------------------------
+Cherry-picking 058e0da58be02b56248b7bf2ebe6f3b32fd44bf6
+Auto-merging drivers/usb/serial/ch341.c
+CONFLICT (content): Merge conflict in drivers/usb/serial/ch341.c
+error: could not apply 058e0da58be0... USB: serial: ch341: sort device-id entries
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 058e0da58be02b56248b7bf2ebe6f3b32fd44bf6
+Auto-resolving conflicts by accepting incoming changes...
