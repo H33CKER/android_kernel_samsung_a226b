@@ -13770,3 +13770,20 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 3f8c7a235a524343f2705196bba6c723b3a1fd98
 Auto-resolving conflicts by accepting incoming changes...
+[main cf8ae4532a16] ALSA: pcm: Clear the full allocated memory at hw_params
+ Author: Takashi Iwai <tiwai@suse.de>
+ Date: Fri Dec 18 15:56:25 2020 +0100
+ 2 files changed, 149 insertions(+), 2 deletions(-)
+----------------------------------------
+Cherry-picking 8147d77ad9baf80234c47bcaa033406f0e71c92f
+Auto-merging drivers/md/dm-verity-target.c
+CONFLICT (content): Merge conflict in drivers/md/dm-verity-target.c
+error: could not apply 8147d77ad9ba... dm verity: skip verity work if I/O error when system is shutting down
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 8147d77ad9baf80234c47bcaa033406f0e71c92f
+Auto-resolving conflicts by accepting incoming changes...

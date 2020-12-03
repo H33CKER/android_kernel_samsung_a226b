@@ -16,7 +16,6 @@
 
 #include "dm-verity.h"
 #include "dm-verity-fec.h"
-#include "dm-verity-debug.h"
 
 #include <linux/module.h>
 #include <linux/reboot.h>
@@ -33,7 +32,6 @@
 #define DM_VERITY_OPT_LOGGING		"ignore_corruption"
 #define DM_VERITY_OPT_RESTART		"restart_on_corruption"
 #define DM_VERITY_OPT_IGN_ZEROES	"ignore_zero_blocks"
-#define DM_VERITY_OPT_AT_MOST_ONCE	"check_at_most_once"
 
 #define DM_VERITY_OPTS_MAX		(2 + DM_VERITY_OPTS_FEC)
 
@@ -251,7 +249,6 @@ static void verity_hash_at_level(struct dm_verity *v, sector_t block, int level,
 /*
  * Handle verification errors.
  */
-#ifndef SEC_HEX_DEBUG
 static int verity_handle_err(struct dm_verity *v, enum verity_block_type type,
 			     unsigned long long block)
 {
@@ -294,16 +291,11 @@ out:
 	if (v->mode == DM_VERITY_MODE_LOGGING)
 		return 0;
 
-	if (v->mode == DM_VERITY_MODE_RESTART) {
-#ifdef CONFIG_DM_VERITY_AVB
-		dm_verity_avb_error_handler();
-#endif
+	if (v->mode == DM_VERITY_MODE_RESTART)
 		kernel_restart("dm-verity device corrupted");
-	}
 
 	return 1;
 }
-#endif
 
 /*
  * Verify hash of a metadata block pertaining to the specified data block
@@ -352,23 +344,11 @@ static int verity_verify_level(struct dm_verity *v, struct dm_verity_io *io,
 			aux->hash_verified = 1;
 		else if (verity_fec_decode(v, io,
 					   DM_VERITY_BLOCK_TYPE_METADATA,
-					   hash_block, data, NULL) == 0) {
-#ifdef SEC_HEX_DEBUG
-			add_fec_correct_blks();
-			add_fc_blks_entry(hash_block,v->data_dev->name);
-#endif
+					   hash_block, data, NULL) == 0)
 			aux->hash_verified = 1;
-		}
-#ifdef SEC_HEX_DEBUG
-		else if (verity_handle_err_hex_debug(v,
-					DM_VERITY_BLOCK_TYPE_METADATA,
-					hash_block, io, NULL)) {
-			add_corrupted_blks();
-#else
 		else if (verity_handle_err(v,
 					   DM_VERITY_BLOCK_TYPE_METADATA,
 					   hash_block)) {
-#endif
 			r = -EIO;
 			goto release_ret_r;
 		}
@@ -510,18 +490,6 @@ static int verity_bv_zero(struct dm_verity *v, struct dm_verity_io *io,
 }
 
 /*
- * Moves the bio iter one data block forward.
- */
-static inline void verity_bv_skip_block(struct dm_verity *v,
-					struct dm_verity_io *io,
-					struct bvec_iter *iter)
-{
-	struct bio *bio = dm_bio_from_per_bio_data(io, v->ti->per_io_data_size);
-
-	bio_advance_iter(bio, iter, 1 << v->data_dev_block_bits);
-}
-
-/*
  * Verify one "dm_verity_io" structure.
  */
 static int verity_verify_io(struct dm_verity_io *io)
@@ -531,23 +499,12 @@ static int verity_verify_io(struct dm_verity_io *io)
 	struct bvec_iter start;
 	unsigned b;
 	struct verity_result res;
-	struct bio *bio = dm_bio_from_per_bio_data(io, v->ti->per_io_data_size);
 
 	for (b = 0; b < io->n_blocks; b++) {
 		int r;
-		sector_t cur_block = io->block + b;
 		struct ahash_request *req = verity_io_hash_req(v, io);
 
-		if (v->validated_blocks &&
-		    likely(test_bit(cur_block, v->validated_blocks))) {
-			verity_bv_skip_block(v, io, &io->iter);
-#ifdef SEC_HEX_DEBUG
-			add_skipped_blks();
-#endif
-			continue;
-		}
-
-		r = verity_hash_for_block(v, io, cur_block,
+		r = verity_hash_for_block(v, io, io->block + b,
 					  verity_io_want_digest(v, io),
 					  &is_zero);
 		if (unlikely(r < 0))
@@ -581,37 +538,14 @@ static int verity_verify_io(struct dm_verity_io *io)
 			return r;
 
 		if (likely(memcmp(verity_io_real_digest(v, io),
-				  verity_io_want_digest(v, io), v->digest_size) == 0)) {
-			if (v->validated_blocks)
-				set_bit(cur_block, v->validated_blocks);
+				  verity_io_want_digest(v, io), v->digest_size) == 0))
 			continue;
-		}
 		else if (verity_fec_decode(v, io, DM_VERITY_BLOCK_TYPE_DATA,
-					   cur_block, NULL, &start) == 0) {
-#ifdef SEC_HEX_DEBUG
-			add_fec_correct_blks();
-			add_fc_blks_entry(cur_block,v->data_dev->name);
-#endif
+					   io->block + b, NULL, &start) == 0)
 			continue;
-		}
-		else {
-			if (bio->bi_status) {
-				/*
-				 * Error correction failed; Just return error
-				 */
-				return -EIO;
-			}
-#ifdef SEC_HEX_DEBUG
-			if (verity_handle_err_hex_debug(v, DM_VERITY_BLOCK_TYPE_DATA,
-					cur_block, io, &start)) {
-				add_corrupted_blks();
-#else
-			if (verity_handle_err(v, DM_VERITY_BLOCK_TYPE_DATA,
-					cur_block)) {
-#endif
-				return -EIO;
-			}
-		}
+		else if (verity_handle_err(v, DM_VERITY_BLOCK_TYPE_DATA,
+					   io->block + b))
+			return -EIO;
 	}
 
 	return 0;
@@ -652,11 +586,13 @@ static void verity_work(struct work_struct *w)
 static void verity_end_io(struct bio *bio)
 {
 	struct dm_verity_io *io = bio->bi_private;
+
 	if (bio->bi_status &&
 	    (!verity_fec_is_enabled(io->v) || verity_is_system_shutting_down())) {
 		verity_finish_io(io, bio->bi_status);
 		return;
 	}
+
 	INIT_WORK(&io->work, verity_work);
 	queue_work(io->v->verify_wq, &io->work);
 }
@@ -703,21 +639,7 @@ no_prefetch_cluster:
 
 static void verity_submit_prefetch(struct dm_verity *v, struct dm_verity_io *io)
 {
-	sector_t block = io->block;
-	unsigned int n_blocks = io->n_blocks;
 	struct dm_verity_prefetch_work *pw;
-
-	if (v->validated_blocks) {
-		while (n_blocks && test_bit(block, v->validated_blocks)) {
-			block++;
-			n_blocks--;
-		}
-		while (n_blocks && test_bit(block + n_blocks - 1,
-					v->validated_blocks))
-			n_blocks--;
-		if (!n_blocks)
-			return;
-	}
 
 	pw = kmalloc(sizeof(struct dm_verity_prefetch_work),
 		GFP_NOIO | __GFP_NORETRY | __GFP_NOMEMALLOC | __GFP_NOWARN);
@@ -727,8 +649,8 @@ static void verity_submit_prefetch(struct dm_verity *v, struct dm_verity_io *io)
 
 	INIT_WORK(&pw->work, verity_prefetch_io);
 	pw->v = v;
-	pw->block = block;
-	pw->n_blocks = n_blocks;
+	pw->block = io->block;
+	pw->n_blocks = io->n_blocks;
 	queue_work(v->verify_wq, &pw->work);
 }
 
@@ -736,7 +658,7 @@ static void verity_submit_prefetch(struct dm_verity *v, struct dm_verity_io *io)
  * Bio map function. It allocates dm_verity_io structure and bio vector and
  * fills them. Then it issues prefetches and the I/O.
  */
-int verity_map(struct dm_target *ti, struct bio *bio)
+static int verity_map(struct dm_target *ti, struct bio *bio)
 {
 	struct dm_verity *v = ti->private;
 	struct dm_verity_io *io;
@@ -765,15 +687,6 @@ int verity_map(struct dm_target *ti, struct bio *bio)
 	io->block = bio->bi_iter.bi_sector >> (v->data_dev_block_bits - SECTOR_SHIFT);
 	io->n_blocks = bio->bi_iter.bi_size >> v->data_dev_block_bits;
 
-#ifdef SEC_HEX_DEBUG
-	add_total_blks(io->n_blocks);
-
-	if (get_total_blks() - get_prev_total_blks() > 0x4000) {
-		set_prev_total_blks(get_total_blks());
-		print_blks_cnt(v->data_dev->name);
-	}
-#endif
-
 	bio->bi_end_io = verity_end_io;
 	bio->bi_private = io;
 	io->iter = bio->bi_iter;
@@ -790,7 +703,7 @@ int verity_map(struct dm_target *ti, struct bio *bio)
 /*
  * Status: V (valid) or C (corruption found)
  */
-void verity_status(struct dm_target *ti, status_type_t type,
+static void verity_status(struct dm_target *ti, status_type_t type,
 			  unsigned status_flags, char *result, unsigned maxlen)
 {
 	struct dm_verity *v = ti->private;
@@ -827,8 +740,6 @@ void verity_status(struct dm_target *ti, status_type_t type,
 			args += DM_VERITY_OPTS_FEC;
 		if (v->zero_digest)
 			args++;
-		if (v->validated_blocks)
-			args++;
 		if (!args)
 			return;
 		DMEMIT(" %u", args);
@@ -847,14 +758,12 @@ void verity_status(struct dm_target *ti, status_type_t type,
 		}
 		if (v->zero_digest)
 			DMEMIT(" " DM_VERITY_OPT_IGN_ZEROES);
-		if (v->validated_blocks)
-			DMEMIT(" " DM_VERITY_OPT_AT_MOST_ONCE);
 		sz = verity_fec_status_table(v, sz, result, maxlen);
 		break;
 	}
 }
 
-int verity_prepare_ioctl(struct dm_target *ti,
+static int verity_prepare_ioctl(struct dm_target *ti,
 		struct block_device **bdev, fmode_t *mode)
 {
 	struct dm_verity *v = ti->private;
@@ -867,7 +776,7 @@ int verity_prepare_ioctl(struct dm_target *ti,
 	return 0;
 }
 
-int verity_iterate_devices(struct dm_target *ti,
+static int verity_iterate_devices(struct dm_target *ti,
 				  iterate_devices_callout_fn fn, void *data)
 {
 	struct dm_verity *v = ti->private;
@@ -875,7 +784,7 @@ int verity_iterate_devices(struct dm_target *ti,
 	return fn(ti, v->data_dev, v->data_start, ti->len, data);
 }
 
-void verity_io_hints(struct dm_target *ti, struct queue_limits *limits)
+static void verity_io_hints(struct dm_target *ti, struct queue_limits *limits)
 {
 	struct dm_verity *v = ti->private;
 
@@ -888,7 +797,7 @@ void verity_io_hints(struct dm_target *ti, struct queue_limits *limits)
 	blk_limits_io_min(limits, limits->logical_block_size);
 }
 
-void verity_dtr(struct dm_target *ti)
+static void verity_dtr(struct dm_target *ti)
 {
 	struct dm_verity *v = ti->private;
 
@@ -898,7 +807,6 @@ void verity_dtr(struct dm_target *ti)
 	if (v->bufio)
 		dm_bufio_client_destroy(v->bufio);
 
-	kvfree(v->validated_blocks);
 	kfree(v->salt);
 	kfree(v->root_digest);
 	kfree(v->zero_digest);
@@ -917,26 +825,6 @@ void verity_dtr(struct dm_target *ti)
 	verity_fec_dtr(v);
 
 	kfree(v);
-}
-
-static int verity_alloc_most_once(struct dm_verity *v)
-{
-	struct dm_target *ti = v->ti;
-
-	/* the bitset can only handle INT_MAX blocks */
-	if (v->data_blocks > INT_MAX) {
-		ti->error = "device too large to use check_at_most_once";
-		return -E2BIG;
-	}
-
-	v->validated_blocks = kvzalloc(BITS_TO_LONGS(v->data_blocks) *
-				       sizeof(unsigned long), GFP_KERNEL);
-	if (!v->validated_blocks) {
-		ti->error = "failed to allocate bitset for check_at_most_once";
-		return -ENOMEM;
-	}
-
-	return 0;
 }
 
 static int verity_alloc_zero_digest(struct dm_verity *v)
@@ -1008,12 +896,6 @@ static int verity_parse_opt_args(struct dm_arg_set *as, struct dm_verity *v)
 			}
 			continue;
 
-		} else if (!strcasecmp(arg_name, DM_VERITY_OPT_AT_MOST_ONCE)) {
-			r = verity_alloc_most_once(v);
-			if (r)
-				return r;
-			continue;
-
 		} else if (verity_is_fec_opt_arg(arg_name)) {
 			r = verity_fec_parse_opt_args(as, v, &argc, arg_name);
 			if (r)
@@ -1042,7 +924,7 @@ static int verity_parse_opt_args(struct dm_arg_set *as, struct dm_verity *v)
  *	<digest>
  *	<salt>		Hex string or "-" if no salt.
  */
-int verity_ctr(struct dm_target *ti, unsigned argc, char **argv)
+static int verity_ctr(struct dm_target *ti, unsigned argc, char **argv)
 {
 	struct dm_verity *v;
 	struct dm_arg_set as;
@@ -1155,15 +1037,6 @@ int verity_ctr(struct dm_target *ti, unsigned argc, char **argv)
 		v->tfm = NULL;
 		goto bad;
 	}
-
-	/*
-	 * dm-verity performance can vary greatly depending on which hash
-	 * algorithm implementation is used.  Help people debug performance
-	 * problems by logging the ->cra_driver_name.
-	 */
-	DMINFO("%s using implementation \"%s\"", v->alg_name,
-	       crypto_hash_alg_common(v->tfm)->base.cra_driver_name);
-
 	v->digest_size = crypto_ahash_digestsize(v->tfm);
 	if ((1 << v->hash_dev_block_bits) < v->digest_size * 2) {
 		ti->error = "Digest size too big";
@@ -1214,18 +1087,6 @@ int verity_ctr(struct dm_target *ti, unsigned argc, char **argv)
 		if (r < 0)
 			goto bad;
 	}
-
-#ifdef SEC_HEX_DEBUG
-	get_b_info(v->data_dev->name);
-#endif
-
-#ifdef CONFIG_DM_ANDROID_VERITY_AT_MOST_ONCE_DEFAULT_ENABLED
-	if (!v->validated_blocks) {
-		r = verity_alloc_most_once(v);
-		if (r)
-			goto bad;
-	}
-#endif
 
 	v->hash_per_block_bits =
 		__fls((1 << v->hash_dev_block_bits) / v->digest_size);
@@ -1292,18 +1153,9 @@ int verity_ctr(struct dm_target *ti, unsigned argc, char **argv)
 	ti->per_io_data_size = roundup(ti->per_io_data_size,
 				       __alignof__(struct dm_verity_io));
 
-#ifdef SEC_HEX_DEBUG
-	if (!verity_fec_is_enabled(v))
-		add_fec_off_cnt(v->data_dev->name);
-#endif
-
 	return 0;
 
 bad:
-
-#ifdef SEC_HEX_DEBUG
-	add_fec_off_cnt("bad");
-#endif
 	verity_dtr(ti);
 
 	return r;
@@ -1311,7 +1163,7 @@ bad:
 
 static struct target_type verity_target = {
 	.name		= "verity",
-	.version	= {1, 4, 0},
+	.version	= {1, 3, 0},
 	.module		= THIS_MODULE,
 	.ctr		= verity_ctr,
 	.dtr		= verity_dtr,
