@@ -16234,3 +16234,34 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 2afb9a5a42ab910589d3a3da96d365cb7085ff8b
 Auto-resolving conflicts by accepting incoming changes...
+[main 8e9d9c9b10da] usb: gadget: u_ether: Fix MTU size mismatch with RX packet size
+ Author: Manish Narani <manish.narani@xilinx.com>
+ Date: Tue Nov 17 12:43:35 2020 +0530
+ 2 files changed, 283 insertions(+), 795 deletions(-)
+----------------------------------------
+Cherry-picking 3017f5e12bbfe19add7dc921caddc2a1c0066814
+[main 49445d666335] kvm: check tlbs_dirty directly
+ Author: Lai Jiangshan <laijs@linux.alibaba.com>
+ Date: Thu Dec 17 23:41:18 2020 +0800
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+Successfully cherry-picked 3017f5e12bbfe19add7dc921caddc2a1c0066814
+----------------------------------------
+Cherry-picking 3242aa3a635c0958671ee1e4b0958dcc7c4e5c79
+[main 198af46dfd77] Linux 4.14.222
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Tue Feb 23 14:00:34 2021 +0100
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 3242aa3a635c0958671ee1e4b0958dcc7c4e5c79
+----------------------------------------
+Cherry-picking 00022873fdc1a304fd89016d227e3781f413dfbd
+Auto-merging drivers/hid/hid-core.c
+CONFLICT (content): Merge conflict in drivers/hid/hid-core.c
+error: could not apply 00022873fdc1... HID: make arrays usage and value to be the same
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 00022873fdc1a304fd89016d227e3781f413dfbd
+Auto-resolving conflicts by accepting incoming changes...
