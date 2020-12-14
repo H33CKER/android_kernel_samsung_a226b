@@ -39220,3 +39220,23 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 92d4ced9881361aefa2f7bc58dab19aa4d28ddf8
 Auto-resolving conflicts by accepting incoming changes...
+[main db03a32e16c5] xen/xenbus: Allow watches discard events before queueing
+ Author: SeongJae Park <sjpark@amazon.de>
+ Date: Mon Dec 14 10:02:45 2020 +0100
+ 3 files changed, 103 insertions(+), 14 deletions(-)
+----------------------------------------
+Cherry-picking b4f08f32301ce32f0b8416dc8ccabca4ba14439e
+Auto-merging drivers/net/xen-netback/xenbus.c
+CONFLICT (content): Merge conflict in drivers/net/xen-netback/xenbus.c
+Auto-merging drivers/xen/xen-pciback/xenbus.c
+Auto-merging drivers/xen/xenbus/xenbus_probe.c
+CONFLICT (content): Merge conflict in drivers/xen/xenbus/xenbus_probe.c
+error: could not apply b4f08f32301c... xen/xenbus: Add 'will_handle' callback support in xenbus_watch_path()
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of b4f08f32301ce32f0b8416dc8ccabca4ba14439e
+Auto-resolving conflicts by accepting incoming changes...
