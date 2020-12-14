@@ -84709,3 +84709,181 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of a7e5343678758a55e4942a44c4260cf509ee5874
 Auto-resolving conflicts by accepting incoming changes...
+[main e53e279f495a] PCI/MSI: Enable and mask MSI-X early
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Thu Jul 29 23:51:40 2021 +0200
+ 2 files changed, 46 insertions(+), 66 deletions(-)
+----------------------------------------
+Cherry-picking a4e854548a5bfcbacbec69561b775cb392ecfa39
+[main 2f9f0b35471a] PCI/MSI: Do not set invalid bits in MSI mask
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Thu Jul 29 23:51:44 2021 +0200
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Successfully cherry-picked a4e854548a5bfcbacbec69561b775cb392ecfa39
+----------------------------------------
+Cherry-picking aacbb0d7d13c510cd72e31e4e36159ae59707ebd
+[main e3387a414b09] PCI/MSI: Correct misleading comments
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Thu Jul 29 23:51:45 2021 +0200
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+Successfully cherry-picked aacbb0d7d13c510cd72e31e4e36159ae59707ebd
+----------------------------------------
+Cherry-picking e45820c3d25fb02521a9618b0d31d98b655f0db1
+[main 64a5116cb626] PCI/MSI: Use msi_mask_irq() in pci_msi_shutdown()
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Thu Jul 29 23:51:46 2021 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked e45820c3d25fb02521a9618b0d31d98b655f0db1
+----------------------------------------
+Cherry-picking dd3df556f9cbb60e968b74dd6d33196ff9e2092a
+Auto-merging include/linux/device.h
+[main 0626f5f7154d] PCI/MSI: Protect msi_desc::masked for multi-MSI
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Thu Jul 29 23:51:47 2021 +0200
+ 2 files changed, 11 insertions(+), 9 deletions(-)
+Successfully cherry-picked dd3df556f9cbb60e968b74dd6d33196ff9e2092a
+----------------------------------------
+Cherry-picking e1d5e8a561baaafed6e35d72a6ad53d248580d6c
+[main ba8ef293eba2] PCI/MSI: Mask all unused MSI-X entries
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Thu Jul 29 23:51:41 2021 +0200
+ 1 file changed, 28 insertions(+), 12 deletions(-)
+Successfully cherry-picked e1d5e8a561baaafed6e35d72a6ad53d248580d6c
+----------------------------------------
+Cherry-picking e206635e2456997a9ee5ffb0756c417925ee0574
+[main f234fb5b382c] PCI/MSI: Enforce that MSI-X table entry is masked for update
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Thu Jul 29 23:51:42 2021 +0200
+ 1 file changed, 15 insertions(+)
+Successfully cherry-picked e206635e2456997a9ee5ffb0756c417925ee0574
+----------------------------------------
+Cherry-picking 603c94b16a2efdc8cada73b5bd3c47ae35836532
+[main e9779047eeea] PCI/MSI: Enforce MSI[X] entry updates to be visible
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Thu Jul 29 23:51:43 2021 +0200
+ 1 file changed, 5 insertions(+)
+Successfully cherry-picked 603c94b16a2efdc8cada73b5bd3c47ae35836532
+----------------------------------------
+Cherry-picking 7b77a6cec99c9d6234c100554f4929cfb1723464
+Auto-merging include/asm-generic/vmlinux.lds.h
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 5322 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 7b77a6cec99c.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 7b77a6cec99c9d6234c100554f4929cfb1723464
+No conflicted files found but cherry-pick failed, attempting to skip commit 7b77a6cec99c9d6234c100554f4929cfb1723464
+----------------------------------------
+Cherry-picking 60986d1097ade1eaea48f6ad87b3a01857bf9014
+Auto-merging net/mac80211/tx.c
+[main 17d518774ae6] mac80211: drop data frames without key on encrypted links
+ Author: Johannes Berg <johannes.berg@intel.com>
+ Date: Thu Mar 26 15:09:42 2020 +0200
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 60986d1097ade1eaea48f6ad87b3a01857bf9014
+----------------------------------------
+Cherry-picking 6ed198381ed2496fbc82214108e56a441d3b0213
+Auto-merging arch/x86/kvm/svm.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 5323 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 6ed198381ed2.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 6ed198381ed2496fbc82214108e56a441d3b0213
+No conflicted files found but cherry-pick failed, attempting to skip commit 6ed198381ed2496fbc82214108e56a441d3b0213
+----------------------------------------
+Cherry-picking 26af47bdc45e454877f15fa7658a167bb9799681
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 5323 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 26af47bdc45e.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 26af47bdc45e454877f15fa7658a167bb9799681
+No conflicted files found but cherry-pick failed, attempting to skip commit 26af47bdc45e454877f15fa7658a167bb9799681
+----------------------------------------
+Cherry-picking af3da506c67bbbf6f08f1c2bd320d7e3e5de96ef
+Auto-merging arch/x86/kernel/fpu/xstate.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 5323 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit af3da506c67b.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of af3da506c67bbbf6f08f1c2bd320d7e3e5de96ef
+No conflicted files found but cherry-pick failed, attempting to skip commit af3da506c67bbbf6f08f1c2bd320d7e3e5de96ef
+----------------------------------------
+Cherry-picking 2cbb22fd4b4fb4d0822d185bf5bd6d027107bfda
+Auto-merging drivers/net/wireless/ath/key.c
+CONFLICT (content): Merge conflict in drivers/net/wireless/ath/key.c
+error: could not apply 2cbb22fd4b4f... ath: Use safer key clearing with key cache entries
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 2cbb22fd4b4fb4d0822d185bf5bd6d027107bfda
+Auto-resolving conflicts by accepting incoming changes...
