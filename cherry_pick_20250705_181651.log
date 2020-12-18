@@ -13628,3 +13628,145 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of aa93e9471afe103812badfd10be6509554312e72
 Auto-resolving conflicts by accepting incoming changes...
+[main ba71ffd5f39a] mm: memcontrol: fix excessive complexity in memory.stat reporting
+ Author: Johannes Weiner <hannes@cmpxchg.org>
+ Date: Tue Dec 29 02:38:22 2020 +0000
+ 3 files changed, 1254 insertions(+), 121 deletions(-)
+----------------------------------------
+Cherry-picking 6e1278ea35099542b2e5b7c6adb3a0cdfb590d47
+[main 53d25591c06d] vfio/pci: Move dummy_resources_list init in vfio_pci_probe()
+ Author: Eric Auger <eric.auger@redhat.com>
+ Date: Fri Nov 13 18:52:02 2020 +0100
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+Successfully cherry-picked 6e1278ea35099542b2e5b7c6adb3a0cdfb590d47
+----------------------------------------
+Cherry-picking 80a49c5756911d0c3ca3177225ae917697de4326
+[main 2e9e782c5203] s390/dasd: fix hanging device offline processing
+ Author: Stefan Haberland <sth@linux.ibm.com>
+ Date: Thu Dec 17 16:59:04 2020 +0100
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+Successfully cherry-picked 80a49c5756911d0c3ca3177225ae917697de4326
+----------------------------------------
+Cherry-picking 5603bcc51324476bafd4bf4112857d93b4909993
+[main a33c87361aa8] USB: serial: digi_acceleport: fix write-wakeup deadlocks
+ Author: Johan Hovold <johan@kernel.org>
+ Date: Mon Oct 26 11:43:06 2020 +0100
+ 1 file changed, 13 insertions(+), 32 deletions(-)
+Successfully cherry-picked 5603bcc51324476bafd4bf4112857d93b4909993
+----------------------------------------
+Cherry-picking 404653452c4382236f0ff57f88a2dbad668f8ed7
+[main 7e9830cbeded] powerpc/bitops: Fix possible undefined behaviour with fls() and fls64()
+ Author: Christophe Leroy <christophe.leroy@csgroup.eu>
+ Date: Thu Oct 22 14:05:46 2020 +0000
+ 1 file changed, 21 insertions(+), 2 deletions(-)
+Successfully cherry-picked 404653452c4382236f0ff57f88a2dbad668f8ed7
+----------------------------------------
+Cherry-picking b732e14e6218bd925e15c539165f037081ae5176
+[main 07b15bd37735] uapi: move constants from <linux/kernel.h> to <linux/const.h>
+ Author: Petr Vorel <petr.vorel@gmail.com>
+ Date: Mon Dec 14 19:03:21 2020 -0800
+ 8 files changed, 12 insertions(+), 14 deletions(-)
+Successfully cherry-picked b732e14e6218bd925e15c539165f037081ae5176
+----------------------------------------
+Cherry-picking 320f61926b081865181de2d7edd18f1d06c4e600
+[main 4ba449e3330e] of: fix linker-section match-table corruption
+ Author: Johan Hovold <johan@kernel.org>
+ Date: Mon Nov 23 11:23:12 2020 +0100
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 320f61926b081865181de2d7edd18f1d06c4e600
+----------------------------------------
+Cherry-picking b74d5f70523a819aac71e0eee4f4b530e69e463a
+[main 2607138d9c25] reiserfs: add check for an invalid ih_entry_count
+ Author: Rustam Kovhaev <rkovhaev@gmail.com>
+ Date: Sun Nov 1 06:09:58 2020 -0800
+ 1 file changed, 6 insertions(+)
+Successfully cherry-picked b74d5f70523a819aac71e0eee4f4b530e69e463a
+----------------------------------------
+Cherry-picking 68d8414711b4e392fba64b1dd567dedaeb10deb8
+[main 99101787745e] misc: vmw_vmci: fix kernel info-leak by initializing dbells in vmci_ctx_get_chkpt_doorbells()
+ Author: Anant Thazhemadam <anant.thazhemadam@gmail.com>
+ Date: Mon Nov 23 04:15:34 2020 +0530
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 68d8414711b4e392fba64b1dd567dedaeb10deb8
+----------------------------------------
+Cherry-picking 63cd39aa6c7b514a2914934cf940d4c86305b699
+[main 49fc09d1a6a8] media: gp8psk: initialize stats at power control logic
+ Author: Mauro Carvalho Chehab <mchehab+huawei@kernel.org>
+ Date: Fri Nov 27 07:40:21 2020 +0100
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 63cd39aa6c7b514a2914934cf940d4c86305b699
+----------------------------------------
+Cherry-picking c5eae3edc5273ac59dab70fd49114cce729f27f4
+[main b860e54e24d6] ALSA: seq: Use bool for snd_seq_queue internal flags
+ Author: Takashi Iwai <tiwai@suse.de>
+ Date: Sun Dec 6 09:34:56 2020 +0100
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Successfully cherry-picked c5eae3edc5273ac59dab70fd49114cce729f27f4
+----------------------------------------
+Cherry-picking 3ce2fd56bb342f15cc2184ec321610546bfe6f26
+[main 925ac2d4b7bb] rtc: sun6i: Fix memleak in sun6i_rtc_clk_init
+ Author: Dinghao Liu <dinghao.liu@zju.edu.cn>
+ Date: Tue Oct 20 14:12:26 2020 +0800
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+Successfully cherry-picked 3ce2fd56bb342f15cc2184ec321610546bfe6f26
+----------------------------------------
+Cherry-picking 22d29be48cef12cd97beac20bf0431a326847b02
+Auto-merging kernel/module.c
+[main d92f904dcf7a] module: set MODULE_STATE_GOING state when a module fails to load
+ Author: Miroslav Benes <mbenes@suse.cz>
+ Date: Tue Oct 27 15:03:36 2020 +0100
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 22d29be48cef12cd97beac20bf0431a326847b02
+----------------------------------------
+Cherry-picking 63b61ea7cd96652d250845d35c80b1aaa865503d
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 1752 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 63b61ea7cd96.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_181651.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 63b61ea7cd96652d250845d35c80b1aaa865503d
+No conflicted files found but cherry-pick failed, attempting to skip commit 63b61ea7cd96652d250845d35c80b1aaa865503d
+----------------------------------------
+Cherry-picking 3569349e760c7903fd6990b835f64fdc98c016a8
+[main 41f6cb426a0f] powerpc: sysdev: add missing iounmap() on error in mpic_msgr_probe()
+ Author: Qinglang Miao <miaoqinglang@huawei.com>
+ Date: Wed Oct 28 17:15:51 2020 +0800
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 3569349e760c7903fd6990b835f64fdc98c016a8
+----------------------------------------
+Cherry-picking c4c670e1ea402b5657c5c4835f6669a5d39ee534
+Auto-merging kernel/module.c
+[main 4771c04d0546] module: delay kobject uevent until after module init call
+ Author: Jessica Yu <jeyu@kernel.org>
+ Date: Fri Nov 27 10:09:39 2020 +0100
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+Successfully cherry-picked c4c670e1ea402b5657c5c4835f6669a5d39ee534
+----------------------------------------
+Cherry-picking 3f8c7a235a524343f2705196bba6c723b3a1fd98
+Auto-merging sound/core/pcm_native.c
+CONFLICT (content): Merge conflict in sound/core/pcm_native.c
+error: could not apply 3f8c7a235a52... ALSA: pcm: Clear the full allocated memory at hw_params
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 3f8c7a235a524343f2705196bba6c723b3a1fd98
+Auto-resolving conflicts by accepting incoming changes...
