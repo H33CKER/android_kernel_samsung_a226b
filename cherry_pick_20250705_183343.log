@@ -40394,3 +40394,79 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 7bf9f793455e7e22ceb04ee4d0f1920671d7e61e
 Auto-resolving conflicts by accepting incoming changes...
+[main 98f61fec4c97] CDC-NCM: remove "connected" log message
+ Author: Roland Dreier <roland@kernel.org>
+ Date: Wed Dec 23 19:21:16 2020 -0800
+ 2 files changed, 799 insertions(+), 18 deletions(-)
+----------------------------------------
+Cherry-picking 96d3717362a38c74491f1e2549b9c3080a601871
+Auto-merging drivers/net/usb/qmi_wwan.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4754 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 96d3717362a3.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 96d3717362a38c74491f1e2549b9c3080a601871
+No conflicted files found but cherry-pick failed, attempting to skip commit 96d3717362a38c74491f1e2549b9c3080a601871
+----------------------------------------
+Cherry-picking da35ba33e1261de495ff05af89e96f78d8492483
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4754 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit da35ba33e126.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of da35ba33e1261de495ff05af89e96f78d8492483
+No conflicted files found but cherry-pick failed, attempting to skip commit da35ba33e1261de495ff05af89e96f78d8492483
+----------------------------------------
+Cherry-picking 7e6953fa83a67b907a5a1fc8796b45aa2807cdeb
+Auto-merging include/net/red.h
+CONFLICT (content): Merge conflict in include/net/red.h
+Auto-merging net/sched/sch_choke.c
+CONFLICT (content): Merge conflict in net/sched/sch_choke.c
+Auto-merging net/sched/sch_gred.c
+CONFLICT (content): Merge conflict in net/sched/sch_gred.c
+Auto-merging net/sched/sch_red.c
+CONFLICT (content): Merge conflict in net/sched/sch_red.c
+Auto-merging net/sched/sch_sfq.c
+CONFLICT (content): Merge conflict in net/sched/sch_sfq.c
+error: could not apply 7e6953fa83a6... net: sched: prevent invalid Scell_log shift count
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 7e6953fa83a67b907a5a1fc8796b45aa2807cdeb
+Auto-resolving conflicts by accepting incoming changes...
