@@ -392,8 +392,6 @@ static int a2mp_getampassoc_req(struct amp_mgr *mgr, struct sk_buff *skb,
 		memset(&rsp, 0, sizeof(rsp));
 		rsp.id = req->id;
 
-		memset(&rsp, 0, sizeof(rsp));
-
 		if (tmp) {
 			rsp.status = A2MP_STATUS_COLLISION_OCCURED;
 			amp_mgr_put(tmp);
@@ -521,7 +519,6 @@ static int a2mp_createphyslink_req(struct amp_mgr *mgr, struct sk_buff *skb,
 		assoc = kmemdup(req->amp_assoc, assoc_len, GFP_KERNEL);
 		if (!assoc) {
 			amp_ctrl_put(ctrl);
-			hci_dev_put(hdev);
 			return -ENOMEM;
 		}
 

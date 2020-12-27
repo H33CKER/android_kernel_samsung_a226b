@@ -46538,3 +46538,331 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 2c7a2cf336a2fb94e6c78b9ae4331581a311d01f
 Auto-resolving conflicts by accepting incoming changes...
+[main d8ff7427e1b6] USB: Gadget Ethernet: Re-enable Jumbo frames.
+ Author: John Greb <h3x4m3r0n@gmail.com>
+ Date: Sun May 6 20:01:57 2018 +0000
+ 2 files changed, 48 insertions(+), 8 deletions(-)
+----------------------------------------
+Cherry-picking 2afb9a5a42ab910589d3a3da96d365cb7085ff8b
+[main 2cd2d8aa9a51] usb: gadget: u_ether: Fix MTU size mismatch with RX packet size
+ Author: Manish Narani <manish.narani@xilinx.com>
+ Date: Tue Nov 17 12:43:35 2020 +0530
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+Successfully cherry-picked 2afb9a5a42ab910589d3a3da96d365cb7085ff8b
+----------------------------------------
+Cherry-picking 3017f5e12bbfe19add7dc921caddc2a1c0066814
+Auto-merging virt/kvm/kvm_main.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4853 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 3017f5e12bbf.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 3017f5e12bbfe19add7dc921caddc2a1c0066814
+No conflicted files found but cherry-pick failed, attempting to skip commit 3017f5e12bbfe19add7dc921caddc2a1c0066814
+----------------------------------------
+Cherry-picking 3242aa3a635c0958671ee1e4b0958dcc7c4e5c79
+[main e916ffb3de18] Linux 4.14.222
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Tue Feb 23 14:00:34 2021 +0100
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 3242aa3a635c0958671ee1e4b0958dcc7c4e5c79
+----------------------------------------
+Cherry-picking 00022873fdc1a304fd89016d227e3781f413dfbd
+Auto-merging drivers/hid/hid-core.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4854 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 00022873fdc1.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 00022873fdc1a304fd89016d227e3781f413dfbd
+No conflicted files found but cherry-pick failed, attempting to skip commit 00022873fdc1a304fd89016d227e3781f413dfbd
+----------------------------------------
+Cherry-picking afd4a33779bd37cf8b566ef1fbbbac06366c61f6
+[main 6c3aef905aca] usb: quirks: add quirk to start video capture on ELMO L-12F document camera reliable
+ Author: Stefan Ursella <stefan.ursella@wolfvision.net>
+ Date: Wed Feb 10 15:07:11 2021 +0100
+ 1 file changed, 3 insertions(+)
+Successfully cherry-picked afd4a33779bd37cf8b566ef1fbbbac06366c61f6
+----------------------------------------
+Cherry-picking 49ee014a2070b209fd73ad96a7a36193dcdd149c
+Auto-merging fs/ntfs/inode.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4855 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 49ee014a2070.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 49ee014a2070b209fd73ad96a7a36193dcdd149c
+No conflicted files found but cherry-pick failed, attempting to skip commit 49ee014a2070b209fd73ad96a7a36193dcdd149c
+----------------------------------------
+Cherry-picking c11e6ca7a84e92b4933bd2c29ade08c18a47a430
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4855 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit c11e6ca7a84e.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of c11e6ca7a84e92b4933bd2c29ade08c18a47a430
+No conflicted files found but cherry-pick failed, attempting to skip commit c11e6ca7a84e92b4933bd2c29ade08c18a47a430
+----------------------------------------
+Cherry-picking f885d30f4b08d514203f008c8c4d0df05744c830
+Auto-merging drivers/net/usb/qmi_wwan.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4855 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit f885d30f4b08.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of f885d30f4b08d514203f008c8c4d0df05744c830
+No conflicted files found but cherry-pick failed, attempting to skip commit f885d30f4b08d514203f008c8c4d0df05744c830
+----------------------------------------
+Cherry-picking ad48c641e7c344ae7aba243d3056a22eaba71bfd
+Auto-merging fs/cifs/connect.c
+[main 1e507e53f33c] cifs: Set CIFS_MOUNT_USE_PREFIX_PATH flag on setting cifs_sb->prepath.
+ Author: Shyam Prasad N <sprasad@microsoft.com>
+ Date: Thu Feb 11 03:26:54 2021 -0800
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked ad48c641e7c344ae7aba243d3056a22eaba71bfd
+----------------------------------------
+Cherry-picking d38b972711fc965af208ab1fc85811a0a30d798d
+Auto-merging scripts/recordmcount.pl
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4856 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit d38b972711fc.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of d38b972711fc965af208ab1fc85811a0a30d798d
+No conflicted files found but cherry-pick failed, attempting to skip commit d38b972711fc965af208ab1fc85811a0a30d798d
+----------------------------------------
+Cherry-picking 4eb9d709e9f8efd9c9ce84627400f9acb245e770
+Auto-merging include/asm-generic/vmlinux.lds.h
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4856 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 4eb9d709e9f8.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 4eb9d709e9f8efd9c9ce84627400f9acb245e770
+No conflicted files found but cherry-pick failed, attempting to skip commit 4eb9d709e9f8efd9c9ce84627400f9acb245e770
+----------------------------------------
+Cherry-picking a0a4e00a41d58a856d486e8bc8b97c319a6ea4fb
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4856 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit a0a4e00a41d5.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of a0a4e00a41d58a856d486e8bc8b97c319a6ea4fb
+No conflicted files found but cherry-pick failed, attempting to skip commit a0a4e00a41d58a856d486e8bc8b97c319a6ea4fb
+----------------------------------------
+Cherry-picking 0516cf27f0eafc016455e70e23fc8f6467a0983a
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4856 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 0516cf27f0ea.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 0516cf27f0eafc016455e70e23fc8f6467a0983a
+No conflicted files found but cherry-pick failed, attempting to skip commit 0516cf27f0eafc016455e70e23fc8f6467a0983a
+----------------------------------------
+Cherry-picking f8700bb4b89593070040a11c0f9a91e7b94018ae
+Auto-merging drivers/char/random.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4856 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit f8700bb4b895.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of f8700bb4b89593070040a11c0f9a91e7b94018ae
+No conflicted files found but cherry-pick failed, attempting to skip commit f8700bb4b89593070040a11c0f9a91e7b94018ae
+----------------------------------------
+Cherry-picking 2dfbc49763bf4b1e241becc712752e9f264ed422
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4856 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 2dfbc49763bf.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 2dfbc49763bf4b1e241becc712752e9f264ed422
+No conflicted files found but cherry-pick failed, attempting to skip commit 2dfbc49763bf4b1e241becc712752e9f264ed422
+----------------------------------------
+Cherry-picking 858b98d0ac1fe8eae468e4f00784e93ae1b3be2f
+Auto-merging net/bluetooth/a2mp.c
+CONFLICT (content): Merge conflict in net/bluetooth/a2mp.c
+error: could not apply 858b98d0ac1f... Bluetooth: Fix initializing response id after clearing struct
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 858b98d0ac1fe8eae468e4f00784e93ae1b3be2f
+Auto-resolving conflicts by accepting incoming changes...
