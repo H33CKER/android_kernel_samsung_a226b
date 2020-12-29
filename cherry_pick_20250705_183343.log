@@ -39410,3 +39410,29 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 832cf724c1c92ea421df941e95bcf1c41e1e0c31
 Auto-resolving conflicts by accepting incoming changes...
+[main a65c1e619a9d] ALSA: usb-audio: simplify set_sync_ep_implicit_fb_quirk
+ Author: Alberto Aguirre <albaguirre@gmail.com>
+ Date: Wed Apr 18 09:35:34 2018 -0500
+ 2 files changed, 187 insertions(+), 110 deletions(-)
+----------------------------------------
+Cherry-picking f8181d33515448cf8e2c80b1307775b0b857f8cd
+[main 9edbf87fc144] ALSA: usb-audio: fix sync-ep altsetting sanity check
+ Author: Johan Hovold <johan@kernel.org>
+ Date: Tue Jan 14 09:39:53 2020 +0100
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked f8181d33515448cf8e2c80b1307775b0b857f8cd
+----------------------------------------
+Cherry-picking fdcda71d87acfe8f645f3ce5e9303688cad8b8f1
+Auto-merging include/linux/memcontrol.h
+CONFLICT (content): Merge conflict in include/linux/memcontrol.h
+Auto-merging mm/memcontrol.c
+CONFLICT (content): Merge conflict in mm/memcontrol.c
+error: could not apply fdcda71d87ac... mm: memcontrol: eliminate raw access to stat and event counters
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of fdcda71d87acfe8f645f3ce5e9303688cad8b8f1
+Auto-resolving conflicts by accepting incoming changes...
