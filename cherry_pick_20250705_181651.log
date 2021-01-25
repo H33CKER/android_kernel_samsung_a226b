@@ -14986,3 +14986,253 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of d5b8aff36114472104fe864cbe43d66ab130c66d
 Auto-resolving conflicts by accepting incoming changes...
+[main cd3106d4f1e1] intel_th: pci: Add Alder Lake-P support
+ Author: Alexander Shishkin <alexander.shishkin@linux.intel.com>
+ Date: Fri Jan 15 22:59:17 2021 +0300
+ 2 files changed, 1219 insertions(+)
+----------------------------------------
+Cherry-picking 83f8cb9aff0ffb8661fb620b7598ca5804bf75ab
+[main ec3404c82e88] stm class: Fix module init return on allocation failure
+ Author: Wang Hui <john.wanghui@huawei.com>
+ Date: Fri Jan 15 22:59:16 2021 +0300
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+Successfully cherry-picked 83f8cb9aff0ffb8661fb620b7598ca5804bf75ab
+----------------------------------------
+Cherry-picking 34dab9d7bf9def610ad11f92130aceb8456d3edf
+[main 773d514c4d32] ehci: fix EHCI host controller initialization sequence
+ Author: Eugene Korenevsky <ekorenevsky@astralinux.ru>
+ Date: Sun Jan 10 20:36:09 2021 +0300
+ 1 file changed, 12 insertions(+)
+Successfully cherry-picked 34dab9d7bf9def610ad11f92130aceb8456d3edf
+----------------------------------------
+Cherry-picking 7309606a10a57d48a1ea13cdcacbc3bf8e230e73
+[main 6101788c75f6] USB: ehci: fix an interrupt calltrace error
+ Author: Longfang Liu <liulongfang@huawei.com>
+ Date: Tue Jan 12 09:57:27 2021 +0800
+ 1 file changed, 3 insertions(+)
+Successfully cherry-picked 7309606a10a57d48a1ea13cdcacbc3bf8e230e73
+----------------------------------------
+Cherry-picking cbbefc94a05a16fb5b3e975efb314c4b577b4b0f
+Auto-merging drivers/usb/gadget/udc/core.c
+[main 66dd102d050b] usb: udc: core: Use lock when write to soft_connect
+ Author: Thinh Nguyen <Thinh.Nguyen@synopsys.com>
+ Date: Thu Jan 14 00:09:51 2021 -0800
+ 1 file changed, 10 insertions(+), 3 deletions(-)
+Successfully cherry-picked cbbefc94a05a16fb5b3e975efb314c4b577b4b0f
+----------------------------------------
+Cherry-picking c1670a2277ea79b17346f612a0ebccf7606c4e13
+[main ef081af1f7d9] usb: bdc: Make bdc pci driver depend on BROKEN
+ Author: Patrik Jakobsson <patrik.r.jakobsson@gmail.com>
+ Date: Mon Jan 18 21:36:15 2021 +0100
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked c1670a2277ea79b17346f612a0ebccf7606c4e13
+----------------------------------------
+Cherry-picking 235db93b742b4d008f4f154f78773222c010c9ac
+Auto-merging drivers/usb/host/xhci-ring.c
+[main c9305b8b67de] xhci: make sure TRB is fully written before giving it to the controller
+ Author: Mathias Nyman <mathias.nyman@linux.intel.com>
+ Date: Fri Jan 15 18:19:06 2021 +0200
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked 235db93b742b4d008f4f154f78773222c010c9ac
+----------------------------------------
+Cherry-picking be416319e64b36da08e891aca6f7d133ca77460c
+[main a95f77518e56] xhci: tegra: Delay for disabling LFPS detector
+ Author: JC Kuo <jckuo@nvidia.com>
+ Date: Fri Jan 15 18:19:07 2021 +0200
+ 1 file changed, 7 insertions(+)
+Successfully cherry-picked be416319e64b36da08e891aca6f7d133ca77460c
+----------------------------------------
+Cherry-picking 46854fb19f425624a3205b041205adbd34514577
+Auto-merging include/linux/compiler-gcc.h
+[main d93cfa1e2d44] compiler.h: Raise minimum version of GCC to 5.1 for arm64
+ Author: Will Deacon <will@kernel.org>
+ Date: Tue Jan 12 22:48:32 2021 +0000
+ 1 file changed, 6 insertions(+)
+Successfully cherry-picked 46854fb19f425624a3205b041205adbd34514577
+----------------------------------------
+Cherry-picking 685827c797771821733071077a1f113bf653f7a8
+[main 97d4bfb9bee1] netfilter: rpfilter: mask ecn bits before fib lookup
+ Author: Guillaume Nault <gnault@redhat.com>
+ Date: Sat Jan 16 11:44:26 2021 +0100
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 685827c797771821733071077a1f113bf653f7a8
+----------------------------------------
+Cherry-picking 4a4a58cc76987bd54543a125e23c3530d2630b41
+[main 2087203a088e] sh: dma: fix kconfig dependency for G2_DMA
+ Author: Necip Fazil Yildiran <fazilyildiran@gmail.com>
+ Date: Thu Sep 17 18:45:48 2020 +0300
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+Successfully cherry-picked 4a4a58cc76987bd54543a125e23c3530d2630b41
+----------------------------------------
+Cherry-picking 465196a0a5aafe44b5d8b7b2c0881cdbcb5d2c93
+[main 6653f305c6c7] sh_eth: Fix power down vs. is_opened flag ordering
+ Author: Geert Uytterhoeven <geert+renesas@glider.be>
+ Date: Mon Jan 18 16:08:12 2021 +0100
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked 465196a0a5aafe44b5d8b7b2c0881cdbcb5d2c93
+----------------------------------------
+Cherry-picking 11ecda3990b7254aef8504ca1a8abb4dc0b5bc57
+Auto-merging net/core/skbuff.c
+[main c32d7f789b41] skbuff: back tiny skbs with kmalloc() in __netdev_alloc_skb() too
+ Author: Alexander Lobakin <alobakin@pm.me>
+ Date: Fri Jan 15 15:04:40 2021 +0000
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+Successfully cherry-picked 11ecda3990b7254aef8504ca1a8abb4dc0b5bc57
+----------------------------------------
+Cherry-picking 3891633be734b67fb4af6305b525872a04ca8a60
+Auto-merging net/ipv4/udp.c
+[main 33dca031b0cf] udp: mask TOS bits in udp_v4_early_demux()
+ Author: Guillaume Nault <gnault@redhat.com>
+ Date: Sat Jan 16 11:44:22 2021 +0100
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 3891633be734b67fb4af6305b525872a04ca8a60
+----------------------------------------
+Cherry-picking c39f4346bc5841174cae900dfd0251abca15b33b
+Auto-merging net/ipv6/addrconf.c
+[main 0ef4eb205208] ipv6: create multicast route with RTPROT_KERNEL
+ Author: Matteo Croce <mcroce@microsoft.com>
+ Date: Fri Jan 15 19:42:08 2021 +0100
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked c39f4346bc5841174cae900dfd0251abca15b33b
+----------------------------------------
+Cherry-picking 3cd1ef583509ea4513f0fc64a3ac9381f4e95ac5
+[main 5e8c410b76f4] net_sched: avoid shift-out-of-bounds in tcindex_set_parms()
+ Author: Eric Dumazet <edumazet@google.com>
+ Date: Thu Jan 14 10:52:29 2021 -0800
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+Successfully cherry-picked 3cd1ef583509ea4513f0fc64a3ac9381f4e95ac5
+----------------------------------------
+Cherry-picking 1755faf1fe9d871bcc2a5f2e302ef8340cf54dde
+[main 4c2487d7810b] net: dsa: b53: fix an off by one in checking "vlan->vid"
+ Author: Dan Carpenter <dan.carpenter@oracle.com>
+ Date: Tue Jan 19 17:48:03 2021 +0300
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 1755faf1fe9d871bcc2a5f2e302ef8340cf54dde
+----------------------------------------
+Cherry-picking 3fd855b4bea10e62519bf0adf2bd5de98942e5a6
+[main ee1a7f3e636d] futex: futex_wake_op, fix sign_extend32 sign bits
+ Author: Jiri Slaby <jslaby@suse.cz>
+ Date: Thu Nov 30 15:35:44 2017 +0100
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked 3fd855b4bea10e62519bf0adf2bd5de98942e5a6
+----------------------------------------
+Cherry-picking 89a46106501919301aa7081221272efcf9f51883
+[main 30a6458e120c] gpio: mvebu: fix pwm .get_state period calculation
+ Author: Baruch Siach <baruch@tkos.co.il>
+ Date: Sun Jan 17 15:17:02 2021 +0200
+ 1 file changed, 10 insertions(+), 15 deletions(-)
+Successfully cherry-picked 89a46106501919301aa7081221272efcf9f51883
+----------------------------------------
+Cherry-picking 690f6da58e6bb85432b6ee96e635a32fa0cdd8b1
+[main 7330c4fddcab] Revert "mm/slub: fix a memory leak in sysfs_slab_add()"
+ Author: Wang Hai <wanghai38@huawei.com>
+ Date: Thu Jan 28 19:32:50 2021 +0800
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+Successfully cherry-picked 690f6da58e6bb85432b6ee96e635a32fa0cdd8b1
+----------------------------------------
+Cherry-picking 29f2a64709209b253d6581f61601ef337b26d9d4
+[main f0f0b250d3e7] futex: Ensure the correct return value from futex_lock_pi()
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Wed Jan 20 16:00:24 2021 +0100
+ 1 file changed, 16 insertions(+), 16 deletions(-)
+Successfully cherry-picked 29f2a64709209b253d6581f61601ef337b26d9d4
+----------------------------------------
+Cherry-picking 7e27ef3c7cc6c230c391f68fe881ec39d76d1c72
+[main 3556cf588e0d] futex: Replace pointless printk in fixup_owner()
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Tue Jan 19 16:06:10 2021 +0100
+ 1 file changed, 3 insertions(+), 7 deletions(-)
+Successfully cherry-picked 7e27ef3c7cc6c230c391f68fe881ec39d76d1c72
+----------------------------------------
+Cherry-picking 6935461c6465d2b1ae030635ebe6ac1702e19e94
+[main bfc17ebade63] futex: Provide and use pi_state_update_owner()
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Tue Jan 19 15:21:35 2021 +0100
+ 1 file changed, 33 insertions(+), 33 deletions(-)
+Successfully cherry-picked 6935461c6465d2b1ae030635ebe6ac1702e19e94
+----------------------------------------
+Cherry-picking 348a99a76b07102475a7d4768de0e5a68851043e
+[main 706fabc59e98] rtmutex: Remove unused argument from rt_mutex_proxy_unlock()
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Wed Jan 20 11:32:07 2021 +0100
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 348a99a76b07102475a7d4768de0e5a68851043e
+----------------------------------------
+Cherry-picking 51b7a7338bae3db42904ace1595061fb56b4de57
+[main d128fbfa825b] futex: Use pi_state_update_owner() in put_pi_state()
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Wed Jan 20 11:35:19 2021 +0100
+ 1 file changed, 1 insertion(+), 7 deletions(-)
+Successfully cherry-picked 51b7a7338bae3db42904ace1595061fb56b4de57
+----------------------------------------
+Cherry-picking 52b71186bdc06a369045494264c4487e8e09aa41
+[main 5344e1f1828b] futex: Simplify fixup_pi_state_owner()
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Tue Jan 19 16:26:38 2021 +0100
+ 1 file changed, 26 insertions(+), 27 deletions(-)
+Successfully cherry-picked 52b71186bdc06a369045494264c4487e8e09aa41
+----------------------------------------
+Cherry-picking 50cfcc42dd1be7668ad37640657c7a156bbd0704
+[main 25e7c71660c3] futex: Handle faults correctly for PI futexes
+ Author: Thomas Gleixner <tglx@linutronix.de>
+ Date: Mon Jan 18 19:01:21 2021 +0100
+ 1 file changed, 20 insertions(+), 36 deletions(-)
+Successfully cherry-picked 50cfcc42dd1be7668ad37640657c7a156bbd0704
+----------------------------------------
+Cherry-picking fdb2310d58812b15f6b460509b43ff0b87e59367
+Auto-merging kernel/trace/ring_buffer.c
+[main 51be7555d11f] tracing: Fix race in trace_open and buffer resize call
+ Author: Gaurav Kohli <gkohli@codeaurora.org>
+ Date: Tue Oct 6 15:03:53 2020 +0530
+ 1 file changed, 4 insertions(+)
+Successfully cherry-picked fdb2310d58812b15f6b460509b43ff0b87e59367
+----------------------------------------
+Cherry-picking f24facaf185f729be2f07d124066709d0e9236c4
+[main f87d76fde055] x86/boot/compressed: Disable relocation relaxation
+ Author: Arvind Sankar <nivedita@alum.mit.edu>
+ Date: Tue Aug 11 20:43:08 2020 -0400
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked f24facaf185f729be2f07d124066709d0e9236c4
+----------------------------------------
+Cherry-picking 2f15ad510ebb4ab577cc24183c0e8aee5fb9ea29
+Auto-merging fs/ext4/inode.c
+[main 1c0092322dd0] fs: move I_DIRTY_INODE to fs.h
+ Author: Christoph Hellwig <hch@lst.de>
+ Date: Mon Jan 25 12:37:42 2021 -0800
+ 4 files changed, 8 insertions(+), 10 deletions(-)
+Successfully cherry-picked 2f15ad510ebb4ab577cc24183c0e8aee5fb9ea29
+----------------------------------------
+Cherry-picking 5c846eee8b209dbfc188314c20a3f50e72a337f0
+Auto-merging fs/ext4/inode.c
+[main 6f0136909ed8] writeback: Drop I_DIRTY_TIME_EXPIRE
+ Author: Jan Kara <jack@suse.cz>
+ Date: Mon Jan 25 12:37:43 2021 -0800
+ 2 files changed, 11 insertions(+), 18 deletions(-)
+Successfully cherry-picked 5c846eee8b209dbfc188314c20a3f50e72a337f0
+----------------------------------------
+Cherry-picking 964d9ec041e2c860f696e7c87b77941bbfd90a13
+[main 58e74eceb408] fs: fix lazytime expiration handling in __writeback_single_inode()
+ Author: Eric Biggers <ebiggers@google.com>
+ Date: Mon Jan 25 12:37:44 2021 -0800
+ 1 file changed, 13 insertions(+), 11 deletions(-)
+Successfully cherry-picked 964d9ec041e2c860f696e7c87b77941bbfd90a13
+----------------------------------------
+Cherry-picking 2c8a3fceddf0dd87f278e7a5e01350f86f844b1c
+[main 365154e4ed5a] Linux 4.14.218
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Sat Jan 30 13:31:17 2021 +0100
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 2c8a3fceddf0dd87f278e7a5e01350f86f844b1c
+----------------------------------------
+Cherry-picking 51359110d9d9b0231dc6a60716895104c73e7770
+Auto-merging drivers/block/nbd.c
+CONFLICT (content): Merge conflict in drivers/block/nbd.c
+error: could not apply 51359110d9d9... nbd: freeze the queue while we're adding connections
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 51359110d9d9b0231dc6a60716895104c73e7770
+Auto-resolving conflicts by accepting incoming changes...
