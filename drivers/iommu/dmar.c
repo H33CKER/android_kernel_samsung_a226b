@@ -1116,16 +1116,13 @@ static int alloc_iommu(struct dmar_drhd_unit *drhd)
 
 		err = iommu_device_register(&iommu->iommu);
 		if (err)
-			goto err_sysfs;
+			goto err_unmap;
 	}
 
 	drhd->iommu = iommu;
-	iommu->drhd = drhd;
 
 	return 0;
 
-err_sysfs:
-	iommu_device_sysfs_remove(&iommu->iommu);
 err_unmap:
 	unmap_iommu(iommu);
 error_free_seq_id:
@@ -1137,7 +1134,7 @@ error:
 
 static void free_iommu(struct intel_iommu *iommu)
 {
-	if (intel_iommu_enabled && !iommu->drhd->ignored) {
+	if (intel_iommu_enabled && iommu->iommu.ops) {
 		iommu_device_unregister(&iommu->iommu);
 		iommu_device_sysfs_remove(&iommu->iommu);
 	}
