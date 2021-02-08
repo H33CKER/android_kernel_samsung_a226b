@@ -49459,3 +49459,105 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of fe8723646063f92479f920a486e50b4d50b28e40
 Auto-resolving conflicts by accepting incoming changes...
+[main 8bf540090b6f] Input: i8042 - add ASUS Zenbook Flip to noselftest list
+ Author: Marcos Paulo de Souza <mpdesouza@suse.com>
+ Date: Fri Feb 19 10:37:13 2021 -0800
+ 2 files changed, 517 insertions(+), 7 deletions(-)
+----------------------------------------
+Cherry-picking 107faef1dc2fd593472609ad21b0ef7152986def
+[main 0dbe19cc9587] USB: serial: option: update interface mapping for ZTE P685M
+ Author: Lech Perczak <lech.perczak@gmail.com>
+ Date: Sun Feb 7 01:54:43 2021 +0100
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 107faef1dc2fd593472609ad21b0ef7152986def
+----------------------------------------
+Cherry-picking 68deb52948e1bde0c951e1fa842c8426d0088e2d
+Auto-merging drivers/usb/musb/musb_core.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4875 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 68deb52948e1.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 68deb52948e1bde0c951e1fa842c8426d0088e2d
+No conflicted files found but cherry-pick failed, attempting to skip commit 68deb52948e1bde0c951e1fa842c8426d0088e2d
+----------------------------------------
+Cherry-picking 3f5bbe24acc4bd29832c3e4c77594d28590c70da
+Auto-merging drivers/usb/serial/mos7840.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4875 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 3f5bbe24acc4.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 3f5bbe24acc4bd29832c3e4c77594d28590c70da
+No conflicted files found but cherry-pick failed, attempting to skip commit 3f5bbe24acc4bd29832c3e4c77594d28590c70da
+----------------------------------------
+Cherry-picking 5abbfbe0da0fe639422cad710ef190ad012bcd78
+Auto-merging drivers/usb/serial/mos7720.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4875 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 5abbfbe0da0f.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 5abbfbe0da0fe639422cad710ef190ad012bcd78
+No conflicted files found but cherry-pick failed, attempting to skip commit 5abbfbe0da0fe639422cad710ef190ad012bcd78
+----------------------------------------
+Cherry-picking f323b51938668fbee4ab85a591ae439a7bcb2fe1
+Auto-merging drivers/usb/dwc3/gadget.c
+CONFLICT (content): Merge conflict in drivers/usb/dwc3/gadget.c
+error: could not apply f323b5193866... usb: dwc3: gadget: Fix setting of DEPCFG.bInterval_m1
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of f323b51938668fbee4ab85a591ae439a7bcb2fe1
+Auto-resolving conflicts by accepting incoming changes...
