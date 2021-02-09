@@ -45686,3 +45686,20 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 8d9ca7e328ef7a0625f50e3033bda4666c783133
 Auto-resolving conflicts by accepting incoming changes...
+[main 7eeed69bcd58] squashfs: add more sanity checks in id lookup
+ Author: Phillip Lougher <phillip@squashfs.org.uk>
+ Date: Tue Feb 9 13:41:53 2021 -0800
+ 2 files changed, 49 insertions(+), 4 deletions(-)
+----------------------------------------
+Cherry-picking 69396cfd7908dee7a833068bcc2d7122ce9264f9
+Auto-merging fs/squashfs/export.c
+CONFLICT (content): Merge conflict in fs/squashfs/export.c
+error: could not apply 69396cfd7908... squashfs: add more sanity checks in inode lookup
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 69396cfd7908dee7a833068bcc2d7122ce9264f9
+Auto-resolving conflicts by accepting incoming changes...
