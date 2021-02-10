@@ -45720,3 +45720,46 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of ff49cace7b8cf00d27665f7536a863d406963d06
 Auto-resolving conflicts by accepting incoming changes...
+[main 916d38833b7c] squashfs: add more sanity checks in xattr id lookup
+ Author: Phillip Lougher <phillip@squashfs.org.uk>
+ Date: Tue Feb 9 13:42:00 2021 -0800
+ 2 files changed, 19 insertions(+), 4 deletions(-)
+----------------------------------------
+Cherry-picking c6cb6af4665e6241ce2d201386fb93e4200d79f7
+Auto-merging kernel/trace/trace_events.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4838 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit c6cb6af4665e.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of c6cb6af4665e6241ce2d201386fb93e4200d79f7
+No conflicted files found but cherry-pick failed, attempting to skip commit c6cb6af4665e6241ce2d201386fb93e4200d79f7
+----------------------------------------
+Cherry-picking e46d433754420b4d6513ca389403de88a0910279
+Auto-merging kernel/trace/trace.c
+CONFLICT (content): Merge conflict in kernel/trace/trace.c
+error: could not apply e46d43375442... tracing: Check length before giving out the filter buffer
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of e46d433754420b4d6513ca389403de88a0910279
+Auto-resolving conflicts by accepting incoming changes...
