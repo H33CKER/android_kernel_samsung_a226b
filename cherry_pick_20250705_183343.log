@@ -46454,3 +46454,45 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 9ca595810e8fbc541c388abdb4d2ed9ef20a2e06
 Auto-resolving conflicts by accepting incoming changes...
+[main e2adfa829c83] xen-netback: don't "handle" error by BUG()
+ Author: Jan Beulich <jbeulich@suse.com>
+ Date: Mon Feb 15 08:55:31 2021 +0100
+ 2 files changed, 45 insertions(+), 12 deletions(-)
+----------------------------------------
+Cherry-picking 7910839db1ca4d0cd4789872621a023f985e50e0
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4850 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 7910839db1ca.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 7910839db1ca4d0cd4789872621a023f985e50e0
+No conflicted files found but cherry-pick failed, attempting to skip commit 7910839db1ca4d0cd4789872621a023f985e50e0
+----------------------------------------
+Cherry-picking 5571633988e02a1107720544a57ab4878c4446be
+Auto-merging drivers/block/xen-blkback/blkback.c
+CONFLICT (content): Merge conflict in drivers/block/xen-blkback/blkback.c
+error: could not apply 5571633988e0... xen-blkback: fix error handling in xen_blkbk_map()
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 5571633988e02a1107720544a57ab4878c4446be
+Auto-resolving conflicts by accepting incoming changes...
