@@ -46387,3 +46387,27 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 84e240c8aab4831a8312746cb4b346ce77a8f568
 Auto-resolving conflicts by accepting incoming changes...
+[main a5a8c62d4a1e] Xen/gntdev: correct dev_bus_addr handling in gntdev_map_grant_pages()
+ Author: Jan Beulich <jbeulich@suse.com>
+ Date: Mon Feb 15 08:51:07 2021 +0100
+ 2 files changed, 91 insertions(+), 9 deletions(-)
+----------------------------------------
+Cherry-picking 9c12c61144be8d11d010646a71021c1da08d7710
+[main 10eda1629cfb] Xen/gntdev: correct error checking in gntdev_map_grant_pages()
+ Author: Jan Beulich <jbeulich@suse.com>
+ Date: Mon Feb 15 08:52:27 2021 +0100
+ 1 file changed, 9 insertions(+), 8 deletions(-)
+Successfully cherry-picked 9c12c61144be8d11d010646a71021c1da08d7710
+----------------------------------------
+Cherry-picking 4514b5e3445540384fd647ce26afae2300274c6a
+Auto-merging arch/arm/xen/p2m.c
+CONFLICT (content): Merge conflict in arch/arm/xen/p2m.c
+error: could not apply 4514b5e34455... xen/arm: don't ignore return errors from set_phys_to_machine
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 4514b5e3445540384fd647ce26afae2300274c6a
+Auto-resolving conflicts by accepting incoming changes...
