@@ -18354,3 +18354,28 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 90c58a548d3a93c11e8aac5a0f609a090bbc9c29
 Auto-resolving conflicts by accepting incoming changes...
+[main d2589487ed5b] mmc: core: Fix partition switch time for eMMC
+ Author: Adrian Hunter <adrian.hunter@intel.com>
+ Date: Wed Mar 3 11:26:14 2021 +0200
+ 2 files changed, 512 insertions(+), 546 deletions(-)
+----------------------------------------
+Cherry-picking ebcbbc55925e58421483e792105521988d24994f
+Auto-merging drivers/usb/class/cdc-acm.c
+[main 0739cf08b142] Goodix Fingerprint device is not a modem
+ Author: Yorick de Wid <ydewid@gmail.com>
+ Date: Sat Feb 13 15:49:02 2021 +0100
+ 1 file changed, 5 insertions(+)
+Successfully cherry-picked ebcbbc55925e58421483e792105521988d24994f
+----------------------------------------
+Cherry-picking a73840c8f354079680b4b849b68c1ad2d79d52f6
+Auto-merging drivers/usb/gadget/function/u_ether_configfs.h
+CONFLICT (content): Merge conflict in drivers/usb/gadget/function/u_ether_configfs.h
+error: could not apply a73840c8f354... USB: gadget: u_ether: Fix a configfs return code
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of a73840c8f354079680b4b849b68c1ad2d79d52f6
+Auto-resolving conflicts by accepting incoming changes...
