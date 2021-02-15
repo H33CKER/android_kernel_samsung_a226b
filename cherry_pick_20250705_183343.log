@@ -46411,3 +46411,46 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 4514b5e3445540384fd647ce26afae2300274c6a
 Auto-resolving conflicts by accepting incoming changes...
+[main 3a03b62a8d9d] xen/arm: don't ignore return errors from set_phys_to_machine
+ Author: Stefano Stabellini <stefano.stabellini@xilinx.com>
+ Date: Mon Feb 15 08:53:44 2021 +0100
+ 2 files changed, 28 insertions(+), 31 deletions(-)
+----------------------------------------
+Cherry-picking fd8ec8c708953323feb7c6177d894d39a23b08e4
+Auto-merging drivers/block/xen-blkback/blkback.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4849 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit fd8ec8c70895.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of fd8ec8c708953323feb7c6177d894d39a23b08e4
+No conflicted files found but cherry-pick failed, attempting to skip commit fd8ec8c708953323feb7c6177d894d39a23b08e4
+----------------------------------------
+Cherry-picking 9ca595810e8fbc541c388abdb4d2ed9ef20a2e06
+Auto-merging drivers/net/xen-netback/netback.c
+CONFLICT (content): Merge conflict in drivers/net/xen-netback/netback.c
+error: could not apply 9ca595810e8f... xen-netback: don't "handle" error by BUG()
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 9ca595810e8fbc541c388abdb4d2ed9ef20a2e06
+Auto-resolving conflicts by accepting incoming changes...
