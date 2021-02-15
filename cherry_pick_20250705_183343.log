@@ -46304,3 +46304,86 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 0788a22d85fea3b23b0a979f35d0a0a1a734ecc3
 Auto-resolving conflicts by accepting incoming changes...
+[main 8024b876deef] trace: Use -mcount-record for dynamic ftrace
+ Author: Andi Kleen <ak@linux.intel.com>
+ Date: Mon Nov 27 13:34:13 2017 -0800
+ 2 files changed, 191 insertions(+), 3 deletions(-)
+----------------------------------------
+Cherry-picking cfc6eb148982ce916112d50569ee4930c24f0758
+[main 80f6d2ddee90] tracing: Fix SKIP_STACK_VALIDATION=1 build due to bad merge with -mrecord-mcount
+ Author: Greg Thelen <gthelen@google.com>
+ Date: Fri Jun 8 14:47:46 2018 -0700
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked cfc6eb148982ce916112d50569ee4930c24f0758
+----------------------------------------
+Cherry-picking 4480921923080f037efc8ae7c32fb9cdcf06573f
+[main 80ec3832bb21] tracing: Avoid calling cc-option -mrecord-mcount for every Makefile
+ Author: Vasily Gorbik <gor@linux.ibm.com>
+ Date: Mon Aug 6 15:17:44 2018 +0200
+ 2 files changed, 10 insertions(+), 6 deletions(-)
+Successfully cherry-picked 4480921923080f037efc8ae7c32fb9cdcf06573f
+----------------------------------------
+Cherry-picking da2e2a5c88abfe0974b4b8575c798fcafb552fc9
+Auto-merging arch/x86/xen/p2m.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4846 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit da2e2a5c88ab.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of da2e2a5c88abfe0974b4b8575c798fcafb552fc9
+No conflicted files found but cherry-pick failed, attempting to skip commit da2e2a5c88abfe0974b4b8575c798fcafb552fc9
+----------------------------------------
+Cherry-picking 232ba596896a7654a931ab28868562dd8b6b3904
+Auto-merging arch/x86/xen/p2m.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4846 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 232ba596896a.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 232ba596896a7654a931ab28868562dd8b6b3904
+No conflicted files found but cherry-pick failed, attempting to skip commit 232ba596896a7654a931ab28868562dd8b6b3904
+----------------------------------------
+Cherry-picking 84e240c8aab4831a8312746cb4b346ce77a8f568
+Auto-merging drivers/xen/gntdev.c
+CONFLICT (content): Merge conflict in drivers/xen/gntdev.c
+error: could not apply 84e240c8aab4... Xen/gntdev: correct dev_bus_addr handling in gntdev_map_grant_pages()
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 84e240c8aab4831a8312746cb4b346ce77a8f568
+Auto-resolving conflicts by accepting incoming changes...
