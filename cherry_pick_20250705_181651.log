@@ -17559,3 +17559,27 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 676c8e5a1bf448b4c11cb1e57ddfe2c70253f1d7
 Auto-resolving conflicts by accepting incoming changes...
+[main ae158ead1784] drm/virtio: use kvmalloc for large allocations
+ Author: Sergey Senozhatsky <senozhatsky@chromium.org>
+ Date: Thu Nov 5 10:47:44 2020 +0900
+ 2 files changed, 1363 insertions(+), 352 deletions(-)
+----------------------------------------
+Cherry-picking bed4b4569ce69f573a794b9400993835f5110fad
+[main a25a09e7111f] virtio/s390: implement virtio-ccw revision 2 correctly
+ Author: Cornelia Huck <cohuck@redhat.com>
+ Date: Tue Feb 16 12:06:45 2021 +0100
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked bed4b4569ce69f573a794b9400993835f5110fad
+----------------------------------------
+Cherry-picking 49970f46586322c2fee149b8775b031306651f69
+Auto-merging arch/arm64/kernel/module.lds
+CONFLICT (content): Merge conflict in arch/arm64/kernel/module.lds
+error: could not apply 49970f465863... arm64 module: set plt* section addresses to 0x0
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 49970f46586322c2fee149b8775b031306651f69
+Auto-resolving conflicts by accepting incoming changes...
