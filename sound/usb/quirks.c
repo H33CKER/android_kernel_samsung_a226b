@@ -66,12 +66,8 @@ static int create_composite_quirk(struct snd_usb_audio *chip,
 		if (!iface)
 			continue;
 		if (quirk->ifnum != probed_ifnum &&
-		    !usb_interface_claimed(iface)) {
-			err = usb_driver_claim_interface(driver, iface,
-							 USB_AUDIO_IFACE_UNUSED);
-			if (err < 0)
-				return err;
-		}
+		    !usb_interface_claimed(iface))
+			usb_driver_claim_interface(driver, iface, (void *)-1L);
 	}
 
 	return 0;
@@ -402,12 +398,8 @@ static int create_autodetect_quirks(struct snd_usb_audio *chip,
 			continue;
 
 		err = create_autodetect_quirk(chip, iface, driver);
-		if (err >= 0) {
-			err = usb_driver_claim_interface(driver, iface,
-							 USB_AUDIO_IFACE_UNUSED);
-			if (err < 0)
-				return err;
-		}
+		if (err >= 0)
+			usb_driver_claim_interface(driver, iface, (void *)-1L);
 	}
 
 	return 0;
@@ -1164,7 +1156,6 @@ bool snd_usb_get_sample_rate_quirk(struct snd_usb_audio *chip)
 	case USB_ID(0x21B4, 0x0081): /* AudioQuest DragonFly */
 	case USB_ID(0x2912, 0x30c8): /* Audioengine D1 */
 	case USB_ID(0x413c, 0xa506): /* Dell AE515 sound bar */
-	case USB_ID(0x046d, 0x084c): /* Logitech ConferenceCam Connect */
 		return true;
 	}
 	return false;
@@ -1177,6 +1168,7 @@ bool snd_usb_get_sample_rate_quirk(struct snd_usb_audio *chip)
 static bool is_itf_usb_dsd_2alts_dac(unsigned int id)
 {
 	switch (id) {
+	case USB_ID(0x154e, 0x1002): /* Denon DCD-1500RE */
 	case USB_ID(0x154e, 0x1003): /* Denon DA-300USB */
 	case USB_ID(0x154e, 0x3005): /* Marantz HD-DAC1 */
 	case USB_ID(0x154e, 0x3006): /* Marantz SA-14S1 */
@@ -1342,10 +1334,6 @@ void snd_usb_ctl_msg_quirk(struct usb_device *dev, unsigned int pipe,
 	     chip->usb_id == USB_ID(0x0951, 0x16ad)) &&
 	    (requesttype & USB_TYPE_MASK) == USB_TYPE_CLASS)
 		mdelay(1);
-
-	if (chip->usb_id == USB_ID(0x04e8, 0xa051) &&
-	     (requesttype & USB_TYPE_MASK) == USB_TYPE_CLASS)
-		mdelay(5);
 }
 
 /*
