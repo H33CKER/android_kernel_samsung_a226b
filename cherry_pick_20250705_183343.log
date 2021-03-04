@@ -50434,3 +50434,93 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 8b779e11bc55616fc100d5cecf3c1d3c317c39e4
 Auto-resolving conflicts by accepting incoming changes...
+[main e3571dae00a3] ipv6: icmp6: avoid indirect call for icmpv6_send()
+ Author: Eric Dumazet <edumazet@google.com>
+ Date: Fri Jun 19 12:02:59 2020 -0700
+ 4 files changed, 76 insertions(+), 14 deletions(-)
+----------------------------------------
+Cherry-picking 564885afa52041de3ac7a847dc71dbfed41cfebe
+[main 1ecd1d6bbf02] ipv6: silence compilation warning for non-IPV6 builds
+ Author: Leon Romanovsky <leonro@nvidia.com>
+ Date: Wed Feb 3 15:51:09 2021 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 564885afa52041de3ac7a847dc71dbfed41cfebe
+----------------------------------------
+Cherry-picking 372fb8e270446213ba51b11bfaa7b9632c0efa90
+Auto-merging include/linux/ipv6.h
+[main 28e7b0b8fb07] net: icmp: pass zeroed opts from icmp{,v6}_ndo_send before sending
+ Author: Jason A. Donenfeld <Jason@zx2c4.com>
+ Date: Tue Feb 23 14:18:58 2021 +0100
+ 6 files changed, 43 insertions(+), 23 deletions(-)
+Successfully cherry-picked 372fb8e270446213ba51b11bfaa7b9632c0efa90
+----------------------------------------
+Cherry-picking 1788a8b4f84a6cf22460ab40924d9fe107a71a45
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4889 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 1788a8b4f84a.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 1788a8b4f84a6cf22460ab40924d9fe107a71a45
+No conflicted files found but cherry-pick failed, attempting to skip commit 1788a8b4f84a6cf22460ab40924d9fe107a71a45
+----------------------------------------
+Cherry-picking 397a88b2cc869c823bf40bc403d36a62afec1edd
+[main 6558b40d225c] Linux 4.14.223
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Wed Mar 3 18:22:57 2021 +0100
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 397a88b2cc869c823bf40bc403d36a62afec1edd
+----------------------------------------
+Cherry-picking beb7f9d3ecf45e2c10283f082ac327448b9e37fa
+Auto-merging drivers/net/usb/qmi_wwan.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 4890 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit beb7f9d3ecf4.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of beb7f9d3ecf45e2c10283f082ac327448b9e37fa
+No conflicted files found but cherry-pick failed, attempting to skip commit beb7f9d3ecf45e2c10283f082ac327448b9e37fa
+----------------------------------------
+Cherry-picking 4094a92b2edc0afe3b2ce8344fedc6d1aef2a740
+Auto-merging scripts/Makefile
+CONFLICT (content): Merge conflict in scripts/Makefile
+error: could not apply 4094a92b2edc... scripts: use pkg-config to locate libcrypto
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 4094a92b2edc0afe3b2ce8344fedc6d1aef2a740
+Auto-resolving conflicts by accepting incoming changes...
