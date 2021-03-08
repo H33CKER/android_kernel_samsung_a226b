@@ -52904,3 +52904,20 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 2aa95d91da76815a1166add7601f325ed320e2f2
 Auto-resolving conflicts by accepting incoming changes...
+[main 4fbcebf8e428] usbip: fix vhci_hcd to check for stream socket
+ Author: Shuah Khan <skhan@linuxfoundation.org>
+ Date: Sun Mar 7 20:53:27 2021 -0700
+ 2 files changed, 24 insertions(+), 48 deletions(-)
+----------------------------------------
+Cherry-picking 66ea0d31eec230385c0fc19f5abe26d9d49e0a0a
+Auto-merging drivers/usb/usbip/vudc_sysfs.c
+CONFLICT (content): Merge conflict in drivers/usb/usbip/vudc_sysfs.c
+error: could not apply 66ea0d31eec2... usbip: fix vudc to check for stream socket
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 66ea0d31eec230385c0fc19f5abe26d9d49e0a0a
+Auto-resolving conflicts by accepting incoming changes...
