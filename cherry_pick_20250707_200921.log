@@ -283,3 +283,286 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of b25c3f1776583c62639c8f1d1983a9ab6553fab5
 Auto-resolving conflicts by accepting incoming changes...
+[main 48f83e87f529] BACKPORT: bpf: offload: add infrastructure for loading programs for a specific netdev
+ Author: Jakub Kicinski <jakub.kicinski@netronome.com>
+ Date: Fri Nov 3 13:56:17 2017 -0700
+ 10 files changed, 391 insertions(+), 13 deletions(-)
+ create mode 100644 kernel/bpf/offload.c
+----------------------------------------
+Cherry-picking 47b16b371e9939534136e87614846060711d8e45
+[main 6e05d4e1f712] bpf: offload: rename the ifindex field
+ Author: Jakub Kicinski <jakub.kicinski@netronome.com>
+ Date: Mon Nov 20 15:21:53 2017 -0800
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+Successfully cherry-picked 47b16b371e9939534136e87614846060711d8e45
+----------------------------------------
+Cherry-picking 8386f5d617e7f234589a2e4c9c3e50d15fb1b46e
+Auto-merging kernel/trace/bpf_trace.c
+Auto-merging net/core/filter.c
+[main dc779408ecf4] BACKPORT: bpf: Check attach type at prog load time
+ Author: Andrey Ignatov <rdna@fb.com>
+ Date: Fri Mar 30 15:08:00 2018 -0700
+ 7 files changed, 76 insertions(+), 23 deletions(-)
+Successfully cherry-picked 8386f5d617e7f234589a2e4c9c3e50d15fb1b46e
+----------------------------------------
+Cherry-picking eb0c9ab2d5a0e82e2bf61231d4944c2e02abfada
+Auto-merging kernel/bpf/cgroup.c
+Auto-merging kernel/bpf/core.c
+Auto-merging kernel/cgroup/cgroup.c
+[main 9585c0dfed75] BACKPORT: bpf: introduce BPF_PROG_QUERY command
+ Author: Alexei Starovoitov <ast@fb.com>
+ Date: Mon Oct 2 22:50:22 2017 -0700
+ 7 files changed, 148 insertions(+)
+Successfully cherry-picked eb0c9ab2d5a0e82e2bf61231d4944c2e02abfada
+----------------------------------------
+Cherry-picking 22499d2bc268fcbb699c09f7557dc6f3c8922fd7
+Auto-merging kernel/bpf/cgroup.c
+Auto-merging net/core/filter.c
+Auto-merging net/ipv4/af_inet.c
+[main e00e704207fc] BACKPORT: bpf: Hooks for sys_bind
+ Author: Andrey Ignatov <rdna@fb.com>
+ Date: Fri Mar 30 15:08:02 2018 -0700
+ 9 files changed, 362 insertions(+), 8 deletions(-)
+Successfully cherry-picked 22499d2bc268fcbb699c09f7557dc6f3c8922fd7
+----------------------------------------
+Cherry-picking f67134f4a39e9e21d6fb4e6a72f1f3c24309443e
+Auto-merging include/net/inet_common.h
+Auto-merging include/net/ipv6.h
+Auto-merging net/ipv4/af_inet.c
+[main 8ac448a4c772] BACKPORT: net: Introduce __inet_bind() and __inet6_bind
+ Author: Andrey Ignatov <rdna@fb.com>
+ Date: Fri Mar 30 15:08:04 2018 -0700
+ 4 files changed, 52 insertions(+), 29 deletions(-)
+Successfully cherry-picked f67134f4a39e9e21d6fb4e6a72f1f3c24309443e
+----------------------------------------
+Cherry-picking ca460459f24c2392c56161042347e62f06038f7e
+Auto-merging include/net/sock.h
+Auto-merging include/net/udp.h
+Auto-merging net/core/filter.c
+Auto-merging net/ipv4/af_inet.c
+Auto-merging net/ipv4/tcp_ipv4.c
+Auto-merging net/ipv4/udp.c
+Auto-merging net/ipv6/tcp_ipv6.c
+Auto-merging net/ipv6/udp.c
+[main 54c905f29ea6] BACKPORT: bpf: Hooks for sys_connect
+ Author: Andrey Ignatov <rdna@fb.com>
+ Date: Fri Mar 30 15:08:05 2018 -0700
+ 13 files changed, 200 insertions(+)
+Successfully cherry-picked ca460459f24c2392c56161042347e62f06038f7e
+----------------------------------------
+Cherry-picking 3e94a525ce6058d5591dc93588a9aaa85f3eeb6b
+Auto-merging net/core/filter.c
+Auto-merging net/ipv4/af_inet.c
+[main e331f3ebd6e0] BACKPORT: bpf: Post-hooks for sys_bind
+ Author: Andrey Ignatov <rdna@fb.com>
+ Date: Fri Mar 30 15:08:07 2018 -0700
+ 6 files changed, 195 insertions(+), 30 deletions(-)
+Successfully cherry-picked 3e94a525ce6058d5591dc93588a9aaa85f3eeb6b
+----------------------------------------
+Cherry-picking 437345780ccfa9625cc4744cb8992a2c351fcae8
+[main 6c7a40cf073c] kernel: bpf: devmap: Create __dev_map_alloc_node
+ Author: Tim Zimmermann <tim@linux4.de>
+ Date: Wed Jan 10 06:24:54 2024 +0100
+ 1 file changed, 27 insertions(+), 13 deletions(-)
+Successfully cherry-picked 437345780ccfa9625cc4744cb8992a2c351fcae8
+----------------------------------------
+Cherry-picking cd50ca414c72dbf116297c0b1b90335835496b43
+Auto-merging net/core/filter.c
+[main 78f84c75754c] BACKPORT: xdp: Add devmap_hash map type for looking up devices by hashed index
+ Author: Toke Høiland-Jørgensen <toke@redhat.com>
+ Date: Fri Jul 26 18:06:55 2019 +0200
+ 6 files changed, 228 insertions(+), 3 deletions(-)
+Successfully cherry-picked cd50ca414c72dbf116297c0b1b90335835496b43
+----------------------------------------
+Cherry-picking f323f6839f35ecd36566a2625931c924c3952965
+[main 0c9441bb6847] BACKPORT: devmap: Allow map lookups from eBPF
+ Author: Toke Høiland-Jørgensen <toke@redhat.com>
+ Date: Fri Jun 28 11:12:35 2019 +0200
+ 3 files changed, 10 insertions(+), 5 deletions(-)
+Successfully cherry-picked f323f6839f35ecd36566a2625931c924c3952965
+----------------------------------------
+Cherry-picking 0bf3ed19d19324cf110a4fe85a3daeea061bf24e
+Auto-merging kernel/sys.c
+[main e99c694bb384] syscall: Increase bpf fake uname to 5.4
+ Author: Tim Zimmermann <tim@linux4.de>
+ Date: Sun Jan 14 05:49:48 2024 +0100
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 0bf3ed19d19324cf110a4fe85a3daeea061bf24e
+----------------------------------------
+Cherry-picking 49505be2902dd6ed5749eef1084c859f12792870
+Auto-merging kernel/sys.c
+[main 33b9f9ba9dcb] syscall: Increase bpf fake uname to 5.4.186
+ Author: Tim Zimmermann <tim@linux4.de>
+ Date: Thu May 16 05:56:11 2024 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 49505be2902dd6ed5749eef1084c859f12792870
+----------------------------------------
+Cherry-picking 8c4cefd49b96069500c49e7aabd5fa09f9d5f431
+[main b22dcb810d5d] scripts: Remove mistakenly added LTO file
+ Author: Tim Zimmermann <tim@linux4.de>
+ Date: Wed May 29 11:09:15 2024 +0200
+ 1 file changed, 22 deletions(-)
+ delete mode 100644 scripts/module-lto.lds
+Successfully cherry-picked 8c4cefd49b96069500c49e7aabd5fa09f9d5f431
+----------------------------------------
+Cherry-picking 5047291cc57693e3cf6992c725e5742d1a2dfc0d
+Auto-merging net/ipv6/route.c
+[main a896a14ab91a] BACKPORT: net: fix __dst_negative_advice() race
+ Author: Eric Dumazet <edumazet@google.com>
+ Date: Tue May 28 11:43:53 2024 +0000
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked 5047291cc57693e3cf6992c725e5742d1a2dfc0d
+----------------------------------------
+Cherry-picking b15f6803c9ab34e2b2bbb0b52153cd865b9ae34e
+Auto-merging net/ipv4/tcp.c
+[main e836aece5abe] Revert "net: fix unused variable warning in do_tcp_setsockopt()"
+ Author: Tim Zimmermann <tim@linux4.de>
+ Date: Mon Jun 3 17:58:15 2024 +0200
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked b15f6803c9ab34e2b2bbb0b52153cd865b9ae34e
+----------------------------------------
+Cherry-picking a519aba319c1e8c0db0ead8cbb00d9de582b1232
+Auto-merging kernel/bpf/cgroup.c
+Auto-merging net/core/filter.c
+Auto-merging net/ipv4/udp.c
+Auto-merging net/ipv6/udp.c
+[main fef1fc828362] bpf: Hooks for sys_sendmsg
+ Author: Andrey Ignatov <rdna@fb.com>
+ Date: Fri May 25 08:55:23 2018 -0700
+ 8 files changed, 125 insertions(+), 9 deletions(-)
+Successfully cherry-picked a519aba319c1e8c0db0ead8cbb00d9de582b1232
+----------------------------------------
+Cherry-picking a1cf7b560525ea063bbb2b24d08fb5ee72325f7f
+[main 2289b19c9253] BACKPORT: bpf: enforce return code for cgroup-bpf programs
+ Author: Alexei Starovoitov <ast@fb.com>
+ Date: Mon Oct 2 22:50:23 2017 -0700
+ 2 files changed, 112 insertions(+)
+Successfully cherry-picked a1cf7b560525ea063bbb2b24d08fb5ee72325f7f
+----------------------------------------
+Cherry-picking c8f10f9c226de67e59113b0eb6916adf0c20f2a7
+Auto-merging net/core/filter.c
+Auto-merging net/ipv4/udp.c
+Auto-merging net/ipv6/udp.c
+[main de4a6c3d5168] BACKPORT: bpf: fix unconnected udp hooks
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Fri Jun 7 01:48:57 2019 +0200
+ 7 files changed, 36 insertions(+), 3 deletions(-)
+Successfully cherry-picked c8f10f9c226de67e59113b0eb6916adf0c20f2a7
+----------------------------------------
+Cherry-picking 4be9defe9a1c4dd6aa59d1250b45fb4f0849f995
+Auto-merging kernel/sys.c
+[main a18a8e77d9a8] syscall: Only fake uname on very first call of netbpfload
+ Author: Tim Zimmermann <tim@linux4.de>
+ Date: Sat Jul 20 11:18:16 2024 +0200
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+Successfully cherry-picked 4be9defe9a1c4dd6aa59d1250b45fb4f0849f995
+----------------------------------------
+Cherry-picking 84b8cbf9fbbde8d2ad4b917ecd13278057f70484
+Auto-merging kernel/sys.c
+[main 6b8d6cb83909] syscall: Increase fake uname to 6.6.40
+ Author: Tim Zimmermann <tim@linux4.de>
+ Date: Sat Jul 20 11:19:35 2024 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 84b8cbf9fbbde8d2ad4b917ecd13278057f70484
+----------------------------------------
+Cherry-picking 0e4168646b7eb82cbb41f6da3d6f2b81fde12a22
+[main 27abb3b2df15] BACKPORT: mm/mremap: add MREMAP_DONTUNMAP to mremap()
+ Author: Brian Geffon <bgeffon@google.com>
+ Date: Wed Apr 1 21:09:17 2020 -0700
+ 2 files changed, 72 insertions(+), 23 deletions(-)
+Successfully cherry-picked 0e4168646b7eb82cbb41f6da3d6f2b81fde12a22
+----------------------------------------
+Cherry-picking cee0c569083ca3239ab0946bc2ae947e12da1d03
+[main 06017d7da055] UPSTREAM: mm: Fix MREMAP_DONTUNMAP accounting on VMA merge
+ Author: Brian Geffon <bgeffon@google.com>
+ Date: Fri Apr 17 10:25:56 2020 -0700
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+Successfully cherry-picked cee0c569083ca3239ab0946bc2ae947e12da1d03
+----------------------------------------
+Cherry-picking 4af4093b45e5e1370b07bbe865408eb415112159
+[main 8f10cb78e135] UPSTREAM: userfaultfd: fix remap event with MREMAP_DONTUNMAP
+ Author: Brian Geffon <bgeffon@google.com>
+ Date: Wed May 13 17:50:44 2020 -0700
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked 4af4093b45e5e1370b07bbe865408eb415112159
+----------------------------------------
+Cherry-picking a58c65e2518fe7971260d5cf1a42f1e2f5e9a730
+[main ea9407891023] UPSTREAM: tools headers UAPI: Sync linux/mman.h with the kernel
+ Author: Arnaldo Carvalho de Melo <acme@redhat.com>
+ Date: Tue Apr 14 09:04:53 2020 -0300
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+Successfully cherry-picked a58c65e2518fe7971260d5cf1a42f1e2f5e9a730
+----------------------------------------
+Cherry-picking b14e0460e5658a7de977f131743fbbc90ebe734c
+[main af6b0c8a6575] BACKPORT: mm/mremap: for MREMAP_DONTUNMAP check security_vm_enough_memory_mm()
+ Author: Dmitry Safonov <dima@arista.com>
+ Date: Mon Dec 14 19:08:09 2020 -0800
+ 1 file changed, 14 insertions(+), 23 deletions(-)
+Successfully cherry-picked b14e0460e5658a7de977f131743fbbc90ebe734c
+----------------------------------------
+Cherry-picking a6ca77a25781431476b51b23747bee4903a1dddc
+[main 0a43cb43cc4d] FROMLIST: mm: Extend MREMAP_DONTUNMAP to non-anonymous mappings
+ Author: Brian Geffon <bgeffon@google.com>
+ Date: Tue Mar 23 11:25:17 2021 -0700
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked a6ca77a25781431476b51b23747bee4903a1dddc
+----------------------------------------
+Cherry-picking 9ec934b76d6e54881c22d1cd368d7db05c081f7e
+Auto-merging arch/s390/mm/hugetlbpage.c
+Auto-merging mm/hugetlb.c
+[main d6cc7c667379] BACKPORT: FROMGIT: hugetlb: pass vma into huge_pte_alloc() and huge_pmd_share()
+ Author: Peter Xu <peterx@redhat.com>
+ Date: Thu Mar 18 17:01:46 2021 +1100
+ 11 files changed, 24 insertions(+), 20 deletions(-)
+Successfully cherry-picked 9ec934b76d6e54881c22d1cd368d7db05c081f7e
+----------------------------------------
+Cherry-picking 3d92bcdce3df27046fb2eec44cfd4541b1d1ddaf
+Auto-merging mm/hugetlb.c
+[main 0f741f1f8ca4] BACKPORT: FROMGIT: hugetlb/userfaultfd: forbid huge pmd sharing when uffd enabled
+ Author: Peter Xu <peterx@redhat.com>
+ Date: Thu Mar 18 17:01:46 2021 +1100
+ 4 files changed, 27 insertions(+), 9 deletions(-)
+Successfully cherry-picked 3d92bcdce3df27046fb2eec44cfd4541b1d1ddaf
+----------------------------------------
+Cherry-picking 8a773f4ad7a3f51ff29192668219c5b9aa32eed8
+Auto-merging mm/hugetlb.c
+[main 2ac763e3d66b] FROMGIT: mm/hugetlb: fix build with !ARCH_WANT_HUGE_PMD_SHARE
+ Author: Peter Xu <peterx@redhat.com>
+ Date: Thu Mar 18 17:01:47 2021 +1100
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+Successfully cherry-picked 8a773f4ad7a3f51ff29192668219c5b9aa32eed8
+----------------------------------------
+Cherry-picking 172cf3523c14ebdbc6fb7078c464cc5d28e35e6a
+Auto-merging mm/hugetlb.c
+[main 331d07743449] FROMGIT: mm/hugetlb: move flush_hugetlb_tlb_range() into hugetlb.h
+ Author: Peter Xu <peterx@redhat.com>
+ Date: Thu Mar 18 17:01:47 2021 +1100
+ 2 files changed, 8 insertions(+), 8 deletions(-)
+Successfully cherry-picked 172cf3523c14ebdbc6fb7078c464cc5d28e35e6a
+----------------------------------------
+Cherry-picking 974bc936b76c8e6ce62fce398ec28bad5dfac74b
+Auto-merging mm/hugetlb.c
+[main d10c3c11c33d] BACKPORT: FROMGIT: hugetlb/userfaultfd: unshare all pmds for hugetlbfs when register wp
+ Author: Peter Xu <peterx@redhat.com>
+ Date: Thu Mar 18 17:01:47 2021 +1100
+ 3 files changed, 57 insertions(+)
+Successfully cherry-picked 974bc936b76c8e6ce62fce398ec28bad5dfac74b
+----------------------------------------
+Cherry-picking c5ac6879a963a9a144293da13e54109c477be12d
+Auto-merging arch/arm64/Kconfig
+CONFLICT (content): Merge conflict in arch/arm64/Kconfig
+Auto-merging fs/proc/task_mmu.c
+Auto-merging include/linux/mm.h
+Auto-merging include/trace/events/mmflags.h
+Auto-merging init/Kconfig
+Auto-merging mm/hugetlb.c
+CONFLICT (content): Merge conflict in mm/hugetlb.c
+error: could not apply c5ac6879a963... BACKPORT: FROMGIT: userfaultfd: add minor fault registration mode
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of c5ac6879a963a9a144293da13e54109c477be12d
+Auto-resolving conflicts by accepting incoming changes...
