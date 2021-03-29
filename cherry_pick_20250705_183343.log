@@ -70369,3 +70369,70 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of e862f6000a3ac0e7454d0f43861327274e4d16bc
 Auto-resolving conflicts by accepting incoming changes...
+[main 8c39cf9b953b] bnx2x: Fix missing error code in bnx2x_iov_init_one()
+ Author: Jiapeng Chong <jiapeng.chong@linux.alibaba.com>
+ Date: Tue May 25 19:00:12 2021 +0800
+ 2 files changed, 471 insertions(+), 1 deletion(-)
+----------------------------------------
+Cherry-picking 6da7f019db235464b4ed72ab4a92ee1bb1429d0c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 5168 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 6da7f019db23.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 6da7f019db235464b4ed72ab4a92ee1bb1429d0c
+No conflicted files found but cherry-pick failed, attempting to skip commit 6da7f019db235464b4ed72ab4a92ee1bb1429d0c
+----------------------------------------
+Cherry-picking e49b75dc946ca71acbfa44d94cd0fac7115ab4fa
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 5168 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit e49b75dc946c.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of e49b75dc946ca71acbfa44d94cd0fac7115ab4fa
+No conflicted files found but cherry-pick failed, attempting to skip commit e49b75dc946ca71acbfa44d94cd0fac7115ab4fa
+----------------------------------------
+Cherry-picking ba900685ad6a32a7f986e1e6a0dc5c21f5f04593
+Auto-merging drivers/i2c/busses/i2c-mpc.c
+CONFLICT (content): Merge conflict in drivers/i2c/busses/i2c-mpc.c
+error: could not apply ba900685ad6a... i2c: mpc: Make use of i2c_recover_bus()
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of ba900685ad6a32a7f986e1e6a0dc5c21f5f04593
+Auto-resolving conflicts by accepting incoming changes...
