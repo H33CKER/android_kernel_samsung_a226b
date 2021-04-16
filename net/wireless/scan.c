@@ -71,7 +71,7 @@ module_param(bss_entries_limit, int, 0644);
 MODULE_PARM_DESC(bss_entries_limit,
                  "limit to number of scan BSS entries (per wiphy, default 1000)");
 
-#define IEEE80211_SCAN_RESULT_EXPIRE	(7 * HZ)
+#define IEEE80211_SCAN_RESULT_EXPIRE	(30 * HZ)
 
 static void bss_free(struct cfg80211_internal_bss *bss)
 {
@@ -1026,14 +1026,16 @@ cfg80211_bss_update(struct cfg80211_registered_device *rdev,
 			 * be grouped with this beacon for updates ...
 			 */
 			if (!cfg80211_combine_bsses(rdev, new)) {
-				bss_ref_put(rdev, new);
+				kfree(new);
 				goto drop;
 			}
 		}
 
 		if (rdev->bss_entries >= bss_entries_limit &&
 		    !cfg80211_bss_expire_oldest(rdev)) {
-			bss_ref_put(rdev, new);
+			if (!list_empty(&new->hidden_list))
+				list_del(&new->hidden_list);
+			kfree(new);
 			goto drop;
 		}
 
