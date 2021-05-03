@@ -67015,3 +67015,70 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of eabb889212a517215b20aed9641eb77f4d7d5201
 Auto-resolving conflicts by accepting incoming changes...
+[main 1b00d6b07a72] ALSA: bebob/oxfw: fix Kconfig entry for Mackie d.2 Pro
+ Author: Takashi Sakamoto <o-takashi@sakamocchi.jp>
+ Date: Thu May 13 21:56:49 2021 +0900
+ 4 files changed, 674 insertions(+), 8 deletions(-)
+----------------------------------------
+Cherry-picking 7840dc8dc9b3e4075afb895fecf3b490b872b0cd
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 5092 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 7840dc8dc9b3.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 7840dc8dc9b3e4075afb895fecf3b490b872b0cd
+No conflicted files found but cherry-pick failed, attempting to skip commit 7840dc8dc9b3e4075afb895fecf3b490b872b0cd
+----------------------------------------
+Cherry-picking c70b874014278ec9850c488650d014646f178f44
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 5092 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit c70b87401427.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of c70b874014278ec9850c488650d014646f178f44
+No conflicted files found but cherry-pick failed, attempting to skip commit c70b874014278ec9850c488650d014646f178f44
+----------------------------------------
+Cherry-picking a3767f47be9913fc992d19783c1c80df64b5a820
+Auto-merging drivers/rapidio/rio_cm.c
+CONFLICT (content): Merge conflict in drivers/rapidio/rio_cm.c
+error: could not apply a3767f47be99... Revert "rapidio: fix a NULL pointer dereference when create_workqueue() fails"
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of a3767f47be9913fc992d19783c1c80df64b5a820
+Auto-resolving conflicts by accepting incoming changes...
