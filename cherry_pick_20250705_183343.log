@@ -67283,3 +67283,59 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of fdd6df4522d06eb3e66b91d7d4002b93462ee226
 Auto-resolving conflicts by accepting incoming changes...
+[main 9a19bc63a7e0] Revert "gdrom: fix a memory leak bug"
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Mon May 3 13:56:53 2021 +0200
+ 2 files changed, 94 insertions(+), 10 deletions(-)
+----------------------------------------
+Cherry-picking c7d679196a72524238be968a6dae368b034833e2
+[main 65a9c21efe67] cdrom: gdrom: deallocate struct gdrom_unit fields in remove_gdrom
+ Author: Atul Gopinathan <atulgopinathan@gmail.com>
+ Date: Mon May 3 13:56:54 2021 +0200
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked c7d679196a72524238be968a6dae368b034833e2
+----------------------------------------
+Cherry-picking c6b05151990fc6b6b64c9141cf0d99f51bd37df3
+[main 03a993ec5abb] cdrom: gdrom: initialize global variable at init time
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Thu May 6 16:00:47 2021 +0200
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+Successfully cherry-picked c6b05151990fc6b6b64c9141cf0d99f51bd37df3
+----------------------------------------
+Cherry-picking f13d7f10e31b9d48a5033836c82d4a3d0930bf46
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 5100 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit f13d7f10e31b.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of f13d7f10e31b9d48a5033836c82d4a3d0930bf46
+No conflicted files found but cherry-pick failed, attempting to skip commit f13d7f10e31b9d48a5033836c82d4a3d0930bf46
+----------------------------------------
+Cherry-picking 59b565155a8390bbc4c30796c86b8acfc9f19243
+Auto-merging drivers/net/wireless/realtek/rtlwifi/base.c
+CONFLICT (content): Merge conflict in drivers/net/wireless/realtek/rtlwifi/base.c
+error: could not apply 59b565155a83... Revert "rtlwifi: fix a potential NULL pointer dereference"
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 59b565155a8390bbc4c30796c86b8acfc9f19243
+Auto-resolving conflicts by accepting incoming changes...
