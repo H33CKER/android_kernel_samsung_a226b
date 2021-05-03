@@ -67157,3 +67157,20 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 7551dcc2f1a5b4bae3b50c489dc608712f53d5f9
 Auto-resolving conflicts by accepting incoming changes...
+[main 62d738dc901d] Revert "video: hgafb: fix potential NULL pointer dereference"
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Mon May 3 13:57:05 2021 +0200
+ 2 files changed, 83 insertions(+), 13 deletions(-)
+----------------------------------------
+Cherry-picking f2d1a41d234bc6ac731ee421c003b617a4056f11
+Auto-merging drivers/net/ethernet/stmicro/stmmac/dwmac-sunxi.c
+CONFLICT (content): Merge conflict in drivers/net/ethernet/stmicro/stmmac/dwmac-sunxi.c
+error: could not apply f2d1a41d234b... Revert "net: stmicro: fix a missing check of clk_prepare"
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of f2d1a41d234bc6ac731ee421c003b617a4056f11
+Auto-resolving conflicts by accepting incoming changes...
