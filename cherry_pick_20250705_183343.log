@@ -67339,3 +67339,20 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 59b565155a8390bbc4c30796c86b8acfc9f19243
 Auto-resolving conflicts by accepting incoming changes...
+[main e9fa42c7b93a] Revert "rtlwifi: fix a potential NULL pointer dereference"
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Mon May 3 13:56:39 2021 +0200
+ 2 files changed, 62 insertions(+), 10 deletions(-)
+----------------------------------------
+Cherry-picking 53ca915fd1ab74f4f7e956df88731e34948ec536
+Auto-merging drivers/net/ethernet/qlogic/qlcnic/qlcnic_ethtool.c
+CONFLICT (content): Merge conflict in drivers/net/ethernet/qlogic/qlcnic/qlcnic_ethtool.c
+error: could not apply 53ca915fd1ab... Revert "qlcnic: Avoid potential NULL pointer dereference"
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 53ca915fd1ab74f4f7e956df88731e34948ec536
+Auto-resolving conflicts by accepting incoming changes...
