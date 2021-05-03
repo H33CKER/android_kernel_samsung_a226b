@@ -67191,3 +67191,95 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 3f62ce19840970b2f6b5095639a571f13ecb309c
 Auto-resolving conflicts by accepting incoming changes...
+[main d51692414fa5] Revert "leds: lp5523: fix a missing check of return value of lp55xx_read"
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Mon May 3 13:56:35 2021 +0200
+ 2 files changed, 18 insertions(+), 3 deletions(-)
+----------------------------------------
+Cherry-picking a1870252be08248035467cbacd31dca9b47fe402
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 5097 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit a1870252be08.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of a1870252be08248035467cbacd31dca9b47fe402
+No conflicted files found but cherry-pick failed, attempting to skip commit a1870252be08248035467cbacd31dca9b47fe402
+----------------------------------------
+Cherry-picking 68c77f65b1e8bae99fa85fa158a23c87f4dedb18
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 5097 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 68c77f65b1e8.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 68c77f65b1e8bae99fa85fa158a23c87f4dedb18
+No conflicted files found but cherry-pick failed, attempting to skip commit 68c77f65b1e8bae99fa85fa158a23c87f4dedb18
+----------------------------------------
+Cherry-picking 0da29c155fcc76d833c762bb052f8951bb7d1a7a
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 5097 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 0da29c155fcc.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 0da29c155fcc76d833c762bb052f8951bb7d1a7a
+No conflicted files found but cherry-pick failed, attempting to skip commit 0da29c155fcc76d833c762bb052f8951bb7d1a7a
+----------------------------------------
+Cherry-picking fdd6df4522d06eb3e66b91d7d4002b93462ee226
+Auto-merging drivers/cdrom/gdrom.c
+CONFLICT (content): Merge conflict in drivers/cdrom/gdrom.c
+error: could not apply fdd6df4522d0... Revert "gdrom: fix a memory leak bug"
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of fdd6df4522d06eb3e66b91d7d4002b93462ee226
+Auto-resolving conflicts by accepting incoming changes...
