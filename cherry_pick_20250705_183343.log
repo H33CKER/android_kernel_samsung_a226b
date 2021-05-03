@@ -67356,3 +67356,20 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 53ca915fd1ab74f4f7e956df88731e34948ec536
 Auto-resolving conflicts by accepting incoming changes...
+[main 3be1506d58b0] Revert "qlcnic: Avoid potential NULL pointer dereference"
+ Author: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+ Date: Mon May 3 13:56:51 2021 +0200
+ 2 files changed, 17 insertions(+), 3 deletions(-)
+----------------------------------------
+Cherry-picking e95dc5e919e4733fd4565789eea5daea021bcca2
+Auto-merging drivers/net/ethernet/sun/niu.c
+CONFLICT (content): Merge conflict in drivers/net/ethernet/sun/niu.c
+error: could not apply e95dc5e919e4... Revert "niu: fix missing checks of niu_pci_eeprom_read"
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of e95dc5e919e4733fd4565789eea5daea021bcca2
+Auto-resolving conflicts by accepting incoming changes...
