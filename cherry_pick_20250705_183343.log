@@ -69812,3 +69812,90 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 036f897d67c346b35cf7328a0669b5b8cf7550db
 Auto-resolving conflicts by accepting incoming changes...
+[main 202637716afd] bpf, selftests: Fix up some test_verifier cases for unprivileged
+ Author: Piotr Krysiuk <piotras@gmail.com>
+ Date: Mon May 31 18:25:40 2021 +0000
+ 2 files changed, 120 insertions(+), 41 deletions(-)
+----------------------------------------
+Cherry-picking b464715c67617f6f3453327341486225c4cf1713
+[main 6e53203bfddb] bpf: Move off_reg into sanitize_ptr_alu
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Mon May 31 18:25:41 2021 +0000
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+Successfully cherry-picked b464715c67617f6f3453327341486225c4cf1713
+----------------------------------------
+Cherry-picking 60eb41ad98702781a7ae6c16b37745587d5ed3de
+[main 5b15eadc728d] bpf: Ensure off_reg has no mixed signed bounds for all types
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Mon May 31 18:25:42 2021 +0000
+ 1 file changed, 9 insertions(+), 10 deletions(-)
+Successfully cherry-picked 60eb41ad98702781a7ae6c16b37745587d5ed3de
+----------------------------------------
+Cherry-picking 670494f9fb15d2d555d76df9b73620055755d1ad
+[main 4d243fab0847] bpf: Rework ptr_limit into alu_limit and add common error path
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Mon May 31 18:25:43 2021 +0000
+ 1 file changed, 13 insertions(+), 8 deletions(-)
+Successfully cherry-picked 670494f9fb15d2d555d76df9b73620055755d1ad
+----------------------------------------
+Cherry-picking 53ba03da96f50ca51e516b9bdab23a710e348581
+[main 6d81d8cd1985] bpf: Improve verifier error messages for users
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Mon May 31 18:25:44 2021 +0000
+ 1 file changed, 62 insertions(+), 22 deletions(-)
+Successfully cherry-picked 53ba03da96f50ca51e516b9bdab23a710e348581
+----------------------------------------
+Cherry-picking b1974c77cb3cb5cf9c9b584af5e7b24617f2ee34
+[main 439cd2d99694] bpf: Refactor and streamline bounds check into helper
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Mon May 31 18:25:45 2021 +0000
+ 1 file changed, 37 insertions(+), 17 deletions(-)
+Successfully cherry-picked b1974c77cb3cb5cf9c9b584af5e7b24617f2ee34
+----------------------------------------
+Cherry-picking b6da354729c770c6ceae5bd96b1708b37b3fce23
+[main b10eadaea8ac] bpf: Move sanitize_val_alu out of op switch
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Mon May 31 18:25:46 2021 +0000
+ 1 file changed, 10 insertions(+), 5 deletions(-)
+Successfully cherry-picked b6da354729c770c6ceae5bd96b1708b37b3fce23
+----------------------------------------
+Cherry-picking e2fa89d1a2347ff330851df14eb3d0039af4f67b
+[main 8f9b0c00b23e] bpf: Tighten speculative pointer arithmetic mask
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Mon May 31 18:25:47 2021 +0000
+ 1 file changed, 44 insertions(+), 26 deletions(-)
+Successfully cherry-picked e2fa89d1a2347ff330851df14eb3d0039af4f67b
+----------------------------------------
+Cherry-picking bb53b0a9798abf96a7a43ba0701d37b1ab038e58
+[main 1e007ce5e1d4] bpf: Update selftests to reflect new error states
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Mon May 31 18:25:48 2021 +0000
+ 1 file changed, 12 insertions(+), 22 deletions(-)
+Successfully cherry-picked bb53b0a9798abf96a7a43ba0701d37b1ab038e58
+----------------------------------------
+Cherry-picking 9652b0483022d2099fd53bc67135b63b79857994
+[main 18fd194681eb] bpf: do not allow root to mangle valid pointers
+ Author: Alexei Starovoitov <ast@kernel.org>
+ Date: Mon May 31 18:25:49 2021 +0000
+ 2 files changed, 62 insertions(+), 94 deletions(-)
+Successfully cherry-picked 9652b0483022d2099fd53bc67135b63b79857994
+----------------------------------------
+Cherry-picking ba1be7e6b20053bab635deddd1d6c11acaca90d2
+[main 4c6c6eec4edd] bpf/verifier: disallow pointer subtraction
+ Author: Alexei Starovoitov <ast@kernel.org>
+ Date: Mon May 31 18:25:50 2021 +0000
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully cherry-picked ba1be7e6b20053bab635deddd1d6c11acaca90d2
+----------------------------------------
+Cherry-picking 591da46fae4f01be07f5750107cfa7f973627994
+Auto-merging tools/testing/selftests/bpf/test_align.c
+CONFLICT (content): Merge conflict in tools/testing/selftests/bpf/test_align.c
+error: could not apply 591da46fae4f... selftests/bpf: fix test_align
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 591da46fae4f01be07f5750107cfa7f973627994
+Auto-resolving conflicts by accepting incoming changes...
