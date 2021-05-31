@@ -67703,3 +67703,62 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of f643397142c196d3ac653b2df32997dad991cb29
 Auto-resolving conflicts by accepting incoming changes...
+[main dabc961b9abd] mac80211: prevent mixed key and fragment cache attacks
+ Author: Mathy Vanhoef <Mathy.Vanhoef@kuleuven.be>
+ Date: Mon May 31 22:31:27 2021 +0200
+ 3 files changed, 135 insertions(+), 121 deletions(-)
+----------------------------------------
+Cherry-picking 9d0facb72b797295eeed30739e3e3cd42d71acb7
+Auto-merging include/net/cfg80211.h
+Auto-merging net/wireless/util.c
+[main 05793000536d] mac80211: properly handle A-MSDUs that start with an RFC 1042 header
+ Author: Mathy Vanhoef <Mathy.Vanhoef@kuleuven.be>
+ Date: Mon May 31 22:31:28 2021 +0200
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Successfully cherry-picked 9d0facb72b797295eeed30739e3e3cd42d71acb7
+----------------------------------------
+Cherry-picking a3558e1b75fefb2299659ee0070ee917927d9220
+Auto-merging net/wireless/util.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 5124 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit a3558e1b75fe.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of a3558e1b75fefb2299659ee0070ee917927d9220
+No conflicted files found but cherry-pick failed, attempting to skip commit a3558e1b75fefb2299659ee0070ee917927d9220
+----------------------------------------
+Cherry-picking 5f760074013398349479303c1368d63567f29ca2
+[main d9ab88bd1158] mac80211: drop A-MSDUs on old ciphers
+ Author: Johannes Berg <johannes.berg@intel.com>
+ Date: Mon May 31 22:31:30 2021 +0200
+ 1 file changed, 17 insertions(+)
+Successfully cherry-picked 5f760074013398349479303c1368d63567f29ca2
+----------------------------------------
+Cherry-picking df3ca9d4ed64b1abcb94dad3c0bf22aedac07320
+Auto-merging net/mac80211/sta_info.h
+CONFLICT (content): Merge conflict in net/mac80211/sta_info.h
+error: could not apply df3ca9d4ed64... mac80211: add fragment cache to sta_info
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of df3ca9d4ed64b1abcb94dad3c0bf22aedac07320
+Auto-resolving conflicts by accepting incoming changes...
