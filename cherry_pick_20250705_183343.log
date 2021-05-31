@@ -69730,3 +69730,85 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of a1700479524bb9cb5e8ae720236a6fabd003acae
 Auto-resolving conflicts by accepting incoming changes...
+[main 880758a8317d] ocfs2: fix data corruption by fallocate
+ Author: Junxiao Bi <junxiao.bi@oracle.com>
+ Date: Fri Jun 4 20:01:42 2021 -0700
+ 2 files changed, 236 insertions(+), 62 deletions(-)
+----------------------------------------
+Cherry-picking ffff05b9ee5c74c04bba2801c1f99b31975d74d9
+[main 76fbaed15f2d] nfc: fix NULL ptr dereference in llcp_sock_getname() after failed connect
+ Author: Krzysztof Kozlowski <krzysztof.kozlowski@canonical.com>
+ Date: Mon May 31 09:21:38 2021 +0200
+ 1 file changed, 2 insertions(+)
+Successfully cherry-picked ffff05b9ee5c74c04bba2801c1f99b31975d74d9
+----------------------------------------
+Cherry-picking d7178ad2ceb6ae207ce91feaf8820bad64f238c4
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 5144 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit d7178ad2ceb6.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of d7178ad2ceb6ae207ce91feaf8820bad64f238c4
+No conflicted files found but cherry-pick failed, attempting to skip commit d7178ad2ceb6ae207ce91feaf8820bad64f238c4
+----------------------------------------
+Cherry-picking 0c7086ee625e0a12474fc63824a4a8dfab663838
+Auto-merging fs/btrfs/tree-log.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 5144 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit 0c7086ee625e.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of 0c7086ee625e0a12474fc63824a4a8dfab663838
+No conflicted files found but cherry-pick failed, attempting to skip commit 0c7086ee625e0a12474fc63824a4a8dfab663838
+----------------------------------------
+Cherry-picking b5869ed8a39a4c6599f1d6c52e9ece785ceb8e16
+[main bbdd279d989f] mm, hugetlb: fix simple resv_huge_pages underflow on UFFDIO_COPY
+ Author: Mina Almasry <almasrymina@google.com>
+ Date: Fri Jun 4 20:01:36 2021 -0700
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+Successfully cherry-picked b5869ed8a39a4c6599f1d6c52e9ece785ceb8e16
+----------------------------------------
+Cherry-picking 036f897d67c346b35cf7328a0669b5b8cf7550db
+Auto-merging tools/testing/selftests/bpf/test_verifier.c
+CONFLICT (content): Merge conflict in tools/testing/selftests/bpf/test_verifier.c
+error: could not apply 036f897d67c3... bpf, selftests: Fix up some test_verifier cases for unprivileged
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 036f897d67c346b35cf7328a0669b5b8cf7550db
+Auto-resolving conflicts by accepting incoming changes...
