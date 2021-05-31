@@ -67650,3 +67650,56 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 72bd26a79145d412eadadd4688507d5bde9d3e5e
 Auto-resolving conflicts by accepting incoming changes...
+[main 036b98661680] proc: Check /proc/$pid/attr/ writes against file opener
+ Author: Kees Cook <keescook@chromium.org>
+ Date: Tue May 25 12:37:35 2021 -0700
+ 2 files changed, 135 insertions(+), 149 deletions(-)
+----------------------------------------
+Cherry-picking a51eae89a5dd6585612f79a0cc21be6b6dc62d94
+[main be151f114280] net: hso: fix control-request directions
+ Author: Johan Hovold <johan@kernel.org>
+ Date: Mon May 24 11:25:11 2021 +0200
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked a51eae89a5dd6585612f79a0cc21be6b6dc62d94
+----------------------------------------
+Cherry-picking c39f180c7bd8379de238a4fd4a2f7515e03802f8
+Auto-merging net/mac80211/rx.c
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch main
+Your branch is ahead of 'origin/main' by 5122 commits.
+  (use "git push" to publish your local commits)
+
+You are currently cherry-picking commit c39f180c7bd8.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cherry_pick_20250705_183343.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Conflict or error during cherry-pick of c39f180c7bd8379de238a4fd4a2f7515e03802f8
+No conflicted files found but cherry-pick failed, attempting to skip commit c39f180c7bd8379de238a4fd4a2f7515e03802f8
+----------------------------------------
+Cherry-picking f643397142c196d3ac653b2df32997dad991cb29
+Auto-merging net/mac80211/ieee80211_i.h
+CONFLICT (content): Merge conflict in net/mac80211/ieee80211_i.h
+Auto-merging net/mac80211/key.c
+Auto-merging net/mac80211/rx.c
+CONFLICT (content): Merge conflict in net/mac80211/rx.c
+error: could not apply f643397142c1... mac80211: prevent mixed key and fragment cache attacks
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of f643397142c196d3ac653b2df32997dad991cb29
+Auto-resolving conflicts by accepting incoming changes...
