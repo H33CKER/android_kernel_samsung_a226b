@@ -73007,3 +73007,121 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 97cd3badbd3432cf40143f2553a3c1ab38346847
 Auto-resolving conflicts by accepting incoming changes...
+[main c0d3ee152b3a] mm/thp: try_to_unmap() use TTU_SYNC for safe splitting
+ Author: Hugh Dickins <hughd@google.com>
+ Date: Tue Jun 15 18:23:53 2021 -0700
+ 4 files changed, 132 insertions(+), 107 deletions(-)
+----------------------------------------
+Cherry-picking 4dfa0d6f482311db9e89f53da73d121c47ca2a7d
+Auto-merging mm/internal.h
+[main 9d9ed621169d] mm/thp: fix vma_address() if virtual address below file offset
+ Author: Hugh Dickins <hughd@google.com>
+ Date: Tue Jun 15 18:23:56 2021 -0700
+ 2 files changed, 13 insertions(+), 17 deletions(-)
+Successfully cherry-picked 4dfa0d6f482311db9e89f53da73d121c47ca2a7d
+----------------------------------------
+Cherry-picking d5d912c4c36f97112dd1545bfbfc71c06201d345
+[main 46e8c473620a] mm/thp: fix page_address_in_vma() on file THP tails
+ Author: Jue Wang <juew@google.com>
+ Date: Tue Jun 15 18:24:00 2021 -0700
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Successfully cherry-picked d5d912c4c36f97112dd1545bfbfc71c06201d345
+----------------------------------------
+Cherry-picking b5acf9a91826ed8a5f9141a7e0c7420740a8894e
+[main 03d86bd8b46a] mm: thp: replace DEBUG_VM BUG with VM_WARN when unmap fails for split
+ Author: Yang Shi <shy828301@gmail.com>
+ Date: Tue Jun 15 18:24:07 2021 -0700
+ 1 file changed, 7 insertions(+), 17 deletions(-)
+Successfully cherry-picked b5acf9a91826ed8a5f9141a7e0c7420740a8894e
+----------------------------------------
+Cherry-picking 66c488875de24d10c6e2bd26e226a4bf39ae3e1e
+[main 0d552151bad2] mm: page_vma_mapped_walk(): use page for pvmw->page
+ Author: Hugh Dickins <hughd@google.com>
+ Date: Thu Jun 24 18:39:01 2021 -0700
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+Successfully cherry-picked 66c488875de24d10c6e2bd26e226a4bf39ae3e1e
+----------------------------------------
+Cherry-picking 084d41a8294988b1f124e22837f85cb6391ae82b
+[main 54d33c7229d0] mm: page_vma_mapped_walk(): settle PageHuge on entry
+ Author: Hugh Dickins <hughd@google.com>
+ Date: Thu Jun 24 18:39:04 2021 -0700
+ 1 file changed, 8 insertions(+), 4 deletions(-)
+Successfully cherry-picked 084d41a8294988b1f124e22837f85cb6391ae82b
+----------------------------------------
+Cherry-picking 3d98b8080cffa74d1a833a1ca639985573668627
+[main 92f8fc31f9ff] mm: page_vma_mapped_walk(): use pmde for *pvmw->pmd
+ Author: Hugh Dickins <hughd@google.com>
+ Date: Thu Jun 24 18:39:07 2021 -0700
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+Successfully cherry-picked 3d98b8080cffa74d1a833a1ca639985573668627
+----------------------------------------
+Cherry-picking 43d40057fdc5df5f0809ee2a13d436be9adcbc96
+[main c9dad5705888] mm: page_vma_mapped_walk(): prettify PVMW_MIGRATION block
+ Author: Hugh Dickins <hughd@google.com>
+ Date: Thu Jun 24 18:39:10 2021 -0700
+ 1 file changed, 14 insertions(+), 16 deletions(-)
+Successfully cherry-picked 43d40057fdc5df5f0809ee2a13d436be9adcbc96
+----------------------------------------
+Cherry-picking 1c1ea4e4397022a89be0699239db1c90cfa5ba48
+[main e41890a3d1e5] mm: page_vma_mapped_walk(): crossing page table boundary
+ Author: Hugh Dickins <hughd@google.com>
+ Date: Thu Jun 24 18:39:14 2021 -0700
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Successfully cherry-picked 1c1ea4e4397022a89be0699239db1c90cfa5ba48
+----------------------------------------
+Cherry-picking 72b2b0d093c5a3cf6513c5f4c2aecb6ad8faff2e
+[main 704814f53e7c] mm: page_vma_mapped_walk(): add a level of indentation
+ Author: Hugh Dickins <hughd@google.com>
+ Date: Thu Jun 24 18:39:17 2021 -0700
+ 1 file changed, 55 insertions(+), 50 deletions(-)
+Successfully cherry-picked 72b2b0d093c5a3cf6513c5f4c2aecb6ad8faff2e
+----------------------------------------
+Cherry-picking ca054d41da1b96b2c3f1f556efabf19c54abff50
+[main 4437c9a3356c] mm: page_vma_mapped_walk(): use goto instead of while (1)
+ Author: Hugh Dickins <hughd@google.com>
+ Date: Thu Jun 24 18:39:20 2021 -0700
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+Successfully cherry-picked ca054d41da1b96b2c3f1f556efabf19c54abff50
+----------------------------------------
+Cherry-picking 329d4fb943b042db257f56b00a9da70631d36b3d
+[main fb46ca18f57f] mm: page_vma_mapped_walk(): get vma_address_end() earlier
+ Author: Hugh Dickins <hughd@google.com>
+ Date: Thu Jun 24 18:39:23 2021 -0700
+ 1 file changed, 9 insertions(+), 4 deletions(-)
+Successfully cherry-picked 329d4fb943b042db257f56b00a9da70631d36b3d
+----------------------------------------
+Cherry-picking 3a5f1cdac2f698a9c708429aa23c3bccd5c1ccee
+[main dec878b91096] mm/thp: fix page_vma_mapped_walk() if THP mapped by ptes
+ Author: Hugh Dickins <hughd@google.com>
+ Date: Thu Jun 24 18:39:26 2021 -0700
+ 1 file changed, 25 insertions(+), 9 deletions(-)
+Successfully cherry-picked 3a5f1cdac2f698a9c708429aa23c3bccd5c1ccee
+----------------------------------------
+Cherry-picking fc308458ef456f488d4de30d27eefa0904835d53
+[main 81d1692e00e2] mm/thp: another PVMW_SYNC fix in page_vma_mapped_walk()
+ Author: Hugh Dickins <hughd@google.com>
+ Date: Thu Jun 24 18:39:30 2021 -0700
+ 1 file changed, 4 insertions(+)
+Successfully cherry-picked fc308458ef456f488d4de30d27eefa0904835d53
+----------------------------------------
+Cherry-picking c5bb56066fac7d7fdd51f3e8127a9704386ba694
+Auto-merging include/linux/hugetlb.h
+Auto-merging include/linux/pagemap.h
+[main 5487806e754b] mm, futex: fix shared futex pgoff on shmem huge page
+ Author: Hugh Dickins <hughd@google.com>
+ Date: Thu Jun 24 18:39:52 2021 -0700
+ 2 files changed, 2 insertions(+), 5 deletions(-)
+Successfully cherry-picked c5bb56066fac7d7fdd51f3e8127a9704386ba694
+----------------------------------------
+Cherry-picking 4164c07e5062cba5e6666df81d7fce1e4f54c317
+Auto-merging drivers/scsi/sr.c
+CONFLICT (content): Merge conflict in drivers/scsi/sr.c
+error: could not apply 4164c07e5062... scsi: sr: Return appropriate error code when disk is ejected
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 4164c07e5062cba5e6666df81d7fce1e4f54c317
+Auto-resolving conflicts by accepting incoming changes...
