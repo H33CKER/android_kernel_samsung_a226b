@@ -72980,3 +72980,30 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of a369974d1547fc41bdab5e19186303c0ac31dc5a
 Auto-resolving conflicts by accepting incoming changes...
+[main 6aa9e1f07d15] mm/rmap: remove unneeded semicolon in page_not_mapped()
+ Author: Miaohe Lin <linmiaohe@huawei.com>
+ Date: Thu Feb 25 17:17:56 2021 -0800
+ 2 files changed, 61 insertions(+), 128 deletions(-)
+----------------------------------------
+Cherry-picking 1decdcdf8ac3ea56b6001b3c60f35c7b15daabb3
+[main a6d1c67254ce] mm/rmap: use page_not_mapped in try_to_unmap()
+ Author: Miaohe Lin <linmiaohe@huawei.com>
+ Date: Thu Feb 25 17:18:03 2021 -0800
+ 1 file changed, 3 insertions(+), 8 deletions(-)
+Successfully cherry-picked 1decdcdf8ac3ea56b6001b3c60f35c7b15daabb3
+----------------------------------------
+Cherry-picking 97cd3badbd3432cf40143f2553a3c1ab38346847
+Auto-merging include/linux/rmap.h
+Auto-merging mm/huge_memory.c
+CONFLICT (content): Merge conflict in mm/huge_memory.c
+Auto-merging mm/page_vma_mapped.c
+CONFLICT (content): Merge conflict in mm/page_vma_mapped.c
+error: could not apply 97cd3badbd34... mm/thp: try_to_unmap() use TTU_SYNC for safe splitting
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 97cd3badbd3432cf40143f2553a3c1ab38346847
+Auto-resolving conflicts by accepting incoming changes...
