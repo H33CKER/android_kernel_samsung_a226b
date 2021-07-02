@@ -319,20 +319,11 @@ failure:
 static void tcp_v6_mtu_reduced(struct sock *sk)
 {
 	struct dst_entry *dst;
-	u32 mtu;
 
 	if ((1 << sk->sk_state) & (TCPF_LISTEN | TCPF_CLOSE))
 		return;
 
-	mtu = READ_ONCE(tcp_sk(sk)->mtu_info);
-
-	/* Drop requests trying to increase our current mss.
-	 * Check done in __ip6_rt_update_pmtu() is too late.
-	 */
-	if (tcp_mtu_to_mss(sk, mtu) >= tcp_sk(sk)->mss_cache)
-		return;
-
-	dst = inet6_csk_update_pmtu(sk, mtu);
+	dst = inet6_csk_update_pmtu(sk, READ_ONCE(tcp_sk(sk)->mtu_info));
 	if (!dst)
 		return;
 
@@ -411,8 +402,6 @@ static void tcp_v6_err(struct sk_buff *skb, struct inet6_skb_parm *opt,
 	}
 
 	if (type == ICMPV6_PKT_TOOBIG) {
-		u32 mtu = ntohl(info);
-
 		/* We are not interested in TCP_LISTEN and open_requests
 		 * (SYN-ACKs send out by Linux are always <576bytes so
 		 * they should go through unfragmented).
@@ -423,11 +412,7 @@ static void tcp_v6_err(struct sk_buff *skb, struct inet6_skb_parm *opt,
 		if (!ip6_sk_accept_pmtu(sk))
 			goto out;
 
-		if (mtu < IPV6_MIN_MTU)
-			goto out;
-
-		WRITE_ONCE(tp->mtu_info, mtu);
-
+		WRITE_ONCE(tp->mtu_info, ntohl(info));
 		if (!sock_owned_by_user(sk))
 			tcp_v6_mtu_reduced(sk);
 		else if (!test_and_set_bit(TCP_MTU_REDUCED_DEFERRED,
@@ -1467,7 +1452,6 @@ process:
 
 	if (sk->sk_state == TCP_NEW_SYN_RECV) {
 		struct request_sock *req = inet_reqsk(sk);
-		bool req_stolen = false;
 		struct sock *nsk;
 
 		sk = req->rsk_listener;
@@ -1491,20 +1475,10 @@ process:
 			th = (const struct tcphdr *)skb->data;
 			hdr = ipv6_hdr(skb);
 			tcp_v6_fill_cb(skb, hdr, th);
-			nsk = tcp_check_req(sk, skb, req, false, &req_stolen);
+			nsk = tcp_check_req(sk, skb, req, false);
 		}
 		if (!nsk) {
 			reqsk_put(req);
-			if (req_stolen) {
-				/* Another cpu got exclusive access to req
-				 * and created a full blown socket.
-				 * Try to feed this packet to this socket
-				 * instead of discarding it.
-				 */
-				tcp_v6_restore_cb(skb);
-				sock_put(sk);
-				goto lookup;
-			}
 			goto discard_and_relse;
 		}
 		if (nsk == sk) {
