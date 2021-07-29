@@ -84692,3 +84692,20 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of a9cedbba7e86250f56cad2571ed6c9388d35cb0c
 Auto-resolving conflicts by accepting incoming changes...
+[main d21b06766dd0] x86/resctrl: Fix default monitoring groups reporting
+ Author: Babu Moger <Babu.Moger@amd.com>
+ Date: Mon Aug 2 14:38:58 2021 -0500
+ 2 files changed, 311 insertions(+), 6 deletions(-)
+----------------------------------------
+Cherry-picking a7e5343678758a55e4942a44c4260cf509ee5874
+Auto-merging drivers/pci/msi.c
+CONFLICT (content): Merge conflict in drivers/pci/msi.c
+error: could not apply a7e534367875... PCI/MSI: Enable and mask MSI-X early
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of a7e5343678758a55e4942a44c4260cf509ee5874
+Auto-resolving conflicts by accepting incoming changes...
