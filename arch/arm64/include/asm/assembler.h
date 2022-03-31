@@ -23,8 +23,6 @@
 #ifndef __ASM_ASSEMBLER_H
 #define __ASM_ASSEMBLER_H
 
-#include <asm-generic/export.h>
-
 #include <asm/asm-offsets.h>
 #include <asm/cpufeature.h>
 #include <asm/cputype.h>
@@ -103,13 +101,6 @@
  */
 	.macro	csdb
 	hint	#20
-	.endm
-
-/*
- * Clear Branch History instruction
- */
-	.macro clearbhb
-	hint	#22
 	.endm
 
 /*
@@ -467,13 +458,6 @@ alternative_endif
 #else
 #define NOKPROBE(x)
 #endif
-
-#ifdef CONFIG_KASAN
-#define EXPORT_SYMBOL_NOKASAN(name)
-#else
-#define EXPORT_SYMBOL_NOKASAN(name)	EXPORT_SYMBOL(name)
-#endif
-
 	/*
 	 * Emit a 64-bit absolute little endian symbol reference in a way that
 	 * ensures that it will be resolved at build time, even when building a
@@ -567,9 +551,7 @@ alternative_endif
 
 	.macro __mitigate_spectre_bhb_loop      tmp
 #ifdef CONFIG_MITIGATE_SPECTRE_BRANCH_HISTORY
-alternative_cb  spectre_bhb_patch_loop_iter
-	mov	\tmp, #32		// Patched to correct the immediate
-alternative_cb_end
+	mov	\tmp, #32
 .Lspectre_bhb_loop\@:
 	b	. + 4
 	subs	\tmp, \tmp, #1
