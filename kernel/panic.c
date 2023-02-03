@@ -28,9 +28,7 @@
 #include <linux/console.h>
 #include <linux/bug.h>
 #include <linux/ratelimit.h>
-#ifdef CONFIG_SEC_DEBUG
-#include <linux/sec_debug.h>
-#endif
+#include <linux/sysfs.h>
 
 #define PANIC_TIMER_STEP 100
 #define PANIC_BLINK_SPD 18
@@ -69,6 +67,25 @@ static __init int kernel_panic_sysctls_init(void)
 	return 0;
 }
 late_initcall(kernel_panic_sysctls_init);
+#endif
+
+static atomic_t warn_count = ATOMIC_INIT(0);
+
+#ifdef CONFIG_SYSFS
+static ssize_t warn_count_show(struct kobject *kobj, struct kobj_attribute *attr,
+			       char *page)
+{
+	return sysfs_emit(page, "%d\n", atomic_read(&warn_count));
+}
+
+static struct kobj_attribute warn_count_attr = __ATTR_RO(warn_count);
+
+static __init int kernel_panic_sysfs_init(void)
+{
+	sysfs_add_file_to_group(kernel_kobj, &warn_count_attr.attr, NULL);
+	return 0;
+}
+late_initcall(kernel_panic_sysfs_init);
 #endif
 
 static long no_blink(int state)
@@ -148,8 +165,6 @@ EXPORT_SYMBOL(nmi_panic);
 
 void check_panic_on_warn(const char *origin)
 {
-	static atomic_t warn_count = ATOMIC_INIT(0);
-
 	if (panic_on_warn)
 		panic("%s: panic_on_warn set ...\n", origin);
 
@@ -174,12 +189,6 @@ void panic(const char *fmt, ...)
 	int state = 0;
 	int old_cpu, this_cpu;
 	bool _crash_kexec_post_notifiers = crash_kexec_post_notifiers;
-#ifdef CONFIG_SEC_DEBUG_EXTRA_INFO
-	struct pt_regs regs;
-
-	regs.regs[30] = _RET_IP_;
-	regs.pc = regs.regs[30] - sizeof(unsigned int);
-#endif
 
 	if (panic_on_warn) {
 		/*
@@ -226,22 +235,7 @@ void panic(const char *fmt, ...)
 	va_start(args, fmt);
 	vsnprintf(buf, sizeof(buf), fmt, args);
 	va_end(args);
-	
-#ifdef CONFIG_SEC_DEBUG_AUTO_COMMENT
-	if (buf[strlen(buf) - 1] == '\n')
-		buf[strlen(buf) - 1] = '\0';
-#endif
-
-#ifdef CONFIG_SEC_DEBUG_EXTRA_INFO
-	sec_debug_set_extra_info_fault((unsigned long)regs.pc, &regs);
-#endif
-
-#ifdef CONFIG_SEC_DEBUG_AUTO_COMMENT
-	pr_auto(ASL5, "Kernel panic - not syncing: %s\n", buf);
-#else
 	pr_emerg("Kernel panic - not syncing: %s\n", buf);
-#endif
-
 #ifdef CONFIG_DEBUG_BUGVERBOSE
 	/*
 	 * Avoid nested stack-dumping if a panic occurs during oops processing
@@ -607,11 +601,9 @@ void __warn(const char *file, int line, void *caller, unsigned taint,
 
 	print_modules();
 
-#ifndef CONFIG_SEC_DEBUG
 	if (regs)
 		show_regs(regs);
 	else
-#endif
 		dump_stack();
 
 	print_oops_end_marker();
