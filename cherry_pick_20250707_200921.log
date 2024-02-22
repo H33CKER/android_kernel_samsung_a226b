@@ -598,3 +598,93 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of df1e699930a51ace7f4c6ac3c69eed709db1fb6f
 Auto-resolving conflicts by accepting incoming changes...
+[main 0d38cfb0fcd1] BACKPORT: userfaultfd/sysctl: add vm.unprivileged_userfaultfd
+ Author: Peter Xu <peterx@redhat.com>
+ Date: Mon May 13 17:16:41 2019 -0700
+ 5 files changed, 322 insertions(+), 81 deletions(-)
+----------------------------------------
+Cherry-picking b6f5e18ba448a83c50781099f69c66e131ae2564
+[main 9f840e6c7597] BACKPORT: userfaultfd: add UFFD_USER_MODE_ONLY
+ Author: Lokesh Gidra <lokeshgidra@google.com>
+ Date: Mon Dec 14 19:13:49 2020 -0800
+ 2 files changed, 18 insertions(+), 1 deletion(-)
+Successfully cherry-picked b6f5e18ba448a83c50781099f69c66e131ae2564
+----------------------------------------
+Cherry-picking cc3b8d64f2635cafccb09e59f96e8b7b9944a57e
+Auto-merging Documentation/sysctl/vm.txt
+[main dac7d4b249d0] UPSTREAM: userfaultfd: add user-mode only option to unprivileged_userfaultfd sysctl knob
+ Author: Lokesh Gidra <lokeshgidra@google.com>
+ Date: Mon Dec 14 19:13:54 2020 -0800
+ 2 files changed, 18 insertions(+), 7 deletions(-)
+Successfully cherry-picked cc3b8d64f2635cafccb09e59f96e8b7b9944a57e
+----------------------------------------
+Cherry-picking b253636bf9b16d398605be7ce50794131bf77904
+[main 1f66489b587a] BACKPORT: userfaultfd: prevent non-cooperative events vs mcopy_atomic races
+ Author: Mike Rapoport <rppt@linux.vnet.ibm.com>
+ Date: Thu Jun 7 17:09:25 2018 -0700
+ 3 files changed, 41 insertions(+), 9 deletions(-)
+Successfully cherry-picked b253636bf9b16d398605be7ce50794131bf77904
+----------------------------------------
+Cherry-picking e7443d98c37ebe62cc3242620472cf73028fbf6d
+[main a8db9baac2b7] BACKPORT: FROMGIT: userfaultfd: add UFFDIO_CONTINUE ioctl
+ Author: Axel Rasmussen <axelrasmussen@google.com>
+ Date: Thu Mar 18 17:01:50 2021 +1100
+ 6 files changed, 163 insertions(+), 31 deletions(-)
+Successfully cherry-picked e7443d98c37ebe62cc3242620472cf73028fbf6d
+----------------------------------------
+Cherry-picking 7707bcdea6209d203f74a6a1053b422f740f4f81
+[main a49072bbef86] BACKPORT: FROMGIT: userfaultfd: update documentation to describe minor fault handling
+ Author: Axel Rasmussen <axelrasmussen@google.com>
+ Date: Thu Mar 18 17:01:51 2021 +1100
+ 1 file changed, 80 insertions(+), 33 deletions(-)
+Successfully cherry-picked 7707bcdea6209d203f74a6a1053b422f740f4f81
+----------------------------------------
+Cherry-picking 56b8d5547238a782e5f9b11073d7cbe4efdd3c0a
+Auto-merging mm/memory.c
+Auto-merging mm/shmem.c
+[main c171b638a634] BACKPORT: FROMGIT: userfaultfd: support minor fault handling for shmem
+ Author: Axel Rasmussen <axelrasmussen@google.com>
+ Date: Thu Mar 18 17:01:51 2021 +1100
+ 6 files changed, 88 insertions(+), 91 deletions(-)
+Successfully cherry-picked 56b8d5547238a782e5f9b11073d7cbe4efdd3c0a
+----------------------------------------
+Cherry-picking 96a407ab50f1b18f081b913c3ab012bb9dd87e3b
+[main 53f8e72ed528] BACKPORT: FROMLIST: userfaultfd/hugetlbfs: Fix minor fault page leak
+ Author: Peter Xu <peterx@redhat.com>
+ Date: Mon Mar 22 13:51:32 2021 -0400
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 96a407ab50f1b18f081b913c3ab012bb9dd87e3b
+----------------------------------------
+Cherry-picking 56dc27b1e6713a87de492bcf9f592e2943475285
+Auto-merging mm/shmem.c
+[main 0fa00b74cf1c] FROMLIST: userfaultfd/shmem: fix minor fault page leak
+ Author: Axel Rasmussen <axelrasmussen@google.com>
+ Date: Mon Mar 22 13:48:35 2021 -0700
+ 1 file changed, 1 insertion(+)
+Successfully cherry-picked 56dc27b1e6713a87de492bcf9f592e2943475285
+----------------------------------------
+Cherry-picking b7590dfc863dd659b378dfe14660b3ff685f83ca
+Auto-merging fs/f2fs/segment.c
+[main f8905fe9b9a7] BACKPORT: f2fs: stop checkpoint when get a out-of-bounds segment
+ Author: Zhiguo Niu <zhiguo.niu@unisoc.com>
+ Date: Tue Feb 20 14:11:24 2024 +0800
+ 1 file changed, 15 insertions(+), 2 deletions(-)
+Successfully cherry-picked b7590dfc863dd659b378dfe14660b3ff685f83ca
+----------------------------------------
+Cherry-picking 32d004c26b03be9a73716bc2fc7a2af7999080f1
+Auto-merging fs/f2fs/data.c
+Auto-merging fs/f2fs/f2fs.h
+Auto-merging fs/f2fs/file.c
+Auto-merging fs/f2fs/gc.c
+CONFLICT (content): Merge conflict in fs/f2fs/gc.c
+Auto-merging fs/f2fs/segment.c
+CONFLICT (content): Merge conflict in fs/f2fs/segment.c
+error: could not apply 32d004c26b03... BACKPORT: f2fs: fix to handle segment allocation failure correctly
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+Conflict or error during cherry-pick of 32d004c26b03be9a73716bc2fc7a2af7999080f1
+Auto-resolving conflicts by accepting incoming changes...
