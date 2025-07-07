@@ -1916,3 +1916,144 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 Conflict or error during cherry-pick of 21d7aa53e05f5fb578fb59ad558c8db8427fe320
 Auto-resolving conflicts by accepting incoming changes...
+[main 20f19dd3152a] bpf, sockmap: convert to generic sk_msg interface
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Sat Oct 13 02:45:58 2018 +0200
+ 19 files changed, 3196 insertions(+), 2291 deletions(-)
+ create mode 100644 include/linux/skmsg.h
+ delete mode 100644 kernel/bpf/sockmap.c
+ create mode 100644 net/core/skmsg.c
+ create mode 100644 net/core/sock_map.c
+ create mode 100644 net/ipv4/tcp_bpf.c
+----------------------------------------
+Cherry-picking 33005178896b2c9028410dd8dada8bc8bd909f66
+[main a0457bc1277b] bpf: always allocate at least 16 bytes for setsockopt hook
+ Author: Stanislav Fomichev <sdf@google.com>
+ Date: Mon Jul 29 14:51:10 2019 -0700
+ 1 file changed, 13 insertions(+), 4 deletions(-)
+Successfully cherry-picked 33005178896b2c9028410dd8dada8bc8bd909f66
+----------------------------------------
+Cherry-picking 990d07657b86a0bba2a5854860ba86cdcfc9a228
+[main 04af76dd763c] bpf: Don't return EINVAL from {get,set}sockopt when optlen > PAGE_SIZE
+ Author: Stanislav Fomichev <sdf@google.com>
+ Date: Tue Jun 16 18:04:14 2020 -0700
+ 1 file changed, 33 insertions(+), 20 deletions(-)
+Successfully cherry-picked 990d07657b86a0bba2a5854860ba86cdcfc9a228
+----------------------------------------
+Cherry-picking f871e2cad448f7ca313f5e030cb0d982d19e7639
+[main 0b91e29d5ee8] bpf: Add bpf_verifier_vlog() and bpf_verifier_log_needed()
+ Author: Martin KaFai Lau <kafai@fb.com>
+ Date: Sat Mar 24 11:44:23 2018 -0700
+ 1 file changed, 13 insertions(+), 24 deletions(-)
+Successfully cherry-picked f871e2cad448f7ca313f5e030cb0d982d19e7639
+----------------------------------------
+Cherry-picking a9e62e5a8006982726054a820a7b52fb11320fc0
+Auto-merging kernel/bpf/core.c
+[main aab9d20e388d] bpf: implement lookup-free direct value access for maps
+ Author: Daniel Borkmann <daniel@iogearbox.net>
+ Date: Tue Apr 9 23:20:03 2019 +0200
+ 8 files changed, 153 insertions(+), 32 deletions(-)
+Successfully cherry-picked a9e62e5a8006982726054a820a7b52fb11320fc0
+----------------------------------------
+Cherry-picking 792256063f04d06e45fa22579b54692f144f5728
+[main df7e847c9ec6] bpf: allow helpers to return PTR_TO_SOCK_COMMON
+ Author: Lorenz Bauer <lmb@cloudflare.com>
+ Date: Fri Mar 22 09:54:00 2019 +0800
+ 2 files changed, 5 insertions(+)
+Successfully cherry-picked 792256063f04d06e45fa22579b54692f144f5728
+----------------------------------------
+Cherry-picking 1650e7720f5132f0bbf788e7f1b90cd6b07c5b47
+[main 699d372f6cf9] bpf: implement MAP_GET_NEXT_KEY command for LPM_TRIE map
+ Author: Yonghong Song <yhs@fb.com>
+ Date: Thu Jan 18 15:08:50 2018 -0800
+ 1 file changed, 93 insertions(+), 2 deletions(-)
+Successfully cherry-picked 1650e7720f5132f0bbf788e7f1b90cd6b07c5b47
+----------------------------------------
+Cherry-picking fbe4050babc2736c401210f2e9f75bbd8cbbdf6b
+[main c39297ce58e1] bpf: fix kernel page fault in lpm map trie_get_next_key
+ Author: Yonghong Song <yhs@fb.com>
+ Date: Fri Jan 26 15:06:07 2018 -0800
+ 1 file changed, 11 insertions(+), 15 deletions(-)
+Successfully cherry-picked fbe4050babc2736c401210f2e9f75bbd8cbbdf6b
+----------------------------------------
+Cherry-picking a6739ac2f52bc1c05e0c90a25e25429fa2fce52d
+[main 6d8543a50877] bpf: Fix exact match conditions in trie_get_next_key()
+ Author: Hou Tao <houtao1@huawei.com>
+ Date: Fri Dec 6 19:06:18 2024 +0800
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully cherry-picked a6739ac2f52bc1c05e0c90a25e25429fa2fce52d
+----------------------------------------
+Cherry-picking 5bce5c69ce3e1945663c84ac3ab66c81b252432a
+[main f1db8d70d617] BACKPORT: bpf: Fix out-of-bounds write in trie_get_next_key()
+ Author: Byeonguk Jeong <jungbu2855@gmail.com>
+ Date: Sat Oct 26 14:02:43 2024 +0900
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+Successfully cherry-picked 5bce5c69ce3e1945663c84ac3ab66c81b252432a
+----------------------------------------
+Cherry-picking 7a53fae05669576056e719f7ee0bbcf835d67fa2
+[main 94eda3c8bfae] bpf: lpm_trie: check left child of last leftmost node for NULL
+ Author: Jonathan Lemon <jonathan.lemon@gmail.com>
+ Date: Sat Jun 8 12:54:19 2019 -0700
+ 2 files changed, 7 insertions(+), 361 deletions(-)
+ delete mode 100644 tools/testing/selftests/bpf/test_lpm_map.c
+Successfully cherry-picked 7a53fae05669576056e719f7ee0bbcf835d67fa2
+----------------------------------------
+Cherry-picking ad5f20276c9481d9d2df0adfba27a4560f8c6035
+[main 465f581cd248] Revert "kbuild: avoid static_assert for genksyms"
+ Author: Tim Zimmermann <tim@linux4.de>
+ Date: Fri Mar 21 07:19:38 2025 +0100
+ 1 file changed, 5 deletions(-)
+Successfully cherry-picked ad5f20276c9481d9d2df0adfba27a4560f8c6035
+----------------------------------------
+Cherry-picking 3580fd243b5a9295e217f6463e05daefdee92035
+[main 771e36b59b9c] BACKPORT: build_bug.h: add wrapper for _Static_assert
+ Author: Rasmus Villemoes <linux@rasmusvillemoes.dk>
+ Date: Thu Mar 7 16:27:00 2019 -0800
+ 1 file changed, 19 insertions(+)
+Successfully cherry-picked 3580fd243b5a9295e217f6463e05daefdee92035
+----------------------------------------
+Cherry-picking 937d0e8ea06537d69c7ff70cd7ec1b9937bf0dea
+[main 064ac427ad57] BACKPORT: userfaultfd: wp: add UFFDIO_COPY_MODE_WP
+ Author: Andrea Arcangeli <aarcange@redhat.com>
+ Date: Mon Apr 6 20:05:41 2020 -0700
+ 4 files changed, 36 insertions(+), 20 deletions(-)
+Successfully cherry-picked 937d0e8ea06537d69c7ff70cd7ec1b9937bf0dea
+----------------------------------------
+Cherry-picking e4b0c627339ea26c6731faa38773ac2a272f957b
+[main ccc1287bb01b] BACKPORT: ANDROID: userfaultfd: add MMAP_TRYLOCK mode for COPY/ZEROPAGE
+ Author: Lokesh Gidra <lokeshgidra@google.com>
+ Date: Fri Mar 8 10:04:39 2024 -0800
+ 4 files changed, 22 insertions(+), 10 deletions(-)
+Successfully cherry-picked e4b0c627339ea26c6731faa38773ac2a272f957b
+----------------------------------------
+Cherry-picking 4ba53de54b96723b3671aaaba9cefb3d3c8f1ffb
+[main 5e4bd161bb60] BACKPORT: ANDROID: userfaultfd: abort uffdio ops if mmap_lock is contended
+ Author: Lokesh Gidra <lokeshgidra@google.com>
+ Date: Fri Mar 8 10:59:56 2024 -0800
+ 1 file changed, 12 insertions(+)
+Successfully cherry-picked 4ba53de54b96723b3671aaaba9cefb3d3c8f1ffb
+----------------------------------------
+Cherry-picking 4f0dfd5d0a0818eee1092793d3cf98be7582ae57
+Auto-merging arch/arm64/configs/cuttlefish_defconfig
+Auto-merging arch/x86/configs/x86_64_cuttlefish_defconfig
+[main 343a70874c24] ANDROID: GKI: Enable CONFIG_USERFAULTFD
+ Author: Lokesh Gidra <lokeshgidra@google.com>
+ Date: Wed Mar 3 13:09:40 2021 -0800
+ 2 files changed, 2 insertions(+)
+Successfully cherry-picked 4f0dfd5d0a0818eee1092793d3cf98be7582ae57
+----------------------------------------
+Cherry-picking 08f9229852fe1e57d7f82a4dc091df7627befd04
+Auto-merging kernel/sys.c
+[main 94348b06c353] syscall: Only spoof uname for root
+ Author: backslashxx <118538522+backslashxx@users.noreply.github.com>
+ Date: Tue Mar 11 11:07:47 2025 +0800
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+Successfully cherry-picked 08f9229852fe1e57d7f82a4dc091df7627befd04
+----------------------------------------
+Cherry-picking 80ba874d752b77e7f913ca4b59479204bd61c08a
+[main 1d730ff7044e] Partially revert "fixup: add back code missed during BPF picking"
+ Author: Tim Zimmermann <tim@linux4.de>
+ Date: Sat May 17 19:38:40 2025 +0200
+ 2 files changed, 1 insertion(+), 5 deletions(-)
+Successfully cherry-picked 80ba874d752b77e7f913ca4b59479204bd61c08a
+All commits cherry-picked.
